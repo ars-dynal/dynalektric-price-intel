@@ -1,0 +1,73 @@
+name: Discover DEPL ERP response schema (field names only, no values)
+
+# Manually triggered only. Fetches ONE sample record from a few endpoints and
+# prints ONLY the field names (dict keys), never the actual values — this
+# repo is public and its Action logs are publicly visible, so no real
+# item/budget/vendor/price value should ever be echoed here. This step exists
+# purely to learn the API's response shape before writing real parsing logic.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get token and inspect field names only
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: |
+          python3 -m pip install --quiet requests
+          python3 - <<'PYEOF'
+          import requests, json, os
+
+          BASE = "https://depl.consult-trico.com"
+          cid = os.environ["DEPL_CLIENT_ID"]
+          secret = os.environ["DEPL_CLIENT_SECRET"]
+
+          tok = requests.post(f"{BASE}/oauth/token", json={
+              "grant_type": "client_credentials", "client_id": cid, "client_secret": secret
+          }, timeout=20)
+          tok.raise_for_status()
+          access_token = tok.json()["access_token"]
+          headers = {"Authorization": f"Bearer {access_token}", "Accept": "application/json"}
+
+          def describe(name, path, params=None):
+              print(f"\n=== {name} ({path}) ===")
+              try:
+                  r = requests.get(f"{BASE}{path}", headers=headers, params=params or {"per_page": 1}, timeout=20)
+                  print(f"HTTP status: {r.status_code}")
+                  if r.status_code != 200:
+                      print("(non-200, skipping schema dump)")
+                      return
+                  body = r.json()
+                  if isinstance(body, dict):
+                      print("Top-level response keys:", sorted(body.keys()))
+                      # common wrapper patterns
+                      for wrapper_key in ("data", "items", "results"):
+                          if wrapper_key in body:
+                              items = body[wrapper_key]
+                              if isinstance(items, list) and items:
+                                  print(f"'{wrapper_key}' is a list of {len(items)} item(s) on this page.")
+                                  print(f"First record's field names:", sorted(items[0].keys()) if isinstance(items[0], dict) else type(items[0]))
+                                  # one level deeper for nested objects, names only
+                                  for k, v in items[0].items() if isinstance(items[0], dict) else []:
+                                      if isinstance(v, dict):
+                                          print(f"  nested '{k}' field names:", sorted(v.keys()))
+                                      elif isinstance(v, list) and v and isinstance(v[0], dict):
+                                          print(f"  nested list '{k}[0]' field names:", sorted(v[0].keys()))
+                              elif isinstance(items, dict):
+                                  print(f"'{wrapper_key}' field names:", sorted(items.keys()))
+                  elif isinstance(body, list) and body:
+                      print("Response is a top-level list. First record's field names:", sorted(body[0].keys()) if isinstance(body[0], dict) else type(body[0]))
+              except Exception as e:
+                  print(f"Error describing {name}: {type(e).__name__}: {e}")
+
+          describe("Items", "/api/external/items")
+          describe("Budgets", "/api/external/budgets")
+          describe("Purchase Orders", "/api/external/purchase-orders")
+          describe("Inventory", "/api/external/inventory")
+          describe("BOMs", "/api/external/boms")
+          describe("Vendors", "/api/external/vendors")
+          PYEOF
