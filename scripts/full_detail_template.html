@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commodity Price Intelligence — Dynalektric</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;
+    --series-2:       #eb6834;
+    --good:           #0ca30c;
+    --warning:        #fab219;
+    --critical:       #d03b3b;
+    --good-tint:      #e7f6e7;
+    --warning-tint:   #fff6e2;
+    --critical-tint:  #fbe9e9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --good:           #0ca30c;
+      --warning:        #fab219;
+      --critical:       #e66767;
+      --good-tint:      rgba(12,163,12,0.14);
+      --warning-tint:   rgba(250,178,25,0.14);
+      --critical-tint:  rgba(230,103,103,0.14);
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --good:           #0ca30c;
+    --warning:        #fab219;
+    --critical:       #e66767;
+    --good-tint:      rgba(12,163,12,0.14);
+    --warning-tint:   rgba(250,178,25,0.14);
+    --critical-tint:  rgba(230,103,103,0.14);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page-plane); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text-primary); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  .topbar { display:flex; align-items:center; justify-content:space-between; margin-bottom: 22px; }
+  .brand { display:flex; align-items:baseline; gap:10px; }
+  .brand .name { font-weight:700; font-size:15px; letter-spacing:.2px; }
+  .brand .tag { font-size:12px; color:var(--text-muted); }
+  h1 { font-size: 22px; margin: 0 0 4px; letter-spacing: -0.2px; }
+  .sub { color: var(--text-secondary); font-size: 13.5px; margin: 0 0 22px; max-width: 760px; line-height:1.5; }
+
+  .theme-toggle { border:1px solid var(--border); background:var(--surface-1); color:var(--text-secondary); font-size:12px; padding:6px 10px; border-radius:7px; cursor:pointer; }
+
+  .cards { display:grid; grid-template-columns: 1.3fr 1.3fr 1fr 1fr 1fr; gap:14px; margin-bottom:26px; }
+  @media (max-width: 900px){ .cards{ grid-template-columns: 1fr 1fr; } }
+
+  .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 14px; position: relative; overflow: hidden; }
+  .card .accent { position:absolute; left:0; top:0; bottom:0; width:4px; }
+  .card.al .accent { background: var(--series-1); }
+  .card.cu .accent { background: var(--series-2); }
+  .card .label { font-size:12px; color:var(--text-muted); margin-bottom:6px; display:flex; align-items:center; gap:6px; }
+  .card .swatch { width:8px; height:8px; border-radius:2px; display:inline-block; }
+  .card.al .swatch { background: var(--series-1); }
+  .card.cu .swatch { background: var(--series-2); }
+  .card .value { font-size:26px; font-weight:650; letter-spacing:-0.3px; font-variant-numeric: proportional-nums; }
+  .card .value small { font-size:13px; font-weight:500; color:var(--text-secondary); margin-left:3px;}
+  .card .meta { font-size:11.5px; color:var(--text-muted); margin-top:6px; line-height:1.5; }
+
+  .stat { display:flex; flex-direction:column; justify-content:center; }
+  .stat .num { font-size:28px; font-weight:650; }
+  .stat .cap { font-size:12px; color:var(--text-muted); margin-top:4px; line-height:1.4; }
+  .stat.crit .num { color: var(--critical); }
+  .stat.warn .num { color: #c98500; }
+  .stat.ok .num { color: var(--good); }
+
+  section { margin-bottom: 28px; }
+  .section-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:10px; flex-wrap:wrap; gap:6px;}
+  .section-head h2 { font-size: 15px; margin:0; }
+  .section-head .note { font-size:12px; color:var(--text-muted); }
+
+  table { width:100%; border-collapse:collapse; background:var(--surface-1); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  thead th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.04em; color: var(--text-muted); font-weight:600; padding:10px 12px; border-bottom:1px solid var(--gridline); background: color-mix(in srgb, var(--surface-1) 96%, var(--text-primary) 4%); }
+  tbody td { padding:9px 12px; border-bottom:1px solid var(--gridline); font-size:13px; vertical-align:middle; }
+  tbody tr:last-child td { border-bottom:none; }
+  .mono { font-variant-numeric: tabular-nums; color: var(--text-secondary); font-size:12.5px; }
+  .num { text-align:right; font-weight:600; color:var(--text-primary); }
+  .itemname { color:var(--text-primary); max-width:340px; }
+  .flagnote { color: var(--text-secondary); font-size:12.5px; font-style:italic; }
+
+  .gapcell { display:flex; align-items:center; gap:8px; min-width:150px; }
+  .gapbar-track { flex:1; height:6px; border-radius:4px; background: var(--gridline); overflow:hidden; }
+  .gapbar-fill { height:100%; border-radius:4px; }
+  .status-critical { background: var(--critical); }
+  .status-warning { background: var(--warning); }
+  .status-ontrack { background: var(--good); }
+  .gapnum { font-size:12px; font-weight:650; font-variant-numeric: tabular-nums; white-space:nowrap; }
+  .status-text-critical { color: var(--critical); }
+  .status-text-warning { color: #a06a00; }
+  .status-text-ontrack { color: var(--good); }
+
+  .badge { display:inline-flex; align-items:center; gap:5px; font-size:11.5px; font-weight:600; padding:3px 9px; border-radius:999px; white-space:nowrap; }
+  .badge .dot { width:6px; height:6px; border-radius:50%; display:inline-block; }
+  .badge-critical { background: var(--critical-tint); color: var(--text-primary); }
+  .badge-critical .dot { background: var(--critical); }
+  .badge-warning { background: var(--warning-tint); color: var(--text-primary); }
+  .badge-warning .dot { background: var(--warning); }
+  .badge-ontrack { background: var(--good-tint); color: var(--text-primary); }
+  .badge-ontrack .dot { background: var(--good); }
+
+  .conf-badge { font-size:10.5px; font-weight:600; padding:2px 7px; border-radius:5px; border:1px solid var(--border); white-space:nowrap; cursor:help; }
+  .conf-high { color: var(--good); border-color: color-mix(in srgb, var(--good) 40%, var(--border)); }
+  .conf-low  { color: #a06a00; border-color: color-mix(in srgb, var(--warning) 50%, var(--border)); }
+  .conf-unv  { color: var(--text-muted); border-style:dashed; }
+
+  .pilot-banner { display:flex; gap:8px; align-items:center; font-size:12px; color: var(--text-secondary); background: var(--good-tint); border:1px solid color-mix(in srgb, var(--good) 30%, var(--border)); border-radius:8px; padding:8px 12px; margin-bottom:14px; }
+  .pilot-banner b { color: var(--text-primary); }
+
+  .flagbox { border:1px dashed var(--border); border-radius:12px; padding: 4px; background: var(--surface-1); }
+  .flagbox table { border:none; border-radius:8px; }
+
+  .callout { background: var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:16px 18px; font-size:13px; color:var(--text-secondary); line-height:1.65; }
+  .callout h3 { font-size:13.5px; color:var(--text-primary); margin:0 0 8px; }
+  .callout ol { margin: 8px 0 0; padding-left:18px; }
+  .callout li { margin-bottom:6px; }
+  .callout code { background: color-mix(in srgb, var(--surface-1) 90%, var(--text-primary) 10%); padding:1px 5px; border-radius:4px; font-size:12px; }
+
+  footer { margin-top: 30px; font-size:11.5px; color:var(--text-muted); border-top:1px solid var(--gridline); padding-top:14px; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">
+      <span class="name">Dynalektric</span>
+      <span class="tag">Commodity Price Intelligence — Daily</span>
+    </div>
+    <button class="theme-toggle" onclick="const r=document.documentElement; r.getAttribute('data-theme')==='dark' ? r.setAttribute('data-theme','light') : r.setAttribute('data-theme','dark')">Toggle theme</button>
+  </div>
+
+  <h1>Are your budgeted raw-material rates still in line with today's market?</h1>
+  <p class="sub">Refreshed automatically from your live item master ({{N_TOTAL_ITEMS}} aluminium/copper items) plus today's published NALCO/LME benchmarks. Pilot section below covers your 18 most frequently handled items with a premium-adjusted suggested rate.</p>
+
+  <div class="pilot-banner">✓ <span><b>Auto-refreshed:</b> items ranked by warehouse activity (usage-frequency proxy), suggested rate = today's metal price × a premium learned from your own near-market items.</span></div>
+
+  <div class="cards">
+    <div class="card al">
+      <div class="accent"></div>
+      <div class="label"><span class="swatch"></span>Aluminium — NALCO ingot</div>
+      <div class="value">₹{{AL_PRICE}} <small>/ kg</small></div>
+      <div class="meta">Basic price band ₹{{AL_BAND}}, w.e.f. {{AL_DATE}} · nalcoindia.com price circular</div>
+    </div>
+    <div class="card cu">
+      <div class="accent"></div>
+      <div class="label"><span class="swatch"></span>Copper — LME cash equivalent</div>
+      <div class="value">₹{{CU_PRICE}} <small>/ kg</small></div>
+      <div class="meta">${{CU_USD}}/t cash settlement, {{CU_DATE}} · converted at ~₹{{USDINR}}/USD · LME / Hindustan Copper</div>
+    </div>
+    <div class="stat crit">
+      <div class="num">{{N_CRIT}}</div>
+      <div class="cap">of the 18 pilot items critically behind, premium-adjusted</div>
+    </div>
+    <div class="stat warn">
+      <div class="num">{{N_WARN}}</div>
+      <div class="cap">of the 18 pilot items due for review</div>
+    </div>
+    <div class="stat ok">
+      <div class="num">{{N_OK}}</div>
+      <div class="cap">of the 18 pilot items on track</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <h2>Pilot: 18 most frequently handled items — premium-adjusted suggested rate</h2>
+      <span class="note">Ranked by warehouse/pallet touches (proxy for usage frequency) · suggested rate = today's metal price × your own category premium</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Item code</th>
+          <th>Item</th>
+          <th style="text-align:center">Times handled</th>
+          <th style="text-align:center">Last movement</th>
+          <th style="text-align:right">Your budgeted rate</th>
+          <th style="text-align:right">Suggested rate today</th>
+          <th>Gap</th>
+          <th>Signal</th>
+          <th>Confidence</th>
+        </tr>
+      </thead>
+      <tbody>
+{{PILOT_ROWS}}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Largest gaps — budgeted price vs. today's market</h2>
+      <span class="note">Top 15 of {{N_CLEAN}} aluminium/copper items priced in ₹/kg and comparable to raw metal, no premium adjustment · sorted by gap</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Item code</th>
+          <th>Item</th>
+          <th style="text-align:right">Your budgeted rate</th>
+          <th style="text-align:right">Market rate today</th>
+          <th>Gap</th>
+          <th>Signal</th>
+        </tr>
+      </thead>
+      <tbody>
+{{GAP_ROWS}}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>AI-flagged data quality issues</h2>
+      <span class="note">Caught automatically — no one had to notice these by eye</span>
+    </div>
+    <div class="flagbox">
+      <table>
+        <thead>
+          <tr><th>Item code</th><th>Item</th><th>Budgeted rate</th><th>Why it's flagged</th></tr>
+        </thead>
+        <tbody>
+{{FLAG_ROWS}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <h3>How the pilot's "suggested rate" is calculated</h3>
+      <p>For each pilot item, we look at all other items in the same category (AL1 foil, AL2 conductor/strip, CU1 foil, CU2 strip) currently priced within ±15% of today's raw-metal rate — a proxy for "recently updated, trustworthy" prices. The median premium those items carry over raw metal becomes that category's learned conversion premium, applied to today's metal price. Categories with few or no near-market items are marked Low/Unverified confidence — treat those suggested rates as directional only.</p>
+      <p><b>IEEMA's published Price Variation base-price/index for copper and aluminium</b> (the mechanism your industry already uses to settle transformer/cable price-variation claims) remains the recommended long-term anchor, especially once copper items are no longer universally stale. Pulling the current circular from your IEEMA membership access and cross-checking a few items would raise confidence meaningfully.</p>
+      <h3 style="margin-top:14px;">Still on the roadmap</h3>
+      <ol>
+        <li><b>Item-to-commodity mapping via LLM</b> — auto-classify new items into base metal/form/grade instead of relying on the existing category codes.</li>
+        <li><b>Real purchase-order history</b> — replace the near-market-price proxy with actual PO price trends per item family, once available.</li>
+        <li><b>IEEMA cross-check</b> — validate suggested rates against the published PV base-price circular.</li>
+        <li><b>Surfaced in the Budget screen</b> — pre-fill the <b>Proposed Rate/Unit</b> field with the suggested number and a one-line rationale, approver accepts or overrides.</li>
+        <li><b>Buy-timing signal</b> — combine price trend with <b>Stock</b> and lead-time data.</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    Prices: NALCO price circular (nalcoindia.com/domestic/current-price/), effective {{AL_DATE}} · LME copper cash settlement via westmetall.com, {{CU_DATE}}, converted at an indicative ₹{{USDINR}}/USD · Item data: Dynalektric item master · Industry reference: IEEMA Price Variation Clauses & Indices (ieema.org/pv-clauses-prices-indices/). Auto-refreshed snapshot — not a substitute for a contractual price-variation calculation.
+  </footer>
+
+</div>
+</div>
+</body>
+</html>

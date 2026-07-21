@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynalektric — Commodity Price Signal (Public Summary)</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;
+    --series-2:       #eb6834;
+    --good:           #0ca30c;
+    --warning:        #fab219;
+    --critical:       #d03b3b;
+    --good-tint:      #e7f6e7;
+    --warning-tint:   #fff6e2;
+    --critical-tint:  #fbe9e9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1: #1a1a19; --page-plane: #0d0d0d; --text-primary: #ffffff;
+      --text-secondary: #c3c2b7; --text-muted: #898781; --gridline: #2c2c2a;
+      --border: rgba(255,255,255,0.10); --series-1: #3987e5; --series-2: #d95926;
+      --good-tint: rgba(12,163,12,0.14); --warning-tint: rgba(250,178,25,0.14);
+      --critical-tint: rgba(230,103,103,0.14); --critical: #e66767;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--page-plane); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--text-primary); }
+  .wrap { max-width: 880px; margin:0 auto; padding: 32px 20px 60px; }
+  .topbar { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:20px; }
+  .brand { font-weight:700; font-size:15px; }
+  .tag { font-size:12px; color:var(--text-muted); margin-left:8px; }
+  h1 { font-size:20px; margin:0 0 6px; }
+  .sub { color:var(--text-secondary); font-size:13.5px; max-width:640px; line-height:1.55; margin-bottom:22px; }
+  .notice { background:var(--warning-tint); border:1px solid color-mix(in srgb, var(--warning) 40%, var(--border)); border-radius:8px; padding:10px 14px; font-size:12.5px; color:var(--text-secondary); margin-bottom:22px; }
+  .notice b { color:var(--text-primary); }
+  .cards { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:26px; }
+  @media (max-width:640px){ .cards{ grid-template-columns:1fr; } }
+  .card { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:16px; position:relative; overflow:hidden; }
+  .card .accent { position:absolute; left:0; top:0; bottom:0; width:4px; }
+  .card.al .accent { background:var(--series-1); }
+  .card.cu .accent { background:var(--series-2); }
+  .card .label { font-size:12px; color:var(--text-muted); margin-bottom:6px; }
+  .card .value { font-size:24px; font-weight:650; }
+  .card .value small { font-size:12.5px; font-weight:500; color:var(--text-secondary); }
+  .card .meta { font-size:11px; color:var(--text-muted); margin-top:6px; line-height:1.5; }
+  section { margin-bottom:26px; }
+  h2 { font-size:14.5px; margin:0 0 10px; }
+  .signal-row { display:flex; gap:12px; flex-wrap:wrap; }
+  .pill { flex:1; min-width:140px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; }
+  .pill .n { font-size:26px; font-weight:700; }
+  .pill .l { font-size:11.5px; color:var(--text-muted); margin-top:4px; }
+  .pill.crit .n { color:var(--critical); }
+  .pill.warn .n { color:#a06a00; }
+  .pill.ok .n { color:var(--good); }
+  .confbox { background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:12px 16px; font-size:12.5px; color:var(--text-secondary); }
+  .confbox div { padding:3px 0; }
+  footer { margin-top:20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--gridline); padding-top:12px; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+  <div class="topbar">
+    <div><span class="brand">Dynalektric</span><span class="tag">Commodity Price Signal — Public Summary</span></div>
+  </div>
+  <h1>Aluminium &amp; copper: is the market moving faster than our budgets?</h1>
+  <p class="sub">A public, non-sensitive summary of an internal price-intelligence tool. No item codes, vendor names, or rupee budget figures appear here — only aggregate signal counts and today's public commodity benchmarks.</p>
+  <div class="notice"><b>Note:</b> this page intentionally omits item-level detail. Full item-by-item figures are internal-only.</div>
+
+  <div class="cards">
+    <div class="card al">
+      <div class="accent"></div>
+      <div class="label">Aluminium — NALCO ingot</div>
+      <div class="value">₹361.90 <small>/ kg</small></div>
+      <div class="meta">w.e.f. 18 Jul 2026 · NALCO price circular (nalcoindia.com/domestic/current-price/)</div>
+    </div>
+    <div class="card cu">
+      <div class="accent"></div>
+      <div class="label">Copper — LME cash equivalent</div>
+      <div class="value">₹1,277.17 <small>/ kg</small></div>
+      <div class="meta">17 Jul 2026 · LME cash settlement via westmetall.com</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Frequently-handled items — premium-adjusted signal (18 items tracked)</h2>
+    <div class="signal-row">
+      <div class="pill crit"><div class="n">4</div><div class="l">Critical</div></div>
+      <div class="pill warn"><div class="n">9</div><div class="l">Review</div></div>
+      <div class="pill ok"><div class="n">5</div><div class="l">On track</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>All tracked items — vs. raw metal price, no premium adjustment (101 items)</h2>
+    <div class="signal-row">
+      <div class="pill crit"><div class="n">25</div><div class="l">≥50% behind</div></div>
+      <div class="pill warn"><div class="n">43</div><div class="l">15–50% behind</div></div>
+      <div class="pill ok"><div class="n">33</div><div class="l">Within ±15%</div></div>
+    </div>
+    <p style="font-size:11.5px;color:var(--text-muted);margin-top:8px;">Plus 4 item(s) auto-flagged as likely data-entry errors (priced far below any realistic metal cost).</p>
+  </section>
+
+  <section>
+    <h2>Confidence by category</h2>
+    <div class="confbox">
+      <div>Aluminium foil: Low (thin sample)</div>
+      <div>Aluminium conductor/strip: High</div>
+      <div>Copper foil: Unverified (no current near-market items)</div>
+      <div>Copper strip: Unverified (no current near-market items)</div>
+    </div>
+  </section>
+
+  <footer>
+    Generated 2026-07-21T09:55:00Z UTC · Sources: NALCO price circular, LME cash settlement (westmetall.com) · Internal detail withheld by design. Not a substitute for a contractual price-variation calculation.
+  </footer>
+</div>
+</div>
+</body>
+</html>

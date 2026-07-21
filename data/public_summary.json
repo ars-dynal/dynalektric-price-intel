@@ -1,0 +1,37 @@
+{
+  "generated_at_utc": "2026-07-21T09:55:00Z",
+  "aluminium": {
+    "price_per_kg": 361.90,
+    "price_band": "356,050–367,750/MT",
+    "effective_date": "18 Jul 2026",
+    "source": "NALCO price circular (nalcoindia.com/domestic/current-price/)"
+  },
+  "copper": {
+    "price_per_kg": 1277.17,
+    "usd_per_tonne": 13373.50,
+    "usdinr": 95.5,
+    "settlement_date": "17 Jul 2026",
+    "source": "LME cash settlement via westmetall.com"
+  },
+  "pilot_signals": {
+    "total_items": 18,
+    "critical": 4,
+    "review": 9,
+    "on_track": 5,
+    "note": "18 most frequently handled aluminium/copper items, premium-adjusted vs. today's market. No item codes or rupee amounts shown publicly — full detail is internal-only."
+  },
+  "broad_signals": {
+    "total_items": 101,
+    "critical_ge_50pct": 25,
+    "review_15_to_50pct": 43,
+    "on_track_lt_15pct": 33,
+    "data_quality_flags": 4,
+    "note": "All priced aluminium/copper items (KGS, raw-form) compared directly to today's metal price, no premium adjustment."
+  },
+  "category_confidence": {
+    "AL1_foil": "Low (thin sample)",
+    "AL2_conductor_strip": "High",
+    "CU1_foil": "Unverified (no current near-market items)",
+    "CU2_strip": "Unverified (no current near-market items)"
+  }
+}
