@@ -1,0 +1,47 @@
+name: Live ERP-driven item analysis (aggregate-only)
+
+# Manually triggered for now. Fetches Items + Purchase Orders from the DEPL
+# ERP API, calibrates real premiums and frequency rankings from actual
+# purchase-order history, and writes back ONLY aggregate counts/medians/
+# confidence labels into data/public_summary.json.
+#
+# SAFETY: this repo is public and its Action logs are publicly visible.
+# scripts/erp_analysis.py never prints or commits raw item codes, item
+# names, vendor names/ids, or rupee prices — only aggregate counts, medians,
+# and category-level confidence labels. See that script's module docstring.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run live ERP analysis (aggregate-only output)
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/erp_analysis.py
+
+      - name: Render public dashboard
+        run: python3 scripts/render_public.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/public_summary.json docs/index.html
+          git diff --cached --quiet || git commit -m "Live ERP-driven analysis refresh: $(date -u +%Y-%m-%d)"
+          git push
