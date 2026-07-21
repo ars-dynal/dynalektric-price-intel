@@ -1,0 +1,50 @@
+name: Test DEPL ERP connectivity (ping only)
+
+# Manually triggered only. Deliberately calls ONLY /api/external/ping, which
+# returns a generic "API is reachable" message with no business data — this
+# repo is public and its Action logs are publicly visible, so no endpoint
+# that returns real items/budgets/vendors/POs should ever run here. That
+# data-pulling work belongs in a separate private repo once connectivity
+# is confirmed.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request OAuth token and ping the API
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: |
+          set -e
+          if [ -z "$DEPL_CLIENT_ID" ] || [ -z "$DEPL_CLIENT_SECRET" ]; then
+            echo "Missing DEPL_CLIENT_ID or DEPL_CLIENT_SECRET repo secret."
+            exit 1
+          fi
+
+          echo "Requesting token..."
+          HTTP_STATUS=$(curl -s -o /tmp/token.json -w "%{http_code}" -X POST \
+            "https://depl.consult-trico.com/oauth/token" \
+            -H "Content-Type: application/json" -H "Accept: application/json" \
+            -d "{\"grant_type\":\"client_credentials\",\"client_id\":\"$DEPL_CLIENT_ID\",\"client_secret\":\"$DEPL_CLIENT_SECRET\"}")
+          echo "Token request HTTP status: $HTTP_STATUS"
+
+          ACCESS_TOKEN=$(python3 -c "import json; print(json.load(open('/tmp/token.json')).get('access_token',''))" 2>/dev/null || echo "")
+          if [ -z "$ACCESS_TOKEN" ]; then
+            echo "No access_token in response. (Not printing response body — may contain sensitive info.)"
+            exit 1
+          fi
+          echo "Access token obtained: yes (length: ${#ACCESS_TOKEN} chars)"
+
+          echo "Calling /api/external/ping ..."
+          PING_STATUS=$(curl -s -o /tmp/ping.json -w "%{http_code}" \
+            "https://depl.consult-trico.com/api/external/ping" \
+            -H "Authorization: Bearer $ACCESS_TOKEN" -H "Accept: application/json")
+          echo "Ping HTTP status: $PING_STATUS"
+          echo "Ping response body (documented as non-sensitive: success flag + generic message):"
+          cat /tmp/ping.json
+          echo ""
+          rm -f /tmp/token.json /tmp/ping.json
