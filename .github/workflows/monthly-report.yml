@@ -1,0 +1,63 @@
+name: Monthly RM price intelligence report
+
+on:
+  schedule:
+    # 04:00 UTC on the 1st of each month (09:30 IST)
+    - cron: '0 4 1 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Month to build (YYYY-MM), blank = current'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build the report HTML
+        run: python3 scripts/build_report.py ${{ github.event.inputs.month }}
+
+      - name: Install Chromium for PDF export
+        run: |
+          pip install playwright
+          python3 -m playwright install --with-deps chromium
+
+      - name: Export report to PDF
+        run: |
+          python3 - <<'PY'
+          import glob, os, asyncio
+          from playwright.async_api import async_playwright
+          html = sorted(glob.glob('docs/reports/*.html'))[-1]
+          pdf = html.replace('.html', '.pdf')
+          async def go():
+              async with async_playwright() as p:
+                  b = await p.chromium.launch()
+                  pg = await b.new_page()
+                  await pg.goto('file://' + os.path.abspath(html))
+                  await pg.wait_for_timeout(400)
+                  await pg.pdf(path=pdf, format='A4', print_background=True,
+                               margin={'top':'0','bottom':'0','left':'0','right':'0'})
+                  await b.close()
+          asyncio.run(go())
+          print('Wrote', pdf)
+          PY
+
+      # Uploaded as a private workflow artifact (visible to repo collaborators),
+      # NOT committed to the public Pages site — the report carries procurement
+      # strategy and stays internal unless you decide otherwise.
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rm-price-report
+          path: docs/reports/*.pdf
+          retention-days: 90

@@ -31,13 +31,16 @@ jobs:
       - name: Append today's prices to the monthly history store
         run: python3 scripts/update_history.py
 
-      - name: Render item detail page + trend charts
+      - name: Recompute buy-timing signals
+        run: python3 scripts/buy_signals.py
+
+      - name: Render item detail page + trend charts + signals
         run: python3 scripts/render_items.py
 
       - name: Commit and push if changed
         run: |
           git config user.name "dynalektric-price-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/public_summary.json data/price_history.json docs/index.html docs/items.html
+          git add data/public_summary.json data/price_history.json data/buy_signals.json docs/index.html docs/items.html
           git diff --cached --quiet || git commit -m "Daily public price refresh: $(date -u +%Y-%m-%d)"
           git push

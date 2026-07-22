@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Rendered monthly reports (carry procurement strategy) - delivered as workflow artifacts, not published
+docs/reports/

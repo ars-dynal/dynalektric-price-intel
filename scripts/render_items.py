@@ -63,6 +63,11 @@ def main():
             history = json.load(f)
     except FileNotFoundError:
         history = {"series": {}, "meta": {}}
+    try:
+        with open(os.path.join(ROOT, "data", "buy_signals.json")) as f:
+            signals = json.load(f)
+    except FileNotFoundError:
+        signals = {"signals": {}}
 
     # Configured live benchmark sources, keyed by detected base metal.
     # A metal with no free/configured source maps to None -> blank cell.
@@ -116,8 +121,34 @@ def main():
             f'<div class="value">₹{b["price"]:,.2f} <small>/ kg</small></div>'
             f'<div class="meta">{b["src"]} · {b["asof"]}</div></div>')
 
+    # --- buy-timing signal cards ---
+    SIG_ICON = {"BUY": "▲", "NEUTRAL": "▬", "HOLD": "▼", "NO SIGNAL": "○"}
+    sig_cards = ""
+    for name, sg in signals.get("signals", {}).items():
+        cls = sg.get("cls", "none")
+        pos = sg.get("pos")
+        bar = ""
+        if pos is not None:
+            bar = (f'<div class="posbar"><div class="posfill" style="left:{pos*100:.0f}%"></div>'
+                   f'<span class="poslo">₹{sg.get("lo",0):,.0f}</span>'
+                   f'<span class="poshi">₹{sg.get("hi",0):,.0f}</span></div>')
+        cur = f'₹{sg["cur"]:,.0f}/kg' if sg.get("cur") is not None else "—"
+        sig_cards += (
+            f'<div class="sigcard sc-{cls}">'
+            f'<div class="sighead"><span class="sigbadge sb-{cls}">{SIG_ICON.get(sg["signal"],"")} {sg["signal"]}</span>'
+            f'<span class="signame">{name}</span><span class="sigcur">{cur}</span></div>'
+            f'<div class="sigline">{sg.get("headline","")}</div>'
+            f'{bar}'
+            f'<div class="sigreason">{sg.get("reason","")}</div>'
+            f'<div class="sigaction"><b>Action:</b> {sg.get("action","")}</div>'
+            f'</div>')
+    sig_generated = signals.get("generated_at_utc", "")
+    sig_disclaimer = signals.get("disclaimer", "")
+
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     html = (TEMPLATE
+            .replace("{{SIGNAL_CARDS}}", sig_cards)
+            .replace("{{SIG_DISCLAIMER}}", sig_disclaimer)
             .replace("{{BENCH_CARDS}}", bench_cards)
             .replace("{{HISTORY}}", json.dumps(history, ensure_ascii=False))
             .replace("{{DATA}}", json.dumps(rows, ensure_ascii=False))
@@ -151,8 +182,23 @@ h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--tx2);font-size:13.5px;margin
 .card .value{font-size:24px;font-weight:650}.card .value small{font-size:12px;color:var(--tx2);font-weight:500}
 .card .meta{font-size:11px;color:var(--mut);margin-top:5px}
 .tag-ind{font-size:9.5px;font-weight:700;color:#a06a00;border:1px solid #fab219;border-radius:4px;padding:1px 5px;margin-left:4px}
+.signals{margin-bottom:24px}
+.signals h2,.trends h2{font-size:15px;margin:0 0 3px}.signals .h2sub,.trends .h2sub{font-size:12px;color:var(--mut);margin:0 0 12px}
 .trends{margin-bottom:24px}
-.trends h2{font-size:15px;margin:0 0 3px}.trends .h2sub{font-size:12px;color:var(--mut);margin:0 0 12px}
+.sigrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.sigrid{grid-template-columns:1fr}}
+.sigcard{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:14px 15px;border-left:4px solid var(--mut)}
+.sc-buy{border-left-color:var(--good)}.sc-hold{border-left-color:var(--crit)}.sc-neutral{border-left-color:var(--warn)}.sc-none{border-left-color:var(--mut)}
+.sighead{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.sigbadge{font-size:11px;font-weight:800;padding:3px 9px;border-radius:6px;letter-spacing:.3px}
+.sb-buy{background:var(--good);color:#fff}.sb-hold{background:var(--crit);color:#fff}.sb-neutral{background:var(--warn);color:#3a2c00}.sb-none{background:var(--grid);color:var(--tx2)}
+.signame{font-weight:650;font-size:13.5px}.sigcur{margin-left:auto;font-weight:650;font-variant-numeric:tabular-nums;font-size:13px}
+.sigline{font-size:12.5px;font-weight:600;margin-bottom:9px}
+.posbar{position:relative;height:6px;background:linear-gradient(90deg,var(--goodt),var(--warnt),var(--critt));border-radius:4px;margin:16px 0 14px}
+.posfill{position:absolute;top:-3px;width:3px;height:12px;background:var(--tx);border-radius:2px;transform:translateX(-50%)}
+.poslo,.poshi{position:absolute;top:8px;font-size:9.5px;color:var(--mut)}.poslo{left:0}.poshi{right:0}
+.sigreason{font-size:11.5px;color:var(--tx2);line-height:1.5;margin-bottom:8px}
+.sigaction{font-size:11.5px;line-height:1.45}.sigaction b{color:var(--tx)}
 .chartgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 @media(max-width:820px){.chartgrid{grid-template-columns:1fr}}
 .chartcard{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:13px 14px 10px;position:relative}
@@ -184,6 +230,11 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <p class="sub">The <b>Live Market ₹/kg</b> column shows today's benchmark price for each item's base metal — the same value for every item of a given metal. It is a live commodity reference only, not an estimated selling or purchase price. No gap, premium, or processing cost is calculated. "ERP rate" is your item-master price, shown as-is.</p>
 <p class="gen">Auto-refreshed daily (9:00 AM IST). Last generated: {{GENERATED}} · {{N_TOTAL}} items.</p>
 <div class="cards">{{BENCH_CARDS}}</div>
+<section class="signals">
+ <h2>Buy-timing monitor — should we buy now?</h2>
+ <p class="h2sub">Each metal read against its own trailing-12-month range. BUY = historically low (stock-up window); HOLD = near its high (wait for a dip). {{SIG_DISCLAIMER}}</p>
+ <div class="sigrid">{{SIGNAL_CARDS}}</div>
+</section>
 <section class="trends">
  <h2>Price trend — last year &amp; current year</h2>
  <p class="h2sub">Monthly ₹/kg per base metal. Solid = actual; dashed = naive linear projection (next 3 months), not a market forecast. Series self-builds daily.</p>

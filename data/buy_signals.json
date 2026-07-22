@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "2026-07-22T19:44:21Z",
+  "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
+  "signals": {
+    "Copper": {
+      "signal": "HOLD",
+      "cls": "hold",
+      "headline": "Elevated \u2014 near the top of its year",
+      "reason": "At \u20b91,300/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,300), +5% vs its 6-month average, 3-month momentum +7%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
+      "cur": 1299.78,
+      "lo": 1129.6,
+      "hi": 1299.78,
+      "pos": 1.0,
+      "mom3": 6.9,
+      "vs_avg6": 4.9
+    },
+    "Aluminium": {
+      "signal": "HOLD",
+      "cls": "hold",
+      "headline": "Elevated \u2014 near the top of its year",
+      "reason": "At \u20b9362/kg it sits 100% up its trailing-12-month range (\u20b9241\u2013\u20b9362), +7% vs its 6-month average, 3-month momentum +2%. Multi-year high; NALCO guides that aluminium may ease into FY27 as alumina softens. A pullback is more likely than a further leg up.",
+      "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
+      "cur": 361.9,
+      "lo": 240.8,
+      "hi": 361.9,
+      "pos": 1.0,
+      "mom3": 2.5,
+      "vs_avg6": 7.4
+    },
+    "CRGO steel": {
+      "signal": "NO SIGNAL",
+      "cls": "none",
+      "headline": "Insufficient / indicative data",
+      "reason": "No live benchmark configured \u2014 a buy signal cannot be computed until a price source is set up.",
+      "action": "Configure a price source or wait for history to build.",
+      "cur": 230.0
+    }
+  }
+}
