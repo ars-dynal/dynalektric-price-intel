@@ -44,10 +44,11 @@ def main():
         '{{BROAD_REVIEW}}': str(broad['review_15_to_50pct']),
         '{{BROAD_OK}}': str(broad['on_track_lt_15pct']),
         '{{DATA_FLAGS}}': str(broad['data_quality_flags']),
-        '{{CONF_AL1}}': conf['AL1_foil'],
-        '{{CONF_AL2}}': conf['AL2_conductor_strip'],
-        '{{CONF_CU1}}': conf['CU1_foil'],
-        '{{CONF_CU2}}': conf['CU2_strip'],
+        # .get() with a fallback: older runs wrote AL1_foil/CU1_foil-style
+        # keys under a since-retired 4-way split; new runs write
+        # aluminium/copper directly. Falls back to 'N/A' if neither is set yet.
+        '{{CONF_AL}}': conf.get('aluminium', conf.get('AL1_foil', 'N/A')),
+        '{{CONF_CU}}': conf.get('copper', conf.get('CU1_foil', 'N/A')),
         '{{GENERATED_AT}}': d['generated_at_utc'],
     }
     for k, v in replacements.items():

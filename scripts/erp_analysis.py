@@ -3,8 +3,9 @@
 Live ERP-driven commodity price analysis for Dynalektric.
 
 Pulls Items + Purchase Orders from the DEPL ERP API, filters to aluminium/
-copper raw-material items (categories AL1/AL2/CU1/CU2, priced in KGS, not a
-finished/insulated form), and uses REAL purchase-order transaction prices to:
+copper raw-material items (item_category.category_code 'AL-222-'/'CU-222-',
+priced in KGS, not a finished/insulated form), and uses REAL purchase-order
+transaction prices to:
 
   1. Calibrate each category's premium over today's raw-metal price from
      actual recent purchases, instead of the old "near-market items" proxy.
@@ -29,11 +30,18 @@ import sys
 import time
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 import requests
 
 BASE = "https://depl.consult-trico.com"
-METAL_CATEGORIES = {"AL1", "AL2", "CU1", "CU2"}
+# Confirmed against live data (2026-07-22 debug run): item_category.category_code
+# is 'AL-222-' for every aluminium item and 'CU-222-' for every copper item.
+# There is no live-data equivalent of the old AL1/AL2/CU1/CU2 foil-vs-strip
+# split (a code-prefix check across 119 real AL/CU items found 0 matches on
+# any AL1/AL2/CU1/CU2 prefix) - so this collapses to two categories.
+CATEGORY_MAP = {"AL-222-": "AL", "CU-222-": "CU"}
+METAL_CATEGORIES = {"AL", "CU"}
 EXCLUDE_KW = re.compile(r'cable|panel|plate|wire|busbar|desk|sleeve', re.I)
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SUMMARY_PATH = os.path.join(ROOT, 'data', 'public_summary.json')
@@ -53,11 +61,20 @@ def auth():
 
 
 def paginate(session, path, params):
+    """Yields records across all pages. Explicitly re-applies `params` (e.g.
+    per_page) on every request, not just the first - Laravel's next_page_url
+    does not reliably preserve custom per_page here, which previously caused
+    pagination to silently fall back to a small default page size on every
+    page after the first (confirmed via debug run: 201 pages for what should
+    have been ~30-90 pages at per_page=100)."""
     url = f"{BASE}{path}"
-    page_params = dict(params)
-    page_count = 0
+    desired_params = dict(params)
     while url:
-        r = session.get(url, params=page_params if page_count == 0 else None, timeout=30)
+        parts = urlsplit(url)
+        query = dict(parse_qsl(parts.query))
+        query.update(desired_params)
+        full_url = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), ''))
+        r = session.get(full_url, timeout=30)
         r.raise_for_status()
         body = r.json()
         paginator = body.get("data", {})
@@ -65,7 +82,6 @@ def paginate(session, path, params):
         for rec in records:
             yield rec
         url = paginator.get("next_page_url")
-        page_count += 1
         time.sleep(REQUEST_DELAY_S)
 
 
@@ -73,8 +89,9 @@ def fetch_metal_items(session):
     """Returns dict: item_id -> {category, uom_name, default_price, name_excluded}"""
     items = {}
     for rec in paginate(session, "/api/external/items", {"per_page": PER_PAGE}):
-        cat = (rec.get("item_category") or {}).get("category_code")
-        if cat not in METAL_CATEGORIES:
+        code = (rec.get("item_category") or {}).get("category_code")
+        cat = CATEGORY_MAP.get(code)
+        if not cat:
             continue
         uom_name = (rec.get("uom") or {}).get("name")
         name = rec.get("name") or ""
@@ -118,7 +135,7 @@ def main():
     session = requests.Session()
     session.headers.update({"Authorization": f"Bearer {token}", "Accept": "application/json"})
 
-    print("Fetching items (categories AL1/AL2/CU1/CU2 only)...")
+    print("Fetching items (categories AL-222-/CU-222- only)...")
     items = fetch_metal_items(session)
     print(f"Matched {len(items)} aluminium/copper items across all categories (counts only, no codes/names).")
 
@@ -175,7 +192,7 @@ def main():
 
     # --- broad signal counts: default_price vs raw metal, no premium ---
     broad_crit = broad_review = broad_ok = broad_flagged = 0
-    flag_floor = {"AL1": 100, "AL2": 100, "CU1": 200, "CU2": 200}
+    flag_floor = {"AL": 100, "CU": 200}
     broad_total = 0
     for iid in comparable_ids:
         dp = items[iid]["default_price"]
@@ -236,10 +253,8 @@ def main():
         "note": "All priced, comparable aluminium/copper items (live ERP), vs. today's metal price, no premium adjustment."
     }
     summary["category_confidence"] = {
-        "AL1_foil": f"{confidence['AL1']} (n={sample_n['AL1']} real POs, last 12mo preferred)",
-        "AL2_conductor_strip": f"{confidence['AL2']} (n={sample_n['AL2']} real POs, last 12mo preferred)",
-        "CU1_foil": f"{confidence['CU1']} (n={sample_n['CU1']} real POs, last 12mo preferred)",
-        "CU2_strip": f"{confidence['CU2']} (n={sample_n['CU2']} real POs, last 12mo preferred)",
+        "aluminium": f"{confidence['AL']} (n={sample_n['AL']} real POs, last 12mo preferred)",
+        "copper": f"{confidence['CU']} (n={sample_n['CU']} real POs, last 12mo preferred)",
     }
     summary["data_source"] = "live_erp_purchase_order_history"
     summary["generated_at_utc"] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
