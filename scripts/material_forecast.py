@@ -113,6 +113,28 @@ def lin(ys):
     return (sy - b * sx) / n, b
 
 
+def month_of(po_date):
+    """Return YYYY-MM from an ERP date. Trico uses DD/MM/YYYY; also tolerate ISO."""
+    s = (po_date or "").strip()
+    if not s:
+        return None
+    if "/" in s:
+        parts = s.split("/")
+        if len(parts) == 3 and len(parts[2]) == 4:
+            d, mo, y = parts
+            try:
+                return f"{int(y):04d}-{int(mo):02d}"
+            except ValueError:
+                return None
+    if "-" in s and len(s) >= 7:
+        try:
+            y, mo = s[:7].split("-")
+            return f"{int(y):04d}-{int(mo):02d}"
+        except ValueError:
+            return None
+    return None
+
+
 def add_months(m, k):
     y, mo = map(int, m.split("-")); mo += k
     y += (mo - 1) // 12; mo = (mo - 1) % 12 + 1
@@ -152,8 +174,8 @@ def main():
     monthly = defaultdict(lambda: defaultdict(float))  # metal -> {YYYY-MM: kg}
     qty_field_seen, lines_seen, lines_qty = set(), 0, 0
     for po in paginate(session, "/api/external/purchase-orders", {"per_page": PER_PAGE}):
-        pod = (po.get("po_date") or "")[:7]  # YYYY-MM
-        if len(pod) != 7:
+        pod = month_of(po.get("po_date"))  # -> YYYY-MM (Trico dates are DD/MM/YYYY)
+        if not pod:
             continue
         for line in (po.get("items") or []):
             iid = line.get("item_id")
