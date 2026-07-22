@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   refresh:
@@ -34,6 +35,9 @@ jobs:
       - name: Recompute buy-timing signals
         run: python3 scripts/buy_signals.py
 
+      - name: Evaluate procurement alerts
+        run: python3 scripts/alerts.py
+
       - name: Render item detail page + trend charts + signals
         run: python3 scripts/render_items.py
 
@@ -41,6 +45,20 @@ jobs:
         run: |
           git config user.name "dynalektric-price-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/public_summary.json data/price_history.json data/buy_signals.json docs/index.html docs/items.html
+          git add data/public_summary.json data/price_history.json data/buy_signals.json data/alerts.json docs/index.html docs/items.html
           git diff --cached --quiet || git commit -m "Daily public price refresh: $(date -u +%Y-%m-%d)"
           git push
+
+      - name: Open an issue if there are new alerts
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -s data/new_alerts.md ]; then
+            gh issue create \
+              --title "Price alert — $(date -u +%Y-%m-%d)" \
+              --body-file data/new_alerts.md \
+              --repo "${GITHUB_REPOSITORY}" || echo "issue creation skipped/failed"
+          else
+            echo "No new alerts."
+          fi

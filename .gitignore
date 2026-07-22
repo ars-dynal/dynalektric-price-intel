@@ -6,3 +6,4 @@ __pycache__/
 docs/reports/
 data/consumption_forecast.json
 data/budget_check.json
+data/new_alerts.md
