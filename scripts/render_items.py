@@ -58,6 +58,11 @@ def main():
         doc = json.load(f)
     with open(os.path.join(ROOT, "data", "public_summary.json")) as f:
         s = json.load(f)
+    try:
+        with open(os.path.join(ROOT, "data", "price_history.json")) as f:
+            history = json.load(f)
+    except FileNotFoundError:
+        history = {"series": {}, "meta": {}}
 
     # Configured live benchmark sources, keyed by detected base metal.
     # A metal with no free/configured source maps to None -> blank cell.
@@ -114,6 +119,7 @@ def main():
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     html = (TEMPLATE
             .replace("{{BENCH_CARDS}}", bench_cards)
+            .replace("{{HISTORY}}", json.dumps(history, ensure_ascii=False))
             .replace("{{DATA}}", json.dumps(rows, ensure_ascii=False))
             .replace("{{GENERATED}}", generated)
             .replace("{{N_TOTAL}}", str(len(rows))))
@@ -145,6 +151,21 @@ h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--tx2);font-size:13.5px;margin
 .card .value{font-size:24px;font-weight:650}.card .value small{font-size:12px;color:var(--tx2);font-weight:500}
 .card .meta{font-size:11px;color:var(--mut);margin-top:5px}
 .tag-ind{font-size:9.5px;font-weight:700;color:#a06a00;border:1px solid #fab219;border-radius:4px;padding:1px 5px;margin-left:4px}
+.trends{margin-bottom:24px}
+.trends h2{font-size:15px;margin:0 0 3px}.trends .h2sub{font-size:12px;color:var(--mut);margin:0 0 12px}
+.chartgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.chartgrid{grid-template-columns:1fr}}
+.chartcard{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:13px 14px 10px;position:relative}
+.chartcard .ctitle{font-size:12.5px;font-weight:650;display:flex;align-items:center;gap:6px}
+.chartcard .cdot{width:9px;height:9px;border-radius:2px;display:inline-block}
+.chartcard .cnow{font-size:20px;font-weight:650;margin-top:2px}.chartcard .cnow small{font-size:11px;color:var(--tx2);font-weight:500}
+.chartcard .cchg{font-size:11.5px;margin-left:6px;font-weight:600}.up{color:#0ca30c}.down{color:#d03b3b}
+.chartcard .csrc{font-size:10.5px;color:var(--mut);margin-top:2px}
+.chartcard svg{display:block;width:100%;height:auto;margin-top:6px;overflow:visible}
+.chartcard .axlbl{fill:var(--mut);font-size:9px}
+.chartcard .tip{position:absolute;pointer-events:none;background:var(--tx);color:var(--bg);font-size:11px;padding:3px 7px;border-radius:5px;opacity:0;transform:translate(-50%,-130%);white-space:nowrap;transition:opacity .08s}
+.chartcard .indbadge{font-size:9px;font-weight:700;color:#a06a00;border:1px solid #fab219;border-radius:4px;padding:1px 4px;margin-left:auto}
+.forecast-note{font-size:11px;color:var(--mut);margin-top:8px}
 .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
 .controls input,.controls select{font-size:13px;padding:7px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--surf);color:var(--tx)}
 .controls input{min-width:230px}.count{font-size:12px;color:var(--mut);margin-left:auto}
@@ -163,6 +184,12 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <p class="sub">The <b>Live Market ₹/kg</b> column shows today's benchmark price for each item's base metal — the same value for every item of a given metal. It is a live commodity reference only, not an estimated selling or purchase price. No gap, premium, or processing cost is calculated. "ERP rate" is your item-master price, shown as-is.</p>
 <p class="gen">Auto-refreshed daily (9:00 AM IST). Last generated: {{GENERATED}} · {{N_TOTAL}} items.</p>
 <div class="cards">{{BENCH_CARDS}}</div>
+<section class="trends">
+ <h2>Price trend — last year &amp; current year</h2>
+ <p class="h2sub">Monthly ₹/kg per base metal. Solid = actual; dashed = naive linear projection (next 3 months), not a market forecast. Series self-builds daily.</p>
+ <div class="chartgrid" id="charts"></div>
+ <p class="forecast-note">Copper = LME cash × USD/INR. Aluminium = NALCO ingot (rebased to basic-price basis; pre-Jul-2026 points are rebased estimates). CRGO = indicative, no historical feed.</p>
+</section>
 <div class="controls">
  <input id="q" placeholder="Search code or item name..." oninput="render()">
  <select id="metal" onchange="render()"><option value="">All metals</option><option>Copper</option><option>Aluminium</option><option>CRGO steel</option><option>Stainless Steel</option><option>Mild Steel</option></select>
@@ -177,6 +204,50 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a></footer>
 </div>
 <script>
+const HISTORY={{HISTORY}};
+const MCOLOR={Copper:'var(--cu)',Aluminium:'var(--al)','CRGO steel':'var(--st)'};
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtM(m){const a=m.split('-');return MON[+a[1]-1]+" '"+a[0].slice(2)}
+function addMonths(m,k){let a=m.split('-'),y=+a[0],mo=+a[1]+k;y+=Math.floor((mo-1)/12);mo=((mo-1)%12+12)%12+1;return y+'-'+String(mo).padStart(2,'0')}
+function lin(pts){const n=pts.length;let sx=0,sy=0,sxy=0,sxx=0;pts.forEach(p=>{sx+=p.x;sy+=p.y;sxy+=p.x*p.y;sxx+=p.x*p.x});const den=(n*sxx-sx*sx)||1;const b=(n*sxy-sx*sy)/den;return{a:(sy-b*sx)/n,b:b}}
+function drawCharts(){
+ const grid=document.getElementById('charts');if(!grid)return;grid.innerHTML='';
+ Object.entries(HISTORY.series||{}).forEach(([metal,s])=>{
+  const pts=(s.points||[]).slice();const color=MCOLOR[metal]||'var(--st)';
+  const last=pts.length?pts[pts.length-1].v:null;
+  const card=document.createElement('div');card.className='chartcard';
+  let chg='';if(pts.length>=2){const pv=pts[pts.length-2].v;const d=(last-pv)/pv*100;chg='<span class="cchg '+(d>=0?'up':'down')+'">'+(d>=0?'▲':'▼')+' '+Math.abs(d).toFixed(1)+'%</span>';}
+  const ind=s.indicative?'<span class="indbadge">indicative</span>':'';
+  card.innerHTML='<div class="ctitle"><span class="cdot" style="background:'+color+'"></span>'+metal+ind+'</div>'+
+   '<div class="cnow">₹'+(last!=null?last.toLocaleString('en-IN'):'—')+' <small>/kg</small>'+chg+'</div>'+
+   '<div class="csrc">'+(s.source||'')+'</div>';
+  if(pts.length<2){card.innerHTML+='<div class="csrc" style="margin-top:10px">Trend builds as daily data collects.</div>';grid.appendChild(card);return;}
+  const idx=pts.map((p,i)=>({x:i,y:p.v}));const fit=lin(idx.slice(-Math.min(6,idx.length)));
+  const fc=[];for(let k=1;k<=3;k++){const x=pts.length-1+k;fc.push({m:addMonths(pts[pts.length-1].m,k),v:Math.max(0,fit.a+fit.b*x),x:x})}
+  const all=pts.map(p=>p.v).concat(fc.map(p=>p.v));let mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);const pad=(mx-mn)*0.18||1;mn-=pad;mx+=pad;
+  const W=320,H=150,L=8,R=8,T=8,Bt=18,totalX=pts.length-1+3;
+  const sx=x=>L+(x/totalX)*(W-L-R),sy=v=>T+(1-(v-mn)/(mx-mn))*(H-T-Bt);
+  let g='';for(let k=0;k<=2;k++){const gv=mn+(mx-mn)*k/2,yy=sy(gv);g+='<line x1="'+L+'" y1="'+yy+'" x2="'+(W-R)+'" y2="'+yy+'" stroke="var(--grid)" stroke-width="1"/><text x="'+L+'" y="'+(yy-2)+'" class="axlbl">₹'+Math.round(gv)+'</text>'}
+  const ap=pts.map((p,i)=>(i?'L':'M')+sx(i).toFixed(1)+' '+sy(p.v).toFixed(1)).join(' ');
+  const fp='M'+sx(pts.length-1).toFixed(1)+' '+sy(last).toFixed(1)+' '+fc.map(p=>'L'+sx(p.x).toFixed(1)+' '+sy(p.v).toFixed(1)).join(' ');
+  const xl='<text x="'+sx(0)+'" y="'+(H-4)+'" class="axlbl">'+fmtM(pts[0].m)+'</text>'+
+   '<text x="'+sx(pts.length-1)+'" y="'+(H-4)+'" class="axlbl" text-anchor="middle">'+fmtM(pts[pts.length-1].m)+'</text>'+
+   '<text x="'+sx(totalX)+'" y="'+(H-4)+'" class="axlbl" text-anchor="end">'+fmtM(fc[fc.length-1].m)+'</text>';
+  const dots=pts.map((p,i)=>'<circle cx="'+sx(i).toFixed(1)+'" cy="'+sy(p.v).toFixed(1)+'" r="10" fill="transparent" data-m="'+p.m+'" data-v="'+p.v+'" class="hv"/>').join('')+
+   fc.map(p=>'<circle cx="'+sx(p.x).toFixed(1)+'" cy="'+sy(p.v).toFixed(1)+'" r="10" fill="transparent" data-m="'+p.m+'" data-v="'+p.v.toFixed(0)+'" data-f="1" class="hv"/>').join('');
+  card.innerHTML+='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+metal+' price trend">'+g+
+   '<path d="'+fp+'" fill="none" stroke="'+color+'" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>'+
+   '<path d="'+ap+'" fill="none" stroke="'+color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'+
+   '<circle cx="'+sx(pts.length-1).toFixed(1)+'" cy="'+sy(last).toFixed(1)+'" r="3" fill="'+color+'"/>'+xl+dots+'</svg><div class="tip"></div>';
+  grid.appendChild(card);
+  const tip=card.querySelector('.tip');
+  card.querySelectorAll('.hv').forEach(c=>{
+   c.addEventListener('mouseenter',()=>{const f=c.getAttribute('data-f');tip.textContent=fmtM(c.getAttribute('data-m'))+': ₹'+(+c.getAttribute('data-v')).toLocaleString('en-IN')+(f?' (proj.)':'');tip.style.opacity=1});
+   c.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();tip.style.left=(e.clientX-r.left)+'px';tip.style.top=(e.clientY-r.top)+'px'});
+   c.addEventListener('mouseleave',()=>tip.style.opacity=0);
+  });
+ });
+}
 const DATA={{DATA}};
 let sortKey='metal',sortDir=1;
 function metalCls(m){return m==='Copper'?'cu':m==='Aluminium'?'al':m==='CRGO steel'?'st':m==='Stainless Steel'?'ss':m==='Mild Steel'?'ms':''}
@@ -200,6 +271,7 @@ function render(){
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td><td class="mono srccell">'+d.src+'</td></tr>';}).join('');
 }
+drawCharts();
 render();
 </script></body></html>"""
 
