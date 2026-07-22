@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dynalektric - Forward Material Requirements</title><style>
+:root{color-scheme:light dark;--bg:#f9f9f7;--surf:#fff;--tx:#0b0b0b;--tx2:#52514e;--mut:#898781;--bd:rgba(11,11,11,.1);--grid:#e6e5df}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0d0d;--surf:#1a1a19;--tx:#fff;--tx2:#c3c2b7;--bd:rgba(255,255,255,.12);--grid:#2c2c2a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
+.brand{display:flex;align-items:baseline;gap:9px;margin-bottom:6px}.brand b{font-size:15px}.brand span{font-size:12px;color:var(--mut)}
+h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--tx2);font-size:13px;margin:0 0 18px;max-width:820px;line-height:1.5}
+.tot{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:16px 18px;margin-bottom:20px;display:flex;align-items:baseline;gap:12px}
+.tot .big{font-size:30px;font-weight:700}.tot .lbl{font-size:13px;color:var(--tx2)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.mc{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.mct{font-size:14px;font-weight:650;display:flex;align-items:center;gap:7px}.dot{width:10px;height:10px;border-radius:2px}
+.sig{margin-left:auto;color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:6px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:12px 0}
+.k{font-size:10.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}.v{font-size:17px;font-weight:650;margin-top:2px}.s{font-size:11.5px;color:var(--tx2)}
+.rec{font-size:12px;color:var(--tx2);line-height:1.5;border-top:1px solid var(--grid);padding-top:9px}
+.chartcard{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-top:16px}
+.chartcard .ct{font-size:13px;font-weight:650;margin-bottom:8px}.chartcard svg{width:100%;height:auto}.cax{fill:var(--mut);font-size:9px}
+.leg{display:flex;gap:14px;font-size:11px;color:var(--tx2);margin-top:6px}.leg i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:4px}
+footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
+</style></head><body><div class="wrap">
+<div class="brand"><b>Dynalektric</b><span>Forward Material Requirements — from the order book</span></div>
+<h1>What we'll need to buy, from committed orders</h1>
+<p class="sub">Forward demand = each budget's raw-material quantities scheduled by its project delivery date, netted against current stock, priced at today's live metal rate, and paired with the buy-timing signal. Covers the next 148 budgets with metal lines.</p>
+<div class="tot"><span class="big">₹0</span><span class="lbl">net metal to buy over the next 6 months, at today's prices</span></div>
+<div class="cards"><div class="mc" style="border-top:3px solid #2a78d6">
+          <div class="mct"><span class="dot" style="background:#2a78d6"></span>Aluminium
+            <span class="sig" style="background:#d03b3b">HOLD</span></div>
+          <div class="grid3">
+            <div><div class="k">Committed demand</div><div class="v">58 kg</div><div class="s">next 6 mo</div></div>
+            <div><div class="k">In stock</div><div class="v">22,992 kg</div></div>
+            <div><div class="k">Net to buy</div><div class="v" style="color:#0ca30c">0 kg</div><div class="s">₹0</div></div>
+          </div>
+          <div class="rec"><b>Recommendation:</b> covered by stock · signal <b>HOLD</b> — Cover essential needs only; wait for a dip before opportunistic buying.</div>
+        </div><div class="mc" style="border-top:3px solid #eb6834">
+          <div class="mct"><span class="dot" style="background:#eb6834"></span>Copper
+            <span class="sig" style="background:#d03b3b">HOLD</span></div>
+          <div class="grid3">
+            <div><div class="k">Committed demand</div><div class="v">2,734 kg</div><div class="s">next 6 mo</div></div>
+            <div><div class="k">In stock</div><div class="v">32,098 kg</div></div>
+            <div><div class="k">Net to buy</div><div class="v" style="color:#0ca30c">0 kg</div><div class="s">₹0</div></div>
+          </div>
+          <div class="rec"><b>Recommendation:</b> covered by stock · signal <b>HOLD</b> — Cover essential needs only; wait for a dip before opportunistic buying.</div>
+        </div></div>
+<div class="chartcard"><div class="ct">Committed demand by delivery month (kg)</div><svg viewBox="0 0 640 200"><line x1="46" y1="174" x2="630" y2="174" stroke="var(--grid)"/><text x="42" y="177" text-anchor="end" class="cax">0</text><line x1="46" y1="93" x2="630" y2="93" stroke="var(--grid)"/><text x="42" y="96" text-anchor="end" class="cax">1,132</text><line x1="46" y1="12" x2="630" y2="12" stroke="var(--grid)"/><text x="42" y="15" text-anchor="end" class="cax">2,265</text><rect x="68.7" y="169.9" width="24.0" height="4.1" rx="2" fill="#2a78d6"/><rect x="94.7" y="167.8" width="24.0" height="6.2" rx="2" fill="#eb6834"/><text x="95" y="194" text-anchor="middle" class="cax">Jul '26</text><rect x="192.0" y="131.3" width="24.0" height="42.7" rx="2" fill="#eb6834"/><text x="192" y="194" text-anchor="middle" class="cax">Aug '26</text><text x="289" y="194" text-anchor="middle" class="cax">Sep '26</text><text x="387" y="194" text-anchor="middle" class="cax">Oct '26</text><rect x="484.0" y="29.4" width="24.0" height="144.6" rx="2" fill="#eb6834"/><text x="484" y="194" text-anchor="middle" class="cax">Nov '26</text><rect x="581.3" y="172.1" width="24.0" height="1.9" rx="2" fill="#eb6834"/><text x="581" y="194" text-anchor="middle" class="cax">Dec '26</text></svg>
+<div class="leg"><span><i style="background:#eb6834"></i>Copper</span><span><i style="background:#2a78d6"></i>Aluminium</span></div></div>
+<footer>Source: DEPL/Trico ERP budgets (bom_budget_items x delivery_date) + inventory + live LME/NALCO prices. Generated 2026-07-22 20:32 UTC. Aggregate view — per-budget detail stays private. <a href="./items.html" style="color:#2a78d6">Live prices →</a> · <a href="./consumption.html" style="color:#2a78d6">Consumption →</a></footer>
+</div></body></html>
