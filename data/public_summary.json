@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-22T11:21:57Z",
+  "generated_at_utc": "2026-07-22T12:42:29Z",
   "aluminium": {
     "price_per_kg": 361.9,
     "price_band": "356,050\u2013367,750/MT",
@@ -14,24 +14,25 @@
     "source": "LME cash settlement via westmetall.com"
   },
   "pilot_signals": {
-    "total_items": 18,
-    "critical": 4,
-    "review": 9,
-    "on_track": 5,
-    "note": "18 most frequently handled aluminium/copper items, premium-adjusted vs. today's market. No item codes or rupee amounts shown publicly \u2014 full detail is internal-only."
+    "total_items": 0,
+    "critical": 0,
+    "review": 0,
+    "on_track": 0,
+    "note": "Top items ranked by REAL purchase-order frequency (live ERP data), premium-adjusted using calibrated premiums from actual recent purchase prices. No item codes or rupee amounts shown publicly."
   },
   "broad_signals": {
-    "total_items": 101,
-    "critical_ge_50pct": 25,
-    "review_15_to_50pct": 43,
-    "on_track_lt_15pct": 33,
-    "data_quality_flags": 4,
-    "note": "All priced aluminium/copper items (KGS, raw-form) compared directly to today's metal price, no premium adjustment."
+    "total_items": 0,
+    "critical_ge_50pct": 0,
+    "review_15_to_50pct": 0,
+    "on_track_lt_15pct": 0,
+    "data_quality_flags": 0,
+    "note": "All priced, comparable aluminium/copper items (live ERP), vs. today's metal price, no premium adjustment."
   },
   "category_confidence": {
-    "AL1_foil": "Low (thin sample)",
-    "AL2_conductor_strip": "High",
-    "CU1_foil": "Unverified (no current near-market items)",
-    "CU2_strip": "Unverified (no current near-market items)"
-  }
+    "AL1_foil": "Unverified (n=0 real POs, last 12mo preferred)",
+    "AL2_conductor_strip": "Unverified (n=0 real POs, last 12mo preferred)",
+    "CU1_foil": "Unverified (n=0 real POs, last 12mo preferred)",
+    "CU2_strip": "Unverified (n=0 real POs, last 12mo preferred)"
+  },
+  "data_source": "live_erp_purchase_order_history"
 }
