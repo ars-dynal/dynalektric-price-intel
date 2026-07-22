@@ -1,0 +1,44 @@
+name: AI item classification (free open-source LLM)
+
+# Classifies raw-material items by base metal (Copper/Aluminium/CRGO steel/
+# Stainless/Mild steel/Other) using a free OpenAI-compatible LLM (Groq by
+# default). Only NEW items are classified each run (cache). Item names are not
+# sensitive; the cache (item code -> base metal) is committed.
+#
+# Requires secrets: LLM_API_KEY (a free Groq key) + DEPL_CLIENT_ID/SECRET.
+# Optionally set repo variables LLM_BASE_URL / LLM_MODEL to use another provider.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Weekly, Mondays 05:15 UTC
+    - cron: '15 5 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  classify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Classify items
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/classify_items.py
+      - name: Commit classification cache if changed
+        run: |
+          git config user.name "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/item_classification.json
+          git diff --cached --quiet || git commit -m "Item classification refresh: $(date -u +%Y-%m-%d)"
+          git push

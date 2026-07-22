@@ -68,6 +68,11 @@ def main():
             signals = json.load(f)
     except FileNotFoundError:
         signals = {"signals": {}}
+    try:
+        with open(os.path.join(ROOT, "data", "item_classification.json")) as f:
+            classif = json.load(f).get("items", {})
+    except FileNotFoundError:
+        classif = {}
 
     # Configured live benchmark sources, keyed by detected base metal.
     # A metal with no free/configured source maps to None -> blank cell.
@@ -98,7 +103,8 @@ def main():
 
     rows = []
     for it in doc["items"]:
-        metal = detect_metal(it.get("name"), it.get("cat"))
+        # Prefer AI classification (by item code) when available; else category/name rules.
+        metal = (classif.get(it.get("code")) or {}).get("metal") or detect_metal(it.get("name"), it.get("cat"))
         b = bench.get(metal) if metal else None
         has_price = bool(b and b["price"] is not None)
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
