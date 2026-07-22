@@ -14,6 +14,12 @@
     "settlement_date": "20 Jul 2026",
     "source": "LME cash settlement via westmetall.com"
   },
+  "crgo_steel": {
+    "price_per_kg": 230.0,
+    "effective_date": "22 Jul 2026",
+    "source": "INDICATIVE estimate - no free daily benchmark (SM Steels/IndiaMART quote-only; SteelMint paid)",
+    "indicative": true
+  },
   "pilot_signals": {
     "total_items": 18,
     "critical": 0,
