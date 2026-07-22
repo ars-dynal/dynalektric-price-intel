@@ -77,14 +77,25 @@ def main():
         "Mild Steel": {"price": None, "src": "no benchmark configured", "asof": "", "indicative": False},
     }
 
+    # Short, per-row source label naming where each metal's live price comes from.
+    SRC_SHORT = {
+        "Copper": "LME cash · westmetall.com",
+        "Aluminium": "NALCO circular",
+        "CRGO steel": "Indicative — no live feed",
+        "Stainless Steel": "—",
+        "Mild Steel": "—",
+    }
+
     rows = []
     for it in doc["items"]:
         metal = detect_metal(it.get("name"), it.get("cat"))
         b = bench.get(metal) if metal else None
+        has_price = bool(b and b["price"] is not None)
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
                      "metal": metal or "—", "uom": it["uom"],
                      "erp": it.get("rate"),
-                     "lm": (b["price"] if b else None)})
+                     "lm": (b["price"] if b else None),
+                     "src": SRC_SHORT.get(metal, "—") if has_price else "—"})
 
     # Only render benchmark cards for metals that actually appear and have a price.
     present = {}
@@ -161,7 +172,8 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <th onclick="sortBy('code')">Item code</th><th onclick="sortBy('name')">Item</th>
  <th onclick="sortBy('cat')">Cat</th><th onclick="sortBy('metal')">Base metal</th><th>UOM</th>
  <th class="num" onclick="sortBy('erp')">ERP rate &#8377;/kg</th>
- <th class="num" onclick="sortBy('lm')">Live market &#8377;/kg</th></tr></thead><tbody id="tb"></tbody></table>
+ <th class="num" onclick="sortBy('lm')">Live market &#8377;/kg</th>
+ <th onclick="sortBy('src')">Live price source</th></tr></thead><tbody id="tb"></tbody></table>
 <footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a></footer>
 </div>
 <script>
@@ -186,7 +198,7 @@ function render(){
    return '<tr><td class="mono">'+d.code+'</td><td>'+d.name.replace(/</g,'&lt;')+'</td>'+
    '<td class="mono">'+d.cat+'</td><td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
-   '<td class="lm">'+lm+'</td></tr>';}).join('');
+   '<td class="lm">'+lm+'</td><td class="mono srccell">'+d.src+'</td></tr>';}).join('');
 }
 render();
 </script></body></html>"""
