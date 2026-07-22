@@ -4,3 +4,4 @@ __pycache__/
 
 # Rendered monthly reports (carry procurement strategy) - delivered as workflow artifacts, not published
 docs/reports/
+data/consumption_forecast.json

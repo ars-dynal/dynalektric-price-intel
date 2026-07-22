@@ -1,0 +1,45 @@
+name: Material consumption forecast (ERP, aggregate-only)
+
+# Fetches Items + Purchase Orders from the DEPL/Trico ERP, builds a monthly
+# kg-purchased-per-metal series (proxy for consumption) and a short forecast,
+# and prints the field-name schema of boms/budgets/inventory to inform the
+# richer BOM-explosion version.
+#
+# The forecast output (data/consumption_forecast.json) is uploaded as a PRIVATE
+# workflow artifact, NOT committed to the public repo — monthly purchase volumes
+# are commercially sensitive. Schema output in the log is field NAMES only.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Mondays 04:30 UTC (10:00 IST) - weekly refresh
+    - cron: '30 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Build consumption forecast (aggregate-only) + print BOM/budget schema
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/material_forecast.py
+
+      - name: Upload forecast (private artifact - not published)
+        uses: actions/upload-artifact@v4
+        with:
+          name: consumption-forecast
+          path: data/consumption_forecast.json
+          retention-days: 90
