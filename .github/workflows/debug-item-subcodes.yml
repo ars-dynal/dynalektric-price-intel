@@ -1,0 +1,106 @@
+name: Debug AL/CU item sub-classification (counts only, no codes)
+
+# Manually triggered only. We now know item_category.category_code == 'AL-222-'
+# / 'CU-222-' identifies aluminium/copper items. This checks whether the
+# finer AL1/AL2/CU1/CU2 (foil vs strip) split used previously corresponds to
+# a prefix of the item 'code' field, WITHOUT ever printing an actual item
+# code — only counts of how many match each candidate prefix — plus the
+# distinct values of item_class / material_grade for aluminium/copper items,
+# which are material-spec classification labels (e.g. alloy grade), not
+# item codes/names/prices/vendor info, so safe to print in full here.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sample AL/CU items and check code prefixes (counts only)
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: |
+          python3 -m pip install --quiet requests
+          python3 - <<'PYEOF'
+          import requests, os
+          from collections import Counter
+
+          BASE = "https://depl.consult-trico.com"
+          cid = os.environ["DEPL_CLIENT_ID"]
+          secret = os.environ["DEPL_CLIENT_SECRET"]
+
+          tok = requests.post(f"{BASE}/oauth/token", json={
+              "grant_type": "client_credentials", "client_id": cid, "client_secret": secret
+          }, timeout=20)
+          tok.raise_for_status()
+          headers = {"Authorization": f"Bearer {tok.json()['access_token']}", "Accept": "application/json"}
+
+          all_records = []
+          url = f"{BASE}/api/external/items"
+          params = {"per_page": 100}
+          page = 0
+          while url:
+              r = requests.get(url, headers=headers, params=params if page == 0 else None, timeout=30)
+              r.raise_for_status()
+              body = r.json()
+              paginator = body.get("data", {})
+              records = paginator.get("data", [])
+              all_records.extend(records)
+              url = paginator.get("next_page_url")
+              page += 1
+              if page > 200:  # safety cap, ~20k items
+                  print("Hit safety page cap (200 pages) - stopping early.")
+                  break
+
+          print(f"Fetched {len(all_records)} item records total, {page} page(s).")
+
+          metal_items = [r for r in all_records
+                         if (r.get("item_category") or {}).get("category_code") in ("AL-222-", "CU-222-")]
+          al_items = [r for r in metal_items if (r.get("item_category") or {}).get("category_code") == "AL-222-"]
+          cu_items = [r for r in metal_items if (r.get("item_category") or {}).get("category_code") == "CU-222-"]
+          print(f"Total AL-222- items: {len(al_items)}")
+          print(f"Total CU-222- items: {len(cu_items)}")
+
+          def prefix_counts(records, prefixes):
+              counts = Counter()
+              for rec in records:
+                  code = (rec.get("code") or "")
+                  matched = None
+                  for p in prefixes:
+                      if code.upper().startswith(p):
+                          matched = p
+                          break
+                  counts[matched or "(no prefix match)"] += 1
+              return counts
+
+          print("\nAL-222- items by code prefix (counts only, no actual codes shown):")
+          for p, c in prefix_counts(al_items, ["AL1", "AL2"]).items():
+              print(f"    {p}: {c}")
+
+          print("\nCU-222- items by code prefix (counts only, no actual codes shown):")
+          for p, c in prefix_counts(cu_items, ["CU1", "CU2"]).items():
+              print(f"    {p}: {c}")
+
+          def dist(records, field, subfield=None):
+              vals = Counter()
+              for rec in records:
+                  v = rec.get(field)
+                  if subfield and isinstance(v, dict):
+                      v = v.get(subfield)
+                  if v not in (None, ""):
+                      vals[str(v)] += 1
+              return vals
+
+          print("\nAL/CU items - distinct 'item_class' values (material classification, not item code/name):")
+          for v, c in dist(metal_items, "item_class").most_common(30):
+              print(f"    {v!r}: {c}")
+
+          print("\nAL/CU items - distinct 'material_grade' values (alloy/grade spec, not item code/name):")
+          for v, c in dist(metal_items, "material_grade").most_common(30):
+              print(f"    {v!r}: {c}")
+
+          print("\nAL/CU items - distinct 'uom.name' values:")
+          for v, c in dist(metal_items, "uom", "name").most_common(10):
+              print(f"    {v!r}: {c}")
+          PYEOF
