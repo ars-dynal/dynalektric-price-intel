@@ -252,7 +252,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <th class="num" onclick="sortBy('erp')">ERP rate &#8377;/kg</th>
  <th class="num" onclick="sortBy('lm')">Live market &#8377;/kg</th>
  <th onclick="sortBy('src')">Live price source</th></tr></thead><tbody id="tb"></tbody></table>
-<footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a> · <a href="./consumption.html" style="color:var(--al)">Consumption &amp; spend &rarr;</a></footer>
+<footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a> · <a href="./consumption.html" style="color:var(--al)">Consumption &amp; spend &rarr;</a> · <a href="./demand.html" style="color:var(--al)">Forward demand &rarr;</a></footer>
 </div>
 <script>
 const HISTORY={{HISTORY}};

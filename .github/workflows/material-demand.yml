@@ -1,0 +1,44 @@
+name: Forward material requirements (ERP order-book)
+
+# Builds the forward demand forecast from budgets (bom_budget_items x project
+# delivery_date), netted against inventory and priced live. Publishes the
+# aggregate page docs/demand.html to the Pages site and uploads the detailed
+# per-budget JSON as a PRIVATE artifact.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Mondays 04:45 UTC (10:15 IST)
+    - cron: '45 4 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  demand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Build forward demand (aggregate page + private detail)
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/material_demand.py
+      - name: Commit the aggregate page
+        run: |
+          git config user.name "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/demand.html
+          git diff --cached --quiet || git commit -m "Forward material demand refresh: $(date -u +%Y-%m-%d)"
+          git push
+      - name: Upload per-budget detail (private artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: material-demand-detail
+          path: data/material_demand.json
+          retention-days: 90
