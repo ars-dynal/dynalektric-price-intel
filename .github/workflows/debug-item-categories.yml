@@ -1,0 +1,120 @@
+name: Debug item category field/values (classification codes only)
+
+# Manually triggered only. The erp-refresh workflow matched 0 items against
+# AL1/AL2/CU1/CU2, meaning the category field name or value format guessed
+# from the earlier schema discovery doesn't match reality. This step prints
+# ONLY: (a) the raw path/shape used to reach a category-like field, and
+# (b) the set of DISTINCT short category-code/label values seen across a
+# sample of items. Category classification codes (e.g. "AL1", "Aluminium
+# Foil") are NOT sensitive business data — no item names, item codes, rupee
+# prices, or vendor info are ever printed here, only these short category
+# labels, so this is safe for a public repo's logs.
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sample items and print category-field candidates
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: |
+          python3 -m pip install --quiet requests
+          python3 - <<'PYEOF'
+          import requests, os, json
+          from collections import Counter
+
+          BASE = "https://depl.consult-trico.com"
+          cid = os.environ["DEPL_CLIENT_ID"]
+          secret = os.environ["DEPL_CLIENT_SECRET"]
+
+          tok = requests.post(f"{BASE}/oauth/token", json={
+              "grant_type": "client_credentials", "client_id": cid, "client_secret": secret
+          }, timeout=20)
+          tok.raise_for_status()
+          headers = {"Authorization": f"Bearer {tok.json()['access_token']}", "Accept": "application/json"}
+
+          # Pull several pages so rare categories show up too.
+          all_records = []
+          url = f"{BASE}/api/external/items"
+          params = {"per_page": 100}
+          for _ in range(5):  # up to 500 items sampled
+              r = requests.get(url, headers=headers, params=params if url.endswith('/items') else None, timeout=30)
+              r.raise_for_status()
+              body = r.json()
+              paginator = body.get("data", {})
+              records = paginator.get("data", [])
+              all_records.extend(records)
+              url = paginator.get("next_page_url")
+              if not url:
+                  break
+
+          print(f"Sampled {len(all_records)} item records.")
+          if not all_records:
+              print("No item records returned at all — check /api/external/items itself.")
+              raise SystemExit(0)
+
+          print("\nTop-level keys on a record:", sorted(all_records[0].keys()))
+
+          # Try every plausible path to a category label/code, count distinct values.
+          candidate_paths = [
+              ("item_category.category_code", lambda rec: (rec.get("item_category") or {}).get("category_code")),
+              ("item_category.code", lambda rec: (rec.get("item_category") or {}).get("code")),
+              ("item_category.name", lambda rec: (rec.get("item_category") or {}).get("name")),
+              ("category.code", lambda rec: (rec.get("category") or {}).get("code")),
+              ("category.category_code", lambda rec: (rec.get("category") or {}).get("category_code")),
+              ("category.name", lambda rec: (rec.get("category") or {}).get("name")),
+              ("category_code (top-level)", lambda rec: rec.get("category_code")),
+              ("category (top-level, if scalar)", lambda rec: rec.get("category") if not isinstance(rec.get("category"), dict) else None),
+              ("item_group.name", lambda rec: (rec.get("item_group") or {}).get("name")),
+              ("group.name", lambda rec: (rec.get("group") or {}).get("name")),
+          ]
+
+          for label, fn in candidate_paths:
+              vals = Counter()
+              hits = 0
+              for rec in all_records:
+                  try:
+                      v = fn(rec)
+                  except Exception:
+                      v = None
+                  if v is not None:
+                      hits += 1
+                      vals[str(v)] += 1
+              if hits:
+                  print(f"\n[{label}] non-null on {hits}/{len(all_records)} records. Distinct values (value: count):")
+                  for v, c in vals.most_common(20):
+                      print(f"    {v!r}: {c}")
+              else:
+                  print(f"\n[{label}] not present on any sampled record.")
+
+          # Also show UOM candidates the same way, since the comparable-set
+          # filter also depends on matching 'KGS' exactly.
+          print("\n--- UOM field candidates ---")
+          uom_paths = [
+              ("uom.name", lambda rec: (rec.get("uom") or {}).get("name")),
+              ("uom.code", lambda rec: (rec.get("uom") or {}).get("code")),
+              ("uom (top-level, if scalar)", lambda rec: rec.get("uom") if not isinstance(rec.get("uom"), dict) else None),
+              ("unit.name", lambda rec: (rec.get("unit") or {}).get("name")),
+          ]
+          for label, fn in uom_paths:
+              vals = Counter()
+              hits = 0
+              for rec in all_records:
+                  try:
+                      v = fn(rec)
+                  except Exception:
+                      v = None
+                  if v is not None:
+                      hits += 1
+                      vals[str(v)] += 1
+              if hits:
+                  print(f"\n[{label}] non-null on {hits}/{len(all_records)} records. Distinct values (value: count):")
+                  for v, c in vals.most_common(20):
+                      print(f"    {v!r}: {c}")
+              else:
+                  print(f"\n[{label}] not present on any sampled record.")
+          PYEOF
