@@ -203,28 +203,33 @@ def main():
                    "Aggregate only; no item/vendor/price-line detail.",
            "qty_field_used": sorted(qty_field_seen),
            "metals": {}}
+    cur_month = datetime.now(timezone.utc).strftime("%Y-%m")
     for metal, series in monthly.items():
         months = sorted(series)
-        if len(months) < 3:
+        pr = price.get(metal, 0)
+        # Exclude the current (incomplete) calendar month from the forecast basis;
+        # purchase data is lumpy, so use a trailing run-rate, NOT a linear trend.
+        complete = [m for m in months if m < cur_month]
+        if len(complete) < 3:
             out["metals"][metal] = {"insufficient_data": True,
-                                    "monthly": [{"m": m, "kg": round(series[m], 1)} for m in months]}
+                                    "monthly": [{"m": m, "kg": round(series[m], 1),
+                                                 "partial": m == cur_month} for m in months]}
             continue
-        vals = [series[m] for m in months]
-        a, b = lin(vals[-min(12, len(vals)):])
-        base_i = len(vals) - 1
-        fc = []
-        for k in range(1, FORECAST_MONTHS + 1):
-            fc.append({"m": add_months(months[-1], k), "kg": round(max(0.0, a + b * (base_i + k)), 1)})
-        avg3 = statistics.mean(vals[-3:])
-        fc_total = sum(p["kg"] for p in fc)
-        spend = round(fc_total * price.get(metal, 0), 0)
+        cvals = [series[m] for m in complete]
+        rr6 = statistics.mean(cvals[-6:])
+        rr12 = statistics.mean(cvals[-min(12, len(cvals)):])
+        fc = [{"m": add_months(cur_month, k), "kg": round(rr6, 1)} for k in range(1, FORECAST_MONTHS + 1)]
         out["metals"][metal] = {
-            "monthly": [{"m": m, "kg": round(series[m], 1)} for m in months],
+            "monthly": [{"m": m, "kg": round(series[m], 1), "partial": m == cur_month} for m in months],
             "forecast": fc,
-            "avg3_kg": round(avg3, 1),
-            "forecast_total_kg": round(fc_total, 1),
-            "forecast_spend_inr": spend,
-            "price_per_kg": price.get(metal),
+            "run_rate_6mo_kg": round(rr6, 1),
+            "run_rate_12mo_kg": round(rr12, 1),
+            "forecast_total_3mo_kg": round(rr6 * FORECAST_MONTHS, 1),
+            "forecast_spend_3mo_inr": round(rr6 * FORECAST_MONTHS * pr, 0),
+            "annual_kg": round(rr12 * 12, 1),
+            "annual_spend_inr": round(rr12 * 12 * pr, 0),
+            "price_per_kg": pr,
+            "method": "flat trailing 6-month run-rate; current partial month excluded from basis",
         }
 
     with open(OUT, "w") as f:
