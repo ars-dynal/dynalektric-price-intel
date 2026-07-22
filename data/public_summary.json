@@ -7,10 +7,11 @@
     "source": "NALCO price circular (nalcoindia.com/domestic/current-price/)"
   },
   "copper": {
-    "price_per_kg": 1277.17,
-    "usd_per_tonne": 13373.5,
-    "usdinr": 95.5,
-    "settlement_date": "17 Jul 2026",
+    "price_per_kg": 1299.78,
+    "usd_per_tonne": 13629.0,
+    "usdinr": 95.37,
+    "usdinr_source": "x-rates.com July 2026 avg (live FX fetched daily in Actions)",
+    "settlement_date": "20 Jul 2026",
     "source": "LME cash settlement via westmetall.com"
   },
   "pilot_signals": {

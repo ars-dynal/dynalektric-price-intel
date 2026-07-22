@@ -81,6 +81,32 @@ def fetch_nalco():
         return None
 
 
+def fetch_usdinr():
+    """Returns (rate_float, source_host) or None on failure.
+
+    Tries two free, no-API-key FX endpoints, then gives up (caller keeps the
+    previously stored rate). USD/INR is the least critical input here — a small
+    error only nudges the copper INR/kg conversion slightly — so this stays
+    best-effort like the rest of the script rather than ever crashing the run.
+    """
+    endpoints = [
+        ("https://api.frankfurter.app/latest?from=USD&to=INR",
+         lambda j: j["rates"]["INR"]),
+        ("https://open.er-api.com/v6/latest/USD",
+         lambda j: j["rates"]["INR"]),
+    ]
+    for url, extract in endpoints:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            r.raise_for_status()
+            rate = float(extract(r.json()))
+            if 50 < rate < 200:  # sane guard against a garbage parse
+                return round(rate, 3), url.split("//")[1].split("/")[0]
+        except Exception as e:
+            print(f"USD/INR fetch via {url} failed: {e}", file=sys.stderr)
+    return None
+
+
 def fetch_lme_copper():
     """Returns (usd_per_tonne, date_str) or None on failure."""
     try:
@@ -112,10 +138,20 @@ def main():
     else:
         print("Keeping previous aluminium price (fetch failed)")
 
+    # USD/INR: fetch live (best-effort) instead of the old hardcoded 95.5.
+    fx = fetch_usdinr()
+    if fx:
+        usdinr, fx_src = fx
+        data['copper']['usdinr'] = usdinr
+        data['copper']['usdinr_source'] = fx_src
+        print(f"Updated USD/INR: {usdinr} (via {fx_src})")
+    else:
+        usdinr = data['copper'].get('usdinr', 95.5)
+        print(f"Keeping previous USD/INR: {usdinr} (live fetch failed)")
+
     lme = fetch_lme_copper()
     if lme:
         usd_per_tonne, date_str = lme
-        usdinr = data['copper'].get('usdinr', 95.5)  # not re-fetched here; update manually/periodically
         data['copper']['usd_per_tonne'] = usd_per_tonne
         data['copper']['settlement_date'] = date_str
         data['copper']['price_per_kg'] = round(usd_per_tonne * usdinr / 1000.0, 2)
