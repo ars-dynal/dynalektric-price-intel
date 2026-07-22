@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dynalektric — Material Consumption & Spend</title><style>
+:root{color-scheme:light dark;--bg:#f9f9f7;--surf:#fff;--tx:#0b0b0b;--tx2:#52514e;--mut:#898781;--bd:rgba(11,11,11,.1);--grid:#e6e5df;--crit:#d03b3b}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0d0d;--surf:#1a1a19;--tx:#fff;--tx2:#c3c2b7;--bd:rgba(255,255,255,.12);--grid:#2c2c2a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
+.badge{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--crit);padding:3px 9px;border-radius:6px;letter-spacing:.3px}
+h1{font-size:22px;margin:10px 0 4px}.sub{color:var(--tx2);font-size:13px;margin:0 0 20px;max-width:820px;line-height:1.5}
+h2{font-size:15px;margin:26px 0 12px}
+.tot{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:16px 18px;margin-bottom:20px;display:flex;align-items:baseline;gap:12px}
+.tot .big{font-size:30px;font-weight:700}.tot .lbl{font-size:13px;color:var(--tx2)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:720px){.cards{grid-template-columns:1fr}}
+.mc{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.mct{font-size:14px;font-weight:650;display:flex;align-items:center;gap:7px}.dot{width:10px;height:10px;border-radius:2px}
+.rr{font-size:26px;font-weight:700;margin:8px 0 12px}.rr small{font-size:12px;color:var(--tx2);font-weight:500}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.k{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}.v{font-size:16px;font-weight:650;margin-top:2px}.s{font-size:12.5px;color:var(--tx2)}
+.pxnote{font-size:10.5px;color:var(--mut);margin-top:10px}
+.chartcard{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:14px}
+.chartcard .ct{font-size:13px;font-weight:650;display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.chartcard svg{width:100%;height:auto}.cax{fill:var(--mut);font-size:9px}
+.stub{background:var(--surf);border:1px dashed var(--bd);border-radius:12px;padding:18px;color:var(--tx2);font-size:13px;line-height:1.6}
+footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
+</style></head><body><div class="wrap">
+<div style="display:flex;align-items:baseline;gap:9px;margin-bottom:6px"><span style="font-weight:700;font-size:15px">Dynalektric</span><span style="font-size:12px;color:var(--mut)">Material Consumption &amp; Spend</span></div>
+<h1>Material consumption &amp; spend forecast</h1>
+<p class="sub">From your ERP purchase-order history (kg purchased per month = consumption proxy). Forecast uses a trailing 6-month run-rate; the current partial month is excluded. Spend at today's live metal price.</p>
+<div class="tot"><span class="big">₹5.19 Cr</span><span class="lbl">estimated annual metal spend (copper + aluminium) at today's prices</span></div>
+<div class="cards"><div class="mc" style="border-top:3px solid #eb6834">
+      <div class="mct"><span class="dot" style="background:#eb6834"></span>Copper</div>
+      <div class="rr">2,338 <small>kg/mo run-rate</small></div>
+      <div class="grid2">
+        <div><div class="k">Next quarter</div><div class="v">7,012 kg</div><div class="s">₹91.1 L</div></div>
+        <div><div class="k">Annualised</div><div class="v">30,635 kg</div><div class="s">₹3.98 Cr</div></div>
+      </div>
+      <div class="pxnote">at ₹1,300/kg today · 6mo run-rate; forecast = flat run-rate</div>
+    </div><div class="mc" style="border-top:3px solid #2a78d6">
+      <div class="mct"><span class="dot" style="background:#2a78d6"></span>Aluminium</div>
+      <div class="rr">2,437 <small>kg/mo run-rate</small></div>
+      <div class="grid2">
+        <div><div class="k">Next quarter</div><div class="v">7,312 kg</div><div class="s">₹26.5 L</div></div>
+        <div><div class="k">Annualised</div><div class="v">33,324 kg</div><div class="s">₹1.21 Cr</div></div>
+      </div>
+      <div class="pxnote">at ₹362/kg today · 6mo run-rate; forecast = flat run-rate</div>
+    </div></div>
+<h2>Monthly purchases (kg) — actual, with run-rate forecast</h2>
+<div class="cards" id="charts"></div>
+<h2>Max Purchase Limit — budget exposure</h2>
+<div class="stub"><b>Populates when you run the "Budget / Max Purchase Limit check" workflow.</b><br>
+It scans every budget and flags metal lines whose budgeted rate sits below today's live metal price — i.e. budgets you can't procure at because the metal alone costs more. Output stays private (budget numbers + vendor rates). Once you run it, paste me the result and this panel fills with the flagged budgets and total shortfall.</div>
+<footer>Source: DEPL/Trico ERP purchase orders + live LME/NALCO prices. Internal — purchase volumes are commercially sensitive; this view is private, not on the public site. Run date basis: item master export + PO history to Jul 2026. · <a href="./items.html" style="color:#2a78d6">Live item prices →</a></footer>
+</div>
+<script>
+const D={"Copper": {"months": ["2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07"], "vals": [10032.6, 340, 541, 2126.9, 4494.2, 5549.9, 876.5, 3021.6, 5721, 457, 5096, 664, 1269, 818, 75], "rr6": 2338, "cur": "2026-07", "col": "#eb6834"}, "Aluminium": {"months": ["2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12", "2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07"], "vals": [24.6, 45, 108, 1285, 550, 4654.7, 5196, 4464, 2550, 3148.6, 2501.8, 3055.7, 1849.8, 1650, 2418.8, 40], "rr6": 2437, "cur": "2026-07", "col": "#2a78d6"}};
+function bars(el,name,d){
+ const W=460,H=180,L=38,R=8,T=10,B=26;
+ const cur=d.cur;const n=d.months.length;
+ const mx=Math.max(...d.vals)*1.1;
+ const bw=(W-L-R)/n*0.66;
+ const sx=i=>L+(i+0.5)/n*(W-L-R);const sy=v=>T+(1-v/mx)*(H-T-B);
+ let g='';for(let k=0;k<=2;k++){const gv=mx*k/2,yy=sy(gv);g+='<line x1="'+L+'" y1="'+yy+'" x2="'+(W-R)+'" y2="'+yy+'" stroke="var(--grid)"/><text x="'+(L-4)+'" y="'+(yy+3)+'" text-anchor="end" class="cax">'+Math.round(gv)+'</text>';}
+ let b='';d.months.forEach((m,i)=>{const partial=m===cur;const h=(H-T-B)-(sy(d.vals[i])-T);
+   b+='<rect x="'+(sx(i)-bw/2)+'" y="'+sy(d.vals[i])+'" width="'+bw+'" height="'+Math.max(0,h)+'" rx="2" fill="'+d.col+'" opacity="'+(partial?0.35:0.9)+'"/>';});
+ // run-rate line
+ const yrr=sy(d.rr6);
+ b+='<line x1="'+L+'" y1="'+yrr+'" x2="'+(W-R)+'" y2="'+yrr+'" stroke="'+d.col+'" stroke-dasharray="4 3" stroke-width="1.5"/>';
+ b+='<text x="'+(W-R)+'" y="'+(yrr-4)+'" text-anchor="end" class="cax" fill="'+d.col+'">run-rate '+d.rr6.toLocaleString()+'/mo</text>';
+ const xl='<text x="'+sx(0)+'" y="'+(H-6)+'" class="cax">'+d.months[0]+'</text><text x="'+sx(n-1)+'" y="'+(H-6)+'" text-anchor="end" class="cax">'+d.months[n-1]+' (partial)</text>';
+ el.innerHTML='<div class="ct"><span class="dot" style="background:'+d.col+'"></span>'+name+' — monthly kg purchased</div><svg viewBox="0 0 '+W+' '+H+'">'+g+b+xl+'</svg>';
+}
+const cont=document.getElementById('charts');
+Object.entries(D).forEach(([name,d])=>{const c=document.createElement('div');c.className='chartcard';cont.appendChild(c);bars(c,name,d);});
+</script></body></html>
