@@ -103,8 +103,41 @@ def fetch_candidates(session):
         uom = (rec.get("uom") or {}).get("name")
         name = rec.get("name")
         if uom in CANDIDATE_UOM and name:
-            cands.append({"code": rec.get("code"), "name": name})
+            cands.append({"code": rec.get("code"), "name": name, "uom": uom,
+                          "cat": (rec.get("item_category") or {}).get("category_code"),
+                          "rate": rec.get("default_price")})
     return cands
+
+
+REAL_METALS = {"Copper", "Aluminium", "CRGO steel", "Stainless Steel", "Mild Steel"}
+
+
+def write_items_json(cands, known):
+    """Regenerate data/items.json to include every KGS metal item (all base metals,
+    not just AL/CU), so the dashboard shows the full classified universe."""
+    items = []
+    for c in cands:
+        if c.get("uom") != "KGS":
+            continue
+        metal = (known.get(c["code"]) or {}).get("metal")
+        if metal not in REAL_METALS:
+            continue
+        items.append({"code": c["code"], "name": c["name"], "cat": c.get("cat"),
+                      "metal": metal, "uom": "KGS", "rate": c.get("rate")})
+    if len(items) < 200:  # safety: don't clobber the existing list on a bad/partial run
+        print(f"Only {len(items)} classified KGS metal items — keeping existing items.json.")
+        return
+    path = os.path.join(ROOT, "data", "items.json")
+    with open(path) as f:
+        prev = json.load(f)
+    prev["items"] = items
+    prev["item_count"] = len(items)
+    prev["source_export"] = "ERP live + AI classification"
+    with open(path, "w") as f:
+        json.dump(prev, f, ensure_ascii=False, indent=0)
+    from collections import Counter
+    print(f"Wrote data/items.json with {len(items)} classified KGS metal items: "
+          f"{dict(Counter(i['metal'] for i in items))}")
 
 
 def main():
@@ -142,6 +175,9 @@ def main():
     counts = Counter(v["metal"] for v in known.values())
     print(f"Classified {done} new; cache now {len(known)} items.")
     print("By base metal:", dict(counts))
+
+    # Expand the dashboard item list to the full classified metal universe.
+    write_items_json(cands, known)
 
 
 if __name__ == "__main__":
