@@ -20,6 +20,18 @@
     "source": "INDICATIVE estimate - no free daily benchmark (SM Steels/IndiaMART quote-only; SteelMint paid)",
     "indicative": true
   },
+  "mild_steel": {
+    "price_per_kg": 62.0,
+    "effective_date": "24 Jul 2026",
+    "source": "INDICATIVE - HRC/MS basis (no free daily feed; update monthly from a supplier quote)",
+    "indicative": true
+  },
+  "stainless_steel": {
+    "price_per_kg": 270.0,
+    "effective_date": "24 Jul 2026",
+    "source": "INDICATIVE - SS304 basis (no free daily feed; update monthly from a supplier quote)",
+    "indicative": true
+  },
   "pilot_signals": {
     "total_items": 18,
     "critical": 0,

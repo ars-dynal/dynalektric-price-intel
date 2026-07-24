@@ -35,7 +35,9 @@ CONTEXT = {
               "Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
     "Aluminium": "Multi-year high; NALCO guides that aluminium may ease into FY27 as alumina softens. "
                  "A pullback is more likely than a further leg up.",
-    "CRGO steel": "No live benchmark configured — a buy signal cannot be computed until a price source is set up.",
+    "CRGO steel": "Indicative price only — a buy signal needs a real price feed or history to build.",
+    "Mild Steel": "Indicative price only — a buy signal needs a real price feed or history to build.",
+    "Stainless Steel": "Indicative price only — a buy signal needs a real price feed or history to build.",
 }
 
 

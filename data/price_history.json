@@ -111,6 +111,26 @@
           "v": 230.0
         }
       ]
+    },
+    "Mild Steel": {
+      "source": "Indicative - HRC/MS basis, no historical feed",
+      "indicative": true,
+      "points": [
+        {
+          "m": "2026-07",
+          "v": 62.0
+        }
+      ]
+    },
+    "Stainless Steel": {
+      "source": "Indicative - SS304 basis, no historical feed",
+      "indicative": true,
+      "points": [
+        {
+          "m": "2026-07",
+          "v": 270.0
+        }
+      ]
     }
   }
 }

@@ -87,9 +87,14 @@ def main():
                        "src": s.get("crgo_steel", {}).get("source", "indicative"),
                        "asof": s.get("crgo_steel", {}).get("effective_date", ""),
                        "indicative": True},
-        # No free daily benchmark configured yet for these — left blank, not estimated.
-        "Stainless Steel": {"price": None, "src": "no benchmark configured", "asof": "", "indicative": False},
-        "Mild Steel": {"price": None, "src": "no benchmark configured", "asof": "", "indicative": False},
+        "Mild Steel": {"price": s.get("mild_steel", {}).get("price_per_kg"),
+                       "src": s.get("mild_steel", {}).get("source", "indicative"),
+                       "asof": s.get("mild_steel", {}).get("effective_date", ""),
+                       "indicative": True},
+        "Stainless Steel": {"price": s.get("stainless_steel", {}).get("price_per_kg"),
+                            "src": s.get("stainless_steel", {}).get("source", "indicative"),
+                            "asof": s.get("stainless_steel", {}).get("effective_date", ""),
+                            "indicative": True},
     }
 
     # Short, per-row source label naming where each metal's live price comes from.
@@ -97,8 +102,8 @@ def main():
         "Copper": "LME cash · westmetall.com",
         "Aluminium": "NALCO circular",
         "CRGO steel": "Indicative — no live feed",
-        "Stainless Steel": "—",
-        "Mild Steel": "—",
+        "Mild Steel": "Indicative — HRC/MS basis",
+        "Stainless Steel": "Indicative — SS304 basis",
     }
 
     # Finished landed cost — company costing formula (costing.py), per item by form.

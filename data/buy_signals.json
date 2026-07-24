@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-24T11:08:20Z",
+  "generated_at_utc": "2026-07-24T21:05:42Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
@@ -32,9 +32,25 @@
       "signal": "NO SIGNAL",
       "cls": "none",
       "headline": "Insufficient / indicative data",
-      "reason": "No live benchmark configured \u2014 a buy signal cannot be computed until a price source is set up.",
+      "reason": "Indicative price only \u2014 a buy signal needs a real price feed or history to build.",
       "action": "Configure a price source or wait for history to build.",
       "cur": 230.0
+    },
+    "Mild Steel": {
+      "signal": "NO SIGNAL",
+      "cls": "none",
+      "headline": "Insufficient / indicative data",
+      "reason": "Indicative price only \u2014 a buy signal needs a real price feed or history to build.",
+      "action": "Configure a price source or wait for history to build.",
+      "cur": 62.0
+    },
+    "Stainless Steel": {
+      "signal": "NO SIGNAL",
+      "cls": "none",
+      "headline": "Insufficient / indicative data",
+      "reason": "Indicative price only \u2014 a buy signal needs a real price feed or history to build.",
+      "action": "Configure a price source or wait for history to build.",
+      "cur": 270.0
     }
   }
 }

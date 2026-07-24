@@ -46,6 +46,8 @@ def main():
         "Copper": s.get("copper", {}).get("price_per_kg"),
         "Aluminium": s.get("aluminium", {}).get("price_per_kg"),
         "CRGO steel": s.get("crgo_steel", {}).get("price_per_kg"),
+        "Mild Steel": s.get("mild_steel", {}).get("price_per_kg"),
+        "Stainless Steel": s.get("stainless_steel", {}).get("price_per_kg"),
     }
     for metal, val in live.items():
         series = hist["series"].get(metal)
