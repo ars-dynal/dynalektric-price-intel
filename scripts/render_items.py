@@ -101,16 +101,32 @@ def main():
         "Mild Steel": "—",
     }
 
+    # Finished landed cost per metal, from the company costing formula (costing.py).
+    DEFAULT_PROFILE = {"Aluminium": "Aluminium foil", "Copper": "Copper strip/wire"}
+    finished = {}
+    try:
+        import costing
+        cmap = {c["profile"]: c for c in costing.all_costs()}
+        for metal, prof in DEFAULT_PROFILE.items():
+            c = cmap.get(prof)
+            if c:
+                finished[metal] = {"ex": c["total_ex_gst"], "confirmed": c["confirmed"], "profile": prof}
+    except Exception:
+        finished = {}
+
     rows = []
     for it in doc["items"]:
         # Prefer AI classification (by item code) when available; else category/name rules.
         metal = (classif.get(it.get("code")) or {}).get("metal") or detect_metal(it.get("name"), it.get("cat"))
         b = bench.get(metal) if metal else None
         has_price = bool(b and b["price"] is not None)
+        fin = finished.get(metal)
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
                      "metal": metal or "—", "uom": it["uom"],
                      "erp": it.get("rate"),
                      "lm": (b["price"] if b else None),
+                     "fin": (fin["ex"] if fin else None),
+                     "finc": (fin["confirmed"] if fin else True),
                      "src": SRC_SHORT.get(metal, "—") if has_price else "—"})
 
     # Only render benchmark cards for metals that actually appear and have a price.
@@ -121,10 +137,16 @@ def main():
     bench_cards = ""
     for m, b in present.items():
         tier = '<span class="tag-ind">indicative</span>' if b["indicative"] else ""
+        fin = finished.get(m)
+        finline = ""
+        if fin:
+            est = "" if fin["confirmed"] else ' <span class="tag-ind">est.</span>'
+            finline = f'<div class="finline">Finished ≈ ₹{fin["ex"]:,.0f}/kg ex-GST{est}<span class="finp"> · {fin["profile"]}</span></div>'
         bench_cards += (
             f'<div class="card {CARD_CLS.get(m,"st")}"><div class="accent"></div>'
             f'<div class="label"><span class="swatch"></span>{m} {tier}</div>'
             f'<div class="value">₹{b["price"]:,.2f} <small>/ kg</small></div>'
+            f'{finline}'
             f'<div class="meta">{b["src"]} · {b["asof"]}</div></div>')
 
     # --- buy-timing signal cards ---
@@ -230,10 +252,22 @@ tbody tr:hover{background:color-mix(in srgb,var(--surf) 92%,var(--tx) 8%)}
 .metal-cu{color:var(--cu);font-weight:600}.metal-al{color:var(--al);font-weight:600}.metal-st{color:var(--st);font-weight:600}.metal-ss{color:var(--ss);font-weight:600}.metal-ms{color:var(--ms);font-weight:600}
 .na{color:var(--mut)}
 footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.nav a{font-size:12.5px;font-weight:600;color:var(--tx2);text-decoration:none;padding:7px 13px;border:1px solid var(--bd);border-radius:8px;background:var(--surf)}
+.nav a:hover{border-color:var(--al);color:var(--tx)}
+.nav a.active{background:var(--al);color:#fff;border-color:var(--al)}
+.finline{font-size:11.5px;color:var(--tx2);margin-top:4px;font-weight:600}.finp{color:var(--mut);font-weight:400}
+.fin{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--tx2)}
 </style></head><body><div class="wrap">
-<div class="brand"><span class="bname">Dynalektric</span> <span class="btag">Live Commodity Price by Item</span></div>
+<div class="brand"><span class="bname">Dynalektric</span> <span class="btag">Commodity Price Intelligence</span></div>
+<nav class="nav">
+ <a href="./index.html">Summary</a>
+ <a href="./items.html" class="active">Items &amp; prices</a>
+ <a href="./consumption.html">Consumption &amp; spend</a>
+ <a href="./demand.html">Forward demand</a>
+</nav>
 <h1>Today's live commodity price beside each item</h1>
-<p class="sub">The <b>Live Market ₹/kg</b> column shows today's benchmark price for each item's base metal — the same value for every item of a given metal. It is a live commodity reference only, not an estimated selling or purchase price. No gap, premium, or processing cost is calculated. "ERP rate" is your item-master price, shown as-is.</p>
+<p class="sub"><b>Live metal ₹/kg</b> = today's raw benchmark for each item's base metal. <b>Finished ₹/kg</b> = the landed cost from your company costing formula (metal + conversion + packing + freight, ex-GST) — the number to compare budgets against. "ERP rate" is your item-master price, shown as-is. Values marked <b>*</b> use placeholder conversion parameters (copper) pending your confirmed rates.</p>
 <p class="gen">Auto-refreshed daily (9:00 AM IST). Last generated: {{GENERATED}} · {{N_TOTAL}} items.</p>
 <div class="cards">{{BENCH_CARDS}}</div>
 <section class="signals">
@@ -256,7 +290,8 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <th onclick="sortBy('code')">Item code</th><th onclick="sortBy('name')">Item</th>
  <th onclick="sortBy('cat')">Cat</th><th onclick="sortBy('metal')">Base metal</th><th>UOM</th>
  <th class="num" onclick="sortBy('erp')">ERP rate &#8377;/kg</th>
- <th class="num" onclick="sortBy('lm')">Live market &#8377;/kg</th>
+ <th class="num" onclick="sortBy('lm')">Live metal &#8377;/kg</th>
+ <th class="num" onclick="sortBy('fin')">Finished &#8377;/kg</th>
  <th onclick="sortBy('src')">Live price source</th></tr></thead><tbody id="tb"></tbody></table>
 <footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a> · <a href="./consumption.html" style="color:var(--al)">Consumption &amp; spend &rarr;</a> · <a href="./demand.html" style="color:var(--al)">Forward demand &rarr;</a></footer>
 </div>
@@ -326,7 +361,9 @@ function render(){
    return '<tr><td class="mono">'+d.code+'</td><td>'+d.name.replace(/</g,'&lt;')+'</td>'+
    '<td class="mono">'+d.cat+'</td><td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
-   '<td class="lm">'+lm+'</td><td class="mono srccell">'+d.src+'</td></tr>';}).join('');
+   '<td class="lm">'+lm+'</td>'+
+   '<td class="fin">'+(d.fin?('₹'+d.fin.toLocaleString('en-IN',{maximumFractionDigits:0})+(d.finc?'':'*')):'<span class="na">—</span>')+'</td>'+
+   '<td class="mono srccell">'+d.src+'</td></tr>';}).join('');
 }
 drawCharts();
 render();

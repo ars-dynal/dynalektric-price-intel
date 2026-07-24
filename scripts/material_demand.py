@@ -289,6 +289,9 @@ HTML = r"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .wrap{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
 .brand{display:flex;align-items:baseline;gap:9px;margin-bottom:6px}.brand b{font-size:15px}.brand span{font-size:12px;color:var(--mut)}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.nav a{font-size:12.5px;font-weight:600;color:var(--tx2);text-decoration:none;padding:7px 13px;border:1px solid var(--bd);border-radius:8px;background:var(--surf)}
+.nav a.active{background:#2a78d6;color:#fff;border-color:#2a78d6}
 h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--tx2);font-size:13px;margin:0 0 16px;max-width:840px;line-height:1.5}
 h2{font-size:15px;margin:26px 0 10px}
 .banner{background:var(--surf);border:1px solid var(--bd);border-left:4px solid #0ca30c;border-radius:12px;padding:14px 16px;font-size:13.5px;line-height:1.55;margin-bottom:18px}
@@ -307,6 +310,7 @@ h2{font-size:15px;margin:26px 0 10px}
 footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
 </style></head><body><div class="wrap">
 <div class="brand"><b>Dynalektric</b><span>Forward Requirements &amp; Max Purchase Limit exposure</span></div>
+<nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html" class="active">Forward demand</a></nav>
 <h1>What to buy, what's covered, and which budgets are under-costed</h1>
 <p class="sub">Open (pending) budget demand vs current inventory, priced live, paired with the buy signal — across {{NBUD}} budgets with metal lines. Plus every budget line whose rate sits below today's metal cost.</p>
 <div class="banner">{{BANNER}}</div>
