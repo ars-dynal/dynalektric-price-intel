@@ -15,15 +15,17 @@ parsing) go through here so the whole system has ONE swappable model backend
 and each caller can cheaply check available() and fall back to rules if no key
 is set. Uses only stdlib (urllib) — no extra dependency.
 """
-import json
 import os
-import urllib.request
-import urllib.error
+
+import requests
 
 # Use `or` (not a default arg): the workflow may pass these as EMPTY strings when
 # the optional repo variables are unset, and "" must still fall back to the default.
 BASE_URL = (os.environ.get("LLM_BASE_URL") or "https://api.groq.com/openai/v1").rstrip("/")
 MODEL = os.environ.get("LLM_MODEL") or "llama-3.3-70b-versatile"
+# A real User-Agent is required — Groq sits behind Cloudflare, which returns a 403
+# "error 1010" to clients with a missing/bot-like signature (e.g. raw urllib).
+UA = "Dynalektric-price-intel/1.0 (+https://github.com/ars-dynal/dynalektric-price-intel)"
 
 
 def api_key():
@@ -51,18 +53,16 @@ def chat(system, user, json_mode=True, temperature=0.0, timeout=60):
     }
     if json_mode:
         body["response_format"] = {"type": "json_object"}
-    req = urllib.request.Request(
+    r = requests.post(
         f"{BASE_URL}/chat/completions",
-        data=json.dumps(body).encode("utf-8"),
-        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-        method="POST",
+        json=body,
+        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
+                 "User-Agent": UA, "Accept": "application/json"},
+        timeout=timeout,
     )
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            resp = json.load(r)
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"LLM HTTP {e.code}: {e.read()[:200]!r}")
-    return resp["choices"][0]["message"]["content"]
+    if r.status_code != 200:
+        raise RuntimeError(f"LLM HTTP {r.status_code}: {r.text[:200]}")
+    return r.json()["choices"][0]["message"]["content"]
 
 
 def chat_json(system, user, **kw):
