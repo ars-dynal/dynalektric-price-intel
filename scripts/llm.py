@@ -15,7 +15,9 @@ parsing) go through here so the whole system has ONE swappable model backend
 and each caller can cheaply check available() and fall back to rules if no key
 is set. Uses only stdlib (urllib) — no extra dependency.
 """
+import json
 import os
+import time
 
 import requests
 
@@ -53,16 +55,24 @@ def chat(system, user, json_mode=True, temperature=0.0, timeout=60):
     }
     if json_mode:
         body["response_format"] = {"type": "json_object"}
-    r = requests.post(
-        f"{BASE_URL}/chat/completions",
-        json=body,
-        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
-                 "User-Agent": UA, "Accept": "application/json"},
-        timeout=timeout,
-    )
-    if r.status_code != 200:
-        raise RuntimeError(f"LLM HTTP {r.status_code}: {r.text[:200]}")
-    return r.json()["choices"][0]["message"]["content"]
+    headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json",
+               "User-Agent": UA, "Accept": "application/json"}
+    url = f"{BASE_URL}/chat/completions"
+    # Retry on 429 (free-tier tokens-per-minute limit), honouring Retry-After.
+    for attempt in range(5):
+        r = requests.post(url, json=body, headers=headers, timeout=timeout)
+        if r.status_code == 429:
+            wait = 8.0
+            try:
+                wait = float(r.headers.get("retry-after", "8"))
+            except (TypeError, ValueError):
+                pass
+            time.sleep(min(wait + 1.0, 30.0))
+            continue
+        if r.status_code != 200:
+            raise RuntimeError(f"LLM HTTP {r.status_code}: {r.text[:200]}")
+        return r.json()["choices"][0]["message"]["content"]
+    raise RuntimeError("LLM rate-limited (429) after retries")
 
 
 def chat_json(system, user, **kw):

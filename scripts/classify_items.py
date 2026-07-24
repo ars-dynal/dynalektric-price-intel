@@ -33,7 +33,7 @@ BASE = "https://depl.consult-trico.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "data", "item_classification.json")
 PER_PAGE = 100
-BATCH = 40
+BATCH = 25  # smaller batches keep each request well under the 12k tokens/minute free limit
 CANDIDATE_UOM = {"KGS", "MTR"}
 METALS = ["Copper", "Aluminium", "CRGO steel", "Stainless Steel", "Mild Steel", "Other"]
 
@@ -163,7 +163,7 @@ def main():
             done += len(res)
         except Exception as e:
             print(f"  batch {i//BATCH} failed: {type(e).__name__}: {e}", file=sys.stderr)
-        time.sleep(1.0)  # be polite to the free tier
+        time.sleep(3.0)  # pace under the free-tier tokens-per-minute limit (retry-on-429 also backs off)
 
     from datetime import datetime, timezone
     cache["generated_at_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
