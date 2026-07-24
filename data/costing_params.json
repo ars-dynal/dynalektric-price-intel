@@ -1,0 +1,51 @@
+{
+  "note": "Dynalektric costing formula parameters, per metal-form profile. Formula is fixed in scripts/costing.py; these rates are editable. GST is recoverable input credit, so compare costs on TOTAL EX-GST. Values marked _confirm=true are placeholders awaiting the real company numbers.",
+  "gst_pct": 18,
+  "profiles": {
+    "Aluminium foil": {
+      "benchmark": "Aluminium",
+      "conversion_rate": 65,
+      "coating_rate": 0,
+      "packing_flat": 6,
+      "packing_fwd_pct": 0,
+      "freight_rate": 0,
+      "cash_discount_pct": 1.5,
+      "other_charges": 0,
+      "_source": "Aluminium wire and foil.xlsx -> Foil Costing sheet"
+    },
+    "Aluminium conductor": {
+      "benchmark": "Aluminium",
+      "premium_inr_kg": 0,
+      "conversion_rate": 65,
+      "coating_rate": 0,
+      "packing_fwd_pct": 2,
+      "freight_rate": 0,
+      "cash_discount_pct": 0,
+      "other_charges": 0,
+      "_confirm": true
+    },
+    "Copper foil": {
+      "benchmark": "Copper",
+      "premium_usd_mt": 0,
+      "conversion_rate": 80,
+      "coating_rate": 0,
+      "packing_flat": 6,
+      "packing_fwd_pct": 0,
+      "freight_rate": 0,
+      "cash_discount_pct": 0,
+      "other_charges": 0,
+      "_confirm": true
+    },
+    "Copper strip/wire": {
+      "benchmark": "Copper",
+      "premium_usd_mt": 0,
+      "conversion_rate": 80,
+      "coating_rate": 0,
+      "packing_fwd_pct": 2,
+      "freight_rate": 0,
+      "cash_discount_pct": 0,
+      "other_charges": 0,
+      "_confirm": true
+    }
+  }
+}
