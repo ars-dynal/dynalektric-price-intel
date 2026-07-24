@@ -33,7 +33,7 @@ BASE = "https://depl.consult-trico.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "data", "item_classification.json")
 PER_PAGE = 100
-BATCH = 25  # smaller batches keep each request well under the 12k tokens/minute free limit
+BATCH = 20  # smaller batches keep each request well under the 12k tokens/minute free limit
 CANDIDATE_UOM = {"KGS", "MTR"}
 METALS = ["Copper", "Aluminium", "CRGO steel", "Stainless Steel", "Mild Steel", "Other"]
 
@@ -42,12 +42,11 @@ SYSTEM = (
     "inventory by PRIMARY base metal. Respond with strict JSON only."
 )
 INSTR = (
-    "For each item, output its primary base metal as exactly one of: "
-    f"{', '.join(METALS)}. Also give a short 'form' (e.g. strip, wire, foil, sheet, "
-    "lamination, rod, busbar, sleeve, other). CRGO/grain-oriented/electrical steel "
-    "-> 'CRGO steel'. SS/304/316 -> 'Stainless Steel'. MS/mild steel/CRCA -> "
-    "'Mild Steel'. Enamelled/ETP copper -> 'Copper'. If not a metal, 'Other'. "
-    'Return {"results":[{"code":"..","metal":"..","form":".."}]} in the same order.'
+    "Output each item's primary base metal as exactly one of: "
+    f"{', '.join(METALS)}. CRGO/grain-oriented/electrical steel -> 'CRGO steel'. "
+    "SS/304/316 -> 'Stainless Steel'. MS/mild steel/CRCA -> 'Mild Steel'. "
+    "Enamelled/ETP copper -> 'Copper'. Non-metal -> 'Other'. "
+    'Return compact JSON {"r":[{"c":"code","m":"metal"}]} in the same order, nothing else.'
 )
 
 
@@ -77,15 +76,15 @@ def paginate(session, path, params):
 
 
 def classify_batch(items, chat_json=None):
-    """items: list of {code,name}. Returns {code: {metal, form}}."""
+    """items: list of {code,name}. Returns {code: {metal}}. Compact I/O to save tokens."""
     chat_json = chat_json or llm.chat_json
-    payload = json.dumps([{"code": i["code"], "name": i["name"][:160]} for i in items], ensure_ascii=False)
+    payload = json.dumps([{"c": i["code"], "n": i["name"][:90]} for i in items], ensure_ascii=False)
     out = chat_json(SYSTEM, INSTR + "\n\nItems:\n" + payload)
     res = {}
-    for r in out.get("results", []):
-        metal = r.get("metal")
+    for r in out.get("r", out.get("results", [])):
+        metal = r.get("m", r.get("metal"))
         if metal in METALS:
-            res[str(r.get("code"))] = {"metal": metal, "form": r.get("form", "")}
+            res[str(r.get("c", r.get("code")))] = {"metal": metal}
     return res
 
 
