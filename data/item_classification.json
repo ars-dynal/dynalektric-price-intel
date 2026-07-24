@@ -1,5 +1,4515 @@
 {
-  "generated_at_utc": "2026-07-24T20:14:28Z",
-  "model": "llama-3.3-70b-versatile",
-  "items": {}
+  "generated_at_utc": "2026-07-24T20:56:45Z",
+  "model": "llama-3.1-8b-instant",
+  "items": {
+    "CU-111-00049": {
+      "metal": "Copper"
+    },
+    "CH-303-00048": {
+      "metal": "Other"
+    },
+    "CH-303-00047": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00537": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00471": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00440": {
+      "metal": "Copper"
+    },
+    "CC-555-00470": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00469": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00468": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00467": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00466": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00465": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00464": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00463": {
+      "metal": "Mild Steel"
+    },
+    "CU-222-00438": {
+      "metal": "Copper"
+    },
+    "CU-222-00437": {
+      "metal": "Copper"
+    },
+    "CU-222-00436": {
+      "metal": "Copper"
+    },
+    "CU-222-00435": {
+      "metal": "Copper"
+    },
+    "CU-222-00434": {
+      "metal": "Copper"
+    },
+    "CU-222-00433": {
+      "metal": "Copper"
+    },
+    "CU-222-00432": {
+      "metal": "Copper"
+    },
+    "CU-222-00431": {
+      "metal": "Copper"
+    },
+    "CU-222-00430": {
+      "metal": "Copper"
+    },
+    "CC-555-00462": {
+      "metal": "Mild Steel"
+    },
+    "CU-222-00429": {
+      "metal": "Copper"
+    },
+    "CC-555-00461": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00460": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00459": {
+      "metal": "Mild Steel"
+    },
+    "AL-222-00283": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00282": {
+      "metal": "Aluminium"
+    },
+    "INS-666-00382": {
+      "metal": "Other"
+    },
+    "INS-666-00381": {
+      "metal": "Other"
+    },
+    "INS-666-00380": {
+      "metal": "Other"
+    },
+    "PNI-000-10120": {
+      "metal": "Mild Steel"
+    },
+    "PNI-000-10119": {
+      "metal": "Mild Steel"
+    },
+    "CU-222-00427": {
+      "metal": "Copper"
+    },
+    "CC-555-00458": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00457": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00456": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00455": {
+      "metal": "CRGO steel"
+    },
+    "CU-111-00048": {
+      "metal": "Copper"
+    },
+    "INS-666-00379": {
+      "metal": "Other"
+    },
+    "CMP-444-00672": {
+      "metal": "Other"
+    },
+    "PNI-000-10118": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00378": {
+      "metal": "Other"
+    },
+    "INS-666-00377": {
+      "metal": "Other"
+    },
+    "INS-666-00376": {
+      "metal": "Other"
+    },
+    "CC-555-00454": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00453": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00452": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00451": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00450": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00449": {
+      "metal": "CRGO steel"
+    },
+    "CH-303-00046": {
+      "metal": "Other"
+    },
+    "CC-555-00448": {
+      "metal": "CRGO steel"
+    },
+    "INS-666-00375": {
+      "metal": "Other"
+    },
+    "INS-666-00374": {
+      "metal": "Other"
+    },
+    "INS-666-00373": {
+      "metal": "Other"
+    },
+    "INS-666-00372": {
+      "metal": "Other"
+    },
+    "INS-666-00371": {
+      "metal": "Other"
+    },
+    "INS-666-00370": {
+      "metal": "Other"
+    },
+    "INS-666-00369": {
+      "metal": "Other"
+    },
+    "INS-666-00368": {
+      "metal": "Other"
+    },
+    "INS-666-00367": {
+      "metal": "Other"
+    },
+    "INS-666-00366": {
+      "metal": "Other"
+    },
+    "INS-666-00365": {
+      "metal": "Other"
+    },
+    "INS-666-00364": {
+      "metal": "Other"
+    },
+    "INS-666-00363": {
+      "metal": "Other"
+    },
+    "INS-666-00362": {
+      "metal": "Other"
+    },
+    "INS-666-00361": {
+      "metal": "Other"
+    },
+    "INS-666-00360": {
+      "metal": "Other"
+    },
+    "INS-666-00359": {
+      "metal": "Other"
+    },
+    "CU-222-00425": {
+      "metal": "Copper"
+    },
+    "CC-555-00446": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00445": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00444": {
+      "metal": "CRGO steel"
+    },
+    "AL-111-00046": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00045": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00044": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00043": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00443": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00442": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00441": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00440": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00439": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00438": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00437": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00436": {
+      "metal": "Mild Steel"
+    },
+    "CU-222-00421": {
+      "metal": "Copper"
+    },
+    "OFF-SPL-00051": {
+      "metal": "Other"
+    },
+    "CC-555-00435": {
+      "metal": "Mild Steel"
+    },
+    "CMP-444-00665": {
+      "metal": "Other"
+    },
+    "AL-222-00269": {
+      "metal": "Aluminium"
+    },
+    "CU-222-00420": {
+      "metal": "Copper"
+    },
+    "INS-666-00358": {
+      "metal": "Other"
+    },
+    "CU-222-00419": {
+      "metal": "Copper"
+    },
+    "INS-666-00357": {
+      "metal": "Other"
+    },
+    "INS-666-00356": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00520": {
+      "metal": "Mild Steel"
+    },
+    "PRD-SPL-00518": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00434": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00433": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00432": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00415": {
+      "metal": "Copper"
+    },
+    "INS-666-00355": {
+      "metal": "Other"
+    },
+    "INS-666-00354": {
+      "metal": "Other"
+    },
+    "CC-555-00431": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00430": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00429": {
+      "metal": "CRGO steel"
+    },
+    "INS-666-00353": {
+      "metal": "Other"
+    },
+    "CC-555-00428": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00427": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00426": {
+      "metal": "CRGO steel"
+    },
+    "CH-303-00045": {
+      "metal": "Other"
+    },
+    "CC-555-00425": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00424": {
+      "metal": "CRGO steel"
+    },
+    "PNI-000-10110": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00514": {
+      "metal": "Other"
+    },
+    "CMP-444-00653": {
+      "metal": "Other"
+    },
+    "CC-555-00423": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00422": {
+      "metal": "CRGO steel"
+    },
+    "AL-111-00042": {
+      "metal": "Aluminium"
+    },
+    "TESTFG00016": {
+      "metal": "Other"
+    },
+    "CC-555-00421": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00420": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00419": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00418": {
+      "metal": "CRGO steel"
+    },
+    "CH-303-00044": {
+      "metal": "Other"
+    },
+    "CH-303-00043": {
+      "metal": "Other"
+    },
+    "CH-303-00042": {
+      "metal": "Other"
+    },
+    "CC-555-00417": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00416": {
+      "metal": "CRGO steel"
+    },
+    "AL-111-00040": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00414": {
+      "metal": "CRGO steel"
+    },
+    "TEST00026": {
+      "metal": "Other"
+    },
+    "TEST00021": {
+      "metal": "Other"
+    },
+    "TEST00020": {
+      "metal": "Other"
+    },
+    "TEST00018": {
+      "metal": "Other"
+    },
+    "CMP-444-00649": {
+      "metal": "Other"
+    },
+    "CMP-444-00648": {
+      "metal": "Other"
+    },
+    "TRD00000013": {
+      "metal": "Other"
+    },
+    "CU-222-00411": {
+      "metal": "Copper"
+    },
+    "CH-303-00041": {
+      "metal": "Other"
+    },
+    "CU-222-00410": {
+      "metal": "Copper"
+    },
+    "CU-222-00409": {
+      "metal": "Copper"
+    },
+    "CMP-444-00646": {
+      "metal": "Other"
+    },
+    "CMP-444-00645": {
+      "metal": "Other"
+    },
+    "CMP-444-00644": {
+      "metal": "Other"
+    },
+    "INS-666-00352": {
+      "metal": "Other"
+    },
+    "CU-111-00047": {
+      "metal": "Copper"
+    },
+    "CMP-444-00639": {
+      "metal": "Other"
+    },
+    "CC-555-00412": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00411": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00410": {
+      "metal": "CRGO steel"
+    },
+    "PNI-000-10091": {
+      "metal": "Other"
+    },
+    "PNI-000-10090": {
+      "metal": "Other"
+    },
+    "PNI-000-10089": {
+      "metal": "Other"
+    },
+    "WB-606-00025": {
+      "metal": "Copper"
+    },
+    "CU-222-00408": {
+      "metal": "Copper"
+    },
+    "INS-666-00351": {
+      "metal": "Other"
+    },
+    "INS-666-00350": {
+      "metal": "Other"
+    },
+    "INS-666-00349": {
+      "metal": "Other"
+    },
+    "INS-666-00348": {
+      "metal": "Other"
+    },
+    "INS-666-00347": {
+      "metal": "Other"
+    },
+    "CMP-444-00635": {
+      "metal": "Other"
+    },
+    "INS-666-00346": {
+      "metal": "Other"
+    },
+    "INS-666-00345": {
+      "metal": "Other"
+    },
+    "CC-555-00409": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00408": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00407": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00406": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00405": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00404": {
+      "metal": "Mild Steel"
+    },
+    "CU-222-00405": {
+      "metal": "Copper"
+    },
+    "CC-555-00403": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00402": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00403": {
+      "metal": "Copper"
+    },
+    "PRD-SPL-00502": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00501": {
+      "metal": "Mild Steel"
+    },
+    "CMP-444-00628": {
+      "metal": "Other"
+    },
+    "AL-222-00253": {
+      "metal": "Aluminium"
+    },
+    "CU-222-00402": {
+      "metal": "Copper"
+    },
+    "CMP-444-00623": {
+      "metal": "Other"
+    },
+    "INS-666-00344": {
+      "metal": "Other"
+    },
+    "AL-222-00252": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00401": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00400": {
+      "metal": "CRGO steel"
+    },
+    "AL-222-00251": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00250": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00249": {
+      "metal": "Aluminium"
+    },
+    "TEST00007": {
+      "metal": "Other"
+    },
+    "TEST00006": {
+      "metal": "Other"
+    },
+    "INS-666-00343": {
+      "metal": "Other"
+    },
+    "INS-666-00342": {
+      "metal": "Other"
+    },
+    "INS-666-00341": {
+      "metal": "Other"
+    },
+    "INS-666-00340": {
+      "metal": "Other"
+    },
+    "CU-222-00401": {
+      "metal": "Other"
+    },
+    "AL-222-00248": {
+      "metal": "Other"
+    },
+    "CU-222-00400": {
+      "metal": "Copper"
+    },
+    "CC-555-00399": {
+      "metal": "Other"
+    },
+    "AL-222-00247": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00246": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00245": {
+      "metal": "Aluminium"
+    },
+    "PKG-000-00139": {
+      "metal": "Other"
+    },
+    "INS-666-00339": {
+      "metal": "Other"
+    },
+    "PNR-202-00084": {
+      "metal": "Other"
+    },
+    "CU-222-00399": {
+      "metal": "Copper"
+    },
+    "AL-222-00244": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00036": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00398": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00397": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00397": {
+      "metal": "Copper"
+    },
+    "AL-222-00243": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00396": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00394": {
+      "metal": "Copper"
+    },
+    "CC-555-00395": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00394": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00393": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00392": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00391": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00390": {
+      "metal": "CRGO steel"
+    },
+    "INS-666-00338": {
+      "metal": "Other"
+    },
+    "CMP-444-00602": {
+      "metal": "Other"
+    },
+    "CC-555-00389": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00388": {
+      "metal": "CRGO steel"
+    },
+    "AL-222-00242": {
+      "metal": "Aluminium"
+    },
+    "INS-666-00337": {
+      "metal": "Other"
+    },
+    "INS-666-00336": {
+      "metal": "Other"
+    },
+    "INS-666-00335": {
+      "metal": "Other"
+    },
+    "CU-222-00390": {
+      "metal": "Copper"
+    },
+    "CU-222-00389": {
+      "metal": "Copper"
+    },
+    "CC-555-00387": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00565": {
+      "metal": "Other"
+    },
+    "CMP-444-00564": {
+      "metal": "Other"
+    },
+    "CH-303-00030": {
+      "metal": "Other"
+    },
+    "CH-303-00029": {
+      "metal": "Other"
+    },
+    "CH-303-00028": {
+      "metal": "Other"
+    },
+    "CH-303-00027": {
+      "metal": "Other"
+    },
+    "CH-303-00026": {
+      "metal": "Other"
+    },
+    "CH-303-00025": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00416": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00398": {
+      "metal": "Other"
+    },
+    "MEA-000-10375": {
+      "metal": "Aluminium"
+    },
+    "MEA-000-10374": {
+      "metal": "Other"
+    },
+    "MEA-000-10372": {
+      "metal": "Other"
+    },
+    "MEA-000-10370": {
+      "metal": "Other"
+    },
+    "MEA-000-10369": {
+      "metal": "Other"
+    },
+    "MEA-000-10365": {
+      "metal": "Copper"
+    },
+    "INS-666-00301": {
+      "metal": "Other"
+    },
+    "INS-666-00300": {
+      "metal": "Other"
+    },
+    "INS-666-00299": {
+      "metal": "Other"
+    },
+    "INS-666-00297": {
+      "metal": "Other"
+    },
+    "INS-666-00296": {
+      "metal": "Other"
+    },
+    "INS-666-00295": {
+      "metal": "Other"
+    },
+    "INS-666-00294": {
+      "metal": "Other"
+    },
+    "INS-666-00293": {
+      "metal": "Other"
+    },
+    "INS-666-00292": {
+      "metal": "Other"
+    },
+    "INS-666-00291": {
+      "metal": "Other"
+    },
+    "INS-666-00290": {
+      "metal": "Other"
+    },
+    "INS-666-00289": {
+      "metal": "Other"
+    },
+    "INS-666-00288": {
+      "metal": "Other"
+    },
+    "INS-666-00287": {
+      "metal": "Other"
+    },
+    "INS-666-00286": {
+      "metal": "Other"
+    },
+    "INS-666-00285": {
+      "metal": "Other"
+    },
+    "INS-666-00284": {
+      "metal": "Other"
+    },
+    "INS-666-00283": {
+      "metal": "Other"
+    },
+    "INS-666-00282": {
+      "metal": "Other"
+    },
+    "INS-666-00281": {
+      "metal": "Other"
+    },
+    "INS-666-00280": {
+      "metal": "Other"
+    },
+    "INS-666-00279": {
+      "metal": "Other"
+    },
+    "INS-666-00278": {
+      "metal": "Other"
+    },
+    "INS-666-00277": {
+      "metal": "Other"
+    },
+    "INS-666-00276": {
+      "metal": "Other"
+    },
+    "INS-666-00275": {
+      "metal": "Other"
+    },
+    "INS-666-00274": {
+      "metal": "Other"
+    },
+    "INS-666-00273": {
+      "metal": "Other"
+    },
+    "INS-666-00271": {
+      "metal": "Other"
+    },
+    "CC-555-00375": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00370": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00386": {
+      "metal": "Copper"
+    },
+    "CU-222-00383": {
+      "metal": "Copper"
+    },
+    "CU-222-00382": {
+      "metal": "Copper"
+    },
+    "CU-222-00381": {
+      "metal": "Copper"
+    },
+    "CU-222-00380": {
+      "metal": "Copper"
+    },
+    "CU-222-00379": {
+      "metal": "Copper"
+    },
+    "CU-222-00378": {
+      "metal": "Copper"
+    },
+    "CU-222-00377": {
+      "metal": "Copper"
+    },
+    "CU-222-00376": {
+      "metal": "Copper"
+    },
+    "CU-222-00375": {
+      "metal": "Copper"
+    },
+    "CU-222-00374": {
+      "metal": "Copper"
+    },
+    "CU-222-00373": {
+      "metal": "Copper"
+    },
+    "CU-222-00372": {
+      "metal": "Copper"
+    },
+    "AL-222-00241": {
+      "metal": "Aluminium"
+    },
+    "INS-666-00305": {
+      "metal": "Other"
+    },
+    "CH-303-00032": {
+      "metal": "Other"
+    },
+    "CH-303-00031": {
+      "metal": "Stainless Steel"
+    },
+    "INS-666-00272": {
+      "metal": "Other"
+    },
+    "INS-666-00303": {
+      "metal": "Other"
+    },
+    "INS-666-00298": {
+      "metal": "Other"
+    },
+    "CC-555-00372": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00373": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00374": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00371": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00384": {
+      "metal": "Copper"
+    },
+    "CC-555-00380": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00379": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00378": {
+      "metal": "CRGO steel"
+    },
+    "CU-222-00388": {
+      "metal": "Copper"
+    },
+    "CC-555-00377": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00376": {
+      "metal": "CRGO steel"
+    },
+    "EL-777-00425": {
+      "metal": "Other"
+    },
+    "WB-606-00022": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00020": {
+      "metal": "Copper"
+    },
+    "WB-606-00019": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00018": {
+      "metal": "Other"
+    },
+    "WB-606-00017": {
+      "metal": "Other"
+    },
+    "WB-606-00016": {
+      "metal": "Copper"
+    },
+    "WB-606-00014": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00013": {
+      "metal": "Other"
+    },
+    "WB-606-00012": {
+      "metal": "Other"
+    },
+    "WB-606-00011": {
+      "metal": "Copper"
+    },
+    "WB-606-00010": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00009": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00006": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00004": {
+      "metal": "Aluminium"
+    },
+    "WB-606-00003": {
+      "metal": "Copper"
+    },
+    "WB-606-00002": {
+      "metal": "Copper"
+    },
+    "WB-606-00001": {
+      "metal": "Copper"
+    },
+    "PTR-404-00003": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00397": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00386": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00355": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00290": {
+      "metal": "Mild Steel"
+    },
+    "PRD-SPL-00222": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00211": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00186": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00175": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00097": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00049": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00030": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00028": {
+      "metal": "Other"
+    },
+    "PRD-SPL-00004": {
+      "metal": "Other"
+    },
+    "PNR-202-00056": {
+      "metal": "Copper"
+    },
+    "PNR-202-00053": {
+      "metal": "Other"
+    },
+    "PNR-202-00052": {
+      "metal": "Other"
+    },
+    "PNR-202-00051": {
+      "metal": "Other"
+    },
+    "PNR-202-00050": {
+      "metal": "Other"
+    },
+    "PNR-202-00049": {
+      "metal": "Other"
+    },
+    "PNR-202-00048": {
+      "metal": "Other"
+    },
+    "PNR-202-00047": {
+      "metal": "Copper"
+    },
+    "PNR-202-00045": {
+      "metal": "Other"
+    },
+    "PNR-202-00041": {
+      "metal": "Other"
+    },
+    "PNR-202-00040": {
+      "metal": "Other"
+    },
+    "PNR-202-00039": {
+      "metal": "Other"
+    },
+    "PNR-202-00038": {
+      "metal": "Other"
+    },
+    "PNR-202-00036": {
+      "metal": "Copper"
+    },
+    "PNR-202-00035": {
+      "metal": "Copper"
+    },
+    "PNR-202-00034": {
+      "metal": "Copper"
+    },
+    "PNR-202-00033": {
+      "metal": "Other"
+    },
+    "PNR-202-00030": {
+      "metal": "Other"
+    },
+    "PNR-202-00021": {
+      "metal": "Other"
+    },
+    "PNR-202-00015": {
+      "metal": "Other"
+    },
+    "PNR-202-00014": {
+      "metal": "Other"
+    },
+    "PNR-202-00009": {
+      "metal": "Other"
+    },
+    "PNR-202-00008": {
+      "metal": "Other"
+    },
+    "PNR-202-00007": {
+      "metal": "Other"
+    },
+    "PNI-000-10046": {
+      "metal": "Other"
+    },
+    "PNI-000-10037": {
+      "metal": "Other"
+    },
+    "PNI-000-10033": {
+      "metal": "Other"
+    },
+    "PNI-000-10032": {
+      "metal": "Other"
+    },
+    "PNI-000-10027": {
+      "metal": "Other"
+    },
+    "PNI-000-10026": {
+      "metal": "Other"
+    },
+    "PNI-000-10023": {
+      "metal": "Other"
+    },
+    "PNI-000-10013": {
+      "metal": "Other"
+    },
+    "PKG-000-00124": {
+      "metal": "Other"
+    },
+    "PKG-000-00087": {
+      "metal": "Mild Steel"
+    },
+    "PKG-000-00085": {
+      "metal": "Other"
+    },
+    "PKG-000-00051": {
+      "metal": "Mild Steel"
+    },
+    "PKG-000-00035": {
+      "metal": "Aluminium"
+    },
+    "PKG-000-00015": {
+      "metal": "Other"
+    },
+    "PKG-000-00008": {
+      "metal": "Other"
+    },
+    "PKG-000-00006": {
+      "metal": "Other"
+    },
+    "PKG-000-00005": {
+      "metal": "Other"
+    },
+    "PKG-000-00003": {
+      "metal": "Other"
+    },
+    "PKG-000-00002": {
+      "metal": "Other"
+    },
+    "PKG-000-00001": {
+      "metal": "Other"
+    },
+    "MFS-111-00112": {
+      "metal": "Other"
+    },
+    "MFS-111-00092": {
+      "metal": "Other"
+    },
+    "MFS-111-00033": {
+      "metal": "Mild Steel"
+    },
+    "MFS-111-00031": {
+      "metal": "Mild Steel"
+    },
+    "MFS-111-00030": {
+      "metal": "Mild Steel"
+    },
+    "MFS-111-00002": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00270": {
+      "metal": "Other"
+    },
+    "INS-666-00269": {
+      "metal": "Other"
+    },
+    "INS-666-00268": {
+      "metal": "Other"
+    },
+    "INS-666-00267": {
+      "metal": "Other"
+    },
+    "INS-666-00266": {
+      "metal": "Other"
+    },
+    "INS-666-00265": {
+      "metal": "Other"
+    },
+    "INS-666-00264": {
+      "metal": "Other"
+    },
+    "INS-666-00263": {
+      "metal": "Other"
+    },
+    "INS-666-00262": {
+      "metal": "Other"
+    },
+    "INS-666-00261": {
+      "metal": "Other"
+    },
+    "INS-666-00260": {
+      "metal": "Other"
+    },
+    "INS-666-00259": {
+      "metal": "Other"
+    },
+    "INS-666-00258": {
+      "metal": "Other"
+    },
+    "INS-666-00257": {
+      "metal": "Other"
+    },
+    "INS-666-00256": {
+      "metal": "Other"
+    },
+    "INS-666-00255": {
+      "metal": "Other"
+    },
+    "INS-666-00254": {
+      "metal": "Other"
+    },
+    "INS-666-00253": {
+      "metal": "Other"
+    },
+    "INS-666-00252": {
+      "metal": "Other"
+    },
+    "INS-666-00251": {
+      "metal": "Other"
+    },
+    "INS-666-00250": {
+      "metal": "Other"
+    },
+    "INS-666-00249": {
+      "metal": "Other"
+    },
+    "INS-666-00248": {
+      "metal": "Other"
+    },
+    "INS-666-00247": {
+      "metal": "Other"
+    },
+    "INS-666-00246": {
+      "metal": "Other"
+    },
+    "INS-666-00245": {
+      "metal": "Other"
+    },
+    "INS-666-00244": {
+      "metal": "Other"
+    },
+    "INS-666-00242": {
+      "metal": "Other"
+    },
+    "INS-666-00241": {
+      "metal": "Other"
+    },
+    "INS-666-00239": {
+      "metal": "Copper"
+    },
+    "INS-666-00238": {
+      "metal": "Other"
+    },
+    "INS-666-00237": {
+      "metal": "Other"
+    },
+    "INS-666-00236": {
+      "metal": "Other"
+    },
+    "INS-666-00235": {
+      "metal": "Other"
+    },
+    "INS-666-00234": {
+      "metal": "Other"
+    },
+    "INS-666-00233": {
+      "metal": "Other"
+    },
+    "INS-666-00232": {
+      "metal": "Other"
+    },
+    "INS-666-00231": {
+      "metal": "Copper"
+    },
+    "INS-666-00230": {
+      "metal": "Copper"
+    },
+    "INS-666-00229": {
+      "metal": "Other"
+    },
+    "INS-666-00228": {
+      "metal": "Other"
+    },
+    "INS-666-00227": {
+      "metal": "Copper"
+    },
+    "INS-666-00226": {
+      "metal": "Other"
+    },
+    "INS-666-00224": {
+      "metal": "Other"
+    },
+    "INS-666-00223": {
+      "metal": "Other"
+    },
+    "INS-666-00221": {
+      "metal": "Copper"
+    },
+    "INS-666-00220": {
+      "metal": "Copper"
+    },
+    "INS-666-00219": {
+      "metal": "Copper"
+    },
+    "INS-666-00218": {
+      "metal": "Other"
+    },
+    "INS-666-00217": {
+      "metal": "Other"
+    },
+    "INS-666-00216": {
+      "metal": "Copper"
+    },
+    "INS-666-00215": {
+      "metal": "Copper"
+    },
+    "INS-666-00214": {
+      "metal": "Other"
+    },
+    "INS-666-00213": {
+      "metal": "Other"
+    },
+    "INS-666-00212": {
+      "metal": "Other"
+    },
+    "INS-666-00211": {
+      "metal": "Other"
+    },
+    "INS-666-00210": {
+      "metal": "Other"
+    },
+    "INS-666-00209": {
+      "metal": "Other"
+    },
+    "INS-666-00205": {
+      "metal": "Other"
+    },
+    "INS-666-00204": {
+      "metal": "Other"
+    },
+    "INS-666-00203": {
+      "metal": "Other"
+    },
+    "INS-666-00202": {
+      "metal": "Other"
+    },
+    "INS-666-00201": {
+      "metal": "Other"
+    },
+    "INS-666-00200": {
+      "metal": "Other"
+    },
+    "INS-666-00199": {
+      "metal": "Other"
+    },
+    "INS-666-00198": {
+      "metal": "Other"
+    },
+    "INS-666-00196": {
+      "metal": "Other"
+    },
+    "INS-666-00195": {
+      "metal": "Other"
+    },
+    "INS-666-00194": {
+      "metal": "Other"
+    },
+    "INS-666-00193": {
+      "metal": "Other"
+    },
+    "INS-666-00192": {
+      "metal": "Other"
+    },
+    "INS-666-00191": {
+      "metal": "Other"
+    },
+    "INS-666-00190": {
+      "metal": "Other"
+    },
+    "INS-666-00189": {
+      "metal": "Other"
+    },
+    "INS-666-00188": {
+      "metal": "Other"
+    },
+    "INS-666-00187": {
+      "metal": "Other"
+    },
+    "INS-666-00185": {
+      "metal": "Other"
+    },
+    "INS-666-00182": {
+      "metal": "Other"
+    },
+    "INS-666-00181": {
+      "metal": "Other"
+    },
+    "INS-666-00180": {
+      "metal": "Other"
+    },
+    "INS-666-00179": {
+      "metal": "Other"
+    },
+    "INS-666-00178": {
+      "metal": "Other"
+    },
+    "INS-666-00177": {
+      "metal": "Other"
+    },
+    "INS-666-00176": {
+      "metal": "Other"
+    },
+    "INS-666-00175": {
+      "metal": "Other"
+    },
+    "INS-666-00174": {
+      "metal": "Other"
+    },
+    "INS-666-00173": {
+      "metal": "Other"
+    },
+    "INS-666-00172": {
+      "metal": "Other"
+    },
+    "INS-666-00171": {
+      "metal": "Copper"
+    },
+    "INS-666-00170": {
+      "metal": "Copper"
+    },
+    "INS-666-00169": {
+      "metal": "Other"
+    },
+    "INS-666-00168": {
+      "metal": "Other"
+    },
+    "INS-666-00167": {
+      "metal": "Copper"
+    },
+    "INS-666-00166": {
+      "metal": "Copper"
+    },
+    "INS-666-00165": {
+      "metal": "Other"
+    },
+    "INS-666-00164": {
+      "metal": "Other"
+    },
+    "INS-666-00163": {
+      "metal": "Other"
+    },
+    "INS-666-00162": {
+      "metal": "Copper"
+    },
+    "INS-666-00161": {
+      "metal": "Other"
+    },
+    "INS-666-00160": {
+      "metal": "Other"
+    },
+    "INS-666-00159": {
+      "metal": "Other"
+    },
+    "INS-666-00158": {
+      "metal": "Other"
+    },
+    "INS-666-00157": {
+      "metal": "Other"
+    },
+    "INS-666-00156": {
+      "metal": "Other"
+    },
+    "INS-666-00155": {
+      "metal": "Other"
+    },
+    "INS-666-00154": {
+      "metal": "Other"
+    },
+    "INS-666-00153": {
+      "metal": "Other"
+    },
+    "INS-666-00152": {
+      "metal": "Other"
+    },
+    "INS-666-00151": {
+      "metal": "Other"
+    },
+    "INS-666-00150": {
+      "metal": "Other"
+    },
+    "INS-666-00149": {
+      "metal": "Other"
+    },
+    "INS-666-00148": {
+      "metal": "Other"
+    },
+    "INS-666-00147": {
+      "metal": "Other"
+    },
+    "INS-666-00146": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00145": {
+      "metal": "Other"
+    },
+    "INS-666-00144": {
+      "metal": "Other"
+    },
+    "INS-666-00143": {
+      "metal": "Other"
+    },
+    "INS-666-00142": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00141": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00140": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00139": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00138": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00137": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00136": {
+      "metal": "Mild Steel"
+    },
+    "INS-666-00135": {
+      "metal": "Other"
+    },
+    "INS-666-00134": {
+      "metal": "Other"
+    },
+    "INS-666-00133": {
+      "metal": "Other"
+    },
+    "INS-666-00132": {
+      "metal": "Other"
+    },
+    "INS-666-00131": {
+      "metal": "Other"
+    },
+    "INS-666-00130": {
+      "metal": "Other"
+    },
+    "INS-666-00129": {
+      "metal": "Other"
+    },
+    "INS-666-00128": {
+      "metal": "Other"
+    },
+    "INS-666-00127": {
+      "metal": "Other"
+    },
+    "INS-666-00126": {
+      "metal": "Other"
+    },
+    "INS-666-00125": {
+      "metal": "Other"
+    },
+    "INS-666-00124": {
+      "metal": "Other"
+    },
+    "INS-666-00123": {
+      "metal": "Other"
+    },
+    "INS-666-00122": {
+      "metal": "Other"
+    },
+    "INS-666-00121": {
+      "metal": "Other"
+    },
+    "INS-666-00120": {
+      "metal": "Other"
+    },
+    "INS-666-00119": {
+      "metal": "Other"
+    },
+    "INS-666-00118": {
+      "metal": "Other"
+    },
+    "INS-666-00117": {
+      "metal": "Other"
+    },
+    "INS-666-00115": {
+      "metal": "Other"
+    },
+    "INS-666-00114": {
+      "metal": "Other"
+    },
+    "INS-666-00113": {
+      "metal": "Other"
+    },
+    "INS-666-00111": {
+      "metal": "Other"
+    },
+    "INS-666-00110": {
+      "metal": "Other"
+    },
+    "INS-666-00109": {
+      "metal": "Copper"
+    },
+    "INS-666-00108": {
+      "metal": "Other"
+    },
+    "INS-666-00106": {
+      "metal": "Other"
+    },
+    "INS-666-00105": {
+      "metal": "Other"
+    },
+    "INS-666-00104": {
+      "metal": "Copper"
+    },
+    "INS-666-00103": {
+      "metal": "Other"
+    },
+    "INS-666-00102": {
+      "metal": "Other"
+    },
+    "INS-666-00101": {
+      "metal": "Other"
+    },
+    "INS-666-00100": {
+      "metal": "Other"
+    },
+    "INS-666-00099": {
+      "metal": "Other"
+    },
+    "INS-666-00098": {
+      "metal": "Other"
+    },
+    "INS-666-00097": {
+      "metal": "Other"
+    },
+    "INS-666-00096": {
+      "metal": "Other"
+    },
+    "INS-666-00095": {
+      "metal": "Other"
+    },
+    "INS-666-00094": {
+      "metal": "Other"
+    },
+    "INS-666-00093": {
+      "metal": "Other"
+    },
+    "INS-666-00092": {
+      "metal": "Other"
+    },
+    "INS-666-00091": {
+      "metal": "Other"
+    },
+    "INS-666-00090": {
+      "metal": "Other"
+    },
+    "INS-666-00089": {
+      "metal": "Other"
+    },
+    "INS-666-00087": {
+      "metal": "Other"
+    },
+    "INS-666-00086": {
+      "metal": "Other"
+    },
+    "INS-666-00085": {
+      "metal": "Other"
+    },
+    "INS-666-00084": {
+      "metal": "Other"
+    },
+    "INS-666-00083": {
+      "metal": "Other"
+    },
+    "INS-666-00082": {
+      "metal": "Other"
+    },
+    "INS-666-00081": {
+      "metal": "Other"
+    },
+    "INS-666-00080": {
+      "metal": "Other"
+    },
+    "INS-666-00079": {
+      "metal": "Other"
+    },
+    "INS-666-00078": {
+      "metal": "Other"
+    },
+    "INS-666-00077": {
+      "metal": "Other"
+    },
+    "INS-666-00076": {
+      "metal": "Other"
+    },
+    "INS-666-00073": {
+      "metal": "Other"
+    },
+    "INS-666-00072": {
+      "metal": "Other"
+    },
+    "INS-666-00071": {
+      "metal": "Other"
+    },
+    "INS-666-00070": {
+      "metal": "Other"
+    },
+    "INS-666-00069": {
+      "metal": "Other"
+    },
+    "INS-666-00068": {
+      "metal": "Other"
+    },
+    "INS-666-00061": {
+      "metal": "Other"
+    },
+    "INS-666-00060": {
+      "metal": "Other"
+    },
+    "INS-666-00059": {
+      "metal": "Other"
+    },
+    "INS-666-00058": {
+      "metal": "Other"
+    },
+    "INS-666-00057": {
+      "metal": "Other"
+    },
+    "INS-666-00056": {
+      "metal": "Other"
+    },
+    "INS-666-00055": {
+      "metal": "Other"
+    },
+    "INS-666-00054": {
+      "metal": "Other"
+    },
+    "INS-666-00053": {
+      "metal": "Other"
+    },
+    "INS-666-00052": {
+      "metal": "Other"
+    },
+    "INS-666-00051": {
+      "metal": "Other"
+    },
+    "INS-666-00050": {
+      "metal": "Other"
+    },
+    "INS-666-00049": {
+      "metal": "Other"
+    },
+    "INS-666-00048": {
+      "metal": "Other"
+    },
+    "INS-666-00047": {
+      "metal": "Other"
+    },
+    "INS-666-00043": {
+      "metal": "Other"
+    },
+    "INS-666-00039": {
+      "metal": "Other"
+    },
+    "INS-666-00038": {
+      "metal": "Other"
+    },
+    "INS-666-00037": {
+      "metal": "Other"
+    },
+    "INS-666-00035": {
+      "metal": "Other"
+    },
+    "INS-666-00032": {
+      "metal": "Other"
+    },
+    "INS-666-00031": {
+      "metal": "Other"
+    },
+    "INS-666-00029": {
+      "metal": "Other"
+    },
+    "INS-666-00028": {
+      "metal": "Other"
+    },
+    "INS-666-00027": {
+      "metal": "Other"
+    },
+    "INS-666-00026": {
+      "metal": "Other"
+    },
+    "INS-666-00025": {
+      "metal": "Other"
+    },
+    "INS-666-00024": {
+      "metal": "Other"
+    },
+    "INS-666-00023": {
+      "metal": "Other"
+    },
+    "INS-666-00022": {
+      "metal": "Other"
+    },
+    "INS-666-00021": {
+      "metal": "Other"
+    },
+    "INS-666-00020": {
+      "metal": "Other"
+    },
+    "INS-666-00019": {
+      "metal": "Other"
+    },
+    "INS-666-00018": {
+      "metal": "Other"
+    },
+    "INS-666-00017": {
+      "metal": "Other"
+    },
+    "INS-666-00016": {
+      "metal": "Other"
+    },
+    "INS-666-00015": {
+      "metal": "Other"
+    },
+    "INS-666-00013": {
+      "metal": "Other"
+    },
+    "INS-666-00012": {
+      "metal": "Other"
+    },
+    "INS-666-00011": {
+      "metal": "Other"
+    },
+    "INS-666-00010": {
+      "metal": "Other"
+    },
+    "INS-666-00009": {
+      "metal": "Other"
+    },
+    "INS-666-00006": {
+      "metal": "Other"
+    },
+    "INS-666-00005": {
+      "metal": "Other"
+    },
+    "INS-666-00004": {
+      "metal": "Other"
+    },
+    "INS-666-00003": {
+      "metal": "Other"
+    },
+    "INS-666-00002": {
+      "metal": "Other"
+    },
+    "INS-666-00001": {
+      "metal": "Other"
+    },
+    "FST-999-00794": {
+      "metal": "Other"
+    },
+    "FST-999-00793": {
+      "metal": "Other"
+    },
+    "FST-999-00776": {
+      "metal": "Other"
+    },
+    "FST-999-00626": {
+      "metal": "Copper"
+    },
+    "FST-999-00625": {
+      "metal": "Copper"
+    },
+    "FST-999-00464": {
+      "metal": "Mild Steel"
+    },
+    "EN-888-00056": {
+      "metal": "Copper"
+    },
+    "EL-777-00576": {
+      "metal": "Copper"
+    },
+    "EL-777-00575": {
+      "metal": "Copper"
+    },
+    "EL-777-00313": {
+      "metal": "Other"
+    },
+    "CU-222-00371": {
+      "metal": "Copper"
+    },
+    "CU-222-00370": {
+      "metal": "Copper"
+    },
+    "CU-222-00367": {
+      "metal": "Copper"
+    },
+    "CU-222-00366": {
+      "metal": "Copper"
+    },
+    "CU-222-00365": {
+      "metal": "Copper"
+    },
+    "CU-222-00364": {
+      "metal": "Copper"
+    },
+    "CU-222-00363": {
+      "metal": "Copper"
+    },
+    "CU-222-00361": {
+      "metal": "Copper"
+    },
+    "CU-222-00360": {
+      "metal": "Copper"
+    },
+    "CU-222-00357": {
+      "metal": "Copper"
+    },
+    "CU-222-00356": {
+      "metal": "Copper"
+    },
+    "CU-222-00352": {
+      "metal": "Copper"
+    },
+    "CU-222-00351": {
+      "metal": "Copper"
+    },
+    "CU-222-00350": {
+      "metal": "Copper"
+    },
+    "CU-222-00349": {
+      "metal": "Copper"
+    },
+    "CU-222-00348": {
+      "metal": "Copper"
+    },
+    "CU-222-00347": {
+      "metal": "Copper"
+    },
+    "CU-222-00346": {
+      "metal": "Copper"
+    },
+    "CU-222-00345": {
+      "metal": "Copper"
+    },
+    "CU-222-00344": {
+      "metal": "Copper"
+    },
+    "CU-222-00343": {
+      "metal": "Copper"
+    },
+    "CU-222-00342": {
+      "metal": "Copper"
+    },
+    "CU-222-00340": {
+      "metal": "Copper"
+    },
+    "CU-222-00339": {
+      "metal": "Copper"
+    },
+    "CU-222-00338": {
+      "metal": "Copper"
+    },
+    "CU-222-00337": {
+      "metal": "Copper"
+    },
+    "CU-222-00336": {
+      "metal": "Copper"
+    },
+    "CU-222-00335": {
+      "metal": "Copper"
+    },
+    "CU-222-00334": {
+      "metal": "Copper"
+    },
+    "CU-222-00333": {
+      "metal": "Copper"
+    },
+    "CU-222-00332": {
+      "metal": "Copper"
+    },
+    "CU-222-00331": {
+      "metal": "Copper"
+    },
+    "CU-222-00329": {
+      "metal": "Copper"
+    },
+    "CU-222-00328": {
+      "metal": "Copper"
+    },
+    "CU-222-00327": {
+      "metal": "Copper"
+    },
+    "CU-222-00326": {
+      "metal": "Copper"
+    },
+    "CU-222-00325": {
+      "metal": "Copper"
+    },
+    "CU-222-00324": {
+      "metal": "Copper"
+    },
+    "CU-222-00323": {
+      "metal": "Copper"
+    },
+    "CU-222-00322": {
+      "metal": "Copper"
+    },
+    "CU-222-00319": {
+      "metal": "Copper"
+    },
+    "CU-222-00316": {
+      "metal": "Copper"
+    },
+    "CU-222-00315": {
+      "metal": "Copper"
+    },
+    "CU-222-00314": {
+      "metal": "Copper"
+    },
+    "CU-222-00313": {
+      "metal": "Copper"
+    },
+    "CU-222-00312": {
+      "metal": "Copper"
+    },
+    "CU-222-00305": {
+      "metal": "Copper"
+    },
+    "CU-222-00301": {
+      "metal": "Copper"
+    },
+    "CU-222-00300": {
+      "metal": "Copper"
+    },
+    "CU-222-00299": {
+      "metal": "Copper"
+    },
+    "CU-222-00298": {
+      "metal": "Copper"
+    },
+    "CU-222-00296": {
+      "metal": "Copper"
+    },
+    "CU-222-00295": {
+      "metal": "Copper"
+    },
+    "CU-222-00293": {
+      "metal": "Copper"
+    },
+    "CU-222-00292": {
+      "metal": "Copper"
+    },
+    "CU-222-00291": {
+      "metal": "Copper"
+    },
+    "CU-222-00290": {
+      "metal": "Copper"
+    },
+    "CU-222-00289": {
+      "metal": "Copper"
+    },
+    "CU-222-00288": {
+      "metal": "Copper"
+    },
+    "CU-222-00287": {
+      "metal": "Copper"
+    },
+    "CU-222-00286": {
+      "metal": "Copper"
+    },
+    "CU-222-00285": {
+      "metal": "Copper"
+    },
+    "CU-222-00284": {
+      "metal": "Copper"
+    },
+    "CU-222-00283": {
+      "metal": "Copper"
+    },
+    "CU-222-00282": {
+      "metal": "Copper"
+    },
+    "CU-222-00262": {
+      "metal": "Copper"
+    },
+    "CU-222-00261": {
+      "metal": "Copper"
+    },
+    "CU-222-00260": {
+      "metal": "Copper"
+    },
+    "CU-222-00259": {
+      "metal": "Copper"
+    },
+    "CU-222-00258": {
+      "metal": "Copper"
+    },
+    "CU-222-00257": {
+      "metal": "Copper"
+    },
+    "CU-222-00256": {
+      "metal": "Copper"
+    },
+    "CU-222-00255": {
+      "metal": "Copper"
+    },
+    "CU-222-00254": {
+      "metal": "Copper"
+    },
+    "CU-222-00253": {
+      "metal": "Copper"
+    },
+    "CU-222-00244": {
+      "metal": "Copper"
+    },
+    "CU-222-00235": {
+      "metal": "Copper"
+    },
+    "CU-222-00234": {
+      "metal": "Copper"
+    },
+    "CU-222-00232": {
+      "metal": "Copper"
+    },
+    "CU-222-00231": {
+      "metal": "Copper"
+    },
+    "CU-222-00230": {
+      "metal": "Copper"
+    },
+    "CU-222-00229": {
+      "metal": "Copper"
+    },
+    "CU-222-00221": {
+      "metal": "Copper"
+    },
+    "CU-222-00220": {
+      "metal": "Copper"
+    },
+    "CU-222-00219": {
+      "metal": "Copper"
+    },
+    "CU-222-00218": {
+      "metal": "Copper"
+    },
+    "CU-222-00217": {
+      "metal": "Copper"
+    },
+    "CU-222-00211": {
+      "metal": "Copper"
+    },
+    "CU-222-00210": {
+      "metal": "Copper"
+    },
+    "CU-222-00209": {
+      "metal": "Copper"
+    },
+    "CU-222-00208": {
+      "metal": "Copper"
+    },
+    "CU-222-00207": {
+      "metal": "Copper"
+    },
+    "CU-222-00206": {
+      "metal": "Copper"
+    },
+    "CU-222-00205": {
+      "metal": "Copper"
+    },
+    "CU-222-00204": {
+      "metal": "Copper"
+    },
+    "CU-222-00203": {
+      "metal": "Copper"
+    },
+    "CU-222-00202": {
+      "metal": "Copper"
+    },
+    "CU-222-00201": {
+      "metal": "Copper"
+    },
+    "CU-222-00200": {
+      "metal": "Copper"
+    },
+    "CU-222-00199": {
+      "metal": "Copper"
+    },
+    "CU-222-00198": {
+      "metal": "Copper"
+    },
+    "CU-222-00197": {
+      "metal": "Copper"
+    },
+    "CU-222-00196": {
+      "metal": "Copper"
+    },
+    "CU-222-00195": {
+      "metal": "Copper"
+    },
+    "CU-222-00193": {
+      "metal": "Copper"
+    },
+    "CU-222-00192": {
+      "metal": "Copper"
+    },
+    "CU-222-00191": {
+      "metal": "Copper"
+    },
+    "CU-222-00190": {
+      "metal": "Copper"
+    },
+    "CU-222-00187": {
+      "metal": "Other"
+    },
+    "CU-222-00186": {
+      "metal": "Copper"
+    },
+    "CU-222-00182": {
+      "metal": "Copper"
+    },
+    "CU-222-00181": {
+      "metal": "Copper"
+    },
+    "CU-222-00180": {
+      "metal": "Copper"
+    },
+    "CU-222-00178": {
+      "metal": "Copper"
+    },
+    "CU-222-00176": {
+      "metal": "Copper"
+    },
+    "CU-222-00175": {
+      "metal": "Copper"
+    },
+    "CU-222-00174": {
+      "metal": "Copper"
+    },
+    "CU-222-00173": {
+      "metal": "Copper"
+    },
+    "CU-222-00172": {
+      "metal": "Copper"
+    },
+    "CU-222-00171": {
+      "metal": "Other"
+    },
+    "CU-222-00170": {
+      "metal": "Copper"
+    },
+    "CU-222-00169": {
+      "metal": "Copper"
+    },
+    "CU-222-00168": {
+      "metal": "Copper"
+    },
+    "CU-222-00167": {
+      "metal": "Copper"
+    },
+    "CU-222-00166": {
+      "metal": "Copper"
+    },
+    "CU-222-00165": {
+      "metal": "Copper"
+    },
+    "CU-222-00164": {
+      "metal": "Copper"
+    },
+    "CU-222-00163": {
+      "metal": "Copper"
+    },
+    "CU-222-00161": {
+      "metal": "Copper"
+    },
+    "CU-222-00160": {
+      "metal": "Copper"
+    },
+    "CU-222-00159": {
+      "metal": "Copper"
+    },
+    "CU-222-00158": {
+      "metal": "Copper"
+    },
+    "CU-222-00157": {
+      "metal": "Copper"
+    },
+    "CU-222-00156": {
+      "metal": "Copper"
+    },
+    "CU-222-00155": {
+      "metal": "Copper"
+    },
+    "CU-222-00154": {
+      "metal": "Copper"
+    },
+    "CU-222-00153": {
+      "metal": "Copper"
+    },
+    "CU-222-00152": {
+      "metal": "Copper"
+    },
+    "CU-222-00151": {
+      "metal": "Copper"
+    },
+    "CU-222-00150": {
+      "metal": "Copper"
+    },
+    "CU-222-00149": {
+      "metal": "Copper"
+    },
+    "CU-222-00148": {
+      "metal": "Copper"
+    },
+    "CU-222-00147": {
+      "metal": "Copper"
+    },
+    "CU-222-00146": {
+      "metal": "Other"
+    },
+    "CU-222-00145": {
+      "metal": "Copper"
+    },
+    "CU-222-00144": {
+      "metal": "Copper"
+    },
+    "CU-222-00143": {
+      "metal": "Copper"
+    },
+    "CU-222-00141": {
+      "metal": "Copper"
+    },
+    "CU-222-00140": {
+      "metal": "Copper"
+    },
+    "CU-222-00139": {
+      "metal": "Copper"
+    },
+    "CU-222-00136": {
+      "metal": "Copper"
+    },
+    "CU-222-00135": {
+      "metal": "Copper"
+    },
+    "CU-222-00134": {
+      "metal": "Copper"
+    },
+    "CU-222-00133": {
+      "metal": "Copper"
+    },
+    "CU-222-00132": {
+      "metal": "Copper"
+    },
+    "CU-222-00131": {
+      "metal": "Copper"
+    },
+    "CU-222-00130": {
+      "metal": "Copper"
+    },
+    "CU-222-00129": {
+      "metal": "Copper"
+    },
+    "CU-222-00128": {
+      "metal": "Copper"
+    },
+    "CU-222-00127": {
+      "metal": "Copper"
+    },
+    "CU-222-00126": {
+      "metal": "Copper"
+    },
+    "CU-222-00125": {
+      "metal": "Copper"
+    },
+    "CU-222-00124": {
+      "metal": "Copper"
+    },
+    "CU-222-00123": {
+      "metal": "Copper"
+    },
+    "CU-222-00122": {
+      "metal": "Copper"
+    },
+    "CU-222-00121": {
+      "metal": "Copper"
+    },
+    "CU-222-00120": {
+      "metal": "Copper"
+    },
+    "CU-222-00119": {
+      "metal": "Copper"
+    },
+    "CU-222-00118": {
+      "metal": "Copper"
+    },
+    "CU-222-00117": {
+      "metal": "Copper"
+    },
+    "CU-222-00116": {
+      "metal": "Copper"
+    },
+    "CU-222-00115": {
+      "metal": "Other"
+    },
+    "CU-222-00114": {
+      "metal": "Other"
+    },
+    "CU-222-00113": {
+      "metal": "Copper"
+    },
+    "CU-222-00112": {
+      "metal": "Copper"
+    },
+    "CU-222-00111": {
+      "metal": "Copper"
+    },
+    "CU-222-00110": {
+      "metal": "Copper"
+    },
+    "CU-222-00109": {
+      "metal": "Copper"
+    },
+    "CU-222-00107": {
+      "metal": "Copper"
+    },
+    "CU-222-00106": {
+      "metal": "Copper"
+    },
+    "CU-222-00097": {
+      "metal": "Copper"
+    },
+    "CU-222-00096": {
+      "metal": "Copper"
+    },
+    "CU-222-00095": {
+      "metal": "Copper"
+    },
+    "CU-222-00094": {
+      "metal": "Copper"
+    },
+    "CU-222-00093": {
+      "metal": "Copper"
+    },
+    "CU-222-00092": {
+      "metal": "Copper"
+    },
+    "CU-222-00091": {
+      "metal": "Copper"
+    },
+    "CU-222-00090": {
+      "metal": "Copper"
+    },
+    "CU-222-00089": {
+      "metal": "Copper"
+    },
+    "CU-222-00088": {
+      "metal": "Copper"
+    },
+    "CU-222-00087": {
+      "metal": "Copper"
+    },
+    "CU-222-00086": {
+      "metal": "Copper"
+    },
+    "CU-222-00078": {
+      "metal": "Copper"
+    },
+    "CU-222-00077": {
+      "metal": "Copper"
+    },
+    "CU-222-00076": {
+      "metal": "Copper"
+    },
+    "CU-222-00074": {
+      "metal": "Copper"
+    },
+    "CU-222-00073": {
+      "metal": "Copper"
+    },
+    "CU-222-00072": {
+      "metal": "Copper"
+    },
+    "CU-222-00071": {
+      "metal": "Copper"
+    },
+    "CU-222-00070": {
+      "metal": "Copper"
+    },
+    "CU-222-00065": {
+      "metal": "Copper"
+    },
+    "CU-222-00064": {
+      "metal": "Copper"
+    },
+    "CU-222-00063": {
+      "metal": "Copper"
+    },
+    "CU-222-00062": {
+      "metal": "Copper"
+    },
+    "CU-222-00051": {
+      "metal": "Copper"
+    },
+    "CU-222-00050": {
+      "metal": "Copper"
+    },
+    "CU-222-00049": {
+      "metal": "Copper"
+    },
+    "CU-222-00048": {
+      "metal": "Copper"
+    },
+    "CU-222-00047": {
+      "metal": "Copper"
+    },
+    "CU-222-00046": {
+      "metal": "Copper"
+    },
+    "CU-222-00040": {
+      "metal": "Copper"
+    },
+    "CU-222-00039": {
+      "metal": "Copper"
+    },
+    "CU-222-00037": {
+      "metal": "Copper"
+    },
+    "CU-222-00036": {
+      "metal": "Copper"
+    },
+    "CU-222-00035": {
+      "metal": "Copper"
+    },
+    "CU-222-00034": {
+      "metal": "Copper"
+    },
+    "CU-222-00031": {
+      "metal": "Copper"
+    },
+    "CU-222-00030": {
+      "metal": "Copper"
+    },
+    "CU-222-00029": {
+      "metal": "Copper"
+    },
+    "CU-222-00028": {
+      "metal": "Copper"
+    },
+    "CU-222-00027": {
+      "metal": "Copper"
+    },
+    "CU-222-00026": {
+      "metal": "Copper"
+    },
+    "CU-222-00025": {
+      "metal": "Copper"
+    },
+    "CU-222-00016": {
+      "metal": "Copper"
+    },
+    "CU-222-00015": {
+      "metal": "Copper"
+    },
+    "CU-222-00014": {
+      "metal": "Copper"
+    },
+    "CU-222-00013": {
+      "metal": "Copper"
+    },
+    "CU-222-00012": {
+      "metal": "Copper"
+    },
+    "CU-222-00011": {
+      "metal": "Copper"
+    },
+    "CU-222-00010": {
+      "metal": "Copper"
+    },
+    "CU-222-00009": {
+      "metal": "Copper"
+    },
+    "CU-222-00008": {
+      "metal": "Copper"
+    },
+    "CU-222-00007": {
+      "metal": "Copper"
+    },
+    "CU-222-00006": {
+      "metal": "Copper"
+    },
+    "CU-222-00005": {
+      "metal": "Copper"
+    },
+    "CU-222-00004": {
+      "metal": "Copper"
+    },
+    "CU-222-00003": {
+      "metal": "Copper"
+    },
+    "CU-222-00002": {
+      "metal": "Copper"
+    },
+    "CU-222-00001": {
+      "metal": "Copper"
+    },
+    "CU-111-00046": {
+      "metal": "Copper"
+    },
+    "CU-111-00042": {
+      "metal": "Copper"
+    },
+    "CU-111-00041": {
+      "metal": "Copper"
+    },
+    "CU-111-00040": {
+      "metal": "Copper"
+    },
+    "CU-111-00039": {
+      "metal": "Copper"
+    },
+    "CU-111-00038": {
+      "metal": "Copper"
+    },
+    "CU-111-00037": {
+      "metal": "Copper"
+    },
+    "CU-111-00036": {
+      "metal": "Copper"
+    },
+    "CU-111-00035": {
+      "metal": "Copper"
+    },
+    "CU-111-00034": {
+      "metal": "Copper"
+    },
+    "CU-111-00033": {
+      "metal": "Copper"
+    },
+    "CU-111-00032": {
+      "metal": "Copper"
+    },
+    "CU-111-00031": {
+      "metal": "Copper"
+    },
+    "CU-111-00030": {
+      "metal": "Copper"
+    },
+    "CU-111-00029": {
+      "metal": "Copper"
+    },
+    "CU-111-00016": {
+      "metal": "Copper"
+    },
+    "CU-111-00015": {
+      "metal": "Copper"
+    },
+    "CU-111-00014": {
+      "metal": "Copper"
+    },
+    "CU-111-00013": {
+      "metal": "Copper"
+    },
+    "CU-111-00012": {
+      "metal": "Copper"
+    },
+    "CU-111-00011": {
+      "metal": "Copper"
+    },
+    "CU-111-00010": {
+      "metal": "Copper"
+    },
+    "CU-111-00009": {
+      "metal": "Copper"
+    },
+    "CU-111-00008": {
+      "metal": "Copper"
+    },
+    "CU-111-00007": {
+      "metal": "Copper"
+    },
+    "CU-111-00006": {
+      "metal": "Copper"
+    },
+    "CU-111-00005": {
+      "metal": "Copper"
+    },
+    "CU-111-00004": {
+      "metal": "Copper"
+    },
+    "CU-111-00003": {
+      "metal": "Copper"
+    },
+    "CU-111-00002": {
+      "metal": "Copper"
+    },
+    "CU-111-00001": {
+      "metal": "Copper"
+    },
+    "CMP-444-00540": {
+      "metal": "Other"
+    },
+    "CMP-444-00537": {
+      "metal": "Other"
+    },
+    "CMP-444-00502": {
+      "metal": "Other"
+    },
+    "CMP-444-00500": {
+      "metal": "Other"
+    },
+    "CMP-444-00499": {
+      "metal": "Other"
+    },
+    "CMP-444-00492": {
+      "metal": "Other"
+    },
+    "CMP-444-00478": {
+      "metal": "Other"
+    },
+    "CMP-444-00468": {
+      "metal": "Other"
+    },
+    "CMP-444-00466": {
+      "metal": "Other"
+    },
+    "CMP-444-00457": {
+      "metal": "Other"
+    },
+    "CMP-444-00456": {
+      "metal": "Other"
+    },
+    "CMP-444-00455": {
+      "metal": "Other"
+    },
+    "CMP-444-00454": {
+      "metal": "Other"
+    },
+    "CMP-444-00453": {
+      "metal": "Other"
+    },
+    "CMP-444-00452": {
+      "metal": "Copper"
+    },
+    "CMP-444-00451": {
+      "metal": "Copper"
+    },
+    "CMP-444-00450": {
+      "metal": "Copper"
+    },
+    "CMP-444-00449": {
+      "metal": "Copper"
+    },
+    "CMP-444-00444": {
+      "metal": "Other"
+    },
+    "CMP-444-00439": {
+      "metal": "Copper"
+    },
+    "CMP-444-00438": {
+      "metal": "Copper"
+    },
+    "CMP-444-00437": {
+      "metal": "Other"
+    },
+    "CMP-444-00435": {
+      "metal": "Copper"
+    },
+    "CMP-444-00434": {
+      "metal": "Copper"
+    },
+    "CMP-444-00415": {
+      "metal": "Copper"
+    },
+    "CMP-444-00390": {
+      "metal": "Copper"
+    },
+    "CMP-444-00382": {
+      "metal": "Other"
+    },
+    "CMP-444-00374": {
+      "metal": "Other"
+    },
+    "CMP-444-00373": {
+      "metal": "Other"
+    },
+    "CMP-444-00363": {
+      "metal": "Other"
+    },
+    "CMP-444-00288": {
+      "metal": "Copper"
+    },
+    "CMP-444-00248": {
+      "metal": "Other"
+    },
+    "CMP-444-00235": {
+      "metal": "Copper"
+    },
+    "CMP-444-00233": {
+      "metal": "Copper"
+    },
+    "CMP-444-00210": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00180": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00147": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00138": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00132": {
+      "metal": "Other"
+    },
+    "CMP-444-00118": {
+      "metal": "Other"
+    },
+    "CMP-444-00114": {
+      "metal": "Other"
+    },
+    "CMP-444-00096": {
+      "metal": "Other"
+    },
+    "CMP-444-00071": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00070": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00051": {
+      "metal": "CRGO steel"
+    },
+    "CMP-444-00044": {
+      "metal": "Other"
+    },
+    "CMP-444-00042": {
+      "metal": "Other"
+    },
+    "CMP-444-00036": {
+      "metal": "Other"
+    },
+    "CMP-444-00033": {
+      "metal": "Other"
+    },
+    "CMP-444-00032": {
+      "metal": "Other"
+    },
+    "CMP-444-00031": {
+      "metal": "Other"
+    },
+    "CMP-444-00026": {
+      "metal": "Other"
+    },
+    "CMP-444-00025": {
+      "metal": "Other"
+    },
+    "CMP-444-00024": {
+      "metal": "Other"
+    },
+    "CMP-444-00020": {
+      "metal": "Other"
+    },
+    "CMP-444-00019": {
+      "metal": "Other"
+    },
+    "CH-303-00021": {
+      "metal": "Other"
+    },
+    "CH-303-00020": {
+      "metal": "Other"
+    },
+    "CH-303-00016": {
+      "metal": "Other"
+    },
+    "CH-303-00014": {
+      "metal": "Other"
+    },
+    "CH-303-00013": {
+      "metal": "Other"
+    },
+    "CH-303-00012": {
+      "metal": "Copper"
+    },
+    "CH-303-00003": {
+      "metal": "Other"
+    },
+    "CH-303-00002": {
+      "metal": "Other"
+    },
+    "CH-303-00001": {
+      "metal": "Other"
+    },
+    "CF-555-00827": {
+      "metal": "Stainless Steel"
+    },
+    "CF-555-00661": {
+      "metal": "Stainless Steel"
+    },
+    "CF-555-00527": {
+      "metal": "Stainless Steel"
+    },
+    "CF-555-00526": {
+      "metal": "Stainless Steel"
+    },
+    "CF-555-00525": {
+      "metal": "Stainless Steel"
+    },
+    "CF-555-00304": {
+      "metal": "Stainless Steel"
+    },
+    "CF-555-00261": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00206": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00205": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00204": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00056": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00055": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00054": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00053": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00052": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00051": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00050": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00049": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00048": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00046": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00045": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00044": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00018": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00017": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00016": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00015": {
+      "metal": "Other"
+    },
+    "CF-555-00014": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00013": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00012": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00011": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00010": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00009": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00008": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00007": {
+      "metal": "Mild Steel"
+    },
+    "CF-555-00006": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00369": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00368": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00367": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00366": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00365": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00364": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00363": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00362": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00361": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00360": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00359": {
+      "metal": "Stainless Steel"
+    },
+    "CC-555-00358": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00357": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00356": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00355": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00354": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00353": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00352": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00351": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00350": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00349": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00348": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00347": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00346": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00345": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00344": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00343": {
+      "metal": "Other"
+    },
+    "CC-555-00342": {
+      "metal": "Other"
+    },
+    "CC-555-00341": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00340": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00339": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00338": {
+      "metal": "Other"
+    },
+    "CC-555-00337": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00336": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00335": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00334": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00333": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00332": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00331": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00330": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00329": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00328": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00327": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00326": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00325": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00324": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00323": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00322": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00321": {
+      "metal": "Other"
+    },
+    "CC-555-00320": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00319": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00318": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00317": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00316": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00315": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00314": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00313": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00312": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00311": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00310": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00309": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00308": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00307": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00306": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00305": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00304": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00303": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00302": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00301": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00300": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00299": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00298": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00297": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00296": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00295": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00294": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00293": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00292": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00291": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00290": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00289": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00288": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00287": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00286": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00285": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00284": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00283": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00282": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00281": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00280": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00279": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00278": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00277": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00276": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00275": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00274": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00273": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00272": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00271": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00270": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00269": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00268": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00267": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00266": {
+      "metal": "Copper"
+    },
+    "CC-555-00265": {
+      "metal": "Copper"
+    },
+    "CC-555-00264": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00263": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00262": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00261": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00260": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00259": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00258": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00257": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00256": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00255": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00254": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00253": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00252": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00251": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00250": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00249": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00248": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00247": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00246": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00245": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00244": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00243": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00241": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00240": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00239": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00238": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00237": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00235": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00234": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00233": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00232": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00231": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00230": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00229": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00228": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00227": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00226": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00225": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00224": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00223": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00222": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00221": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00220": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00219": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00218": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00217": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00216": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00215": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00214": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00213": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00212": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00211": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00210": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00209": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00208": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00207": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00206": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00205": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00204": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00203": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00202": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00201": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00200": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00199": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00198": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00197": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00196": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00195": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00194": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00193": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00192": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00191": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00190": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00189": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00188": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00187": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00186": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00185": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00184": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00183": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00182": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00181": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00180": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00179": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00178": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00177": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00176": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00175": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00174": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00173": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00172": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00171": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00170": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00169": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00168": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00167": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00166": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00165": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00164": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00163": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00162": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00161": {
+      "metal": "Copper"
+    },
+    "CC-555-00160": {
+      "metal": "Copper"
+    },
+    "CC-555-00159": {
+      "metal": "Copper"
+    },
+    "CC-555-00158": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00157": {
+      "metal": "Copper"
+    },
+    "CC-555-00156": {
+      "metal": "Copper"
+    },
+    "CC-555-00155": {
+      "metal": "Copper"
+    },
+    "CC-555-00154": {
+      "metal": "Copper"
+    },
+    "CC-555-00153": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00152": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00151": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00150": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00149": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00148": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00147": {
+      "metal": "Other"
+    },
+    "CC-555-00146": {
+      "metal": "Other"
+    },
+    "CC-555-00145": {
+      "metal": "Other"
+    },
+    "CC-555-00144": {
+      "metal": "Other"
+    },
+    "CC-555-00143": {
+      "metal": "Other"
+    },
+    "CC-555-00142": {
+      "metal": "Other"
+    },
+    "CC-555-00141": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00140": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00139": {
+      "metal": "Other"
+    },
+    "CC-555-00137": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00136": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00135": {
+      "metal": "Other"
+    },
+    "CC-555-00134": {
+      "metal": "Other"
+    },
+    "CC-555-00133": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00132": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00131": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00130": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00129": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00128": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00127": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00126": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00125": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00124": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00123": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00122": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00121": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00120": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00119": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00118": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00117": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00116": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00115": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00114": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00113": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00112": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00111": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00110": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00109": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00108": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00106": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00104": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00103": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00102": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00101": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00100": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00099": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00098": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00097": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00096": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00095": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00094": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00093": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00092": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00091": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00090": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00087": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00086": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00085": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00084": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00082": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00081": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00080": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00079": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00077": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00076": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00075": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00074": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00073": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00072": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00071": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00070": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00069": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00068": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00067": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00066": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00065": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00064": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00063": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00062": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00061": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00060": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00059": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00058": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00057": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00056": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00055": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00054": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00053": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00052": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00051": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00050": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00049": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00048": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00047": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00046": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00045": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00044": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00043": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00042": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00041": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00040": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00038": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00037": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00035": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00034": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00033": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00032": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00031": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00030": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00027": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00026": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00025": {
+      "metal": "Other"
+    },
+    "CC-555-00024": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00023": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00022": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00021": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00020": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00019": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00018": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00017": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00016": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00015": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00013": {
+      "metal": "Other"
+    },
+    "CC-555-00012": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00009": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00005": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00004": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00003": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00002": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00001": {
+      "metal": "CRGO steel"
+    },
+    "ANG-000-00072": {
+      "metal": "Other"
+    },
+    "ANG-000-00071": {
+      "metal": "Other"
+    },
+    "ANG-000-00065": {
+      "metal": "Other"
+    },
+    "ANG-000-00009": {
+      "metal": "Other"
+    },
+    "AL-222-00224": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00223": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00222": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00221": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00220": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00219": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00218": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00217": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00210": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00208": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00207": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00206": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00205": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00196": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00192": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00190": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00189": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00188": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00187": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00180": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00179": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00169": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00165": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00164": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00156": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00155": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00154": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00153": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00152": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00151": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00150": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00149": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00148": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00147": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00145": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00136": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00135": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00134": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00133": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00132": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00126": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00125": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00124": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00110": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00109": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00108": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00107": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00106": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00105": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00104": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00103": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00102": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00101": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00100": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00099": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00087": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00083": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00082": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00076": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00075": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00074": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00073": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00072": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00071": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00064": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00060": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00059": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00058": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00057": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00056": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00055": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00054": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00053": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00052": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00051": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00050": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00049": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00048": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00047": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00046": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00045": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00044": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00043": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00042": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00041": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00040": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00039": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00038": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00036": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00035": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00034": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00033": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00032": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00031": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00030": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00029": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00028": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00027": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00026": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00025": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00024": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00023": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00022": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00021": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00020": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00019": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00018": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00015": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00014": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00013": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00012": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00011": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00010": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00009": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00008": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00007": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00006": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00005": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00004": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00003": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00002": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00001": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00033": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00032": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00031": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00030": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00020": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00019": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00018": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00017": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00016": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00015": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00014": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00013": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00012": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00011": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00010": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00238": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00005": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00004": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00003": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00002": {
+      "metal": "Aluminium"
+    },
+    "AL-111-00001": {
+      "metal": "Aluminium"
+    }
+  }
 }
