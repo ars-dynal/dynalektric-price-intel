@@ -20,8 +20,10 @@ import os
 import urllib.request
 import urllib.error
 
-BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.groq.com/openai/v1").rstrip("/")
-MODEL = os.environ.get("LLM_MODEL", "llama-3.3-70b-versatile")
+# Use `or` (not a default arg): the workflow may pass these as EMPTY strings when
+# the optional repo variables are unset, and "" must still fall back to the default.
+BASE_URL = (os.environ.get("LLM_BASE_URL") or "https://api.groq.com/openai/v1").rstrip("/")
+MODEL = os.environ.get("LLM_MODEL") or "llama-3.3-70b-versatile"
 
 
 def api_key():
