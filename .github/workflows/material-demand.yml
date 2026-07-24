@@ -29,12 +29,14 @@ jobs:
           DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
           DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
         run: python3 scripts/material_demand.py
-      - name: Commit the aggregate page
+      - name: Render Max Purchase Limit page (finished-cost based)
+        run: python3 scripts/budget_view.py
+      - name: Commit the aggregate pages
         run: |
           git config user.name "dynalektric-price-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/demand.html
-          git diff --cached --quiet || git commit -m "Forward material demand refresh: $(date -u +%Y-%m-%d)"
+          git add docs/demand.html docs/budget.html
+          git diff --cached --quiet || git commit -m "Forward demand + max-purchase-limit refresh: $(date -u +%Y-%m-%d)"
           git push
       - name: Upload per-budget detail (private artifact)
         uses: actions/upload-artifact@v4
