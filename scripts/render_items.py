@@ -101,18 +101,18 @@ def main():
         "Mild Steel": "—",
     }
 
-    # Finished landed cost per metal, from the company costing formula (costing.py).
-    DEFAULT_PROFILE = {"Aluminium": "Aluminium foil", "Copper": "Copper strip/wire"}
-    finished = {}
+    # Finished landed cost — company costing formula (costing.py), per item by form.
+    finished_meta = {}   # per-metal default, for the benchmark cards
+    cfg = summ = None
     try:
         import costing
-        cmap = {c["profile"]: c for c in costing.all_costs()}
-        for metal, prof in DEFAULT_PROFILE.items():
-            c = cmap.get(prof)
-            if c:
-                finished[metal] = {"ex": c["total_ex_gst"], "confirmed": c["confirmed"], "profile": prof}
+        cfg, summ = costing.load_cfg_summary()
+        for c in costing.all_costs():
+            if c["profile"] == costing.DEFAULT_PROFILE.get(c["benchmark"]):
+                finished_meta[c["benchmark"]] = {"ex": c["total_ex_gst"], "confirmed": c["confirmed"],
+                                                 "profile": c["profile"]}
     except Exception:
-        finished = {}
+        cfg = None
 
     rows = []
     for it in doc["items"]:
@@ -120,13 +120,23 @@ def main():
         metal = (classif.get(it.get("code")) or {}).get("metal") or detect_metal(it.get("name"), it.get("cat"))
         b = bench.get(metal) if metal else None
         has_price = bool(b and b["price"] is not None)
-        fin = finished.get(metal)
+        fin_val = fin_conf = None
+        if cfg is not None and metal in ("Aluminium", "Copper"):
+            fi = costing.finished_for(metal, it.get("name"), summ, cfg)
+            if fi:
+                fin_val, fin_conf = fi["total_ex_gst"], fi["confirmed"]
+        # budget status: ERP rate vs finished cost
+        erp = it.get("rate")
+        bstat, bdelta = None, None
+        if erp and fin_val:
+            bdelta = round((fin_val - erp) / erp * 100)
+            bstat = "under" if erp < fin_val * 0.98 else ("over" if erp > fin_val * 1.15 else "ok")
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
                      "metal": metal or "—", "uom": it["uom"],
                      "erp": it.get("rate"),
                      "lm": (b["price"] if b else None),
-                     "fin": (fin["ex"] if fin else None),
-                     "finc": (fin["confirmed"] if fin else True),
+                     "fin": fin_val, "finc": (fin_conf if fin_conf is not None else True),
+                     "bstat": bstat, "bdelta": bdelta,
                      "src": SRC_SHORT.get(metal, "—") if has_price else "—"})
 
     # Only render benchmark cards for metals that actually appear and have a price.
@@ -137,7 +147,7 @@ def main():
     bench_cards = ""
     for m, b in present.items():
         tier = '<span class="tag-ind">indicative</span>' if b["indicative"] else ""
-        fin = finished.get(m)
+        fin = finished_meta.get(m)
         finline = ""
         if fin:
             est = "" if fin["confirmed"] else ' <span class="tag-ind">est.</span>'
@@ -258,6 +268,8 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 .nav a.active{background:var(--al);color:#fff;border-color:var(--al)}
 .finline{font-size:11.5px;color:var(--tx2);margin-top:4px;font-weight:600}.finp{color:var(--mut);font-weight:400}
 .fin{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--tx2)}
+.bbadge{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:5px;white-space:nowrap}
+.b-under{background:var(--critt);color:var(--crit)}.b-ok{background:var(--goodt);color:var(--good)}.b-over{background:var(--warnt);color:#a06a00}
 </style></head><body><div class="wrap">
 <div class="brand"><span class="bname">Dynalektric</span> <span class="btag">Commodity Price Intelligence</span></div>
 <nav class="nav">
@@ -267,7 +279,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <a href="./demand.html">Forward demand</a>
 </nav>
 <h1>Today's live commodity price beside each item</h1>
-<p class="sub"><b>Live metal ₹/kg</b> = today's raw benchmark for each item's base metal. <b>Finished ₹/kg</b> = the landed cost from your company costing formula (metal + conversion + packing + freight, ex-GST) — the number to compare budgets against. "ERP rate" is your item-master price, shown as-is. Values marked <b>*</b> use placeholder conversion parameters (copper) pending your confirmed rates.</p>
+<p class="sub"><b>Finished ₹/kg</b> = today's landed cost from your costing formula (metal + conversion for that item's form + packing + freight, ex-GST). <b>Budget status</b> compares your ERP rate to that finished cost — <b>Under</b> = budgeted below today's cost (will overrun). Filter "Under-budgeted only" to see what needs revising. Values marked <b>*</b> use placeholder copper parameters pending your rates.</p>
 <p class="gen">Auto-refreshed daily (9:00 AM IST). Last generated: {{GENERATED}} · {{N_TOTAL}} items.</p>
 <div class="cards">{{BENCH_CARDS}}</div>
 <section class="signals">
@@ -284,6 +296,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <div class="controls">
  <input id="q" placeholder="Search code or item name..." oninput="render()">
  <select id="metal" onchange="render()"><option value="">All metals</option><option>Copper</option><option>Aluminium</option><option>CRGO steel</option><option>Stainless Steel</option><option>Mild Steel</option></select>
+ <select id="bud" onchange="render()"><option value="">All budget status</option><option value="under">Under-budgeted only</option><option value="ok">OK only</option></select>
  <span class="count" id="count"></span>
 </div>
 <table><thead><tr>
@@ -292,6 +305,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <th class="num" onclick="sortBy('erp')">ERP rate &#8377;/kg</th>
  <th class="num" onclick="sortBy('lm')">Live metal &#8377;/kg</th>
  <th class="num" onclick="sortBy('fin')">Finished &#8377;/kg</th>
+ <th onclick="sortBy('bdelta')">Budget status</th>
  <th onclick="sortBy('src')">Live price source</th></tr></thead><tbody id="tb"></tbody></table>
 <footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a> · <a href="./consumption.html" style="color:var(--al)">Consumption &amp; spend &rarr;</a> · <a href="./demand.html" style="color:var(--al)">Forward demand &rarr;</a></footer>
 </div>
@@ -343,12 +357,18 @@ function drawCharts(){
 const DATA={{DATA}};
 let sortKey='metal',sortDir=1;
 function metalCls(m){return m==='Copper'?'cu':m==='Aluminium'?'al':m==='CRGO steel'?'st':m==='Stainless Steel'?'ss':m==='Mild Steel'?'ms':''}
+function bcell(d){if(d.bstat===null||d.bstat===undefined)return '<span class="na">—</span>';
+ if(d.bstat==='under')return '<span class="bbadge b-under">Under '+Math.abs(d.bdelta)+'%</span>';
+ if(d.bstat==='over')return '<span class="bbadge b-over">Over '+Math.abs(d.bdelta)+'%</span>';
+ return '<span class="bbadge b-ok">OK</span>';}
 function sortBy(k){if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=1}render()}
 function render(){
  const q=document.getElementById('q').value.toLowerCase();
  const mf=document.getElementById('metal').value;
+ const bf=document.getElementById('bud').value;
  let r=DATA.filter(d=>{
    if(mf&&d.metal!==mf)return false;
+   if(bf&&d.bstat!==bf)return false;
    if(q&&!(String(d.code).toLowerCase().includes(q)||d.name.toLowerCase().includes(q)))return false;
    return true;});
  r.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];
@@ -363,6 +383,7 @@ function render(){
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td>'+
    '<td class="fin">'+(d.fin?('₹'+d.fin.toLocaleString('en-IN',{maximumFractionDigits:0})+(d.finc?'':'*')):'<span class="na">—</span>')+'</td>'+
+   '<td>'+bcell(d)+'</td>'+
    '<td class="mono srccell">'+d.src+'</td></tr>';}).join('');
 }
 drawCharts();

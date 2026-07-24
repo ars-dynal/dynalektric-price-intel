@@ -24,6 +24,46 @@
       "other_charges": 0,
       "_confirm": true
     },
+    "Aluminium busbar": {
+      "benchmark": "Aluminium",
+      "premium_inr_kg": 0,
+      "conversion_rate": 40,
+      "coating_rate": 0,
+      "packing_fwd_pct": 2,
+      "freight_rate": 0,
+      "other_charges": 0,
+      "_confirm": true
+    },
+    "Copper wire": {
+      "benchmark": "Copper",
+      "premium_usd_mt": 0,
+      "conversion_rate": 90,
+      "coating_rate": 0,
+      "packing_flat": 6,
+      "freight_rate": 0,
+      "other_charges": 0,
+      "_confirm": true
+    },
+    "Copper strip": {
+      "benchmark": "Copper",
+      "premium_usd_mt": 0,
+      "conversion_rate": 80,
+      "coating_rate": 0,
+      "packing_flat": 6,
+      "freight_rate": 0,
+      "other_charges": 0,
+      "_confirm": true
+    },
+    "Copper busbar": {
+      "benchmark": "Copper",
+      "premium_usd_mt": 0,
+      "conversion_rate": 55,
+      "coating_rate": 0,
+      "packing_fwd_pct": 2,
+      "freight_rate": 0,
+      "other_charges": 0,
+      "_confirm": true
+    },
     "Copper foil": {
       "benchmark": "Copper",
       "premium_usd_mt": 0,

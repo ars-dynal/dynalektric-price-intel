@@ -69,11 +69,52 @@ def finished_cost(profile, summary, gst_pct=18.0):
     }
 
 
-def all_costs():
+FORM_KEYWORDS = [("foil", "foil"), ("busbar", "busbar"), ("bus bar", "busbar"),
+                 ("conductor", "conductor"), ("strip", "strip"),
+                 ("winding", "wire"), ("wire", "wire"), ("sheet", "sheet"),
+                 ("lamination", "lamination")]
+DEFAULT_PROFILE = {"Aluminium": "Aluminium foil", "Copper": "Copper strip/wire"}
+
+
+def detect_form(name):
+    n = (name or "").lower()
+    for kw, form in FORM_KEYWORDS:
+        if kw in n:
+            return form
+    return None
+
+
+def profile_name_for(metal, name, cfg):
+    """Pick the costing profile for an item by its base metal + detected form."""
+    profs = cfg.get("profiles", {})
+    form = detect_form(name)
+    if form:
+        cand = f"{metal} {form}"
+        if cand in profs:
+            return cand
+    return DEFAULT_PROFILE.get(metal)
+
+
+def finished_for(metal, name, summary, cfg):
+    """Finished landed cost for a single item (metal + form). None if unpriceable."""
+    pn = profile_name_for(metal, name, cfg)
+    if not pn or pn not in cfg.get("profiles", {}):
+        return None
+    prof = dict(cfg["profiles"][pn], name=pn)
+    prof.setdefault("gst_pct", cfg.get("gst_pct", 18))
+    return finished_cost(prof, summary)
+
+
+def load_cfg_summary():
     with open(PARAMS) as f:
         cfg = json.load(f)
     with open(SUMMARY) as f:
         summary = json.load(f)
+    return cfg, summary
+
+
+def all_costs():
+    cfg, summary = load_cfg_summary()
     out = []
     for name, prof in cfg.get("profiles", {}).items():
         prof = dict(prof, name=name)
