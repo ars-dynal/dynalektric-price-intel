@@ -32,6 +32,12 @@
   .notice{background:var(--warn-tint);border:1px solid color-mix(in srgb,var(--warn) 40%,var(--border));border-radius:10px;padding:11px 14px;font-size:12.5px;color:var(--text-secondary);margin-bottom:18px;line-height:1.5}
   .notice b{color:var(--text-primary)}
   .notice a{color:var(--s1)}
+  .tools{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+  @media (max-width:720px){.tools{grid-template-columns:1fr}}
+  .tool{display:flex;gap:11px;align-items:center;background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--text-primary);font-size:12.5px;line-height:1.45}
+  .tool small{color:var(--text-muted);font-size:11px}
+  .tool:hover{border-color:var(--s1)}
+  .ticon{width:34px;height:34px;border-radius:9px;flex:none;display:flex;align-items:center;justify-content:center;font-size:16px}
   .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
   @media (max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
   .card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:13px 14px;position:relative;overflow:hidden}
@@ -80,6 +86,17 @@
   <div class="notice"><b>Item detail:</b> the full item-by-item table with live prices is at
     <a href="./items.html">items.html →</a> &nbsp;·&nbsp; forward demand &amp; stock cover at
     <a href="./demand.html">demand.html →</a></div>
+
+  <div class="tools">
+    <a class="tool" href="https://github.com/ars-dynal/dynalektric-price-intel/actions/workflows/procurement-plan.yml" target="_blank" rel="noopener">
+      <span class="ticon" style="background:var(--s1)">📊</span>
+      <span><b>Executive procurement dashboard</b><br>
+      <small>Private — team GitHub login required. Open the latest run → download the <i>procurement-plan</i> artifact → open <i>procurement_dashboard.html</i>.</small></span></a>
+    <a class="tool" href="https://github.com/ars-dynal/dynalektric-price-intel/actions/workflows/max-budget.yml" target="_blank" rel="noopener">
+      <span class="ticon" style="background:var(--s4)">🧮</span>
+      <span><b>Max Purchase Limit calculator</b><br>
+      <small>Private — run with a BOM PDF (base64) + project quantity; result arrives as a private artifact.</small></span></a>
+  </div>
 
   <div class="cards">
     <div class="card"><span class="accent" style="background:var(--s1)"></span>
