@@ -5,124 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dynalektric — Commodity Price Signal (Public Summary)</title>
 <style>
-  .viz-root {
-    color-scheme: light;
-    --surface-1:      #fcfcfb;
-    --page-plane:     #f9f9f7;
-    --text-primary:   #0b0b0b;
-    --text-secondary: #52514e;
-    --text-muted:     #898781;
-    --gridline:       #e1e0d9;
-    --border:         rgba(11,11,11,0.10);
-    --series-1:       #2a78d6;
-    --series-2:       #eb6834;
-    --good:           #0ca30c;
-    --warning:        #fab219;
-    --critical:       #d03b3b;
-    --good-tint:      #e7f6e7;
-    --warning-tint:   #fff6e2;
-    --critical-tint:  #fbe9e9;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:where(:not([data-theme="light"])) .viz-root {
-      color-scheme: dark;
-      --surface-1: #1a1a19; --page-plane: #0d0d0d; --text-primary: #ffffff;
-      --text-secondary: #c3c2b7; --text-muted: #898781; --gridline: #2c2c2a;
-      --border: rgba(255,255,255,0.10); --series-1: #3987e5; --series-2: #d95926;
-      --good-tint: rgba(12,163,12,0.14); --warning-tint: rgba(250,178,25,0.14);
-      --critical-tint: rgba(230,103,103,0.14); --critical: #e66767;
-    }
-  }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--page-plane); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--text-primary); }
-  .wrap { max-width: 880px; margin:0 auto; padding: 32px 20px 60px; }
-  .topbar { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:20px; }
-  .brand { font-weight:700; font-size:15px; }
-  .tag { font-size:12px; color:var(--text-muted); margin-left:8px; }
-  h1 { font-size:20px; margin:0 0 6px; }
-  .sub { color:var(--text-secondary); font-size:13.5px; max-width:640px; line-height:1.55; margin-bottom:22px; }
-  .notice { background:var(--warning-tint); border:1px solid color-mix(in srgb, var(--warning) 40%, var(--border)); border-radius:8px; padding:10px 14px; font-size:12.5px; color:var(--text-secondary); margin-bottom:22px; }
-  .notice b { color:var(--text-primary); }
-  .cards { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:26px; }
-  @media (max-width:640px){ .cards{ grid-template-columns:1fr; } }
-  .card { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:16px; position:relative; overflow:hidden; }
-  .card .accent { position:absolute; left:0; top:0; bottom:0; width:4px; }
-  .card.al .accent { background:var(--series-1); }
-  .card.cu .accent { background:var(--series-2); }
-  .card .label { font-size:12px; color:var(--text-muted); margin-bottom:6px; }
-  .card .value { font-size:24px; font-weight:650; }
-  .card .value small { font-size:12.5px; font-weight:500; color:var(--text-secondary); }
-  .card .meta { font-size:11px; color:var(--text-muted); margin-top:6px; line-height:1.5; }
-  section { margin-bottom:26px; }
-  h2 { font-size:14.5px; margin:0 0 10px; }
-  .signal-row { display:flex; gap:12px; flex-wrap:wrap; }
-  .pill { flex:1; min-width:140px; background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:14px; text-align:center; }
-  .pill .n { font-size:26px; font-weight:700; }
-  .pill .l { font-size:11.5px; color:var(--text-muted); margin-top:4px; }
-  .pill.crit .n { color:var(--critical); }
-  .pill.warn .n { color:#a06a00; }
-  .pill.ok .n { color:var(--good); }
-  .confbox { background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:12px 16px; font-size:12.5px; color:var(--text-secondary); }
-  .confbox div { padding:3px 0; }
-  footer { margin-top:20px; font-size:11px; color:var(--text-muted); border-top:1px solid var(--gridline); padding-top:12px; line-height:1.6; }
+  .viz-root{color-scheme:light;
+    --surface-1:#fcfcfb;--page-plane:#f4f4f2;--text-primary:#0b0b0b;--text-secondary:#52514e;--text-muted:#898781;
+    --gridline:#e6e5df;--border:rgba(11,11,11,.12);
+    --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#4a3aa7;
+    --good:#008300;--warn:#c98500;--crit:#c8341f;
+    --good-tint:#e7f6e7;--warn-tint:#fff6e2;--crit-tint:#fbe9e9}
+  @media (prefers-color-scheme: dark){
+    :root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;
+      --surface-1:#1a1a19;--page-plane:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;--text-muted:#8f8e86;
+      --gridline:#2c2c2a;--border:rgba(255,255,255,.14);
+      --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#9085e9;
+      --good:#27a827;--warn:#e0a000;--crit:#e05a45;
+      --good-tint:rgba(12,163,12,.14);--warn-tint:rgba(250,178,25,.14);--crit-tint:rgba(230,103,103,.14)}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page-plane);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text-primary)}
+  .viz-root{background:var(--page-plane);min-height:100vh}
+  .wrap{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
+  .brand{display:flex;align-items:baseline;gap:9px;margin-bottom:6px}
+  .brand b{font-size:15px}.brand span{font-size:12px;color:var(--text-muted)}
+  .nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+  .nav a{font-size:12.5px;font-weight:600;color:var(--text-secondary);text-decoration:none;padding:7px 13px;border:1px solid var(--border);border-radius:8px;background:var(--surface-1)}
+  .nav a.active{background:var(--s1);color:#fff;border-color:var(--s1)}
+  h1{font-size:22px;margin:8px 0 4px}
+  .sub{color:var(--text-secondary);font-size:13px;margin:0 0 14px;max-width:840px;line-height:1.55}
+  .notice{background:var(--warn-tint);border:1px solid color-mix(in srgb,var(--warn) 40%,var(--border));border-radius:10px;padding:11px 14px;font-size:12.5px;color:var(--text-secondary);margin-bottom:18px;line-height:1.5}
+  .notice b{color:var(--text-primary)}
+  .notice a{color:var(--s1)}
+  .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+  @media (max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:13px 14px;position:relative;overflow:hidden}
+  .card .accent{position:absolute;left:0;top:0;bottom:0;width:4px}
+  .card .label{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin-bottom:5px}
+  .card .value{font-size:20px;font-weight:700}
+  .card .value small{font-size:12px;font-weight:500;color:var(--text-secondary)}
+  .card .meta{font-size:10.5px;color:var(--text-muted);margin-top:5px;line-height:1.45;word-break:break-word}
+  .ind{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--warn);border-radius:5px;padding:1px 6px;margin-left:5px;vertical-align:2px}
+  section{margin-bottom:22px}
+  .panel{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px}
+  h2{font-size:14px;margin:0 0 4px}
+  .h2sub{font-size:12px;color:var(--text-secondary);margin:0 0 12px;line-height:1.5}
+  .signal-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}.signal-row{grid-template-columns:1fr}}
+  .pill{border:1px solid var(--border);border-radius:10px;padding:13px;text-align:center}
+  .pill .n{font-size:25px;font-weight:700}
+  .pill .t{font-size:11px;color:var(--text-secondary);margin-top:2px}
+  .pill.crit{background:var(--crit-tint)}.pill.crit .n{color:var(--crit)}
+  .pill.warn{background:var(--warn-tint)}.pill.warn .n{color:var(--warn)}
+  .pill.ok{background:var(--good-tint)}.pill.ok .n{color:var(--good)}
+  .conf{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--text-secondary);margin-top:10px}
+  .conf i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:5px}
+  .flag{font-size:11.5px;color:var(--text-muted);margin-top:10px}
+  footer{margin-top:26px;font-size:11px;color:var(--text-muted);border-top:1px solid var(--gridline);padding-top:12px;line-height:1.7}
+  footer a{color:var(--s1)}
 </style>
 </head>
 <body>
-<div class="viz-root">
-<div class="wrap">
-  <div class="topbar">
-    <div><span class="brand">Dynalektric</span><span class="tag">Commodity Price Signal — Public Summary</span></div>
-  </div>
-  <h1>Aluminium &amp; copper: is the market moving faster than our budgets?</h1>
-  <p class="sub">A public, non-sensitive summary of an internal price-intelligence tool. No item codes, vendor names, or rupee budget figures appear here — only aggregate signal counts and today's public commodity benchmarks.</p>
-  <div class="notice"><b>Item detail:</b> the full item-by-item table with live prices is at <a href="./items.html">items.html →</a></div>
+<div class="viz-root"><div class="wrap">
+
+  <div class="brand"><b>Dynalektric</b><span>Commodity Price Signal — Public Summary</span></div>
+  <nav class="nav">
+    <a href="./index.html" class="active">Summary</a>
+    <a href="./items.html">Items &amp; prices</a>
+    <a href="./consumption.html">Consumption &amp; spend</a>
+    <a href="./demand.html">Forward demand</a>
+    <a href="./budget.html">Max Purchase Limit</a>
+  </nav>
+
+  <h1>Is the market moving faster than our budgets?</h1>
+  <p class="sub">A public, non-sensitive summary of the internal AI procurement-intelligence pipeline.
+  No item codes, vendor names, or rupee budget figures appear here — only aggregate signal counts and
+  today's public commodity benchmarks.</p>
+
+  <div class="notice"><b>Item detail:</b> the full item-by-item table with live prices is at
+    <a href="./items.html">items.html →</a> &nbsp;·&nbsp; forward demand &amp; stock cover at
+    <a href="./demand.html">demand.html →</a></div>
 
   <div class="cards">
-    <div class="card al">
-      <div class="accent"></div>
+    <div class="card"><span class="accent" style="background:var(--s1)"></span>
       <div class="label">Aluminium — NALCO ingot</div>
       <div class="value">₹{{AL_PRICE}} <small>/ kg</small></div>
-      <div class="meta">w.e.f. {{AL_DATE}} · {{AL_SOURCE}}</div>
-    </div>
-    <div class="card cu">
-      <div class="accent"></div>
-      <div class="label">Copper — LME cash equivalent</div>
+      <div class="meta">w.e.f. {{AL_DATE}} · NALCO price circular</div></div>
+    <div class="card"><span class="accent" style="background:var(--s2)"></span>
+      <div class="label">Copper — LME cash</div>
       <div class="value">₹{{CU_PRICE}} <small>/ kg</small></div>
-      <div class="meta">{{CU_DATE}} · {{CU_SOURCE}}</div>
-    </div>
+      <div class="meta">{{CU_DATE}} · LME settlement via westmetall.com</div></div>
+    <div class="card"><span class="accent" style="background:var(--s3)"></span>
+      <div class="label">CRGO steel<span class="ind">INDICATIVE</span></div>
+      <div class="value">₹{{CRGO_PRICE}} <small>/ kg</small></div>
+      <div class="meta">{{CRGO_DATE}} · no free daily benchmark — weekly indicative</div></div>
+    <div class="card"><span class="accent" style="background:var(--s4)"></span>
+      <div class="label">Mild steel<span class="ind">INDICATIVE</span></div>
+      <div class="value">₹{{MS_PRICE}} <small>/ kg</small></div>
+      <div class="meta">{{MS_DATE}} · HRC/MS basis, monthly update</div></div>
+    <div class="card"><span class="accent" style="background:var(--s5)"></span>
+      <div class="label">Stainless steel<span class="ind">INDICATIVE</span></div>
+      <div class="value">₹{{SS_PRICE}} <small>/ kg</small></div>
+      <div class="meta">{{SS_DATE}} · SS304 basis, monthly update</div></div>
   </div>
 
-  <section>
+  <section class="panel">
     <h2>Frequently-handled items — premium-adjusted signal ({{PILOT_TOTAL}} items tracked)</h2>
+    <p class="h2sub">Top items by real purchase-order frequency, compared against today's metal price
+    adjusted by the premium calibrated from actual recent purchases.</p>
     <div class="signal-row">
-      <div class="pill crit"><div class="n">{{PILOT_CRIT}}</div><div class="l">Critical</div></div>
-      <div class="pill warn"><div class="n">{{PILOT_REVIEW}}</div><div class="l">Review</div></div>
-      <div class="pill ok"><div class="n">{{PILOT_OK}}</div><div class="l">On track</div></div>
+      <div class="pill crit"><div class="n">{{PILOT_CRIT}}</div><div class="t">Critical</div></div>
+      <div class="pill warn"><div class="n">{{PILOT_REVIEW}}</div><div class="t">Review</div></div>
+      <div class="pill ok"><div class="n">{{PILOT_OK}}</div><div class="t">On track</div></div>
+    </div>
+    <div class="conf">
+      <span><i style="background:var(--s1)"></i>Aluminium confidence: {{CONF_AL}}</span>
+      <span><i style="background:var(--s2)"></i>Copper confidence: {{CONF_CU}}</span>
     </div>
   </section>
 
-  <section>
+  <section class="panel">
     <h2>All tracked items — vs. raw metal price, no premium adjustment ({{BROAD_TOTAL}} items)</h2>
+    <p class="h2sub">Every priced, comparable aluminium/copper raw-material item compared directly
+    against today's metal benchmark. Larger gaps mean stale budgeted rates.</p>
     <div class="signal-row">
-      <div class="pill crit"><div class="n">{{BROAD_CRIT}}</div><div class="l">≥50% behind</div></div>
-      <div class="pill warn"><div class="n">{{BROAD_REVIEW}}</div><div class="l">15–50% behind</div></div>
-      <div class="pill ok"><div class="n">{{BROAD_OK}}</div><div class="l">Within ±15%</div></div>
+      <div class="pill crit"><div class="n">{{BROAD_CRIT}}</div><div class="t">Critical (≥50% gap)</div></div>
+      <div class="pill warn"><div class="n">{{BROAD_REVIEW}}</div><div class="t">Review (15–50%)</div></div>
+      <div class="pill ok"><div class="n">{{BROAD_OK}}</div><div class="t">On track (&lt;15%)</div></div>
     </div>
-    <p style="font-size:11.5px;color:var(--text-muted);margin-top:8px;">Plus {{DATA_FLAGS}} item(s) auto-flagged as likely data-entry errors (priced far below any realistic metal cost).</p>
-  </section>
-
-  <section>
-    <h2>Confidence by category</h2>
-    <div class="confbox">
-      <div>Aluminium: {{CONF_AL}}</div>
-      <div>Copper: {{CONF_CU}}</div>
-    </div>
+    <div class="flag">Data-quality flags today: {{DATA_FLAGS}} (prices below any realistic metal cost — likely legacy entries).</div>
   </section>
 
   <footer>
-    Generated {{GENERATED_AT}} UTC · Sources: NALCO price circular, LME cash settlement (westmetall.com) · Internal detail withheld by design. Not a substitute for a contractual price-variation calculation.
+    Sources: NALCO price circular · LME cash settlement (westmetall.com) · USD/INR (frankfurter.app) ·
+    live DEPL/Trico ERP purchase-order history (aggregates only).
+    Generated {{GENERATED_AT}} · refreshed daily 09:00 IST by GitHub Actions.<br>
+    Full per-item detail, budget bands, purchase plans and vendor scores stay private — produced by the
+    AI Procurement engines and delivered only as private artifacts. Signals are decision support, not a guarantee.
   </footer>
-</div>
-</div>
+
+</div></div>
 </body>
 </html>

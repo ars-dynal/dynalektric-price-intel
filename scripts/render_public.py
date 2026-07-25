@@ -27,8 +27,22 @@ def main():
     al, cu = d['aluminium'], d['copper']
     pilot, broad = d['pilot_signals'], d['broad_signals']
     conf = d['category_confidence']
+    # Indicative feeds may be absent on older summaries — render dashes, never crash.
+    crgo = d.get('crgo_steel') or {}
+    ms = d.get('mild_steel') or {}
+    ss = d.get('stainless_steel') or {}
+
+    def price(block):
+        v = block.get('price_per_kg')
+        return f"{v:,.2f}" if v else "—"
 
     replacements = {
+        '{{CRGO_PRICE}}': price(crgo),
+        '{{CRGO_DATE}}': crgo.get('effective_date', '—'),
+        '{{MS_PRICE}}': price(ms),
+        '{{MS_DATE}}': ms.get('effective_date', '—'),
+        '{{SS_PRICE}}': price(ss),
+        '{{SS_DATE}}': ss.get('effective_date', '—'),
         '{{AL_PRICE}}': f"{al['price_per_kg']:,.2f}",
         '{{AL_DATE}}': al['effective_date'],
         '{{AL_SOURCE}}': al['source'],
