@@ -1,0 +1,44 @@
+name: AI Procurement Plan (BOM budget + purchase plan, private)
+
+# Runs the BOM/budget engine and the purchase planner against the live ERP.
+# All per-item/per-budget detail is written to git-ignored JSON and leaves the
+# runner ONLY as a private workflow artifact. Public log shows aggregate
+# counts and rupee totals only — never item codes, names, vendors or rates.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Weekly, Mondays 04:00 UTC (09:30 IST) — after the daily price refresh
+    - cron: '0 4 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: BOM / budget analysis (all open budgets)
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/bom_engine.py
+
+      - name: Purchase plan + alerts
+        run: python3 scripts/purchase_planner.py
+
+      - name: Upload results (PRIVATE artifact — never published)
+        uses: actions/upload-artifact@v4
+        with:
+          name: procurement-plan-${{ github.run_id }}
+          path: |
+            data/bom_analysis.json
+            data/purchase_plan.json
+          retention-days: 30

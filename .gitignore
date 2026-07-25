@@ -8,3 +8,12 @@ data/consumption_forecast.json
 data/budget_check.json
 data/new_alerts.md
 data/material_demand.json
+data/bom_analysis.json
+data/purchase_plan.json
+data/vendor_scores.json
+data/quote_analysis.json
+tests/quotes_fixture.csv
+tests/bom_fixture.json
+# BOM PDFs and their parsed forms are business-sensitive - never commit
+inbox/
+*.bom.json

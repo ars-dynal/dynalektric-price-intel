@@ -1,0 +1,77 @@
+name: Max Purchase Limit calculator (BOM PDF, private)
+
+# Computes the recommended MAX PURCHASE LIMIT for a project from a company
+# BOM PDF (the ERP's "BOM Details" export), priced from ERP purchase history,
+# inventory and live NALCO/LME/CRGO benchmarks.
+#
+# HOW TO RUN (BOM PDFs are sensitive — never commit them to this public repo):
+#   1. Locally encode the PDF:   base64 -w0 "bom 4.pdf"        (Linux/Git Bash)
+#                                certutil -encode bom.pdf b64.txt   (Windows)
+#   2. Actions tab -> this workflow -> Run workflow -> paste the base64 string
+#      into bom_pdf_b64, set units (project quantity) and optional delivery date.
+#   3. Download the max-budget-… PRIVATE artifact for the full line detail.
+#      The public log shows only aggregate category totals and the final limit.
+#
+# GitHub caps a dispatch input at ~64 KB, which fits typical BOM PDFs (~25 KB
+# -> ~34 KB base64). For bigger BOMs, run the two scripts locally instead:
+#   python3 scripts/bom_pdf_import.py bom.pdf
+#   python3 scripts/bom_engine.py --bom-json bom.json --units N
+
+on:
+  workflow_dispatch:
+    inputs:
+      bom_pdf_b64:
+        description: "BOM PDF, base64-encoded (single line)"
+        required: true
+      units:
+        description: "Project quantity (multiplies per-unit BOM quantities)"
+        required: true
+        default: "1"
+      delivery_date:
+        description: "Delivery date YYYY-MM-DD (optional, for planning)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests pypdf
+
+      - name: Decode BOM PDF (kept out of the log)
+        env:
+          BOM_B64: ${{ inputs.bom_pdf_b64 }}
+        run: |
+          mkdir -p inbox
+          printf '%s' "$BOM_B64" | tr -d ' \n\r' | base64 -d > inbox/bom.pdf
+          ls -la inbox/bom.pdf
+
+      - name: Parse BOM PDF
+        run: python3 scripts/bom_pdf_import.py inbox/bom.pdf --out inbox/bom.json --csv inbox/bom.csv
+
+      - name: Compute budget bands + max purchase limit
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: |
+          EXTRA=""
+          if [ -n "${{ inputs.delivery_date }}" ]; then EXTRA="--delivery-date ${{ inputs.delivery_date }}"; fi
+          python3 scripts/bom_engine.py --bom-json inbox/bom.json --units "${{ inputs.units }}" $EXTRA
+
+      - name: Upload result (PRIVATE artifact — never published)
+        uses: actions/upload-artifact@v4
+        with:
+          name: max-budget-${{ github.run_id }}
+          path: |
+            data/bom_analysis.json
+            inbox/bom.json
+            inbox/bom.csv
+          retention-days: 30

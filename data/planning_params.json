@@ -1,0 +1,42 @@
+{
+  "note": "AI Procurement Planning parameters. Everything the engines treat as policy lives here so the logic stays fixed and auditable while the numbers stay editable. Lead times are calendar days from PO release to material at the factory gate. risk_pct drives the MAX budget band: max = expected * (1 + risk_pct/100). recent_po_days is how fresh a purchase price must be to outrank the live-benchmark estimate.",
+  "recent_po_days": 180,
+  "po_history_days": 365,
+  "buy_now_window_days": 7,
+  "delay_slack_days": 30,
+  "categories": {
+    "Copper":         {"lead_time_days": 30, "risk_pct": 10, "criticality": "High",   "benchmark": "Copper"},
+    "Aluminium":      {"lead_time_days": 21, "risk_pct": 8,  "criticality": "High",   "benchmark": "Aluminium"},
+    "CRGO":           {"lead_time_days": 45, "risk_pct": 12, "criticality": "High",   "benchmark": "CRGO steel"},
+    "Oil":            {"lead_time_days": 15, "risk_pct": 6,  "criticality": "Medium", "benchmark": null},
+    "Hardware":       {"lead_time_days": 10, "risk_pct": 5,  "criticality": "Low",    "benchmark": null},
+    "Consumables":    {"lead_time_days": 7,  "risk_pct": 5,  "criticality": "Low",    "benchmark": null},
+    "Finished Goods": {"lead_time_days": 30, "risk_pct": 5,  "criticality": "Medium", "benchmark": null},
+    "Others":         {"lead_time_days": 14, "risk_pct": 5,  "criticality": "Low",    "benchmark": null}
+  },
+  "category_code_prefixes": {
+    "AL": "Aluminium",
+    "CU": "Copper",
+    "CC": "CRGO"
+  },
+  "keyword_rules": [
+    {"pattern": "transformer oil|insulating oil|\\boil\\b",                    "category": "Oil"},
+    {"pattern": "bolt|nut|washer|screw|stud|rivet|clamp|bracket|tie rod|channel|angle|fastener", "category": "Hardware"},
+    {"pattern": "tape|sleeve|varnish|paint|thinner|glove|electrode|gasket|adhesive|grease|cotton|paper|crepe|pressboard", "category": "Consumables"},
+    {"pattern": "crgo|lamination|core steel|electrical steel|grain oriented",  "category": "CRGO"}
+  ],
+  "classification_metal_to_category": {
+    "Copper": "Copper",
+    "Aluminium": "Aluminium",
+    "CRGO steel": "CRGO",
+    "Stainless Steel": "Hardware",
+    "Mild Steel": "Hardware",
+    "Other": "Others"
+  },
+  "vendor_score_weights": {
+    "price_competitiveness": 40,
+    "recency": 20,
+    "experience": 20,
+    "consistency": 20
+  }
+}

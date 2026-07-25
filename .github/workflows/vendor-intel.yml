@@ -1,0 +1,37 @@
+name: Vendor Intelligence (scores from PO history, private)
+
+# Scores every vendor per material category from real purchase-order history.
+# Vendor names, prices and scores are commercially sensitive: they are written
+# to a git-ignored JSON that leaves the runner only as a PRIVATE artifact.
+# The public log prints vendor COUNTS per category only.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Monthly, 1st at 04:30 UTC
+    - cron: '30 4 1 * *'
+
+permissions:
+  contents: read
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Score vendors
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/vendor_intel.py
+      - name: Upload scores (PRIVATE artifact — never published)
+        uses: actions/upload-artifact@v4
+        with:
+          name: vendor-scores-${{ github.run_id }}
+          path: data/vendor_scores.json
+          retention-days: 30
