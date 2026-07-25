@@ -3,10 +3,12 @@
     "signals": {
       "Copper": "HOLD",
       "Aluminium": "HOLD",
-      "CRGO steel": "NO SIGNAL"
+      "CRGO steel": "NO SIGNAL",
+      "Mild Steel": "NO SIGNAL",
+      "Stainless Steel": "NO SIGNAL"
     },
     "moved": []
   },
   "alerts": [],
-  "generated_at_utc": "2026-07-24T11:08:20Z"
+  "generated_at_utc": "2026-07-25T09:22:16Z"
 }
