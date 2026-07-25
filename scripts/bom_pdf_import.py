@@ -43,7 +43,9 @@ UOMS = r"(?:KGS|NOS|MTR|ROL|LTR|SET|PRS|PKT|BOX|PCS|SQM|RMT)"
 # NOTE: no lookahead after the 5-digit code tail — descriptions can start with
 # a digit ("2-Conductor Terminal Block"), and ERP item codes are always
 # exactly XX-NNN-NNNNN. The serial-sequence cross-check below catches drift.
-ITEM_START = re.compile(r"(?m)^(\d{1,3})([A-Z]{1,5}-)\s*\n(\d{3}-)\s*\n(\d{5})")
+# `\s*\n?` after the serial: pypdf 3.x emits "1CU-" on one line, pypdf 6.x
+# emits "1\nCU-" — both layouts must parse (verified against both versions).
+ITEM_START = re.compile(r"(?m)^(\d{1,3})\s*\n?([A-Z]{1,5}-)\s*\n(\d{3}-)\s*\n(\d{5})")
 CAT_UOM_QTY = re.compile(rf"Category:\s*([A-Z0-9]+?)\s*({UOMS})\s*(\d+\.\d+)")
 HEADER_ROW = re.compile(r"#\s*Code\s+Description\s+Drawing\s+UOM\s+QTY\s+Sources\s+Comment")
 
