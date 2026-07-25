@@ -1,0 +1,111 @@
+name: BOM upload calculator (drag a PDF into inbox/)
+
+# HOW TO USE:
+#   1. Repo home -> open the inbox/ folder -> "Add file" -> "Upload files"
+#   2. Drag the BOM PDF in. Put the project quantity in the file name:
+#        bom4_qty50.pdf -> 50 units    bom4_x25.pdf -> 25 units    (default 1)
+#   3. Commit. This runs automatically; 2-4 min later the answer appears in
+#      results/<name>-<timestamp>/ : summary.md (max purchase limit),
+#      dashboard.html, budget_detail.json, bom_parsed.csv.
+#
+# NOTE: this repository is PUBLIC. The owner has accepted that uploaded BOM
+# PDFs and the computed results (rates, budgets, vendors) are publicly
+# visible here. If that ever changes, move this flow to a private repo.
+
+on:
+  push:
+    paths:
+      - "inbox/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  calculate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pypdf
+
+      - name: Find the newest uploaded BOM PDF
+        id: find
+        run: |
+          PDF=$(find inbox -iname '*.pdf' -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
+          if [ -z "$PDF" ]; then echo "No PDF in inbox/ - nothing to do."; exit 0; fi
+          NAME=$(basename "$PDF" | sed 's/\.[Pp][Dd][Ff]$//')
+          UNITS=$(echo "$NAME" | grep -oiE '(qty|x)[0-9]+' | grep -oE '[0-9]+' | head -1)
+          echo "pdf=$PDF"          >> "$GITHUB_OUTPUT"
+          echo "name=$NAME"        >> "$GITHUB_OUTPUT"
+          echo "units=${UNITS:-1}" >> "$GITHUB_OUTPUT"
+          echo "Processing '$PDF' with units=${UNITS:-1}"
+
+      - name: Parse the BOM PDF
+        if: steps.find.outputs.pdf != ''
+        run: python3 scripts/bom_pdf_import.py "${{ steps.find.outputs.pdf }}" --out bom_parsed.json --csv bom_parsed.csv
+
+      - name: Compute budget bands vs live ERP data
+        if: steps.find.outputs.pdf != ''
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/bom_engine.py --bom-json bom_parsed.json --units "${{ steps.find.outputs.units }}"
+
+      - name: Render dashboard
+        if: steps.find.outputs.pdf != ''
+        run: python3 scripts/render_procurement_dashboard.py
+
+      - name: Write summary.md
+        if: steps.find.outputs.pdf != ''
+        run: |
+          python3 - "${{ steps.find.outputs.name }}" "${{ steps.find.outputs.units }}" << 'PY'
+          import json, sys
+          from datetime import datetime, timezone
+          name, units = sys.argv[1], sys.argv[2]
+          d = json.load(open("data/bom_analysis.json"))
+          doc = d["documents"][0]; g = d["grand_total"]
+          rows = [
+              f"# Max budget — {doc.get('budget_number') or name}",
+              "",
+              f"- **Project**: {doc.get('project_code') or '—'}  ·  **Units**: {units}",
+              f"- **Minimum budget**: Rs {g['min']:,.0f}",
+              f"- **Expected budget**: Rs {g['expected']:,.0f}",
+              f"- **RECOMMENDED MAX PURCHASE LIMIT: Rs {g['max']:,.0f}**",
+              "",
+              "## By category",
+              "",
+              "| Category | Required qty | Net to buy | Expected cost (Rs) |",
+              "|---|---:|---:|---:|",
+          ]
+          for cat, t in sorted(d.get("category_summary", {}).items()):
+              rows.append(f"| {cat} | {t.get('required_qty',0):,.1f} | {t.get('net_buy_qty',0):,.1f} | {t.get('expected_cost',0):,.0f} |")
+          rows += ["",
+                   f"Unmatched lines (no ERP item-master match): {d.get('unmatched_lines') or 0} — see budget_detail.json.",
+                   f"Live prices used: {d.get('live_prices')}",
+                   f"Generated {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')} — open dashboard.html for the visual view."]
+          open("summary.md", "w").write("\n".join(rows) + "\n")
+          PY
+
+      - name: Save results into the repo
+        if: steps.find.outputs.pdf != ''
+        run: |
+          TS=$(date -u +%Y%m%d-%H%M%S)
+          OUT="results/${{ steps.find.outputs.name }}-$TS"
+          mkdir -p "$OUT"
+          cp summary.md                            "$OUT/summary.md"
+          cp data/procurement_dashboard.html       "$OUT/dashboard.html"
+          cp data/bom_analysis.json                "$OUT/budget_detail.json"
+          cp bom_parsed.csv                        "$OUT/bom_parsed.csv"
+          git config user.name  "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -f "$OUT"
+          git commit -m "BOM result: ${{ steps.find.outputs.name }} (units ${{ steps.find.outputs.units }})"
+          git pull --rebase origin main || true
+          git push
+          echo "Results saved to $OUT/summary.md"
