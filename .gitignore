@@ -12,6 +12,7 @@ data/bom_analysis.json
 data/purchase_plan.json
 data/vendor_scores.json
 data/quote_analysis.json
+data/procurement_dashboard.html
 tests/quotes_fixture.csv
 tests/bom_fixture.json
 # BOM PDFs and their parsed forms are business-sensitive - never commit

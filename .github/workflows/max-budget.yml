@@ -66,12 +66,16 @@ jobs:
           if [ -n "${{ inputs.delivery_date }}" ]; then EXTRA="--delivery-date ${{ inputs.delivery_date }}"; fi
           python3 scripts/bom_engine.py --bom-json inbox/bom.json --units "${{ inputs.units }}" $EXTRA
 
+      - name: Render private dashboard for this BOM
+        run: python3 scripts/render_procurement_dashboard.py
+
       - name: Upload result (PRIVATE artifact — never published)
         uses: actions/upload-artifact@v4
         with:
           name: max-budget-${{ github.run_id }}
           path: |
             data/bom_analysis.json
+            data/procurement_dashboard.html
             inbox/bom.json
             inbox/bom.csv
           retention-days: 30
