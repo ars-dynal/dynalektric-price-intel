@@ -70,21 +70,23 @@ jobs:
           name, units = sys.argv[1], sys.argv[2]
           d = json.load(open("data/bom_analysis.json"))
           doc = d["documents"][0]; g = d["grand_total"]
+          covered = g.get('full_expected', 0) - g.get('expected', 0)
           rows = [
               f"# Max budget — {doc.get('budget_number') or name}",
               "",
               f"- **Project**: {doc.get('project_code') or '—'}  ·  **Units**: {units}",
-              f"- **Minimum budget**: Rs {g['min']:,.0f}",
-              f"- **Expected budget**: Rs {g['expected']:,.0f}",
-              f"- **RECOMMENDED MAX PURCHASE LIMIT: Rs {g['max']:,.0f}**",
+              f"- **Full material budget**: min Rs {g.get('full_min',0):,.0f} · expected Rs {g.get('full_expected',0):,.0f} · max Rs {g.get('full_max',0):,.0f}",
+              f"- **RECOMMENDED MAX PURCHASE LIMIT: Rs {g.get('full_max',0):,.0f}**",
+              f"- Already covered by current stock: Rs {covered:,.0f}",
+              f"- Still to purchase (net of stock): Rs {g.get('expected',0):,.0f}",
               "",
               "## By category",
               "",
-              "| Category | Required qty | Net to buy | Expected cost (Rs) |",
-              "|---|---:|---:|---:|",
+              "| Category | Required qty | Material cost (Rs) | Net to buy | To-buy cost (Rs) |",
+              "|---|---:|---:|---:|---:|",
           ]
           for cat, t in sorted(d.get("category_summary", {}).items()):
-              rows.append(f"| {cat} | {t.get('required_qty',0):,.1f} | {t.get('net_buy_qty',0):,.1f} | {t.get('expected_cost',0):,.0f} |")
+              rows.append(f"| {cat} | {t.get('required_qty',0):,.1f} | {t.get('full_material_cost',0):,.0f} | {t.get('net_buy_qty',0):,.1f} | {t.get('expected_cost',0):,.0f} |")
           rows += ["",
                    f"Unmatched lines (no ERP item-master match): {d.get('unmatched_lines') or 0} — see budget_detail.json.",
                    f"Live prices used: {d.get('live_prices')}",

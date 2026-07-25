@@ -228,17 +228,25 @@ def main():
             min_cost = (min_rate or 0) * net_buy
             max_cost = (max_rate or 0) * net_buy
             full_material_cost = (expected or 0) * required
+            full_min = (min_rate or 0) * required
+            full_max = (max_rate or 0) * required
 
             doc_tot["expected"] += exp_cost
             doc_tot["min"] += min_cost
             doc_tot["max"] += max_cost
             doc_tot["material_cost"] += full_material_cost
+            doc_tot["full_min"] += full_min
+            doc_tot["full_max"] += full_max
             grand["expected"] += exp_cost
             grand["min"] += min_cost
             grand["max"] += max_cost
+            grand["full_expected"] += full_material_cost
+            grand["full_min"] += full_min
+            grand["full_max"] += full_max
             cat_totals[cat]["required_qty"] += required
             cat_totals[cat]["net_buy_qty"] += net_buy
             cat_totals[cat]["expected_cost"] += exp_cost
+            cat_totals[cat]["full_material_cost"] += full_material_cost
 
             lines_out.append({
                 "item_id": iid, "item_code": item["code"], "item_name": item["name"],
@@ -270,6 +278,8 @@ def main():
             "budget_expected": round(doc_tot["expected"], 0),
             "budget_max": round(doc_tot["max"], 0),
             "full_material_cost": round(doc_tot["material_cost"], 0),
+            "full_budget_min": round(doc_tot["full_min"], 0),
+            "full_budget_max": round(doc_tot["full_max"], 0),
             "expected_vs_limit": variance_vs_limit,
             "lines": lines_out,
         })
@@ -297,8 +307,13 @@ def main():
     print(f"Portfolio budget band: min Rs {grand['min']:,.0f} | expected Rs {grand['expected']:,.0f} "
           f"| max Rs {grand['max']:,.0f}")
     if args.bom_json:
-        print(f"\nRECOMMENDED MAX PURCHASE LIMIT for {docs[0].get('project_code') or docs[0].get(key)} "
-              f"({args.units:g} unit(s)): Rs {grand['max']:,.0f}")
+        print(f"\nFull material budget ({args.units:g} unit(s)): "
+              f"min Rs {grand['full_min']:,.0f} | expected Rs {grand['full_expected']:,.0f} "
+              f"| max Rs {grand['full_max']:,.0f}")
+        print(f"Already covered by stock: Rs {grand['full_expected'] - grand['expected']:,.0f} "
+              f"| still to purchase: Rs {grand['expected']:,.0f}")
+        print(f"RECOMMENDED MAX PURCHASE LIMIT for {docs[0].get('project_code') or docs[0].get(key)}: "
+              f"Rs {grand['full_max']:,.0f}")
         if n_unmatched:
             print(f"NOTE: {n_unmatched} line(s) had no ERP item-master match — priced from "
                   f"benchmark/none; review them in the output JSON before fixing the limit.")
