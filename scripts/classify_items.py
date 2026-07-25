@@ -123,6 +123,7 @@ def write_items_json(cands, known):
             continue
         items.append({"code": c["code"], "name": c["name"], "cat": c.get("cat"),
                       "metal": metal, "uom": "KGS", "rate": c.get("rate")})
+    items.sort(key=lambda i:(0 if i.get("rate") else 1, i.get("metal") or "zz", -(i.get("rate") or 0), str(i.get("name"))))
     if len(items) < 200:  # safety: don't clobber the existing list on a bad/partial run
         print(f"Only {len(items)} classified KGS metal items — keeping existing items.json.")
         return
