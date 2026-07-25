@@ -34,6 +34,12 @@ jobs:
       - name: Purchase plan + alerts
         run: python3 scripts/purchase_planner.py
 
+      - name: Vendor scores (fills the dashboard leaderboard)
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/vendor_intel.py || echo "vendor scoring failed - leaderboard stays empty this run"
+
       - name: Render private executive dashboard
         run: python3 scripts/render_procurement_dashboard.py
 
@@ -64,5 +70,6 @@ jobs:
           path: |
             data/bom_analysis.json
             data/purchase_plan.json
+            data/vendor_scores.json
             data/procurement_dashboard.html
           retention-days: 30
