@@ -1,161 +1,256 @@
 #!/usr/bin/env python3
 """
-Max Purchase Limit calculator — renders docs/budget.html from ERP budgets.
+Max Purchase Limit page (docs/budget.html) — recommendation view.
 
-For every budget, using today's FINISHED landed cost (costing formula) per metal:
-  * material cost at finished cost = sum(finished x qty) over its metal lines
-  * flags lines whose budgeted system_rate is below today's finished cost
-    (the max purchase limit is set too low -> the order will overrun)
-  * vendor view: how each vendor_rate compares to finished cost
+For EVERY budget in the ERP (newest first), every line is priced at "our
+rate" — the company's recent real purchase price (data/item_intel.json),
+falling back to the live costing-formula estimate for metal items — and
+compared with the budgeted system rate:
 
-Answers the original question: "help deciding max purchase limit". The correct
-limit for a budget's metal content is the finished cost x quantity at today's
-prices; anything budgeted below that is flagged.
+  per line   : Budget rate vs Our rate -> variance % -> status + action
+  per budget : Budget cost vs Current cost, your limit vs SUGGESTED limit
+               (current cost + 8% price-risk buffer)
 
-Renders an aggregate-friendly page (budget numbers + your own rates; no vendor
-identities). Copper figures are estimates until copper costing params are set.
+Budgets whose max purchase limit is NOT set yet are pulled to the top with
+the suggested limit — so the team gets the number BEFORE deciding, not after.
+
+Click any budget row to expand its line-by-line detail.
+
+Data: ERP budgets API (live) + item_intel.json (weekly PO intel) +
+live LME/NALCO/CRGO via the costing formula. Requires DEPL_CLIENT_* env.
 """
+import html as H
 import json
 import os
 import sys
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import erp_common as erp  # noqa: E402
 import costing  # noqa: E402
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-COL = {"Copper": "#eb6834", "Aluminium": "#2a78d6"}
+ROOT = erp.ROOT
+RISK_BUFFER = 0.08          # suggested limit = current cost x (1 + 8%)
+MAX_BUDGETS = 150
+MAX_LINES = 14
 
 
-def finished_by_metal():
-    cfg, summ = costing.load_cfg_summary()
-    fin = {}
-    for m in ("Copper", "Aluminium"):
-        prof = costing.DEFAULT_PROFILE[m]
-        if prof in cfg.get("profiles", {}):
-            c = costing.finished_cost(dict(cfg["profiles"][prof], name=prof,
-                                           gst_pct=cfg.get("gst_pct", 18)), summ)
-            fin[m] = {"ex": c["total_ex_gst"], "conf": c["confirmed"]}
-    return fin
+def esc(x):
+    return H.escape(str(x if x is not None else "—"))
 
 
 def cr(x):
-    return (f"₹{x/1e7:.2f} Cr" if abs(x) >= 1e7 else (f"₹{x/1e5:.1f} L" if abs(x) >= 1e5 else f"₹{x:,.0f}"))
+    x = x or 0
+    return (f"₹{x/1e7:.2f} Cr" if abs(x) >= 1e7 else
+            (f"₹{x/1e5:.1f} L" if abs(x) >= 1e5 else f"₹{x:,.0f}"))
 
 
-def analyse(budgets, fin):
-    rows = []
-    tot_short = 0.0
-    tot_under_lines = 0
-    ven_above = ven_below = ven_n = 0
-    for b in budgets:
-        cost_fin = 0.0
-        short = 0.0
-        under_lines = 0
-        kg = 0.0
-        for l in b.get("metal_lines", []):
-            m = l["metal"]
-            f = fin.get(m)
-            if not f:
-                continue
-            q = l.get("kg") or 0.0
-            kg += q
-            cost_fin += f["ex"] * q
-            sr = l.get("system_rate")
-            if sr is not None and sr < f["ex"]:
-                under_lines += 1
-                short += (f["ex"] - sr) * q
-            vr = l.get("vendor_rate")
-            if vr is not None:
-                ven_n += 1
-                if vr > f["ex"]:
-                    ven_above += 1
-                else:
-                    ven_below += 1
-        if kg <= 0:
-            continue
-        tot_short += short
-        tot_under_lines += under_lines
-        rows.append({
-            "budget": b.get("budget_number"), "project": b.get("project_code"),
-            "delivery": b.get("delivery_month"), "kg": round(kg, 1),
-            "cost_fin": round(cost_fin, 0), "limit": b.get("max_purchase_limit_amount"),
-            "under_lines": under_lines, "short": round(short, 0),
-        })
-    rows.sort(key=lambda r: -r["short"])
-    return rows, {"budgets": len(rows), "under_lines": tot_under_lines, "shortfall": round(tot_short, 0),
-                  "ven_above": ven_above, "ven_below": ven_below, "ven_n": ven_n}
+def rate_fmt(v):
+    return f"₹{v:,.2f}" if v else "—"
 
 
-def render(budgets, fin, generated="", note=""):
-    rows, s = analyse(budgets, fin)
-    fin_cu = fin.get("Copper", {}); fin_al = fin.get("Aluminium", {})
-    finref = (f'Copper finished ₹{fin_cu.get("ex",0):,.0f}/kg{"" if fin_cu.get("conf") else " (est.)"} · '
-              f'Aluminium finished ₹{fin_al.get("ex",0):,.0f}/kg')
-    trs = ""
-    for r in rows[:120]:
-        flag = (f'<span class="bbadge b-under">{r["under_lines"]} under-costed</span>'
-                if r["under_lines"] else '<span class="bbadge b-ok">OK</span>')
-        lim = cr(r["limit"]) if r["limit"] else "—"
-        trs += (f'<tr><td class="mono">{r["budget"]}</td><td class="mono">{r["project"] or ""}</td>'
-                f'<td class="mono">{r["delivery"] or "—"}</td><td class="num">{r["kg"]:,.0f}</td>'
-                f'<td class="num">{cr(r["cost_fin"])}</td><td class="num">{lim}</td>'
-                f'<td>{flag}</td><td class="num">{cr(r["short"]) if r["short"] else "—"}</td></tr>')
-    ven = (f'{s["ven_above"]} of {s["ven_n"]} vendor quotes are ABOVE finished cost, '
-           f'{s["ven_below"]} at/below.' if s["ven_n"] else "No vendor rates.")
-    return HTML.replace("{{SHORT}}", cr(s["shortfall"])).replace("{{NUNDER}}", str(s["under_lines"])) \
-               .replace("{{NBUD}}", str(s["budgets"])).replace("{{FINREF}}", finref) \
-               .replace("{{VEN}}", ven).replace("{{ROWS}}", trs) \
-               .replace("{{GEN}}", generated).replace("{{NOTE}}", note)
+def our_rate(item, intel_rec, mi, summary, cost_cfg):
+    """Recent real PO rate, else live costing estimate for benchmark metals."""
+    if intel_rec:
+        if intel_rec.get("avg180"):
+            return intel_rec["avg180"], "PO"
+        if intel_rec.get("avg12"):
+            return intel_rec["avg12"], "PO"
+    cat = mi["category"]
+    if cat in ("Copper", "Aluminium"):
+        fi = costing.finished_for(cat, item["name"], summary, cost_cfg)
+        if fi:
+            return fi["total_ex_gst"], "est"
+    if cat == "CRGO":
+        p = (summary.get("crgo_steel") or {}).get("price_per_kg")
+        if p:
+            return float(p), "est"
+    if item.get("default_price"):
+        return item["default_price"], "erp"
+    return None, None
 
 
-HTML = r"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dynalektric - Max Purchase Limit</title><style>
-:root{color-scheme:light dark;--bg:#f9f9f7;--surf:#fff;--tx:#0b0b0b;--tx2:#52514e;--mut:#898781;--bd:rgba(11,11,11,.1);--grid:#e6e5df;--crit:#d03b3b;--good:#0ca30c;--critt:#fbe9e9;--goodt:#e7f6e7}
-@media(prefers-color-scheme:dark){:root{--bg:#0d0d0d;--surf:#1a1a19;--tx:#fff;--tx2:#c3c2b7;--bd:rgba(255,255,255,.12);--grid:#2c2c2a;--critt:rgba(208,59,59,.16);--goodt:rgba(12,163,12,.16)}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{max-width:1080px;margin:0 auto;padding:22px 20px 60px}
-.brand{display:flex;align-items:baseline;gap:9px;margin-bottom:6px}.brand b{font-size:15px}.brand span{font-size:12px;color:var(--mut)}
-.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-.nav a{font-size:12.5px;font-weight:600;color:var(--tx2);text-decoration:none;padding:7px 13px;border:1px solid var(--bd);border-radius:8px;background:var(--surf)}
-.nav a.active{background:#eb6834;color:#fff;border-color:#eb6834}
-h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--tx2);font-size:13px;margin:0 0 16px;max-width:860px;line-height:1.5}
-.tot{background:var(--surf);border:1px solid var(--bd);border-left:4px solid var(--crit);border-radius:12px;padding:14px 16px;margin-bottom:14px;font-size:13.5px;line-height:1.5}
-.tot b{font-size:26px;color:var(--crit)}
-.ref{font-size:12px;color:var(--tx2);margin-bottom:14px}
-table{width:100%;border-collapse:collapse;background:var(--surf);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
-thead th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);font-weight:600;padding:9px 10px;border-bottom:1px solid var(--grid);white-space:nowrap}
-th.num,td.num{text-align:right}tbody td{padding:7px 10px;border-bottom:1px solid var(--grid);font-size:12.5px}
-.mono{font-variant-numeric:tabular-nums;color:var(--tx2);font-size:12px}.num{font-variant-numeric:tabular-nums}
-.bbadge{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:5px;white-space:nowrap}
-.b-under{background:var(--critt);color:var(--crit)}.b-ok{background:var(--goodt);color:var(--good)}
-footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
-</style></head><body><div class="wrap">
-<div class="brand"><b>Dynalektric</b><span>Max Purchase Limit — budgets vs today's finished cost</span></div>
-<nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html">Forward demand</a><a href="./budget.html" class="active">Max Purchase Limit</a></nav>
-<h1>Which budgets are priced below today's cost?</h1>
-<p class="sub">For every budget, the correct material cost is <b>finished cost × quantity</b> at today's prices. Lines whose budgeted rate sits below that are flagged — the purchase limit is set too low and the order will overrun. {{NOTE}}</p>
-<div class="tot"><b>{{SHORT}}</b> total shortfall across {{NUNDER}} under-costed budget lines in {{NBUD}} budgets, if procured at today's finished cost.</div>
-<div class="ref">Finished cost basis: {{FINREF}}. Vendor check: {{VEN}}</div>
-<table><thead><tr><th>Budget</th><th>Project</th><th>Delivery</th><th class="num">Metal kg</th><th class="num">Cost @ finished</th><th class="num">Your limit</th><th>Status</th><th class="num">Shortfall</th></tr></thead>
-<tbody>{{ROWS}}</tbody></table>
-<footer>Source: DEPL/Trico ERP budgets + live LME/NALCO + company costing formula. Generated {{GEN}} UTC. Copper is estimated until copper costing params are confirmed. Top 120 budgets by shortfall shown. <a href="./items.html" style="color:#eb6834">Items →</a></footer>
-</div></body></html>"""
+def line_status(sr, our):
+    if not sr:
+        return "set", "Rate not set", "Set rate ≈ our rate"
+    if not our:
+        return "na", "No reference", "—"
+    v = (our - sr) / sr * 100
+    if v > 10:
+        return "rev", "Review", "Increase budget before PO"
+    if v > 3:
+        return "mon", "Monitor", "Check vendor quotes"
+    if v < -15:
+        return "gen", "Generous", "Verify rate — well above cost"
+    return "ok", "OK", "Proceed"
 
 
 def main():
-    fin = finished_by_metal()
-    path = os.path.join(ROOT, "data", "material_demand.json")
-    with open(path) as f:
-        budgets = json.load(f).get("budgets", [])
-    from datetime import datetime, timezone
+    params = erp.load_params()
+    summary = erp.load_summary()
+    cost_cfg, _ = costing.load_cfg_summary()
+    intel_all = {}
+    try:
+        with open(os.path.join(ROOT, "data", "item_intel.json")) as f:
+            intel_all = json.load(f).get("items", {})
+    except FileNotFoundError:
+        pass
+    mi_engine = erp.MaterialIntel(params)
+
+    session = erp.make_session()
+    print("Fetching items + budgets...")
+    items = erp.fetch_items(session)
+    budgets = erp.fetch_budgets(session)
+    budgets = [b for b in budgets if b.get("lines")]
+    budgets.sort(key=lambda b: (b.get("created_at") or ""), reverse=True)
+    print(f"{len(budgets)} budgets with lines.")
+
+    cards, cards_nolimit = [], []
+    n_rev = n_nolimit = 0
+    tot_var = 0.0
+    order = {"ok": 0, "gen": 1, "na": 1, "mon": 2, "set": 3, "rev": 4}
+
+    for b in budgets[:MAX_BUDGETS]:
+        lrows, bud_cost, cur_cost, worst = [], 0.0, 0.0, "ok"
+        for l in b["lines"]:
+            it = items.get(l["item_id"])
+            if not it or (l.get("quantity") or 0) <= 0:
+                continue
+            mi = mi_engine.enrich(it)
+            our, osrc = our_rate(it, intel_all.get(it.get("code")), mi, summary, cost_cfg)
+            sr, q = l.get("system_rate"), l["quantity"]
+            bc = (sr or 0) * q
+            cc = (our or sr or 0) * q
+            bud_cost += bc
+            cur_cost += cc
+            key, label, action = line_status(sr, our)
+            if order[key] > order[worst]:
+                worst = key
+            var_txt = f"{(our-sr)/sr*100:+.1f}%" if (sr and our) else "—"
+            tag = f'<span class="tag">{osrc}</span>' if osrc else ""
+            lrows.append((cc, f'<tr><td class="mono">{esc(it.get("code"))}</td>'
+                          f'<td class="iname">{esc(it["name"][:60])}</td>'
+                          f'<td class="num">{q:,.2f}</td>'
+                          f'<td class="num">{rate_fmt(sr)}</td>'
+                          f'<td class="num">{rate_fmt(our)}{tag}</td>'
+                          f'<td class="num">{var_txt}</td>'
+                          f'<td><span class="st st-{key}"></span>{label}</td>'
+                          f'<td class="act">{action}</td></tr>'))
+
+        if not lrows:
+            continue
+        lrows.sort(key=lambda t: -t[0])
+        body = "".join(r for _, r in lrows[:MAX_LINES])
+        more = (f'<tr><td colspan="8" class="moreln">… {len(lrows)-MAX_LINES} smaller lines '
+                f'included in totals</td></tr>' if len(lrows) > MAX_LINES else "")
+
+        limit = b.get("max_purchase_limit_amount")
+        suggested = cur_cost * (1 + RISK_BUFFER)
+        variance = cur_cost - bud_cost
+        tot_var += max(0.0, variance)
+        if not limit:
+            n_nolimit += 1
+            bkey, blabel, baction = "set", "No limit yet", f"Suggested limit: {cr(suggested)}"
+        elif worst in ("rev", "set"):
+            n_rev += 1
+            bkey, blabel, baction = "rev", "Review", ("Increase budget before PO"
+                                                      if worst == "rev" else "Set missing line rates")
+        elif worst == "mon":
+            bkey, blabel, baction = "mon", "Monitor", "Check vendor quotes"
+        else:
+            bkey, blabel, baction = "ok", "OK", "Proceed"
+
+        var_pct = f"{variance/bud_cost*100:+.1f}%" if bud_cost else "—"
+        card = f'''<details class="bud b-{bkey}"><summary>
+<span class="c1"><b>{esc(b.get("budget_number"))}</b><small>{esc(b.get("project_code"))} · created {esc((b.get("created_at") or "")[:10])} · delivery {esc(b.get("delivery_date"))}</small></span>
+<span class="c2"><small>Budget cost</small>{cr(bud_cost)}</span>
+<span class="c2"><small>Current cost</small>{cr(cur_cost)}</span>
+<span class="c2"><small>Variance</small>{cr(variance)} <em>{var_pct}</em></span>
+<span class="c2"><small>Your limit</small>{cr(limit) if limit else "—"}</span>
+<span class="c2"><small>Suggested</small><b>{cr(suggested)}</b></span>
+<span class="c3"><span class="st st-{bkey}"></span>{blabel}</span>
+<span class="c4">{baction}</span></summary>
+<table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">Budget rate</th><th class="num">Our rate</th><th class="num">Var %</th><th>Status</th><th>Action</th></tr></thead>
+<tbody>{body}{more}</tbody></table></details>'''
+        (cards_nolimit if not limit else cards).append(card)
+
     gen = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
-    html = render(budgets, fin, generated=gen)
+    page = (TEMPLATE
+            .replace("{{NOLIMIT_BLOCK}}",
+                     ('<h2>New budgets — limit not set yet: our prediction</h2>'
+                      '<p class="h2sub">Set the max purchase limit from the suggested figure '
+                      '(current cost of all lines + 8% price-risk buffer). For a BOM not yet '
+                      'budgeted in the ERP, drop its PDF into the repo inbox/ for a full prediction.</p>'
+                      + "".join(cards_nolimit)) if cards_nolimit else "")
+            .replace("{{CARDS}}", "".join(cards))
+            .replace("{{NBUD}}", str(len(cards) + len(cards_nolimit)))
+            .replace("{{NREV}}", str(n_rev))
+            .replace("{{NNL}}", str(n_nolimit))
+            .replace("{{TVAR}}", cr(tot_var))
+            .replace("{{GEN}}", gen))
     with open(os.path.join(ROOT, "docs", "budget.html"), "w", encoding="utf-8") as f:
-        f.write(html)
-    rows, s = analyse(budgets, fin)
-    print(f"budget.html: {s['budgets']} budgets, {s['under_lines']} under-costed lines, "
-          f"shortfall {cr(s['shortfall'])}")
+        f.write(page)
+    print(f"budget.html: {len(cards)+len(cards_nolimit)} budgets ({n_nolimit} without limit, "
+          f"{n_rev} need review, positive variance {cr(tot_var)})")
+
+
+TEMPLATE = r"""<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dynalektric - Max Purchase Limit</title><style>
+:root{color-scheme:light dark;--bg:#f4f4f2;--surf:#fcfcfb;--tx:#0b0b0b;--tx2:#52514e;--mut:#898781;--bd:rgba(11,11,11,.12);--grid:#e6e5df;
+--crit:#c8341f;--warn:#c98500;--good:#008300;--blue:#2a78d6;--critt:#fbe9e9;--warnt:#fff6e2;--goodt:#e7f6e7}
+@media(prefers-color-scheme:dark){:root{--bg:#0d0d0d;--surf:#1a1a19;--tx:#fff;--tx2:#c3c2b7;--bd:rgba(255,255,255,.14);--grid:#2c2c2a;
+--crit:#e05a45;--warn:#e0a000;--good:#27a827;--critt:rgba(230,103,103,.14);--warnt:rgba(250,178,25,.14);--goodt:rgba(12,163,12,.14)}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+.brand{display:flex;align-items:baseline;gap:9px;margin-bottom:6px}.brand b{font-size:15px}.brand span{font-size:12px;color:var(--mut)}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.nav a{font-size:12.5px;font-weight:600;color:var(--tx2);text-decoration:none;padding:7px 13px;border:1px solid var(--bd);border-radius:8px;background:var(--surf)}
+.nav a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+h1{font-size:22px;margin:8px 0 4px}.sub{color:var(--tx2);font-size:13px;margin:0 0 14px;max-width:900px;line-height:1.5}
+h2{font-size:15px;margin:22px 0 4px}.h2sub{font-size:12px;color:var(--tx2);margin:0 0 10px;line-height:1.5}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+@media(max-width:800px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--surf);border:1px solid var(--bd);border-radius:12px;padding:12px 14px}
+.kpi .k{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut)}.kpi .v{font-size:21px;font-weight:700;margin-top:2px}
+.bud{background:var(--surf);border:1px solid var(--bd);border-radius:12px;margin-bottom:9px;overflow:hidden}
+.bud.b-rev{border-left:4px solid var(--crit)}.bud.b-mon{border-left:4px solid var(--warn)}
+.bud.b-ok{border-left:4px solid var(--good)}.bud.b-set{border-left:4px solid var(--blue)}
+summary{display:grid;grid-template-columns:2.1fr 1fr 1fr 1.15fr .9fr 1fr .95fr 1.5fr;gap:8px;align-items:center;
+padding:11px 14px;cursor:pointer;font-size:12.5px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary small{display:block;font-size:10px;color:var(--mut);font-weight:400;text-transform:uppercase;letter-spacing:.03em}
+.c1 small{text-transform:none;font-size:10.5px}
+.c2{font-variant-numeric:tabular-nums}.c2 em{font-style:normal;font-size:10.5px;color:var(--tx2)}
+.c3{white-space:nowrap}.c4{font-size:11.5px;color:var(--tx2)}
+.st{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:-1px}
+.st-rev{background:var(--crit)}.st-mon{background:var(--warn)}.st-ok{background:var(--good)}
+.st-set{background:var(--blue)}.st-gen,.st-na{background:var(--mut)}
+.bud table{width:100%;border-collapse:collapse;border-top:1px solid var(--grid)}
+.bud thead th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);padding:7px 10px;border-bottom:1px solid var(--grid)}
+.bud tbody td{padding:6px 10px;border-bottom:1px solid var(--grid);font-size:12px}
+.bud th.num,.bud td.num{text-align:right;font-variant-numeric:tabular-nums}
+.mono{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--tx2)}
+.iname{max-width:330px}.act{font-size:11px;color:var(--tx2)}
+.tag{font-size:8.5px;font-weight:800;background:var(--goodt);color:var(--good);border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:1px}
+.moreln{font-size:11px;color:var(--mut);text-align:center}
+footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
+</style></head><body><div class="wrap">
+<div class="brand"><b>Dynalektric</b><span>Max Purchase Limit — recommendations per budget</span></div>
+<nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html">Forward demand</a><a href="./budget.html" class="active">Max Purchase Limit</a></nav>
+<h1>Budget vs today's cost — with a recommendation for each</h1>
+<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budgeted rate. Click a budget to open its line-by-line detail. Suggested limit = current cost + 8% price-risk buffer.</p>
+<div class="kpis">
+ <div class="kpi"><div class="k">Budgets analysed</div><div class="v">{{NBUD}}</div></div>
+ <div class="kpi"><div class="k">Need review</div><div class="v" style="color:var(--crit)">{{NREV}}</div></div>
+ <div class="kpi"><div class="k">No limit set yet</div><div class="v" style="color:var(--blue)">{{NNL}}</div></div>
+ <div class="kpi"><div class="k">Total upward variance</div><div class="v">{{TVAR}}</div></div>
+</div>
+{{NOLIMIT_BLOCK}}
+<h2>All budgets — newest first</h2>
+{{CARDS}}
+<footer>Source: DEPL/Trico ERP budgets (live) · item purchase intel (weekly) · LME/NALCO/CRGO via the company costing formula. Generated {{GEN}} UTC. Newest {{NBUD}} budgets shown. For a BOM with no budget yet, drop its PDF into the repo <b>inbox/</b> for a full prediction.</footer>
+</div></body></html>"""
 
 
 if __name__ == "__main__":

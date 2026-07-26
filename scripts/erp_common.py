@@ -246,6 +246,7 @@ def fetch_budgets(session, project_id=None):
         out.append({
             "budget_number": b.get("budget_number"),
             "status": b.get("status"),
+            "created_at": b.get("created_at"),
             "project_code": proj.get("project_code"),
             "project_name": proj.get("name") or proj.get("project_name"),
             "delivery_date": proj.get("delivery_date"),
