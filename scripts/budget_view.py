@@ -49,6 +49,30 @@ def rate_fmt(v):
     return f"₹{v:,.2f}" if v else "—"
 
 
+def inr(n):
+    """Indian digit grouping: 276450 -> 2,76,450 (matches the ERP screens)."""
+    n = int(round(n))
+    sign = "-" if n < 0 else ""
+    d = str(abs(n))
+    if len(d) <= 3:
+        return sign + d
+    head, tail = d[:-3], d[-3:]
+    parts = []
+    while len(head) > 2:
+        parts.insert(0, head[-2:])
+        head = head[:-2]
+    if head:
+        parts.insert(0, head)
+    return sign + ",".join(parts) + "," + tail
+
+
+def rate_amt(rate, qty):
+    """Rate with the line AMOUNT beneath it — same figure the ERP screen shows."""
+    if not rate:
+        return "—"
+    return f'{rate_fmt(rate)}<div class="amt">₹{inr(rate * qty)}</div>' 
+
+
 def our_rate(item, intel_rec, mi, summary, cost_cfg):
     """Recent real PO rate, else live costing estimate for benchmark metals."""
     if intel_rec:
@@ -135,8 +159,8 @@ def main():
                           f'<td class="iname">{esc(it["name"][:60])}</td>'
                           f'<td class="num">{q:,.2f}</td>'
                           f'<td class="num">{rate_fmt(sr)}</td>'
-                          f'<td class="num">{rate_fmt(vr)}</td>'
-                          f'<td class="num">{rate_fmt(our)}{tag}</td>'
+                          f'<td class="num">{rate_amt(vr, q)}</td>'
+                          f'<td class="num">{rate_amt(our, q)}{tag}</td>'
                           f'<td class="num">{var_txt}</td>'
                           f'<td><span class="st st-{key}"></span>{label}</td>'
                           f'<td class="act">{action}</td></tr>'))
@@ -176,7 +200,7 @@ def main():
 <span class="c2"><small>Suggested</small><b>{cr(suggested)}</b></span>
 <span class="c3"><span class="st st-{bkey}"></span>{blabel}</span>
 <span class="c4">{baction}</span></summary>
-<table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">System rate</th><th class="num">Proposed rate</th><th class="num">Our rate</th><th class="num">Var %</th><th>Status</th><th>Action</th></tr></thead>
+<table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">System rate</th><th class="num">Proposed rate<br><small>amount</small></th><th class="num">Our rate<br><small>amount</small></th><th class="num">Var %</th><th>Status</th><th>Action</th></tr></thead>
 <tbody>{body}{more}</tbody></table></details>'''
         (cards_nolimit if not limit else cards).append(card)
 
@@ -239,6 +263,7 @@ summary small{display:block;font-size:10px;color:var(--mut);font-weight:400;text
 .mono{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--tx2)}
 .iname{max-width:330px}.act{font-size:11px;color:var(--tx2)}
 .tag{font-size:8.5px;font-weight:800;background:var(--goodt);color:var(--good);border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:1px}
+.amt{font-size:10px;color:var(--mut);font-variant-numeric:tabular-nums}
 .moreln{font-size:11px;color:var(--mut);text-align:center}
 footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
 </style></head><body><div class="wrap">
