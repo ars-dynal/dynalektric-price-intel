@@ -37,7 +37,13 @@ jobs:
       - name: Find the newest uploaded BOM PDF
         id: find
         run: |
-          PDF=$(find inbox -iname '*.pdf' -printf '%T@ %p\n' 2>/dev/null | sort -rn | head -1 | cut -d' ' -f2-)
+          # Prefer the PDF added/changed by the commit that triggered this run
+          # (file times are not reliable after checkout); fall back to any PDF
+          # in inbox/ for manual "Run workflow" dispatches.
+          PDF=$(git log -1 --name-only --pretty=format: --diff-filter=AM -- inbox/ | grep -iE '\.pdf$' | tail -1)
+          if [ -z "$PDF" ] || [ ! -f "$PDF" ]; then
+            PDF=$(ls -t inbox/*.pdf inbox/*.PDF 2>/dev/null | head -1)
+          fi
           if [ -z "$PDF" ]; then echo "No PDF in inbox/ - nothing to do."; exit 0; fi
           NAME=$(basename "$PDF" | sed 's/\.[Pp][Dd][Ff]$//')
           UNITS=$(echo "$NAME" | grep -oiE '(qty|x)[0-9]+' | grep -oE '[0-9]+' | head -1)
