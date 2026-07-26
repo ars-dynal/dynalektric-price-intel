@@ -24,7 +24,16 @@ jobs:
         run: pip install requests pypdf
 
       - name: Fetch public NALCO/LME prices
+        # Never let a source-site hiccup keep the whole site stale: if the
+        # fetch fails, continue and re-render with the last known prices
+        # (each card shows its own effective date, so staleness is visible).
+        id: fetch
+        continue-on-error: true
         run: python3 scripts/fetch_public_prices.py
+
+      - name: Note fetch failure in the log
+        if: steps.fetch.outcome == 'failure'
+        run: echo "::warning::Price fetch FAILED - rendering with last known prices. Check fetch_public_prices.py vs source sites."
 
       - name: Render public dashboard
         run: python3 scripts/render_public.py
