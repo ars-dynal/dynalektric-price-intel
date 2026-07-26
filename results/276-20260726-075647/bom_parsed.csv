@@ -1,0 +1,39 @@
+serial,item_code,description,pdf_category,uom,qty_per_unit
+1,CU-222-00440,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.711 Enamelled 0.08 (Finished OD=0.791mm) (22 SWG)",CU2,KGS,0.85
+2,CU-222-00409,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.219 Enamelled 0.066 (Finished OD=1.285mm) (18 SWG)",CU2,KGS,0.65
+3,CC-555-00471,"Core E & I Lamination, 1 - Phase, Type 43, CRNO Grade : M250-35A, 0.35(T)mm, Max Core Loss <2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 2036-02-00-02",CC,KGS,8.3
+4,CMP-444-00686,"Fibreglass Epoxy Bobbin, Grade : FR4 or GPO3, As Per Drawing No : 2036-02-00-03",CMP,NOS,1.0
+5,CF-555-01000,"C Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, E&I Type 43 : As Per Drawing No : 2036-02-00-04",CF,NOS,2.0
+6,CF-555-01001,"L Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, E&I Type 43 : As Per Drawing No : 2036-02-00-05",CF,NOS,2.0
+7,CMP-444-00026,"Fiberglass Sheet, Grade:EP3 (U/V FR4), 3.0 MM (Thickness)",CMP,KGS,0.023
+8,INS-666-00084,"NPN/APA, 5 Mil Class F, 0.13 (T) X 70 (W) mm",INS,KGS,0.12
+9,INS-666-00072,"Fiber Glass Silicone Sleeve ID:1mm, Black, Class H",INS,MTR,1.5
+10,INS-666-00118,"Fiber Glass FG Silicone Sleeve ID:2mm, White, Class H",INS,MTR,1.5
+11,ANG-000-00027,"Metlok 743, 20 Gm",ANG,NOS,0.2
+12,ANG-000-00031,"Nomex (Polyamide) Insulation Adhesive Tape, Class H, 2 Mil, 25 MM (W) X 50 Mtrs",ANG,ROL,0.25
+13,ANG-000-00029,"Fiber Glass Cloth Insulation Adhesive Tape, Class H, 20mm X 25 Mtrs",ANG,ROL,0.2
+14,FST-999-00819,"MS Hex Bolt, Size: M6 x 95(L) mm",FST,NOS,4.0
+15,FST-999-00167,"MS PLAIN WASHER, SIZE: M6",FST,NOS,8.0
+16,FST-999-00134,"MS Flange Nut, Size: M6",FST,NOS,4.0
+17,PNR-202-00028,M6 Nylon Collar Bush Ø6 Washer,PNR,NOS,8.0
+18,INS-666-00356,"Silicon Rubber Coated Fiberglass Sleeve, ID : 6mm, Colour : Black, Class F",INS,MTR,0.33
+19,EL-777-00090,"2-Conductor Terminal Block, 1-Pole, 4 Sqmm, Wago: 262-301",EL,NOS,10.0
+20,EL-777-00091,"End Plate for TB with Fixing Flange, Wago: 262-361",EL,NOS,1.0
+21,FST-999-00326,"Pin Type Nylon-Insulated Copper Ferrule/Cord End Terminals,2.5-8 (L) MM, Blue",FST,NOS,10.0
+22,FST-999-00335,"MS Hex Bolt, Size: M4X15",FST,NOS,2.0
+23,FST-999-00318,"MS PLAIN WASHER, SIZE: M4",FST,NOS,4.0
+24,FST-999-00400,"MS Flange Nut, Size: M4",FST,NOS,2.0
+25,FST-999-00371,"MS screw, Size: M3X12MM",FST,NOS,2.0
+26,FST-999-00100,"MS Plain Washer, Size: M3",FST,NOS,4.0
+27,FST-999-00099,"MS Hex Nut, Size: M3",FST,NOS,2.0
+28,WB-606-00017,Soldering Wire 1MM,WB,KGS,0.01
+29,CH-303-00013,Masking Grease 004-1553,CH,KGS,0.05
+30,CH-303-00001,"Varnish, Dr. Beck 50VT ELANTAS",CH,KGS,0.11
+31,CH-303-00002,Diluent V,CH,KGS,0.011
+32,CH-303-00021,Red Varnish B6-665,CH,KGS,0.05
+33,TMP-000-00411,Tested OK Label Size: 10 X 10 mm,TMP,NOS,1.0
+34,TMP-000-00535,"Earthing Label One Side Adhesive, Size : 8 x 8 mm",TMP,NOS,1.0
+35,TMP-000-00534,"Standard QC Label, One Side Adhesive, Size : 10 x 10 mm",TMP,NOS,1.0
+36,INS-666-00129,"Fire Retardant Heat Shrinkable Sleeve, Make: WOER, Size: Ø2.5 Color: Black, Voltage Rating: 600V & Temp. Rating: 125°C",INS,MTR,0.15
+37,TMP-000-00361,Max Letawin Ink Ribbon PT-IR300 BH,TMP,NOS,0.05
+38,INS-666-00019,"Fire Retardant Heat Shrinkable Sleeve, Make: WOER, Size: Ø6.0/3.0mm, Color: Yellow, Voltage Rating: 600V & Temp. Rating: 125°C",INS,MTR,0.12
