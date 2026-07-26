@@ -1,0 +1,37 @@
+serial,item_code,description,pdf_category,uom,qty_per_unit
+1,CU-222-00429,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.559 Enamelled 0.07 (Finished OD=0.629mm) (24 SWG)",CU2,KGS,0.9
+2,CC-555-00462,"Core E & I Lamination, 1 - Phase, Type 120, CRNO Grade : M250-35A, 0.35(T)mm, Max Core Loss <2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 2037-00-02",CC,KGS,3.2
+3,CMP-444-00682,"Fibreglass Epoxy Bobbin, Grade : FR4 or GPO3, As Per Drawing no : 2037-00-03",CMP,NOS,1.0
+4,CF-555-00985,"C Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, As Per Drawing No : 2037-00-04",CF,NOS,2.0
+5,CF-555-00986,"L Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, As Per Drawing No : 2037-00-05",CF,NOS,2.0
+6,INS-666-00338,APN/NPN O/L (Garflex) Nomex Paper - 0.13mm for 500mm Roll,INS,KGS,0.1
+7,INS-666-00120,"Fiber Glass Silicone Sleeve ID:1mm, White, Class H",INS,MTR,0.8
+8,INS-666-00072,"Fiber Glass Silicone Sleeve ID:1mm, Black, Class H",INS,MTR,0.8
+9,ANG-000-00029,"Fiber Glass Cloth Insulation Adhesive Tape, Class H, 20mm X 25 Mtrs",ANG,ROL,0.15
+10,ANG-000-00031,"Nomex (Polyamide) Insulation Adhesive Tape, Class H, 2 Mil, 25 MM (W) X 50 Mtrs",ANG,ROL,0.25
+11,INS-666-00090,"Fire Retardant Heat Shrinkable Sleeve, Make: WOER, Size: Ø4, Color: Black, Voltage Rating: 600V & Temp. Rating: 125°C",INS,MTR,0.3
+12,INS-666-00358,"Dacron Mylar Dacron (DMD), 12Mil Class F, 0.3(T) x 900(W) mm",INS,KGS,0.03
+13,FST-999-00504,"MS HEX BOLT, SIZE: M5X60",FST,NOS,4.0
+14,FST-999-00199,"MS Plain Washer, Size: M5",FST,NOS,8.0
+15,PNR-202-00031,M5 Nylon Collar Bush Ø5 Washer,PNR,NOS,8.0
+16,FST-999-00781,"MS Flange Nut, Size: M5",FST,NOS,4.0
+17,INS-666-00002,"Silicone Coated Fibreglass Sleeve ID:4mm, Black-C/H, Class H",INS,MTR,0.2
+18,CMP-444-00026,"Fiberglass Sheet, Grade:EP3 (U/V FR4), 3.0 MM (Thickness)",CMP,KGS,0.02
+19,EL-777-00093,"2-Conductor Terminal Block, 1-Pole, 1.5 Sqmm, Wago: 260-301",EL,NOS,4.0
+20,EL-777-00094,"End Plate for TB, 1.5 Sqmm, Wago: 260-361",EL,NOS,1.0
+21,FST-999-00371,"MS screw, Size: M3X12MM",FST,NOS,2.0
+22,FST-999-00100,"MS Plain Washer, Size: M3",FST,NOS,2.0
+23,FST-999-00099,"MS Hex Nut, Size: M3",FST,NOS,2.0
+24,FST-999-00370,"1Sq mm Boot Lugs, (Colour: Red)",FST,NOS,4.0
+25,CU-222-00115,"Teflon Wire Single Strand, 1 Sq.mm, Red",CU2,MTR,0.15
+26,CU-222-00114,"Teflon Wire Single Strand, 1 Sq.mm, Black",CU2,MTR,0.15
+27,FST-999-00372,MS Hex Bolt M4×12MM,FST,NOS,2.0
+28,FST-999-00318,"MS PLAIN WASHER, SIZE: M4",FST,NOS,4.0
+29,FST-999-00317,"MS HEX NUT, SIZE: M4",FST,NOS,2.0
+30,WB-606-00017,Soldering Wire 1MM,WB,KGS,0.0025
+31,CH-303-00001,"Varnish, Dr. Beck 50VT ELANTAS",CH,KGS,0.06
+32,CH-303-00002,Diluent V,CH,KGS,0.006
+33,CH-303-00014,Elmoluft 1A-FD (AC-43 Varnish),CH,KGS,0.015
+34,TMP-000-00411,Tested OK Label Size: 10 X 10 mm,TMP,NOS,1.0
+35,TMP-000-00534,"Standard QC Label, One Side Adhesive, Size : 10 x 10 mm",TMP,NOS,1.0
+36,TMP-000-00535,"Earthing Label One Side Adhesive, Size : 8 x 8 mm",TMP,NOS,1.0
