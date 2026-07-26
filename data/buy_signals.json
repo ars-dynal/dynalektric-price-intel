@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-25T09:22:16Z",
+  "generated_at_utc": "2026-07-26T10:19:04Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
@@ -34,7 +34,7 @@
       "headline": "Insufficient / indicative data",
       "reason": "Indicative price only \u2014 a buy signal needs a real price feed or history to build.",
       "action": "Configure a price source or wait for history to build.",
-      "cur": 230.0
+      "cur": 175.0
     },
     "Mild Steel": {
       "signal": "NO SIGNAL",
