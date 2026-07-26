@@ -1,91 +1,91 @@
 {
-  "note": "Dynalektric costing formula parameters, per metal-form profile. Formula is fixed in scripts/costing.py; these rates are editable. GST is recoverable input credit, so compare costs on TOTAL EX-GST. Values marked _confirm=true are placeholders awaiting the real company numbers.",
-  "gst_pct": 18,
-  "profiles": {
-    "Aluminium foil": {
-      "benchmark": "Aluminium",
-      "conversion_rate": 65,
-      "coating_rate": 0,
-      "packing_flat": 6,
-      "packing_fwd_pct": 0,
-      "freight_rate": 0,
-      "cash_discount_pct": 1.5,
-      "other_charges": 0,
-      "_source": "Aluminium wire and foil.xlsx -> Foil Costing sheet"
-    },
-    "Aluminium conductor": {
-      "benchmark": "Aluminium",
-      "premium_inr_kg": 0,
-      "conversion_rate": 65,
-      "coating_rate": 0,
-      "packing_fwd_pct": 2,
-      "freight_rate": 0,
-      "cash_discount_pct": 0,
-      "other_charges": 0,
-      "_confirm": true
-    },
-    "Aluminium busbar": {
-      "benchmark": "Aluminium",
-      "premium_inr_kg": 0,
-      "conversion_rate": 40,
-      "coating_rate": 0,
-      "packing_fwd_pct": 2,
-      "freight_rate": 0,
-      "other_charges": 0,
-      "_confirm": true
-    },
-    "Copper wire": {
-      "benchmark": "Copper",
-      "premium_usd_mt": 0,
-      "conversion_rate": 90,
-      "coating_rate": 0,
-      "packing_flat": 6,
-      "freight_rate": 0,
-      "other_charges": 0,
-      "_confirm": true
-    },
-    "Copper strip": {
-      "benchmark": "Copper",
-      "premium_usd_mt": 0,
-      "conversion_rate": 80,
-      "coating_rate": 0,
-      "packing_flat": 6,
-      "freight_rate": 0,
-      "other_charges": 0,
-      "_confirm": true
-    },
-    "Copper busbar": {
-      "benchmark": "Copper",
-      "premium_usd_mt": 0,
-      "conversion_rate": 55,
-      "coating_rate": 0,
-      "packing_fwd_pct": 2,
-      "freight_rate": 0,
-      "other_charges": 0,
-      "_confirm": true
-    },
-    "Copper foil": {
-      "benchmark": "Copper",
-      "premium_usd_mt": 0,
-      "conversion_rate": 80,
-      "coating_rate": 0,
-      "packing_flat": 6,
-      "packing_fwd_pct": 0,
-      "freight_rate": 0,
-      "cash_discount_pct": 0,
-      "other_charges": 0,
-      "_confirm": true
-    },
-    "Copper strip/wire": {
-      "benchmark": "Copper",
-      "premium_usd_mt": 0,
-      "conversion_rate": 80,
-      "coating_rate": 0,
-      "packing_fwd_pct": 2,
-      "freight_rate": 0,
-      "cash_discount_pct": 0,
-      "other_charges": 0,
-      "_confirm": true
-    }
+ "note": "Dynalektric costing formula parameters, per metal-form profile. Formula is fixed in scripts/costing.py; these rates are editable. GST is recoverable input credit, so compare costs on TOTAL EX-GST. Values marked _confirm=true are placeholders awaiting the real company numbers.",
+ "gst_pct": 18,
+ "profiles": {
+  "Aluminium foil": {
+   "benchmark": "Aluminium",
+   "conversion_rate": 65,
+   "coating_rate": 0,
+   "packing_flat": 6,
+   "packing_fwd_pct": 0,
+   "freight_rate": 0,
+   "cash_discount_pct": 1.5,
+   "other_charges": 0,
+   "_source": "Aluminium wire and foil.xlsx -> Foil Costing sheet"
+  },
+  "Aluminium conductor": {
+   "benchmark": "Aluminium",
+   "premium_inr_kg": 0,
+   "conversion_rate": 65,
+   "coating_rate": 0,
+   "packing_fwd_pct": 2,
+   "freight_rate": 0,
+   "cash_discount_pct": 0,
+   "other_charges": 0,
+   "_confirm": true
+  },
+  "Aluminium busbar": {
+   "benchmark": "Aluminium",
+   "premium_inr_kg": 0,
+   "conversion_rate": 40,
+   "coating_rate": 0,
+   "packing_fwd_pct": 2,
+   "freight_rate": 0,
+   "other_charges": 0,
+   "_confirm": true
+  },
+  "Copper wire": {
+   "benchmark": "Copper",
+   "premium_usd_mt": 0,
+   "conversion_rate": 219,
+   "coating_rate": 0,
+   "packing_flat": 6,
+   "freight_rate": 0,
+   "other_charges": 0,
+   "_source": "implied from real PO 2026-06-29: Rs1492 enamelled wire - Rs1267 Jun copper - Rs6 packing"
+  },
+  "Copper strip": {
+   "benchmark": "Copper",
+   "premium_usd_mt": 0,
+   "conversion_rate": 183,
+   "coating_rate": 0,
+   "packing_flat": 6,
+   "freight_rate": 0,
+   "other_charges": 0,
+   "_source": "implied from real PO 2026-04-16: Rs1405 copper foil - Rs1216 Apr copper - Rs6 packing"
+  },
+  "Copper busbar": {
+   "benchmark": "Copper",
+   "premium_usd_mt": 0,
+   "conversion_rate": 55,
+   "coating_rate": 0,
+   "packing_fwd_pct": 2,
+   "freight_rate": 0,
+   "other_charges": 0,
+   "_confirm": true
+  },
+  "Copper foil": {
+   "benchmark": "Copper",
+   "premium_usd_mt": 0,
+   "conversion_rate": 183,
+   "coating_rate": 0,
+   "packing_flat": 6,
+   "packing_fwd_pct": 0,
+   "freight_rate": 0,
+   "cash_discount_pct": 0,
+   "other_charges": 0,
+   "_source": "same basis as strip (foil PO 2026-04-16)"
+  },
+  "Copper strip/wire": {
+   "benchmark": "Copper",
+   "premium_usd_mt": 0,
+   "conversion_rate": 80,
+   "coating_rate": 0,
+   "packing_fwd_pct": 2,
+   "freight_rate": 0,
+   "cash_discount_pct": 0,
+   "other_charges": 0,
+   "_confirm": true
   }
+ }
 }
