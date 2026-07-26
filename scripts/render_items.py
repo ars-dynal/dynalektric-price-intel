@@ -331,15 +331,13 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 </div>
 <table><thead><tr>
  <th onclick="sortBy('code')">Item code</th><th onclick="sortBy('name')">Item</th>
- <th onclick="sortBy('cat')">Cat</th><th onclick="sortBy('metal')">Base metal</th><th>UOM</th>
+ <th onclick="sortBy('metal')">Base metal</th><th>UOM</th>
  <th class="num" onclick="sortBy('erp')">ERP rate &#8377;/kg</th>
  <th class="num" onclick="sortBy('lm')">Live metal &#8377;/kg</th>
- <th class="num" onclick="sortBy('fin')">Finished &#8377;/kg</th>
  <th class="num" onclick="sortBy('our')">Our rate &#8377;/kg</th>
  <th class="num" onclick="sortBy('lpo')">Last PO &#8377;/kg</th>
  <th>Vendors (last price)</th>
- <th onclick="sortBy('bdelta')">Budget status</th>
- <th onclick="sortBy('src')">Live price source</th></tr></thead><tbody id="tb"></tbody></table>
+ <th onclick="sortBy('bdelta')">Budget status</th></tr></thead><tbody id="tb"></tbody></table>
 <footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a> · <a href="./consumption.html" style="color:var(--al)">Consumption &amp; spend &rarr;</a> · <a href="./demand.html" style="color:var(--al)">Forward demand &rarr;</a></footer>
 </div>
 <script>
@@ -412,15 +410,13 @@ function render(){
    const lm=d.lm===null?'<span class="na">—</span>':d.lm.toLocaleString('en-IN',{minimumFractionDigits:2});
    const mc=metalCls(d.metal);
    return '<tr><td class="mono">'+d.code+'</td><td>'+d.name.replace(/</g,'&lt;')+'</td>'+
-   '<td class="mono">'+d.cat+'</td><td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
+   '<td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td>'+
-   '<td class="fin">'+(d.fin?('₹'+d.fin.toLocaleString('en-IN',{maximumFractionDigits:0})+(d.finc?'':'*')):'<span class="na">—</span>')+'</td>'+
    '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+(d.ours==='est'?'est':'PO')+'</span>'):'<span class="na">—</span>')+'</td>'+
    '<td class="num mono">'+(d.lpo?(d.lpo.toLocaleString('en-IN',{maximumFractionDigits:0})+'<div class="lpod">'+(d.lpod||'')+'</div>'):'—')+'</td>'+
    '<td class="vendcell">'+(d.vend?d.vend.replace(/</g,'&lt;'):'<span class="na">—</span>')+'</td>'+
-   '<td>'+bcell(d)+'</td>'+
-   '<td class="mono srccell">'+d.src+'</td></tr>';}).join('');
+   '<td>'+bcell(d)+'</td></tr>';}).join('');
 }
 drawCharts();
 render();
