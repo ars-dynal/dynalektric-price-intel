@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Renders docs/items.html — a plain reference table showing TODAY'S LIVE
-COMMODITY PRICE beside each ERP item. Nothing else.
+Renders docs/items.html — the item reference table: today's live commodity
+price, the costing-formula finished cost, OUR RATE (recent real purchase
+price, else the estimate), last PO, and per-item vendors (owner-approved
+addition; data from data/item_intel.json, refreshed weekly from the ERP).
 
 Design rules (deliberate — do not reintroduce):
   * The "Live Market ₹/kg" column shows ONLY today's benchmark price for the
@@ -73,6 +75,11 @@ def main():
             classif = json.load(f).get("items", {})
     except FileNotFoundError:
         classif = {}
+    try:
+        with open(os.path.join(ROOT, "data", "item_intel.json")) as f:
+            intel = json.load(f).get("items", {})
+    except FileNotFoundError:
+        intel = {}
 
     # Configured live benchmark sources, keyed by detected base metal.
     # A metal with no free/configured source maps to None -> blank cell.
@@ -136,11 +143,23 @@ def main():
         if erp and fin_val:
             bdelta = round((fin_val - erp) / erp * 100)
             bstat = "under" if erp < fin_val * 0.98 else ("over" if erp > fin_val * 1.15 else "ok")
+        ii = intel.get(it.get("code")) or {}
+        our, ours = None, None
+        if ii.get("avg180"):
+            our, ours = ii["avg180"], "PO"        # real recent buying price
+        elif ii.get("avg12"):
+            our, ours = ii["avg12"], "PO12"       # older real price
+        elif fin_val:
+            our, ours = fin_val, "est"            # costing-formula estimate
+        vend = " · ".join(f'{v["n"]} (₹{v["p"]:,.0f})' for v in ii.get("vend", [])[:3]) or None
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
                      "metal": metal or "—", "uom": it["uom"],
                      "erp": it.get("rate"),
                      "lm": (b["price"] if b else None),
                      "fin": fin_val, "finc": (fin_conf if fin_conf is not None else True),
+                     "our": our, "ours": ours,
+                     "lpo": ii.get("lpo"), "lpod": ii.get("lpod"),
+                     "vend": vend,
                      "bstat": bstat, "bdelta": bdelta,
                      "src": SRC_SHORT.get(metal, "—") if has_price else "—"})
 
@@ -275,6 +294,11 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 .fin{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;color:var(--tx2)}
 .bbadge{font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:5px;white-space:nowrap}
 .b-under{background:var(--critt);color:var(--crit)}.b-ok{background:var(--goodt);color:var(--good)}.b-over{background:var(--warnt);color:#a06a00}
+.ourcell b{font-weight:700}
+.ourtag{font-size:9px;font-weight:800;border-radius:4px;padding:1px 4px;margin-left:4px;color:#fff;vertical-align:1px}
+.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}
+.lpod{font-size:9.5px;color:var(--text-muted)}
+.vendcell{font-size:11px;color:var(--text-secondary);max-width:230px}
 </style></head><body><div class="wrap">
 <div class="brand"><span class="bname">Dynalektric</span> <span class="btag">Commodity Price Intelligence</span></div>
 <nav class="nav">
@@ -311,6 +335,9 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <th class="num" onclick="sortBy('erp')">ERP rate &#8377;/kg</th>
  <th class="num" onclick="sortBy('lm')">Live metal &#8377;/kg</th>
  <th class="num" onclick="sortBy('fin')">Finished &#8377;/kg</th>
+ <th class="num" onclick="sortBy('our')">Our rate &#8377;/kg</th>
+ <th class="num" onclick="sortBy('lpo')">Last PO &#8377;/kg</th>
+ <th>Vendors (last price)</th>
  <th onclick="sortBy('bdelta')">Budget status</th>
  <th onclick="sortBy('src')">Live price source</th></tr></thead><tbody id="tb"></tbody></table>
 <footer>Benchmarks: LME copper cash (westmetall.com) converted via live USD/INR · NALCO aluminium ingot · CRGO — indicative estimate, no free daily feed. Prices refresh each daily run. <a href="./index.html" style="color:var(--al)">Public summary &rarr;</a> · <a href="./consumption.html" style="color:var(--al)">Consumption &amp; spend &rarr;</a> · <a href="./demand.html" style="color:var(--al)">Forward demand &rarr;</a></footer>
@@ -389,6 +416,9 @@ function render(){
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td>'+
    '<td class="fin">'+(d.fin?('₹'+d.fin.toLocaleString('en-IN',{maximumFractionDigits:0})+(d.finc?'':'*')):'<span class="na">—</span>')+'</td>'+
+   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+(d.ours==='est'?'est':'PO')+'</span>'):'<span class="na">—</span>')+'</td>'+
+   '<td class="num mono">'+(d.lpo?(d.lpo.toLocaleString('en-IN',{maximumFractionDigits:0})+'<div class="lpod">'+(d.lpod||'')+'</div>'):'—')+'</td>'+
+   '<td class="vendcell">'+(d.vend?d.vend.replace(/</g,'&lt;'):'<span class="na">—</span>')+'</td>'+
    '<td>'+bcell(d)+'</td>'+
    '<td class="mono srccell">'+d.src+'</td></tr>';}).join('');
 }

@@ -1,0 +1,42 @@
+name: Item purchase intel (our rate + vendors on items page)
+
+# Refreshes data/item_intel.json (per-item last PO price, recent average,
+# vendors with their latest prices) from the ERP, then re-renders the items
+# page so "Our rate", "Last PO" and "Vendors" stay current.
+# The daily price refresh also re-renders the page every morning using the
+# latest committed intel, so prices stay live daily even between these runs.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Weekly, Mondays 05:00 UTC (10:30 IST)
+    - cron: '0 5 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  intel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Build per-item purchase intel from ERP
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/item_intel.py
+      - name: Re-render items page
+        run: python3 scripts/render_items.py
+      - name: Commit and push if changed
+        run: |
+          git config user.name "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/item_intel.json docs/items.html
+          git diff --cached --quiet || git commit -m "Item purchase intel refresh: $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main || true
+          git push
