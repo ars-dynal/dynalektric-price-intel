@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: needed to see WHICH file the triggering commit added
 
       - uses: actions/setup-python@v5
         with:
@@ -42,7 +44,13 @@ jobs:
           # in inbox/ for manual "Run workflow" dispatches.
           PDF=$(git log -1 --name-only --pretty=format: --diff-filter=AM -- inbox/ | grep -iE '\.pdf$' | tail -1)
           if [ -z "$PDF" ] || [ ! -f "$PDF" ]; then
-            PDF=$(ls -t inbox/*.pdf inbox/*.PDF 2>/dev/null | head -1)
+            # Fallback (manual dispatch): the inbox PDF whose last COMMIT is newest
+            best=0; PDF=""
+            for f in inbox/*.pdf inbox/*.PDF; do
+              [ -f "$f" ] || continue
+              t=$(git log -1 --format=%ct -- "$f" 2>/dev/null || echo 0)
+              if [ "${t:-0}" -gt "$best" ]; then best=$t; PDF=$f; fi
+            done
           fi
           if [ -z "$PDF" ]; then echo "No PDF in inbox/ - nothing to do."; exit 0; fi
           NAME=$(basename "$PDF" | sed 's/\.[Pp][Dd][Ff]$//')
