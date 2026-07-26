@@ -1,0 +1,38 @@
+serial,item_code,description,pdf_category,uom,qty_per_unit
+1,CU-222-00003,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730- Part-29, Class-200 (H) , Size: 6.40 X 1.50 MM, SE-PIA 0.10 MM",CU2,KGS,6.5
+2,CC-555-00367,"Core E & I Lamination, 1 - Phase, Type 226, CRNO Grade : M250-35A, 0.35(T)mm, Max Core Loss <2.1W/Kg@1.5T, 50Hz, As Per Drawing No : 2024-12-00-02",CC,KGS,32.0
+3,CMP-444-00688,"Fibreglass Epoxy Bobbin, Grade : FR4 or GPO3, As Per Drawing No : 2024-12-00-03",CMP,NOS,1.0
+4,CF-555-01002,"Front Top Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, As Per Drawing No : 2024-12-00-04",CF,NOS,1.0
+5,CF-555-01003,"Rear Top Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, As Per Drawing No : 2024-12-00-05",CF,NOS,1.0
+6,CF-555-01004,"Bottom Bracket, Grade : Mild Steel(M.S) Finish : Zinc Trivalent plating Blue Passivation, Coating : Minimum 5 Microns, As Per Drawing No : 2024-12-00-06",CF,NOS,2.0
+7,INS-666-00089,APN/NPN O/L (Garflex) Nomex Paper - 0.1mm for 990mm Roll,INS,KGS,0.2
+8,CU-111-00001,"Copper Foil, Thickness 0.1mm, 16"" Roll Width",CU1,KGS,0.02
+9,INS-666-00004,"Silicon Rubber Coated Fiberglass Sleeve, ID : 8mm, Colour : Black, Class F",INS,MTR,2.05
+10,INS-666-00077,"Silicone Coated Fibreglass Sleeve, ID:8mm, White, Class H",INS,MTR,1.5
+11,ANG-000-00027,"Metlok 743, 20 Gm",ANG,NOS,0.25
+12,ANG-000-00053,Fixon F300 Adhesive Tape 15 mm (W),ANG,ROL,0.3
+13,ANG-000-00031,"Nomex (Polyamide) Insulation Adhesive Tape, Class H, 2 Mil, 25 MM (W) X 50 Mtrs",ANG,ROL,0.6
+14,ANG-000-00029,"Fiber Glass Cloth Insulation Adhesive Tape, Class H, 20mm X 25 Mtrs",ANG,ROL,0.65
+15,FST-999-00566,"MS HEX BOLT, SIZE: M8 X 150(L) mm",FST,NOS,4.0
+16,FST-999-00045,"MS Plain Washer, Size: M8",FST,NOS,12.0
+17,FST-999-00187,"MS Flange Nut, Size: M8",FST,NOS,4.0
+18,PNR-202-00010,M8 Nylon Collar Bush Ø8 Washer,PNR,NOS,8.0
+19,FST-999-00330,"MS Hex Bolt, Size: M5X20",FST,NOS,2.0
+20,FST-999-00199,"MS Plain Washer, Size: M5",FST,NOS,4.0
+21,FST-999-00781,"MS Flange Nut, Size: M5",FST,NOS,2.0
+22,EL-777-00564,"35 Sqmm Connector, Make : Connectwell , Part No : CTS35UN",EL,NOS,4.0
+23,EL-777-00565,"End Clamp For 35 Sqmm Connector, Make : Connectwell, Part No : CA702",EL,NOS,2.0
+24,EL-777-00566,"Connectwell Din Rail, Part No : CA701-1M",EL,NOS,0.1
+25,TMP-000-00553,Connectwell Terminal Marking Card Label MC16,TMP,NOS,8.0
+26,FST-999-00047,M.S EYE BOLT M8 X 20 mm,FST,NOS,2.0
+27,FST-999-00046,"MS SPRING WASHER, SIZE: M8",FST,NOS,2.0
+28,FST-999-00044,"MS Hex Nut, Size: M8",FST,NOS,2.0
+29,CH-303-00013,Masking Grease 004-1553,CH,KGS,0.05
+30,CH-303-00001,"Varnish, Dr. Beck 50VT ELANTAS",CH,KGS,0.5
+31,CH-303-00002,Diluent V,CH,KGS,0.05
+32,CH-303-00021,Red Varnish B6-665,CH,KGS,0.05
+33,INS-666-00130,"Fire Retardant Heat Shrinkable Sleeve, Make: WOER, Size: Ø8/4mm, Color: Black, Voltage Rating: 600V & Temp. Rating: 125°C",INS,MTR,0.5
+34,TMP-000-00005,Earthing Label One Side Adhesive Size:20×20MM,TMP,SET,1.0
+35,TMP-000-00410,Tested OK Label Size: 20 X 20 mm.,TMP,NOS,1.0
+36,TMP-000-00135,Danger Label Size: Dia 20×20MM,TMP,NOS,1.0
+37,TMP-000-00190,"Standard QC Label, Size:26×26MM",TMP,NOS,1.0
