@@ -25,6 +25,15 @@ from collections import Counter
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+_RETRY = Retry(total=6, connect=6, read=3, backoff_factor=8,
+               status_forcelist=(429, 500, 502, 503, 504),
+               allowed_methods=('GET', 'POST'))
+def _rsess():
+    s = requests.Session()
+    s.mount('https://', HTTPAdapter(max_retries=_RETRY))
+    return s
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import llm  # noqa: E402
@@ -51,7 +60,7 @@ INSTR = (
 
 
 def auth():
-    r = requests.post(f"{BASE}/oauth/token", json={
+    r = _rsess().post(f"{BASE}/oauth/token", json={
         "grant_type": "client_credentials",
         "client_id": os.environ["DEPL_CLIENT_ID"],
         "client_secret": os.environ["DEPL_CLIENT_SECRET"],
@@ -148,7 +157,7 @@ def main():
     known = cache["items"]
 
     token = auth()
-    session = requests.Session()
+    session = _rsess()
     session.headers.update({"Authorization": f"Bearer {token}", "Accept": "application/json"})
     cands = fetch_candidates(session)
     todo = [c for c in cands if c["code"] not in known]

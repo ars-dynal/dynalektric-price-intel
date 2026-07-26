@@ -20,6 +20,8 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 BASE = "https://depl.consult-trico.com"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,19 +52,35 @@ def load_classification():
         return {}
 
 
+RETRY = Retry(total=6, connect=6, read=3, backoff_factor=8,
+              status_forcelist=(429, 500, 502, 503, 504),
+              allowed_methods=("GET", "POST"))
+# backoff 8 -> waits of ~8/16/32/64/128s: rides out short ERP/host blips
+# ("Network is unreachable", brief 5xx) instead of failing the whole run.
+
+
+def _retrying_session():
+    s = requests.Session()
+    ad = HTTPAdapter(max_retries=RETRY)
+    s.mount("https://", ad)
+    s.mount("http://", ad)
+    return s
+
+
 def auth():
-    r = requests.post(f"{BASE}/oauth/token", json={
+    s = _retrying_session()
+    r = s.post(f"{BASE}/oauth/token", json={
         "grant_type": "client_credentials",
         "client_id": os.environ["DEPL_CLIENT_ID"],
         "client_secret": os.environ["DEPL_CLIENT_SECRET"],
-    }, timeout=20)
+    }, timeout=30)
     r.raise_for_status()
     return r.json()["access_token"]
 
 
 def make_session():
     token = auth()
-    s = requests.Session()
+    s = _retrying_session()
     s.headers.update({"Authorization": f"Bearer {token}", "Accept": "application/json"})
     return s
 

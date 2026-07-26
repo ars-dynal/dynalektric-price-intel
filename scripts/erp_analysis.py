@@ -33,6 +33,15 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+_RETRY = Retry(total=6, connect=6, read=3, backoff_factor=8,
+               status_forcelist=(429, 500, 502, 503, 504),
+               allowed_methods=('GET', 'POST'))
+def _rsess():
+    s = requests.Session()
+    s.mount('https://', HTTPAdapter(max_retries=_RETRY))
+    return s
 
 BASE = "https://depl.consult-trico.com"
 # Confirmed against live data (2026-07-22 debug run): item_category.category_code
@@ -53,7 +62,7 @@ REQUEST_DELAY_S = 0.15  # be a polite API citizen
 def auth():
     cid = os.environ["DEPL_CLIENT_ID"]
     secret = os.environ["DEPL_CLIENT_SECRET"]
-    r = requests.post(f"{BASE}/oauth/token", json={
+    r = _rsess().post(f"{BASE}/oauth/token", json={
         "grant_type": "client_credentials", "client_id": cid, "client_secret": secret
     }, timeout=20)
     r.raise_for_status()
@@ -132,7 +141,7 @@ def main():
 
     print("Authenticating...")
     token = auth()
-    session = requests.Session()
+    session = _rsess()
     session.headers.update({"Authorization": f"Bearer {token}", "Accept": "application/json"})
 
     print("Fetching items (categories AL-222-/CU-222- only)...")
