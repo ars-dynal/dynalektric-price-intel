@@ -70,16 +70,18 @@ def our_rate(item, intel_rec, mi, summary, cost_cfg):
     return None, None
 
 
-def line_status(sr, our):
-    if not sr:
+def line_status(ref, our, ref_is_proposed):
+    if not ref:
         return "set", "Rate not set", "Set rate ≈ our rate"
     if not our:
         return "na", "No reference", "—"
-    v = (our - sr) / sr * 100
+    v = (our - ref) / ref * 100
     if v > 10:
         return "rev", "Review", "Increase budget before PO"
     if v > 3:
         return "mon", "Monitor", "Check vendor quotes"
+    if ref_is_proposed and v < -3:
+        return "neg", "Negotiate", "Quote above our recent buying price"
     if v < -15:
         return "gen", "Generous", "Verify rate — well above cost"
     return "ok", "OK", "Proceed"
@@ -108,7 +110,7 @@ def main():
     cards, cards_nolimit = [], []
     n_rev = n_nolimit = 0
     tot_var = 0.0
-    order = {"ok": 0, "gen": 1, "na": 1, "mon": 2, "set": 3, "rev": 4}
+    order = {"ok": 0, "gen": 1, "na": 1, "neg": 2, "mon": 2, "set": 3, "rev": 4}
 
     for b in budgets[:MAX_BUDGETS]:
         lrows, bud_cost, cur_cost, worst = [], 0.0, 0.0, "ok"
@@ -118,20 +120,22 @@ def main():
                 continue
             mi = mi_engine.enrich(it)
             our, osrc = our_rate(it, intel_all.get(it.get("code")), mi, summary, cost_cfg)
-            sr, q = l.get("system_rate"), l["quantity"]
-            bc = (sr or 0) * q
-            cc = (our or sr or 0) * q
+            sr, vr, q = l.get("system_rate"), l.get("vendor_rate"), l["quantity"]
+            ref = vr or sr           # the team's PROPOSED rate wins over the old system rate
+            bc = (ref or 0) * q
+            cc = (our or ref or 0) * q
             bud_cost += bc
             cur_cost += cc
-            key, label, action = line_status(sr, our)
-            if order[key] > order[worst]:
+            key, label, action = line_status(ref, our, bool(vr))
+            if order.get(key, 1) > order.get(worst, 0):
                 worst = key
-            var_txt = f"{(our-sr)/sr*100:+.1f}%" if (sr and our) else "—"
+            var_txt = f"{(our-ref)/ref*100:+.1f}%" if (ref and our) else "—"
             tag = f'<span class="tag">{osrc}</span>' if osrc else ""
             lrows.append((cc, f'<tr><td class="mono">{esc(it.get("code"))}</td>'
                           f'<td class="iname">{esc(it["name"][:60])}</td>'
                           f'<td class="num">{q:,.2f}</td>'
                           f'<td class="num">{rate_fmt(sr)}</td>'
+                          f'<td class="num">{rate_fmt(vr)}</td>'
                           f'<td class="num">{rate_fmt(our)}{tag}</td>'
                           f'<td class="num">{var_txt}</td>'
                           f'<td><span class="st st-{key}"></span>{label}</td>'
@@ -141,7 +145,7 @@ def main():
             continue
         lrows.sort(key=lambda t: -t[0])
         body = "".join(r for _, r in lrows[:MAX_LINES])
-        more = (f'<tr><td colspan="8" class="moreln">… {len(lrows)-MAX_LINES} smaller lines '
+        more = (f'<tr><td colspan="9" class="moreln">… {len(lrows)-MAX_LINES} smaller lines '
                 f'included in totals</td></tr>' if len(lrows) > MAX_LINES else "")
 
         limit = b.get("max_purchase_limit_amount")
@@ -155,6 +159,8 @@ def main():
             n_rev += 1
             bkey, blabel, baction = "rev", "Review", ("Increase budget before PO"
                                                       if worst == "rev" else "Set missing line rates")
+        elif worst == "neg":
+            bkey, blabel, baction = "mon", "Negotiate", "Quotes above recent buying price — negotiate"
         elif worst == "mon":
             bkey, blabel, baction = "mon", "Monitor", "Check vendor quotes"
         else:
@@ -170,7 +176,7 @@ def main():
 <span class="c2"><small>Suggested</small><b>{cr(suggested)}</b></span>
 <span class="c3"><span class="st st-{bkey}"></span>{blabel}</span>
 <span class="c4">{baction}</span></summary>
-<table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">Budget rate</th><th class="num">Our rate</th><th class="num">Var %</th><th>Status</th><th>Action</th></tr></thead>
+<table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">System rate</th><th class="num">Proposed rate</th><th class="num">Our rate</th><th class="num">Var %</th><th>Status</th><th>Action</th></tr></thead>
 <tbody>{body}{more}</tbody></table></details>'''
         (cards_nolimit if not limit else cards).append(card)
 
@@ -225,7 +231,7 @@ summary small{display:block;font-size:10px;color:var(--mut);font-weight:400;text
 .c3{white-space:nowrap}.c4{font-size:11.5px;color:var(--tx2)}
 .st{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:-1px}
 .st-rev{background:var(--crit)}.st-mon{background:var(--warn)}.st-ok{background:var(--good)}
-.st-set{background:var(--blue)}.st-gen,.st-na{background:var(--mut)}
+.st-set{background:var(--blue)}.st-neg{background:var(--warn)}.st-gen,.st-na{background:var(--mut)}
 .bud table{width:100%;border-collapse:collapse;border-top:1px solid var(--grid)}
 .bud thead th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);padding:7px 10px;border-bottom:1px solid var(--grid)}
 .bud tbody td{padding:6px 10px;border-bottom:1px solid var(--grid);font-size:12px}
@@ -239,7 +245,7 @@ footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <div class="brand"><b>Dynalektric</b><span>Max Purchase Limit — recommendations per budget</span></div>
 <nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html">Forward demand</a><a href="./budget.html" class="active">Max Purchase Limit</a></nav>
 <h1>Budget vs today's cost — with a recommendation for each</h1>
-<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budgeted rate. Click a budget to open its line-by-line detail. Suggested limit = current cost + 8% price-risk buffer.</p>
+<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budget's proposed rate (or the system rate when no proposal exists). Click a budget to open its line-by-line detail. Suggested limit = current cost + 8% price-risk buffer.</p>
 <div class="kpis">
  <div class="kpi"><div class="k">Budgets analysed</div><div class="v">{{NBUD}}</div></div>
  <div class="kpi"><div class="k">Need review</div><div class="v" style="color:var(--crit)">{{NREV}}</div></div>
