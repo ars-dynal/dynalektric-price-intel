@@ -15,9 +15,9 @@
     "source": "LME cash settlement via westmetall.com"
   },
   "crgo_steel": {
-    "price_per_kg": 230.0,
-    "effective_date": "22 Jul 2026",
-    "source": "INDICATIVE estimate - no free daily benchmark (SM Steels/IndiaMART quote-only; SteelMint paid)",
+    "price_per_kg": 175.0,
+    "effective_date": "26 Jul 2026",
+    "source": "INDICATIVE reset from real PO at Rs 170/kg (2026-07-21) + small buffer; was Rs 230 (35% high). Refresh from latest CRGO PO or supplier quote.",
     "indicative": true
   },
   "mild_steel": {

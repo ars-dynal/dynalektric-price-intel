@@ -211,7 +211,10 @@ def main():
             mi = intel.enrich(item)
             cat = mi["category"]
 
-            required = line["quantity"]
+            design_qty = line["quantity"]
+            # Wastage allowance: purchases must cover cutting/scrap loss, not
+            # just the net design quantity (e.g. CRGO lamination offcuts).
+            required = design_qty * (1 + (mi.get("wastage_pct") or 0) / 100.0)
             available = max(0.0, remaining.get(iid, 0.0))
             allocated = min(required, available)
             remaining[iid] = available - allocated
@@ -251,6 +254,7 @@ def main():
             lines_out.append({
                 "item_id": iid, "item_code": item["code"], "item_name": item["name"],
                 "uom": item["uom"], **mi,
+                "design_qty": round(design_qty, 2),
                 "required_qty": round(required, 2),
                 "stock_allocated": round(allocated, 2),
                 "net_buy_qty": round(net_buy, 2),

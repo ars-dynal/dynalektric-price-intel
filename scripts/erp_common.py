@@ -168,6 +168,7 @@ class MaterialIntel:
             "benchmark": prof.get("benchmark"),
             "lead_time_days": prof["lead_time_days"],
             "risk_pct": prof["risk_pct"],
+            "wastage_pct": prof.get("wastage_pct", 0.0),
             "criticality": prof["criticality"],
         }
 

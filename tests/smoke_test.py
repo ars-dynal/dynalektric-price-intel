@@ -94,14 +94,14 @@ def main():
     b2 = next(d for d in analysis["documents"] if d["budget_number"] == "BUD-002")
     l_cu1 = next(l for l in b1["lines"] if l["item_id"] == 1)
     l_cu2 = next(l for l in b2["lines"] if l["item_id"] == 1)
-    check(l_cu1["stock_allocated"] == 650.0 and l_cu1["net_buy_qty"] == 350.0,
-          "copper stock 650 allocated to earliest budget; net buy 350")
-    check(l_cu2["stock_allocated"] == 0.0 and l_cu2["net_buy_qty"] == 500.0,
-          "no double-counting: second budget gets no copper stock")
+    check(l_cu1["stock_allocated"] == 650.0 and l_cu1["net_buy_qty"] == 375.0,
+          "copper stock 650 allocated to earliest budget; net buy 375 (incl. 2.5% wastage on 1000)")
+    check(l_cu2["stock_allocated"] == 0.0 and l_cu2["net_buy_qty"] == 512.5,
+          "no double-counting: second budget gets no copper stock (500 x 1.025)")
     check(l_cu1["expected_rate_basis"] == "recent PO average", "fresh PO price outranks benchmark")
     check(l_cu1["max_rate"] > l_cu1["expected_rate"] > 0, "max band above expected")
     l_crgo = next(l for l in b1["lines"] if l["item_id"] == 3)
-    check(l_crgo["net_buy_qty"] == 300.0, "CRGO 800 req - 500 stock = 300 net")
+    check(l_crgo["net_buy_qty"] == 340.0, "CRGO 800x1.05 wastage - 500 stock = 340 net")
     check(l_crgo["expected_rate_basis"] == "live benchmark landed cost",
           "stale PO (400d) falls back to CRGO benchmark")
     l_oil = next(l for l in b1["lines"] if l["item_id"] == 5)
@@ -133,7 +133,8 @@ def main():
     check(mb["source"] == "bom-pdf" and mb["units"] == 10, "bom-pdf source + units recorded")
     doc = mb["documents"][0]
     l_cu = next(l for l in doc["lines"] if l["item_code"] == "CU-111-00001")
-    check(l_cu["required_qty"] == 9.0, "per-unit qty x units (0.9 x 10)")
+    check(l_cu["design_qty"] == 9.0 and l_cu["required_qty"] == 9.22,
+          "per-unit qty x units (0.9 x 10) + 2.5% wastage")
     check(l_cu["category"] == "Copper" and l_cu["expected_rate_basis"] == "recent PO average",
           "matched ERP item keeps its PO price anchors")
     check(l_cu["stock_allocated"] > 0, "matched item nets against ERP stock")
