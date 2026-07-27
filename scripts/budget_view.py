@@ -94,21 +94,41 @@ def our_rate(item, intel_rec, mi, summary, cost_cfg):
     return None, None
 
 
-def line_status(ref, our, ref_is_proposed):
+def _src_phrase(osrc, lpod):
+    if osrc == "PO":
+        return f"our {lpod} PO" if lpod else "our recent PO avg"
+    if osrc == "est":
+        return "today's costing estimate (LME/NALCO)"
+    return "the ERP default price"
+
+
+def line_status(ref, our, ref_is_proposed, osrc=None, lpod=None, qty=0.0):
+    """Status + a WHY sentence with the actual numbers, so the action is
+    self-explanatory: which two prices disagree, by how much, worth what."""
     if not ref:
-        return "set", "Rate not set", "Set rate ≈ our rate"
+        if our:
+            return "set", "Rate not set", f"No rate in ERP — enter ≈ ₹{our:,.2f} ({_src_phrase(osrc, lpod)})"
+        return "set", "Rate not set", "No rate in ERP and no price reference — get a quote"
     if not our:
-        return "na", "No reference", "—"
+        return "na", "No reference", "No purchase history or benchmark — judge manually"
     v = (our - ref) / ref * 100
+    gap_amt = abs(our - ref) * qty
+    src = _src_phrase(osrc, lpod)
     if v > 10:
-        return "rev", "Review", "Increase budget before PO"
+        return ("rev", "Review",
+                f"Budget ₹{ref:,.2f} but real cost ₹{our:,.2f} ({src}) — {v:+.0f}%, "
+                f"overrun ≈ ₹{inr(gap_amt)} on this line. Increase before PO")
     if v > 3:
-        return "mon", "Monitor", "Check vendor quotes"
+        return ("mon", "Monitor",
+                f"Real cost ₹{our:,.2f} ({src}) is {v:+.0f}% above budget — ₹{inr(gap_amt)} at risk")
     if ref_is_proposed and v < -3:
-        return "neg", "Negotiate", "Quote above our recent buying price"
+        return ("neg", "Negotiate",
+                f"Quote ₹{ref:,.2f} vs {src} ₹{our:,.2f} — ask ₹{abs(our-ref):,.0f} less "
+                f"(₹{inr(gap_amt)} saving on this line)")
     if v < -15:
-        return "gen", "Generous", "Verify rate — well above cost"
-    return "ok", "OK", "Proceed"
+        return ("gen", "Generous",
+                f"Budget ₹{ref:,.2f} far above real cost ₹{our:,.2f} ({src}) — verify the entry")
+    return "ok", "OK", f"Matches {src} within {v:+.1f}% — proceed"
 
 
 def main():
@@ -143,14 +163,16 @@ def main():
             if not it or (l.get("quantity") or 0) <= 0:
                 continue
             mi = mi_engine.enrich(it)
-            our, osrc = our_rate(it, intel_all.get(it.get("code")), mi, summary, cost_cfg)
+            irec = intel_all.get(it.get("code"))
+            our, osrc = our_rate(it, irec, mi, summary, cost_cfg)
+            lpod = (irec or {}).get("lpod")
             sr, vr, q = l.get("system_rate"), l.get("vendor_rate"), l["quantity"]
             ref = vr or sr           # the team's PROPOSED rate wins over the old system rate
             bc = (ref or 0) * q
             cc = (our or ref or 0) * q
             bud_cost += bc
             cur_cost += cc
-            key, label, action = line_status(ref, our, bool(vr))
+            key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q)
             if order.get(key, 1) > order.get(worst, 0):
                 worst = key
             var_txt = f"{(our-ref)/ref*100:+.1f}%" if (ref and our) else "—"
@@ -261,7 +283,7 @@ summary small{display:block;font-size:10px;color:var(--mut);font-weight:400;text
 .bud tbody td{padding:6px 10px;border-bottom:1px solid var(--grid);font-size:12px}
 .bud th.num,.bud td.num{text-align:right;font-variant-numeric:tabular-nums}
 .mono{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--tx2)}
-.iname{max-width:330px}.act{font-size:11px;color:var(--tx2)}
+.iname{max-width:300px}.act{font-size:10.5px;color:var(--tx2);max-width:260px;line-height:1.45}
 .tag{font-size:8.5px;font-weight:800;background:var(--goodt);color:var(--good);border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:1px}
 .amt{font-size:10px;color:var(--mut);font-variant-numeric:tabular-nums}
 .moreln{font-size:11px;color:var(--mut);text-align:center}
