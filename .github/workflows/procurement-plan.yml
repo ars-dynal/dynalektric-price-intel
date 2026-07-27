@@ -63,6 +63,43 @@ jobs:
           git pull --rebase origin main || true
           git push
 
+      - name: Prepare alert email body
+        id: planalerts
+        run: |
+          python3 - << 'PY'
+          import json
+          d = json.load(open("data/purchase_plan.json"))
+          alerts = d.get("alerts", [])
+          if not alerts:
+              open("plan_alerts.txt", "w").write("")
+          else:
+              lines = [f"Procurement plan alerts ({len(alerts)}):", ""]
+              for a in alerts[:40]:
+                  who = a.get("item_code") or a.get("budget_number") or ""
+                  lines.append(f"- [{a.get('type')}] {who}: {a.get('detail')}")
+              sa = d.get("summary_by_action", {})
+              lines += ["", "Plan summary:"]
+              for k, v in sa.items():
+                  lines.append(f"  {k}: {v.get('lines')} lines, ~Rs {v.get('expected_spend_inr', 0):,.0f}")
+              lines += ["", "Full detail: private artifact 'procurement-plan' of this run, and the password-protected dashboard on the site."]
+              open("plan_alerts.txt", "w").write("\n".join(lines))
+          PY
+          if [ -s plan_alerts.txt ]; then echo "has=true" >> "$GITHUB_OUTPUT"; else echo "has=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Email plan alerts (needs MAIL_* secrets)
+        if: steps.planalerts.outputs.has == 'true'
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Dynalektric procurement alerts — weekly plan"
+          from: Dynalektric Price Intel <${{ secrets.MAIL_USERNAME }}>
+          to: ars@dynalektric.com
+          body: file://plan_alerts.txt
+
       - name: Upload results (PRIVATE artifact — never published)
         uses: actions/upload-artifact@v4
         with:

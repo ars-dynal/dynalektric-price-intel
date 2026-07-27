@@ -59,15 +59,32 @@ jobs:
           git push
 
       - name: Open an issue if there are new alerts
+        id: alerts
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -s data/new_alerts.md ]; then
+            echo "has=true" >> "$GITHUB_OUTPUT"
             gh issue create \
               --title "Price alert — $(date -u +%Y-%m-%d)" \
               --body-file data/new_alerts.md \
               --repo "${GITHUB_REPOSITORY}" || echo "issue creation skipped/failed"
           else
+            echo "has=false" >> "$GITHUB_OUTPUT"
             echo "No new alerts."
           fi
+
+      - name: Email alerts to procurement (needs MAIL_* secrets)
+        if: always() && steps.alerts.outputs.has == 'true'
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Dynalektric price alert — ${{ github.run_started_at }}"
+          from: Dynalektric Price Intel <${{ secrets.MAIL_USERNAME }}>
+          to: ars@dynalektric.com
+          body: file://data/new_alerts.md
