@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T09:25:48Z",
+  "generated_at_utc": "2026-07-28T09:32:59Z",
   "aluminium": {
     "price_per_kg": 361.9,
     "price_band": "356,050\u2013367,750/MT",
@@ -7,11 +7,11 @@
     "source": "NALCO price circular (nalcoindia.com/domestic/current-price/)"
   },
   "copper": {
-    "price_per_kg": 1299.78,
-    "usd_per_tonne": 13629.0,
+    "price_per_kg": 1324.66,
+    "usd_per_tonne": 13810.0,
     "usdinr": 95.92,
     "usdinr_source": "api.frankfurter.app",
-    "settlement_date": "20 Jul 2026",
+    "settlement_date": "27 Jul 2026",
     "source": "LME cash settlement via westmetall.com"
   },
   "crgo_steel": {
