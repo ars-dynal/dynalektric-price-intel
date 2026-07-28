@@ -30,7 +30,18 @@ import erp_common as erp  # noqa: E402
 import costing  # noqa: E402
 
 ROOT = erp.ROOT
-RISK_BUFFER = 0.08          # suggested limit = current cost x (1 + 8%)
+# Suggested limit = current cost x (1 + buffer%). The buffer covers market
+# movement between budget approval and PO release (leads run 21-45 days).
+# Policy lives in data/planning_params.json (suggested_limit_buffer_pct);
+# 8% fallback if the key is absent.
+def _risk_buffer():
+    try:
+        return float(erp.load_params().get("suggested_limit_buffer_pct", 8.0)) / 100.0
+    except Exception:
+        return 0.08
+
+
+RISK_BUFFER = _risk_buffer()
 MAX_BUDGETS = 150
 MAX_LINES = 14
 
