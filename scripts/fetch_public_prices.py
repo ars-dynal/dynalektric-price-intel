@@ -130,33 +130,51 @@ def fetch_usdinr():
     return None
 
 
+_MONTHS = {m: i + 1 for i, m in enumerate(
+    ["January", "February", "March", "April", "May", "June",
+     "July", "August", "September", "October", "November", "December"])}
+
+
+def _parse_lme_rows(html):
+    """Westmetall's English table writes dates as '24. July 2026' (NOT
+    24.07.2026) and prices with thousands-commas ('13,617.00'). Parse every
+    (date, cash-settlement) pair — cash settlement is the first price cell
+    after the date — and return the newest one. Never trust row order."""
+    from datetime import datetime as _dt
+    pat = re.compile(
+        r'(\d{1,2})\.?\s*(January|February|March|April|May|June|July|August|'
+        r'September|October|November|December)\s+(\d{4})[^<]*</td>\s*<td[^>]*>\s*([\d.,]+)',
+        re.I)
+    best = None
+    for day, mon, year, price_str in pat.findall(html):
+        try:
+            d = _dt(int(year), _MONTHS[mon.capitalize()], int(day))
+            price = float(price_str.replace(",", ""))
+        except (ValueError, KeyError):
+            continue
+        if not (1000 < price < 100000):  # sane guard against a garbage parse
+            continue
+        if best is None or d > best[0]:
+            best = (d, price)
+    if best is None:
+        return None
+    return best[1], best[0].strftime("%d %b %Y")
+
+
 def fetch_lme_copper():
     """Returns (usd_per_tonne, date_str) or None on failure."""
     try:
         r = get_with_retries("https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash")
-        rows = re.findall(r'(\d{2}\.\d{2}\.\d{4})\s*</td>\s*<td[^>]*>\s*([\d.,]+)', r.text)
-        if not rows:
-            print("LME: no rows parsed from westmetall table", file=sys.stderr)
+        parsed = _parse_lme_rows(r.text)
+        if parsed is None:
+            # Print what we actually received, so the run log shows WHY
+            # (layout change vs block page) instead of a silent shrug.
+            print(f"LME: no rows parsed (HTTP {r.status_code}, {len(r.text)} bytes). "
+                  f"Page head: {r.text[:300]!r}", file=sys.stderr)
             return None
-        # The westmetall table is newest-first (and its ordering has changed
-        # before), so never trust row position: parse every date and take the
-        # most recent one. Prices can carry thousands separators (13,617.00).
-        from datetime import datetime as _dt
-
-        def _key(row):
-            try:
-                return _dt.strptime(row[0], "%d.%m.%Y")
-            except ValueError:
-                return _dt.min
-
-        date_str, price_str = max(rows, key=_key)
-        price = float(price_str.replace(",", ""))
-        if not (1000 < price < 100000):  # sane guard against a garbage parse
-            print(f"LME: parsed price {price} looks wrong, ignoring", file=sys.stderr)
-            return None
-        return price, _key((date_str, price_str)).strftime("%d %b %Y")
+        return parsed
     except Exception as e:
-        print(f"LME fetch failed: {e}", file=sys.stderr)
+        print(f"LME fetch failed: {type(e).__name__}: {e}", file=sys.stderr)
         return None
 
 
