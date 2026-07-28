@@ -28,7 +28,15 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CARD_CLS = {"Copper": "cu", "Aluminium": "al", "CRGO steel": "st",
+# Stale-PO guard threshold (%). Kept in data/planning_params.json so the
+# policy is editable without touching code; 5% fallback if the key is absent.
+try:
+    with open(os.path.join(ROOT, "data", "planning_params.json")) as _f:
+        DRIFT_PCT = float(json.load(_f).get("po_drift_threshold_pct", 5.0))
+except Exception:
+    DRIFT_PCT = 5.0
+
+CARD_CLS ={"Copper": "cu", "Aluminium": "al", "CRGO steel": "st",
             "Stainless Steel": "ss", "Mild Steel": "ms"}
 
 
@@ -151,6 +159,14 @@ def main():
             our, ours = ii["avg12"], "PO12"       # older real price
         elif fin_val:
             our, ours = fin_val, "est"            # costing-formula estimate
+        # Stale-PO guard: a real PO is trusted only while it still represents
+        # today's market. If the live costing estimate has drifted beyond the
+        # threshold (metal rally/crash since that purchase), suppliers will
+        # quote today's metal — show the estimate instead.
+        if ours in ("PO", "PO12") and fin_val and our:
+            drift = (fin_val - our) / our * 100
+            if abs(drift) > DRIFT_PCT:
+                our, ours = fin_val, "est"
         vend = " · ".join(f'{v["n"]} (₹{v["p"]:,.0f})' for v in ii.get("vend", [])[:3]) or None
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
                      "metal": metal or "—", "uom": it["uom"],

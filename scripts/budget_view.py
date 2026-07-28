@@ -73,25 +73,45 @@ def rate_amt(rate, qty):
     return f'{rate_fmt(rate)}<div class="amt">₹{inr(rate * qty)}</div>' 
 
 
-def our_rate(item, intel_rec, mi, summary, cost_cfg):
-    """Recent real PO rate, else live costing estimate for benchmark metals."""
+def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0):
+    """Recent real PO rate, unless the metal market has drifted away from it.
+
+    A real PO is the best anchor only while it still represents today's
+    market. For indexed metals (Cu/Al/CRGO) we always compute the live
+    costing estimate too; if it differs from the PO by more than
+    drift_pct (either direction), the PO is stale — a supplier will quote
+    today's metal, not June's — so we switch to the estimate and say why.
+    Returns (rate, src_tag, drift_note_or_None).
+    """
+    po = None
     if intel_rec:
-        if intel_rec.get("avg180"):
-            return intel_rec["avg180"], "PO"
-        if intel_rec.get("avg12"):
-            return intel_rec["avg12"], "PO"
+        po = intel_rec.get("avg180") or intel_rec.get("avg12")
+
     cat = mi["category"]
+    bench = None
     if cat in ("Copper", "Aluminium"):
         fi = costing.finished_for(cat, item["name"], summary, cost_cfg)
         if fi:
-            return fi["total_ex_gst"], "est"
-    if cat == "CRGO":
+            bench = fi["total_ex_gst"]
+    elif cat == "CRGO":
         p = (summary.get("crgo_steel") or {}).get("price_per_kg")
         if p:
-            return float(p), "est"
+            bench = float(p)
+
+    if po:
+        if bench:
+            drift = (bench - po) / po * 100
+            if abs(drift) > drift_pct:
+                word = "risen" if drift > 0 else "fallen"
+                return bench, "est", (
+                    f"metal market has {word} {drift:+.1f}% vs our PO ₹{po:,.2f} — "
+                    f"PO no longer representative, using today's cost ₹{bench:,.2f}")
+        return po, "PO", None
+    if bench:
+        return bench, "est", None
     if item.get("default_price"):
-        return item["default_price"], "erp"
-    return None, None
+        return item["default_price"], "erp", None
+    return None, None, None
 
 
 def _src_phrase(osrc, lpod):
@@ -164,7 +184,8 @@ def main():
                 continue
             mi = mi_engine.enrich(it)
             irec = intel_all.get(it.get("code"))
-            our, osrc = our_rate(it, irec, mi, summary, cost_cfg)
+            our, osrc, drift_note = our_rate(it, irec, mi, summary, cost_cfg,
+                                             params.get("po_drift_threshold_pct", 5.0))
             lpod = (irec or {}).get("lpod")
             sr, vr, q = l.get("system_rate"), l.get("vendor_rate"), l["quantity"]
             ref = vr or sr           # the team's PROPOSED rate wins over the old system rate
@@ -173,6 +194,8 @@ def main():
             bud_cost += bc
             cur_cost += cc
             key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q)
+            if drift_note:
+                action = f"{action}. ({drift_note})"
             if order.get(key, 1) > order.get(worst, 0):
                 worst = key
             var_txt = f"{(our-ref)/ref*100:+.1f}%" if (ref and our) else "—"

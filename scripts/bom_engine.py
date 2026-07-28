@@ -93,10 +93,27 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
 
     # Expected-rate hierarchy: a fresh real purchase beats a model estimate;
     # a live benchmark estimate beats stale ERP master data.
+    # EXCEPTION: a PO is only trusted while it still represents today's
+    # market. If the live benchmark has drifted more than
+    # po_drift_threshold_pct away from the recent-PO average (metal rally or
+    # crash since that purchase), suppliers will quote today's metal — so the
+    # benchmark becomes the expected rate and the basis records why.
+    drift_pct = params.get("po_drift_threshold_pct", 5.0)
+    po_drift_note = None
+    if fresh and bench:
+        po_avg = statistics.mean(fresh)
+        drift = (bench - po_avg) / po_avg * 100
+        if abs(drift) > drift_pct:
+            fresh = None  # PO stale — fall through to the benchmark branch
+            po_drift_note = (f"recent PO avg Rs {po_avg:,.2f} set aside — "
+                             f"market moved {drift:+.1f}% since that purchase")
+            anchors["po_drift_note"] = po_drift_note
     if fresh:
         expected, basis = statistics.mean(fresh), "recent PO average"
     elif bench:
-        expected, basis = bench, "live benchmark landed cost"
+        expected, basis = bench, ("live benchmark landed cost"
+                                  if not po_drift_note
+                                  else f"live benchmark landed cost ({po_drift_note})")
     elif avg_po:
         expected, basis = avg_po, "PO history average"
     elif item["default_price"]:

@@ -98,7 +98,19 @@ def main():
           "copper stock 650 allocated to earliest budget; net buy 375 (incl. 2.5% wastage on 1000)")
     check(l_cu2["stock_allocated"] == 0.0 and l_cu2["net_buy_qty"] == 512.5,
           "no double-counting: second budget gets no copper stock (500 x 1.025)")
-    check(l_cu1["expected_rate_basis"] == "recent PO average", "fresh PO price outranks benchmark")
+    # Stale-PO guard: a fresh PO outranks the benchmark ONLY while the live
+    # benchmark stays within po_drift_threshold_pct of it. The fixture PO is
+    # Rs 1310 while the benchmark tracks the real live copper price, so which
+    # branch fires depends on today's market — assert the RULE, not one side.
+    bench_cu = l_cu1["anchors"]["benchmark_landed_cost"]
+    drift_cu = abs(bench_cu - 1310.0) / 1310.0 * 100
+    if drift_cu > 5.0:
+        check(l_cu1["expected_rate_basis"].startswith("live benchmark landed cost (recent PO avg"),
+              f"market drifted {drift_cu:.1f}%% from fixture PO -> PO set aside for live benchmark".replace('%%','%'))
+        check(l_cu1["expected_rate"] == bench_cu, "drifted line priced at the live benchmark")
+    else:
+        check(l_cu1["expected_rate_basis"] == "recent PO average",
+              "fresh PO price outranks benchmark (market within drift threshold)")
     check(l_cu1["max_rate"] > l_cu1["expected_rate"] > 0, "max band above expected")
     l_crgo = next(l for l in b1["lines"] if l["item_id"] == 3)
     check(l_crgo["net_buy_qty"] == 340.0, "CRGO 800x1.05 wastage - 500 stock = 340 net")
@@ -135,8 +147,12 @@ def main():
     l_cu = next(l for l in doc["lines"] if l["item_code"] == "CU-111-00001")
     check(l_cu["design_qty"] == 9.0 and l_cu["required_qty"] == 9.22,
           "per-unit qty x units (0.9 x 10) + 2.5% wastage")
-    check(l_cu["category"] == "Copper" and l_cu["expected_rate_basis"] == "recent PO average",
-          "matched ERP item keeps its PO price anchors")
+    # Same stale-PO guard applies here: PO anchors are kept only while the
+    # live benchmark is within the drift threshold of the fixture PO price.
+    check(l_cu["category"] == "Copper" and
+          (l_cu["expected_rate_basis"] == "recent PO average" or
+           l_cu["expected_rate_basis"].startswith("live benchmark landed cost (recent PO avg")),
+          "matched ERP item keeps PO anchors (or documents why the PO was set aside)")
     check(l_cu["stock_allocated"] > 0, "matched item nets against ERP stock")
     l_crgo = next(l for l in doc["lines"] if l["item_code"] == "CC-999-99999")
     check(l_crgo["category"] == "CRGO", "unmatched item still categorized from its code")
