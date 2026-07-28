@@ -61,8 +61,10 @@ def main():
         vend = sorted(by_vendor.values(), key=lambda l: l["date"], reverse=True)[:3]
         out[item["code"]] = {
             "lpo": round(last["price"], 2), "lpod": last["date"],
-            "avg180": round(statistics.mean(p180), 2) if p180 else None,
-            "avg12": round(statistics.mean(p365), 2) if p365 else None,
+            # medians (field names kept for compatibility): a single PO with a
+            # unit/pack-size entry error can no longer drag the rate
+            "avg180": round(statistics.median(p180), 2) if p180 else None,
+            "avg12": round(statistics.median(p365), 2) if p365 else None,
             "npo": len(lines),
             "vend": [{"n": l.get("vendor_name"), "p": round(l["price"], 2), "d": l["date"]}
                      for l in vend],

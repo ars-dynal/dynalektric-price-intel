@@ -77,10 +77,11 @@ def predicted_at(pos, created):
     fresh_cut = (datetime.fromisoformat(created) - timedelta(days=FRESH_DAYS)).date().isoformat()
     fresh = [p["price"] for p in prior if p["date"] >= fresh_cut]
     if fresh:
-        return statistics.mean(fresh), f"avg of {len(fresh)} PO(s) in the 180d before budget"
+        # median, not mean: PO entry errors (unit/pack-size flips) wreck means
+        return statistics.median(fresh), f"median of {len(fresh)} PO(s) in the 180d before budget"
     yr_cut = (datetime.fromisoformat(created) - timedelta(days=365)).date().isoformat()
     yr = [p["price"] for p in prior if p["date"] >= yr_cut] or [p["price"] for p in prior]
-    return statistics.mean(yr), f"avg of {len(yr)} older PO(s) before budget"
+    return statistics.median(yr), f"median of {len(yr)} older PO(s) before budget"
 
 
 def actual_after(pos, created, window_end):
@@ -127,6 +128,8 @@ def main():
             q = l.get("quantity") or 0
             if not it or q <= 0:
                 continue
+            if str(it.get("code") or "").upper().startswith("TEST"):
+                continue    # ERP test items are not real procurement
             cov_total += 1
             pos = po.get(l["item_id"], [])
             actual, n_po = actual_after(pos, created, wend)

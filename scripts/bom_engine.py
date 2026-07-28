@@ -77,7 +77,7 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
     last_po = pos[-1] if pos else None
     yr = [p["price"] for p in pos if p["date"] >= year_cut]
     fresh = [p["price"] for p in pos if p["date"] >= recent_cut]
-    avg_po = statistics.mean(yr) if yr else (statistics.mean([p["price"] for p in pos]) if pos else None)
+    avg_po = statistics.median(yr) if yr else (statistics.median([p["price"] for p in pos]) if pos else None)
     bench, bench_src = benchmark_rate(category, item["name"], summary, cost_cfg)
 
     anchors = {
@@ -101,7 +101,7 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
     drift_pct = params.get("po_drift_threshold_pct", 5.0)
     po_drift_note = None
     if fresh and bench:
-        po_avg = statistics.mean(fresh)
+        po_avg = statistics.median(fresh)
         drift = (bench - po_avg) / po_avg * 100
         if abs(drift) > drift_pct:
             fresh = None  # PO stale — fall through to the benchmark branch
@@ -109,7 +109,7 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
                              f"market moved {drift:+.1f}% since that purchase")
             anchors["po_drift_note"] = po_drift_note
     if fresh:
-        expected, basis = statistics.mean(fresh), "recent PO average"
+        expected, basis = statistics.median(fresh), "recent PO average"
     elif bench:
         expected, basis = bench, ("live benchmark landed cost"
                                   if not po_drift_note
