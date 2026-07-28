@@ -118,13 +118,61 @@ def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0):
                 word = "risen" if drift > 0 else "fallen"
                 return bench, "est", (
                     f"metal market has {word} {drift:+.1f}% vs our PO ₹{po:,.2f} — "
-                    f"PO no longer representative, using today's cost ₹{bench:,.2f}")
-        return po, "PO", None
+                    f"PO no longer representative, using today's cost ₹{bench:,.2f}"), None
+            # Indexed item, PO within threshold of today's market — that IS
+            # the proof the PO is still representative.
+            return po, "PO", None, {"lv": "high",
+                                    "txt": f"index-validated: live estimate within {abs(drift):.1f}% of this PO"}
+        return po, "PO", None, po_confidence(intel_rec)
     if bench:
-        return bench, "est", None
+        return bench, "est", None, None
     if item.get("default_price"):
-        return item["default_price"], "erp", None
-    return None, None, None
+        return item["default_price"], "erp", None, None
+    return None, None, None, None
+
+
+CONF_LABEL = {"high": "High", "med": "Medium", "low": "Low", "stale": "Stale"}
+
+
+def po_confidence(intel_rec):
+    """Trust rating for a PO-based rate on a NON-INDEXED item (relays,
+    contactors, sockets...). No market index exists to validate against, so
+    the honest proof is the evidence itself: how old the PO is, how many POs
+    back it up, and whether more than one vendor has charged similar money.
+      < 3 months  -> High     3-6 months -> Medium
+      6-12 months -> Low (verify with a quote)
+      > 12 months -> Stale (request a fresh quotation)
+    Single-PO history caps the rating at Medium — one data point is not a
+    market. Two vendors within 5% of each other lifts Low back to Medium."""
+    lpod = (intel_rec or {}).get("lpod")
+    if not lpod:
+        return None
+    try:
+        age = (datetime.now(timezone.utc).date() - datetime.fromisoformat(lpod[:10]).date()).days
+    except ValueError:
+        return None
+    npo = (intel_rec or {}).get("npo") or 0
+    vend = (intel_rec or {}).get("vend") or []
+    months = age / 30.4
+    if age < 90:
+        lv = "high"
+    elif age < 180:
+        lv = "med"
+    elif age < 365:
+        lv = "low"
+    else:
+        lv = "stale"
+    if lv == "high" and npo <= 1:
+        lv = "med"          # one purchase ever — thin evidence
+    if lv == "low" and len(vend) >= 2:
+        prices = [v["p"] for v in vend[:2] if v.get("p")]
+        if len(prices) == 2 and abs(prices[0] - prices[1]) / max(prices) <= 0.05:
+            lv = "med"      # two independent vendors agree — stronger than age alone
+    ev = f"PO {months:.0f} month(s) old, {npo} PO(s), {len(vend)} vendor(s)"
+    advice = {"high": "", "med": "",
+              "low": " — verify with a fresh quote before large POs",
+              "stale": " — request a fresh supplier quotation; do not rely on this price"}[lv]
+    return {"lv": lv, "txt": ev + advice}
 
 
 def _src_phrase(osrc, lpod):
@@ -197,8 +245,8 @@ def main():
                 continue
             mi = mi_engine.enrich(it)
             irec = intel_all.get(it.get("code"))
-            our, osrc, drift_note = our_rate(it, irec, mi, summary, cost_cfg,
-                                             params.get("po_drift_threshold_pct", 5.0))
+            our, osrc, drift_note, conf = our_rate(it, irec, mi, summary, cost_cfg,
+                                                   params.get("po_drift_threshold_pct", 5.0))
             lpod = (irec or {}).get("lpod")
             sr, vr, q = l.get("system_rate"), l.get("vendor_rate"), l["quantity"]
             ref = vr or sr           # the team's PROPOSED rate wins over the old system rate
@@ -209,10 +257,18 @@ def main():
             key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q)
             if drift_note:
                 action = f"{action}. ({drift_note})"
+            if conf:
+                action = (f"{action} · Confidence: {CONF_LABEL[conf['lv']]} ({conf['txt']})")
+                # A stale price reference makes any verdict unreliable —
+                # never let a >12-month-old PO produce a green "proceed".
+                if conf["lv"] == "stale" and key == "ok":
+                    key, label = "mon", "Verify"
             if order.get(key, 1) > order.get(worst, 0):
                 worst = key
             var_txt = f"{(our-ref)/ref*100:+.1f}%" if (ref and our) else "—"
             tag = f'<span class="tag">{osrc}</span>' if osrc else ""
+            if conf:
+                tag += f'<span class="cf cf-{conf["lv"]}" title="{esc(conf["txt"])}">{CONF_LABEL[conf["lv"]]}</span>'
             lrows.append((cc, f'<tr><td class="mono">{esc(it.get("code"))}</td>'
                           f'<td class="iname">{esc(it["name"][:60])}</td>'
                           f'<td class="num">{q:,.2f}</td>'
@@ -340,6 +396,9 @@ summary small{display:block;font-size:10px;color:var(--mut);font-weight:400;text
 .mono{font-family:ui-monospace,Consolas,monospace;font-size:11px;color:var(--tx2)}
 .iname{max-width:300px}.act{font-size:10.5px;color:var(--tx2);max-width:260px;line-height:1.45}
 .tag{font-size:8.5px;font-weight:800;background:var(--goodt);color:var(--good);border-radius:4px;padding:1px 4px;margin-left:4px;vertical-align:1px}
+.cf{font-size:8.5px;font-weight:800;border-radius:4px;padding:1px 4px;margin-left:3px;vertical-align:1px;cursor:help}
+.cf-high{background:#e3f2e6;color:#0a7a33}.cf-med{background:#fdf3dd;color:#8a6100}
+.cf-low{background:#fde8dd;color:#a34d00}.cf-stale{background:#fbe0de;color:#b3261e}
 .amt{font-size:10px;color:var(--mut);font-variant-numeric:tabular-nums}
 .moreln{font-size:11px;color:var(--mut);text-align:center}
 footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
@@ -347,7 +406,7 @@ footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <div class="brand"><b>Dynalektric</b><span>Max Purchase Limit — recommendations per budget</span></div>
 <nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html">Forward demand</a><a href="./budget.html" class="active">Max Purchase Limit</a></nav>
 <h1>Budget vs today's cost — with a recommendation for each</h1>
-<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budget's proposed rate (or the system rate when no proposal exists). Click a budget to open its line-by-line detail. <b>Current benchmark</b> = all lines at our rates — the validated figure actions are judged against. The <b>buffer column</b> (benchmark + price-risk %) is context for setting a new limit, not a reason to raise an existing one.</p>
+<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budget's proposed rate (or the system rate when no proposal exists). Click a budget to open its line-by-line detail. <b>Current benchmark</b> = all lines at our rates — the validated figure actions are judged against. The <b>buffer column</b> (benchmark + price-risk %) is context for setting a new limit, not a reason to raise an existing one. Every PO-based rate carries a <b>confidence badge</b>: metals are index-validated against today's LME/NALCO; non-indexed items (relays, contactors, sockets…) are rated by evidence — PO age, number of POs, vendor agreement (High &lt;3mo · Medium 3–6mo · Low 6–12mo · Stale &gt;12mo, hover for the reason).</p>
 <div class="kpis">
  <div class="kpi"><div class="k">Budgets analysed</div><div class="v">{{NBUD}}</div></div>
  <div class="kpi"><div class="k">Need review</div><div class="v" style="color:var(--crit)">{{NREV}}</div></div>
