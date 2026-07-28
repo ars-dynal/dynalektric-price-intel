@@ -253,7 +253,11 @@ th{{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;let
 .good{{color:var(--good);font-weight:600}}.mid{{color:var(--mid);font-weight:600}}.bad{{color:var(--bad);font-weight:600}}
 .moreln{{color:var(--mut);text-align:center}}
 footer{{color:var(--mut);font-size:12.5px;margin-top:30px}}
-a{{color:#0a5da0}}</style></head><body>
+a{{color:#0a5da0}}
+.nav{{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}}
+.nav a{{font-size:12.5px;font-weight:600;color:var(--mut);text-decoration:none;padding:7px 13px;border:1px solid var(--line);border-radius:8px;background:var(--card)}}
+.nav a.active{{background:#2a78d6;color:#fff;border-color:#2a78d6}}</style></head><body>
+<nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html">Forward demand</a><a href="./budget.html">Max Purchase Limit</a><a href="./backtest.html" class="active">Accuracy</a></nav>
 <h1>Benchmark accuracy back-test</h1>
 <p class="sub">Out-of-sample validation on <b>completed projects</b> (delivery date passed): the predicted rate uses only POs
 that existed <b>before each budget was created</b>; the actual rate is what was really paid <b>after</b>. No peeking.
