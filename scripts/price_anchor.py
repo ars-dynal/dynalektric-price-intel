@@ -51,6 +51,35 @@ def _median(xs):
     return xs[n // 2] if n % 2 else (xs[n // 2 - 1] + xs[n // 2]) / 2.0
 
 
+def monthly_trend(pos, asof, params=None):
+    """Item's own price trend in %/month from its clean PO series before
+    `asof` (same windowing/outlier rules as anchor). None when evidence is
+    too thin (< trend_min_pos POs or < 60-day span) — never guess a trend."""
+    prior = [p for p in pos if p.get("date") and p["date"] < asof and (p.get("price") or 0) > 0]
+    if not prior:
+        return None
+    yr_cut = (datetime.fromisoformat(asof[:10]) - timedelta(days=365)).date().isoformat()
+    window = [p for p in prior if p["date"] >= yr_cut] or prior
+    med = _median([p["price"] for p in window])
+    ratio = _p(params, "outlier_ratio")
+    clean = [p for p in window if med / ratio <= p["price"] <= med * ratio]
+    if len(clean) < _p(params, "trend_min_pos"):
+        return None
+    asof_d = datetime.fromisoformat(asof[:10]).date()
+    pts = [((asof_d - datetime.fromisoformat(p["date"][:10]).date()).days, p["price"]) for p in clean]
+    span = max(a for a, _ in pts) - min(a for a, _ in pts)
+    if span < 60:
+        return None
+    n = len(pts)
+    mx = sum(-a for a, _ in pts) / n
+    my = sum(pr for _, pr in pts) / n
+    sxx = sum((-a - mx) ** 2 for a, _ in pts)
+    if sxx <= 0:
+        return None
+    slope = sum((-a - mx) * (pr - my) for a, pr in pts) / sxx
+    return round(slope * 30.4 / my * 100, 1)
+
+
 def anchor(pos, asof, params=None, calib=None, prefix=None):
     """pos: [{date 'YYYY-MM-DD', price, qty}, ...]; asof: 'YYYY-MM-DD'.
     Uses ONLY POs dated strictly before asof (safe for back-testing)."""

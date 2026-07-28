@@ -187,43 +187,51 @@ def _src_phrase(osrc, lpod):
     return "the ERP default price"
 
 
-def line_status(ref, our, ref_is_proposed, osrc=None, lpod=None, qty=0.0):
-    """Status + a WHY sentence with the actual numbers, so the action is
-    self-explanatory: which two prices disagree, by how much, worth what."""
+def line_status(ref, our, ref_is_proposed, osrc=None, lpod=None, qty=0.0, basis=None):
+    """Verdict ON THE PROPOSED RATE, with its reasoning basis spelled out.
+    `basis` describes how the expectation was formed (PO + item trend +
+    category movement, or live metal index) — the WHY behind the verdict,
+    not just a citation of an old PO."""
     if not ref:
         if our:
-            return "set", "Rate not set", f"No rate in ERP — enter ≈ ₹{our:,.2f} ({_src_phrase(osrc, lpod)})"
+            return "set", "Rate not set", f"No rate in ERP — enter ≈ ₹{our:,.2f} (expectation from {basis or _src_phrase(osrc, lpod)})"
         return "set", "Rate not set", "No rate in ERP and no price reference — get a quote"
     if not our:
         return "na", "No reference", "No purchase history or benchmark — judge manually"
     v = (our - ref) / ref * 100
     gap_amt = abs(our - ref) * qty
-    src = _src_phrase(osrc, lpod)
+    src = basis or _src_phrase(osrc, lpod)
+    word = "Proposed" if ref_is_proposed else "Budget rate"
     if v > 10:
         return ("rev", "Review",
-                f"Budget ₹{ref:,.2f} but real cost ₹{our:,.2f} ({src}) — {v:+.0f}%, "
-                f"overrun ≈ ₹{inr(gap_amt)} on this line. Increase before PO")
+                f"{word} ₹{ref:,.2f} is {v:.0f}% BELOW our expected cost ₹{our:,.2f} "
+                f"[{src}] — either the vendor has committed a real discount (get it in "
+                f"writing) or this line overruns ≈ ₹{inr(gap_amt)}. Validate before PO")
     if v > 3:
         return ("mon", "Monitor",
-                f"Real cost ₹{our:,.2f} ({src}) is {v:+.0f}% above budget — ₹{inr(gap_amt)} at risk")
+                f"{word} ₹{ref:,.2f} is {v:.0f}% below expected ₹{our:,.2f} [{src}] — "
+                f"achievable only if the vendor holds; ₹{inr(gap_amt)} at risk without a confirmed quote")
     if ref_is_proposed and v < -3:
         return ("neg", "Negotiate",
-                f"Quote ₹{ref:,.2f} vs {src} ₹{our:,.2f} — ask ₹{abs(our-ref):,.0f} less "
+                f"Proposed ₹{ref:,.2f} is {abs(v):.0f}% ABOVE expected ₹{our:,.2f} [{src}] — "
+                f"no cost basis supports the premium; ask ₹{abs(our-ref):,.0f} less "
                 f"(₹{inr(gap_amt)} saving on this line)")
     if v < -15:
         return ("gen", "Generous",
-                f"Budget ₹{ref:,.2f} far above real cost ₹{our:,.2f} ({src}) — verify the entry")
-    return "ok", "OK", f"Matches {src} within {v:+.1f}% — proceed"
+                f"{word} ₹{ref:,.2f} far above expected ₹{our:,.2f} [{src}] — verify the entry")
+    return "ok", "OK", f"{word} ₹{ref:,.2f} matches expected ₹{our:,.2f} within {v:+.1f}% [{src}] — proceed"
 
 
 def main():
     params = erp.load_params()
     summary = erp.load_summary()
     cost_cfg, _ = costing.load_cfg_summary()
-    intel_all = {}
+    intel_all, cat_tpm = {}, {}
     try:
         with open(os.path.join(ROOT, "data", "item_intel.json")) as f:
-            intel_all = json.load(f).get("items", {})
+            _idoc = json.load(f)
+            intel_all = _idoc.get("items", {})
+            cat_tpm = _idoc.get("cat_tpm", {})
     except FileNotFoundError:
         pass
     mi_engine = erp.MaterialIntel(params)
@@ -258,7 +266,23 @@ def main():
             cc = (our or ref or 0) * q
             bud_cost += bc
             cur_cost += cc
-            key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q)
+            # Reasoning basis: WHERE the expectation comes from and WHY it
+            # sits where it does — PO level, this item's own price trend,
+            # or its category's movement when its own history is thin.
+            basis = None
+            if osrc == "PO" and irec:
+                basis = f"basis: {lpod} PO ₹{(irec.get('lpo') or our):,.2f}"
+                tpm = irec.get("tpm")
+                pfx = (it.get("code") or "XX")[:2]
+                if tpm is not None and abs(tpm) >= 0.5:
+                    basis += f", this item's price moving {tpm:+.1f}%/month"
+                elif cat_tpm.get(pfx) is not None and abs(cat_tpm[pfx]) >= 0.5:
+                    basis += f", {pfx} category prices moving {cat_tpm[pfx]:+.1f}%/month"
+                else:
+                    basis += ", price stable in our history"
+            elif osrc == "est":
+                basis = "basis: today's base-metal price + our conversion cost (LME/NALCO)"
+            key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q, basis)
             if drift_note and ("trend" in drift_note or "calibration" in drift_note
                                or "outlier" in drift_note or "market" in drift_note):
                 action = f"{action}. ({drift_note})"

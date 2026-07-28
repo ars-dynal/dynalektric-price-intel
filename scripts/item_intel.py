@@ -64,8 +64,9 @@ def main():
                 by_vendor[name] = l
         vend = sorted(by_vendor.values(), key=lambda l: l["date"], reverse=True)[:3]
         ew, ewb = price_anchor.anchor(lines, asof, params, calib, (item["code"] or "")[:2])
+        tpm = price_anchor.monthly_trend(lines, asof, params)
         out[item["code"]] = {
-            "ew": ew, "ewb": ewb,
+            "ew": ew, "ewb": ewb, "tpm": tpm,
             "lpo": round(last["price"], 2), "lpod": last["date"],
             # medians (field names kept for compatibility): a single PO with a
             # unit/pack-size entry error can no longer drag the rate
@@ -76,7 +77,19 @@ def main():
                      for l in vend],
         }
 
+    # Category price movement: median of item trends per code prefix (>=5
+    # trending items). Context for judging proposed rates on items whose own
+    # history is too thin to fit a trend.
+    import statistics as _st
+    from collections import defaultdict as _dd
+    by_pfx = _dd(list)
+    for code, rec in out.items():
+        if rec.get("tpm") is not None:
+            by_pfx[code[:2]].append(rec["tpm"])
+    cat_tpm = {pfx: round(_st.median(ts), 1) for pfx, ts in by_pfx.items() if len(ts) >= 5}
+
     doc = {"generated_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+           "cat_tpm": cat_tpm,
            "items": out}
     with open(OUT, "w") as f:
         json.dump(doc, f, indent=1)
