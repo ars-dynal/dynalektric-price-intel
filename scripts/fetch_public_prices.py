@@ -34,7 +34,30 @@ except ImportError:
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SUMMARY_PATH = os.path.join(ROOT, 'data', 'public_summary.json')
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DynalektricPriceBot/1.0)"}
+HEADERS = {
+    # A plain browser UA: some market-data sites (westmetall included) return
+    # 403 or an empty table to anything that self-identifies as a bot.
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+
+
+def get_with_retries(url, tries=3, timeout=20):
+    """GET with small backoff — one-off network blips shouldn't lose a day's price."""
+    import time
+    last = None
+    for i in range(tries):
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=timeout)
+            r.raise_for_status()
+            return r
+        except Exception as e:
+            last = e
+            if i < tries - 1:
+                time.sleep(5 * (i + 1))
+    raise last
 
 
 def fetch_nalco():
@@ -110,15 +133,28 @@ def fetch_usdinr():
 def fetch_lme_copper():
     """Returns (usd_per_tonne, date_str) or None on failure."""
     try:
-        r = requests.get("https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash",
-                          headers=HEADERS, timeout=20)
-        r.raise_for_status()
-        rows = re.findall(r'(\d{2}\.\d{2}\.\d{4})\s*</td>\s*<td[^>]*>\s*([\d.]+)', r.text)
+        r = get_with_retries("https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash")
+        rows = re.findall(r'(\d{2}\.\d{2}\.\d{4})\s*</td>\s*<td[^>]*>\s*([\d.,]+)', r.text)
         if not rows:
             print("LME: no rows parsed from westmetall table", file=sys.stderr)
             return None
-        date_str, price_str = rows[-1]
-        return float(price_str), date_str
+        # The westmetall table is newest-first (and its ordering has changed
+        # before), so never trust row position: parse every date and take the
+        # most recent one. Prices can carry thousands separators (13,617.00).
+        from datetime import datetime as _dt
+
+        def _key(row):
+            try:
+                return _dt.strptime(row[0], "%d.%m.%Y")
+            except ValueError:
+                return _dt.min
+
+        date_str, price_str = max(rows, key=_key)
+        price = float(price_str.replace(",", ""))
+        if not (1000 < price < 100000):  # sane guard against a garbage parse
+            print(f"LME: parsed price {price} looks wrong, ignoring", file=sys.stderr)
+            return None
+        return price, _key((date_str, price_str)).strftime("%d %b %Y")
     except Exception as e:
         print(f"LME fetch failed: {e}", file=sys.stderr)
         return None
@@ -157,6 +193,11 @@ def main():
         data['copper']['price_per_kg'] = round(usd_per_tonne * usdinr / 1000.0, 2)
         print(f"Updated copper: ${usd_per_tonne}/t ({date_str}) -> Rs {data['copper']['price_per_kg']}/kg at {usdinr}/USD")
     else:
+        # ::warning:: makes this show up as a yellow annotation on the run
+        # page, so a silently-stale copper price can't hide in green runs.
+        print(f"::warning::LME copper fetch failed — page still shows "
+              f"{data['copper'].get('settlement_date')} settlement "
+              f"(${data['copper'].get('usd_per_tonne')}/t). Check westmetall.com layout/blocking.")
         print("Keeping previous copper price (fetch failed)")
 
     from datetime import datetime, timezone
