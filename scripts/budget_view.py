@@ -51,9 +51,11 @@ def esc(x):
 
 
 def cr(x):
+    """Exact rupees, Indian digit grouping, ERP-style — NEVER lakh-rounded.
+    Budget decisions here are rupee-sensitive: ₹9,26,601 and ₹9,26,589 both
+    read '₹9.3 L' when compacted, hiding real differences."""
     x = x or 0
-    return (f"₹{x/1e7:.2f} Cr" if abs(x) >= 1e7 else
-            (f"₹{x/1e5:.1f} L" if abs(x) >= 1e5 else f"₹{x:,.0f}"))
+    return f"-₹{inr(abs(x))}" if x < 0 else f"₹{inr(x)}"
 
 
 def rate_fmt(v):

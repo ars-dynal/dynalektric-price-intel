@@ -36,13 +36,27 @@ def load(path, default=None):
         return default
 
 
+def _inr(n):
+    n = int(round(n or 0))
+    sign = "-" if n < 0 else ""
+    d = str(abs(n))
+    if len(d) <= 3:
+        return sign + d
+    head, tail = d[:-3], d[-3:]
+    parts = []
+    while len(head) > 2:
+        parts.insert(0, head[-2:])
+        head = head[:-2]
+    if head:
+        parts.insert(0, head)
+    return sign + ",".join(parts) + "," + tail
+
+
 def cr(x):
+    """Exact rupees, Indian digit grouping — never lakh-rounded (rupee-sensitive)."""
     x = x or 0
-    if abs(x) >= 1e7:
-        return f"₹{x/1e7:.2f} Cr"
-    if abs(x) >= 1e5:
-        return f"₹{x/1e5:.1f} L"
-    return f"₹{x:,.0f}"
+    return f"-₹{_inr(abs(x))}" if x < 0 else f"₹{_inr(x)}"
+
 
 
 def esc(s):

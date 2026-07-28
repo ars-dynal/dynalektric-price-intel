@@ -189,8 +189,27 @@ def svg_bars(months, series):
     return f'<svg viewBox="0 0 {W} {H}">{g}{bars}</svg>'
 
 
+def _inr(n):
+    n = int(round(n or 0))
+    sign = "-" if n < 0 else ""
+    d = str(abs(n))
+    if len(d) <= 3:
+        return sign + d
+    head, tail = d[:-3], d[-3:]
+    parts = []
+    while len(head) > 2:
+        parts.insert(0, head[-2:])
+        head = head[:-2]
+    if head:
+        parts.insert(0, head)
+    return sign + ",".join(parts) + "," + tail
+
+
 def cr(x):
-    return (f"₹{x/1e7:.2f} Cr" if abs(x) >= 1e7 else (f"₹{x/1e5:.1f} L" if abs(x) >= 1e5 else f"₹{x:,.0f}"))
+    """Exact rupees, Indian digit grouping — never lakh-rounded (rupee-sensitive)."""
+    x = x or 0
+    return f"-₹{_inr(abs(x))}" if x < 0 else f"₹{_inr(x)}"
+
 
 
 def render_html(out, signals):
