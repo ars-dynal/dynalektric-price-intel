@@ -232,17 +232,35 @@ def main():
         suggested = cur_cost * (1 + RISK_BUFFER)
         variance = cur_cost - bud_cost
         tot_var += max(0.0, variance)
+        # Header verdict policy: actions are triggered by the VALIDATED number
+        # (current benchmark = all lines at our rates), never by the buffered
+        # suggestion. The buffer is context for setting a NEW limit, not
+        # grounds to raise an existing one.
+        buf_pct = RISK_BUFFER * 100
         if not limit:
             n_nolimit += 1
-            bkey, blabel, baction = "set", "No limit yet", f"Suggested limit: {cr(suggested)}"
-        elif worst in ("rev", "set"):
+            bkey, blabel, baction = "set", "No limit yet", (
+                f"Benchmark {cr(cur_cost)} + {buf_pct:g}% buffer → suggest {cr(suggested)}")
+        elif limit < cur_cost:
+            # The only case where "increase the budget" is justified by totals:
+            # the approved ceiling is below today's real cost.
             n_rev += 1
-            bkey, blabel, baction = "rev", "Review", ("Increase budget before PO"
-                                                      if worst == "rev" else "Set missing line rates")
+            bkey, blabel, baction = "rev", "Review", (
+                f"Limit is {cr(cur_cost - limit)} below today's cost — increase before PO")
+        elif worst == "set":
+            n_rev += 1
+            bkey, blabel, baction = "rev", "Review", "Set missing line rates"
+        elif worst == "rev":
+            n_rev += 1
+            bkey, blabel, baction = "rev", "Review", (
+                "Revise overrun lines before PO (total limit still covers today's cost)")
         elif worst == "neg":
             bkey, blabel, baction = "mon", "Negotiate", "Quotes above recent buying price — negotiate"
         elif worst == "mon":
             bkey, blabel, baction = "mon", "Monitor", "Check vendor quotes"
+        elif limit < suggested:
+            bkey, blabel, baction = "ok", "OK", (
+                f"Limit covers today's cost; headroom under the {buf_pct:g}% buffer — watch the market")
         else:
             bkey, blabel, baction = "ok", "OK", "Proceed"
 
@@ -250,10 +268,10 @@ def main():
         card = f'''<details class="bud b-{bkey}"><summary>
 <span class="c1"><b>{esc(b.get("budget_number"))}</b><small>{esc(b.get("project_code"))} · created {esc((b.get("created_at") or "")[:10])} · delivery {esc(b.get("delivery_date"))}</small></span>
 <span class="c2"><small>Budget cost</small>{cr(bud_cost)}</span>
-<span class="c2"><small>Current cost</small>{cr(cur_cost)}</span>
+<span class="c2"><small>Current benchmark</small><b>{cr(cur_cost)}</b></span>
 <span class="c2"><small>Variance</small>{cr(variance)} <em>{var_pct}</em></span>
 <span class="c2"><small>Your limit</small>{cr(limit) if limit else "—"}</span>
-<span class="c2"><small>Suggested</small><b>{cr(suggested)}</b></span>
+<span class="c2"><small>+{RISK_BUFFER*100:g}% buffer</small>{cr(suggested)}</span>
 <span class="c3"><span class="st st-{bkey}"></span>{blabel}</span>
 <span class="c4">{baction}</span></summary>
 <table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">System rate</th><th class="num">Proposed rate<br><small>amount</small></th><th class="num">Our rate<br><small>amount</small></th><th class="num">Var %</th><th>Status</th><th>Action</th></tr></thead>
@@ -265,7 +283,8 @@ def main():
             .replace("{{NOLIMIT_BLOCK}}",
                      ('<h2>New budgets — limit not set yet: our prediction</h2>'
                       '<p class="h2sub">Set the max purchase limit from the suggested figure '
-                      '(current cost of all lines + 8% price-risk buffer). For a BOM not yet '
+                      '(current benchmark = all lines at our rates, plus the price-risk buffer '
+                      'shown separately). For a BOM not yet '
                       'budgeted in the ERP, drop its PDF into the repo inbox/ for a full prediction.</p>'
                       + "".join(cards_nolimit)) if cards_nolimit else "")
             .replace("{{CARDS}}", "".join(cards))
@@ -326,7 +345,7 @@ footer{margin-top:20px;font-size:11px;color:var(--mut);border-top:1px solid var(
 <div class="brand"><b>Dynalektric</b><span>Max Purchase Limit — recommendations per budget</span></div>
 <nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html">Forward demand</a><a href="./budget.html" class="active">Max Purchase Limit</a></nav>
 <h1>Budget vs today's cost — with a recommendation for each</h1>
-<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budget's proposed rate (or the system rate when no proposal exists). Click a budget to open its line-by-line detail. Suggested limit = current cost + 8% price-risk buffer.</p>
+<p class="sub">Newest budgets first. Every line is priced at <b>our rate</b> — the recent real purchase price (green PO tag), else the live costing-formula estimate — and compared with the budget's proposed rate (or the system rate when no proposal exists). Click a budget to open its line-by-line detail. <b>Current benchmark</b> = all lines at our rates — the validated figure actions are judged against. The <b>buffer column</b> (benchmark + price-risk %) is context for setting a new limit, not a reason to raise an existing one.</p>
 <div class="kpis">
  <div class="kpi"><div class="k">Budgets analysed</div><div class="v">{{NBUD}}</div></div>
  <div class="kpi"><div class="k">Need review</div><div class="v" style="color:var(--crit)">{{NREV}}</div></div>
