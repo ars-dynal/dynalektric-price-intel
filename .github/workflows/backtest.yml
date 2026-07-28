@@ -1,0 +1,38 @@
+name: Benchmark accuracy back-test (completed projects)
+
+# Validates prediction accuracy on finished projects: what the PO-anchor
+# ladder would have predicted on each budget's creation date vs the prices
+# actually paid afterwards. Publishes docs/backtest.html.
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # Monthly, 1st at 04:00 UTC (09:30 IST)
+    - cron: '0 4 1 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run back-test against ERP history
+        env:
+          DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}
+          DEPL_CLIENT_SECRET: ${{ secrets.DEPL_CLIENT_SECRET }}
+        run: python3 scripts/backtest_benchmark.py
+      - name: Commit and push if changed
+        run: |
+          git config user.name "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/backtest.json docs/backtest.html
+          git diff --cached --quiet || git commit -m "Benchmark back-test: $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main || true
+          git push
