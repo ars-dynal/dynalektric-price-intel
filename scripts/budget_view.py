@@ -96,9 +96,13 @@ def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0):
     today's metal, not June's — so we switch to the estimate and say why.
     Returns (rate, src_tag, drift_note_or_None).
     """
-    po = None
+    po, po_note = None, None
     if intel_rec:
-        po = intel_rec.get("avg180") or intel_rec.get("avg12")
+        # Tier-2 statistical anchor (age-weighted + trend + calibration) when
+        # available; medians as fallback for older intel files.
+        po = intel_rec.get("ew") or intel_rec.get("avg180") or intel_rec.get("avg12")
+        if intel_rec.get("ew"):
+            po_note = intel_rec.get("ewb")
 
     cat = mi["category"]
     bench = None
@@ -121,9 +125,9 @@ def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0):
                     f"PO no longer representative, using today's cost ₹{bench:,.2f}"), None
             # Indexed item, PO within threshold of today's market — that IS
             # the proof the PO is still representative.
-            return po, "PO", None, {"lv": "high",
-                                    "txt": f"index-validated: live estimate within {abs(drift):.1f}% of this PO"}
-        return po, "PO", None, po_confidence(intel_rec)
+            return po, "PO", po_note, {"lv": "high",
+                                       "txt": f"index-validated: live estimate within {abs(drift):.1f}% of this PO"}
+        return po, "PO", po_note, po_confidence(intel_rec)
     if bench:
         return bench, "est", None, None
     if item.get("default_price"):
@@ -255,7 +259,8 @@ def main():
             bud_cost += bc
             cur_cost += cc
             key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q)
-            if drift_note:
+            if drift_note and ("trend" in drift_note or "calibration" in drift_note
+                               or "outlier" in drift_note or "market" in drift_note):
                 action = f"{action}. ({drift_note})"
             if conf:
                 action = (f"{action} · Confidence: {CONF_LABEL[conf['lv']]} ({conf['txt']})")

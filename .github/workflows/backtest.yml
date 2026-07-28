@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests scikit-learn
       - name: Run back-test against ERP history
         env:
           DEPL_CLIENT_ID: ${{ secrets.DEPL_CLIENT_ID }}

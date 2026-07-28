@@ -35,6 +35,7 @@ from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import erp_common as erp  # noqa: E402
+import price_anchor  # noqa: E402
 
 ROOT = erp.ROOT
 OUT_JSON = os.path.join(ROOT, "data", "backtest.json")
@@ -69,19 +70,12 @@ def esc(x):
     return H.escape(str(x if x is not None else "—"))
 
 
-def predicted_at(pos, created):
-    """PO-anchor prediction using only information available before `created`."""
-    prior = [p for p in pos if p["date"] and p["date"] < created]
-    if not prior:
-        return None, None
-    fresh_cut = (datetime.fromisoformat(created) - timedelta(days=FRESH_DAYS)).date().isoformat()
-    fresh = [p["price"] for p in prior if p["date"] >= fresh_cut]
-    if fresh:
-        # median, not mean: PO entry errors (unit/pack-size flips) wreck means
-        return statistics.median(fresh), f"median of {len(fresh)} PO(s) in the 180d before budget"
-    yr_cut = (datetime.fromisoformat(created) - timedelta(days=365)).date().isoformat()
-    yr = [p["price"] for p in prior if p["date"] >= yr_cut] or [p["price"] for p in prior]
-    return statistics.median(yr), f"median of {len(yr)} older PO(s) before budget"
+def predicted_at(pos, created, params):
+    """Tier-2 anchor (age-weighted + outlier-robust + trend), frozen at the
+    budget's creation date. Same code path the live pages use (price_anchor),
+    WITHOUT category calibration — the headline score must stay leakage-free
+    (calibration is learned from these very errors; see the improvement lab)."""
+    return price_anchor.anchor(pos, created, params)
 
 
 def actual_after(pos, created, window_end):
@@ -97,7 +91,79 @@ def actual_after(pos, created, window_end):
     return avg, len(hits)
 
 
+def improvement_lab(results, params):
+    """Walk-forward evaluation of Tier-2 calibration and the Tier-3 ML shadow:
+    learn ONLY from the older half of budgets (by creation date), score ONLY
+    on the newer half. Nothing here feeds live pages until it wins here."""
+    lines = [dict(l) for b in results for l in b["lines"] if l.get("pred") and l.get("actual")]
+    if len(lines) < 200:
+        return {"note": "not enough scored lines for the improvement lab"}
+    lines.sort(key=lambda l: l["created"])
+    half = len(lines) // 2
+    train, test = lines[:half], lines[half:]
+
+    def med_abs(errs):
+        return round(statistics.median(abs(e) for e in errs), 2)
+
+    def w10(errs):
+        return round(sum(1 for e in errs if abs(e) <= 10) / len(errs) * 100, 1)
+
+    # -- calibration learned on the older half --
+    from collections import defaultdict
+    per = defaultdict(list)
+    for l in train:
+        per[(l["code"] or "XX")[:2]].append(l["err"])
+    cap = params.get("calibration_cap_pct", 5.0)
+    min_n = params.get("calibration_min_lines", 30)
+    calib = {pfx: {"bias_pct": round(statistics.median(errs), 2), "n": len(errs)}
+             for pfx, errs in per.items()}
+
+    raw = [l["err"] for l in test]
+    cal_errs = []
+    for l in test:
+        c = calib.get((l["code"] or "XX")[:2])
+        adj = 0.0
+        if c and c["n"] >= min_n:
+            adj = max(-cap, min(cap, -c["bias_pct"]))
+        pred = l["pred"] * (1 + adj / 100)
+        cal_errs.append((pred - l["actual"]) / l["actual"] * 100)
+
+    lab = {"test_lines": len(test), "train_lines": len(train),
+           "raw_median_pct": med_abs(raw), "raw_within10": w10(raw),
+           "calibrated_median_pct": med_abs(cal_errs), "calibrated_within10": w10(cal_errs)}
+
+    # -- Tier-3 ML shadow (gradient boosting on residuals) --
+    try:
+        import math
+        from sklearn.ensemble import HistGradientBoostingRegressor
+        pfx_ids = {p: i for i, p in enumerate(sorted(per.keys()))}
+
+        def feats(l):
+            return [math.log(max(l["pred"], 1e-6)), float(l["age_d"] or 999),
+                    float(l["npo_prior"] or 0), math.log(max(l["qty"], 1e-6)),
+                    float(pfx_ids.get((l["code"] or "XX")[:2], -1))]
+
+        X = [feats(l) for l in train]
+        y = [math.log(l["actual"] / l["pred"]) for l in train]
+        model = HistGradientBoostingRegressor(max_iter=300, learning_rate=0.06,
+                                              max_depth=4, random_state=7)
+        model.fit(X, y)
+        ml_errs = []
+        for l in test:
+            corr = math.exp(float(model.predict([feats(l)])[0]))
+            corr = max(0.7, min(1.4, corr))          # bounded correction
+            pred = l["pred"] * corr
+            ml_errs.append((pred - l["actual"]) / l["actual"] * 100)
+        lab["ml_median_pct"] = med_abs(ml_errs)
+        lab["ml_within10"] = w10(ml_errs)
+        lab["ml_note"] = "shadow only — not used on live pages"
+    except ImportError:
+        lab["ml_note"] = "scikit-learn not installed on this run — ML shadow skipped"
+    return lab
+
+
 def main():
+    params = erp.load_params()
     session = erp.make_session()
     print("Fetching items, budgets, PO history (24 mo)...")
     items = erp.fetch_items(session)
@@ -136,7 +202,7 @@ def main():
             if actual is None:
                 nop += 1
                 continue
-            pred, basis = predicted_at(pos, created)
+            pred, basis = predicted_at(pos, created, params)
             team = l.get("vendor_rate") or l.get("system_rate")
             if pred is None:
                 unc += 1
@@ -152,11 +218,17 @@ def main():
             act_total += actual * q
             if team:
                 team_total += team * q
+            prior = [x for x in pos if x["date"] and x["date"] < created]
+            last_prior = max((x["date"] for x in prior), default=None)
+            age_d = ((datetime.fromisoformat(created).date()
+                      - datetime.fromisoformat(last_prior).date()).days
+                     if last_prior else None)
             rows.append({"code": it.get("code"), "name": it.get("name"),
                          "qty": q, "pred": round(pred, 2), "basis": basis,
                          "actual": round(actual, 2), "n_po": n_po,
                          "team": team, "err": round(err, 1),
-                         "team_err": (round(terr, 1) if terr is not None else None)})
+                         "team_err": (round(terr, 1) if terr is not None else None),
+                         "created": created, "age_d": age_d, "npo_prior": len(prior)})
 
         n_lines_total += cov_total
         n_uncovered += unc
@@ -203,6 +275,27 @@ def main():
 <table><thead><tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">Predicted rate</th><th class="num">Actual paid</th><th class="num">Our error</th><th class="num">Team budget error</th></tr></thead>
 <tbody>{body}{more}</tbody></table></details>''')
 
+    # ---- improvement lab (walk-forward: train old half, score new half) ----
+    lab = improvement_lab(results, params)
+    print("Improvement lab:", json.dumps(lab))
+
+    # ---- live calibration file: learned from ALL scored lines, used by the
+    # live engines (bounded, and always announced in their basis notes) ----
+    from collections import defaultdict
+    per_all = defaultdict(list)
+    for bb in results:
+        for l in bb["lines"]:
+            per_all[(l["code"] or "XX")[:2]].append(l["err"])
+    calib_doc = {"generated_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                 "note": "Per-category-prefix median signed prediction error from the "
+                         "back-test. price_anchor applies the OPPOSITE sign, capped by "
+                         "calibration_cap_pct, only when n >= calibration_min_lines.",
+                 "prefixes": {p: {"bias_pct": round(statistics.median(e), 2), "n": len(e)}
+                              for p, e in per_all.items()}}
+    with open(price_anchor.CALIB_PATH, "w") as f:
+        json.dump(calib_doc, f, indent=1)
+    print(f"Wrote {price_anchor.CALIB_PATH} ({len(calib_doc['prefixes'])} categories)")
+
     # ---- overall summary ----
     if all_errs:
         med = statistics.median(abs(e) for e in all_errs)
@@ -224,6 +317,7 @@ def main():
                "bias_pct": round(bias, 1),
                "team_median_abs_error_pct": (round(team_med, 1) if team_med is not None else None),
                "benchmark_beats_team_pct": (round(beat_pct, 1) if beat_pct is not None else None),
+               "improvement_lab": lab,
                "budgets": results}
     os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
     with open(OUT_JSON, "w") as f:
@@ -272,6 +366,13 @@ Uncovered lines (no prior purchase history at the time) are excluded from the sc
 <span class="chip"><b>{w10:.0f}%</b><small>lines within ±10%</small></span>
 <span class="chip"><b>{bias:+.1f}%</b><small>bias (+ = we over-predict)</small></span>
 <span class="chip"><b>{n_eval}</b><small>lines scored · {n_uncovered} uncovered · {n_nopurchase} not purchased in window</small></span>
+</div>
+<h2 style="font-size:18px;margin:6px 0 6px">Improvement lab — walk-forward (learned on older half, scored on newer half)</h2>
+<div class="chips">
+<span class="chip"><b>{lab.get("raw_median_pct","—")}%</b><small>Tier-2 rules (live today)</small></span>
+<span class="chip"><b>{lab.get("calibrated_median_pct","—")}%</b><small>+ category calibration</small></span>
+<span class="chip"><b>{lab.get("ml_median_pct","—")}%</b><small>Tier-3 ML shadow ({esc(lab.get("ml_note",""))})</small></span>
+<span class="chip"><b>{lab.get("test_lines","—")}</b><small>out-of-sample test lines</small></span>
 </div>
 {"".join(cards) if cards else '<p class="sub"><b>No completed budgets with scorable lines yet.</b> As projects finish, this page fills up automatically.</p>'}
 <footer>Generated {gen} UTC · method: PO-anchor ladder frozen at budget creation date vs qty-weighted actual PO prices until delivery+{ACTUAL_GRACE_DAYS}d ·

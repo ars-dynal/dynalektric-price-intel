@@ -1,5 +1,5 @@
 {
-  "note": "AI Procurement Planning parameters. Everything the engines treat as policy lives here so the logic stays fixed and auditable while the numbers stay editable. Lead times are calendar days from PO release to material at the factory gate. risk_pct drives the MAX budget band: max = expected * (1 + risk_pct/100). recent_po_days is how fresh a purchase price must be to outrank the live-benchmark estimate. wastage_pct adds cutting/scrap allowance on top of net BOM quantity when computing purchase quantities and budgets. po_drift_threshold_pct: a recent PO price is trusted only while today's live costing estimate stays within this % of it; beyond that the market has moved and the engines switch to the live estimate (and say so). suggested_limit_buffer_pct: flat % added on top of a budget's current cost to form the SUGGESTED max purchase limit (covers market movement between approval and PO release).",
+  "note": "AI Procurement Planning parameters. Everything the engines treat as policy lives here so the logic stays fixed and auditable while the numbers stay editable. Lead times are calendar days from PO release to material at the factory gate. risk_pct drives the MAX budget band: max = expected * (1 + risk_pct/100). recent_po_days is how fresh a purchase price must be to outrank the live-benchmark estimate. wastage_pct adds cutting/scrap allowance on top of net BOM quantity when computing purchase quantities and budgets. po_drift_threshold_pct: a recent PO price is trusted only while today's live costing estimate stays within this % of it; beyond that the market has moved and the engines switch to the live estimate (and say so). suggested_limit_buffer_pct: flat % added on top of a budget's current cost to form the SUGGESTED max purchase limit (covers market movement between approval and PO release). Tier-2 anchor knobs: po_halflife_days (age-weighting), outlier_ratio (PO entry-error filter), trend_* (per-item price-trend projection), calibration_* (bounded per-category correction learned monthly by the back-test).",
   "recent_po_days": 180,
   "po_history_days": 365,
   "buy_now_window_days": 7,
@@ -100,5 +100,12 @@
     "consistency": 20
   },
   "po_drift_threshold_pct": 5.0,
-  "suggested_limit_buffer_pct": 8.0
+  "suggested_limit_buffer_pct": 8.0,
+  "po_halflife_days": 90,
+  "outlier_ratio": 2.5,
+  "trend_min_pos": 4,
+  "trend_cap_pct": 10.0,
+  "trend_min_monthly_pct": 1.0,
+  "calibration_cap_pct": 5.0,
+  "calibration_min_lines": 30
 }

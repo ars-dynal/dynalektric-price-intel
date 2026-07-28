@@ -51,6 +51,9 @@ from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import erp_common as erp  # noqa: E402
 import costing  # noqa: E402
+import price_anchor  # noqa: E402
+
+CALIB = price_anchor.load_calibration()
 
 OUT = os.path.join(erp.ROOT, "data", "bom_analysis.json")
 
@@ -77,6 +80,11 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
     last_po = pos[-1] if pos else None
     yr = [p["price"] for p in pos if p["date"] >= year_cut]
     fresh = [p["price"] for p in pos if p["date"] >= recent_cut]
+    ew = ew_note = None
+    if fresh:
+        ew, ew_note = price_anchor.anchor(
+            pos, (today + timedelta(days=1)).isoformat(), params, CALIB,
+            (item.get("code") or "")[:2])
     avg_po = statistics.median(yr) if yr else (statistics.median([p["price"] for p in pos]) if pos else None)
     bench, bench_src = benchmark_rate(category, item["name"], summary, cost_cfg)
 
@@ -101,7 +109,7 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
     drift_pct = params.get("po_drift_threshold_pct", 5.0)
     po_drift_note = None
     if fresh and bench:
-        po_avg = statistics.median(fresh)
+        po_avg = ew or statistics.median(fresh)
         drift = (bench - po_avg) / po_avg * 100
         if abs(drift) > drift_pct:
             fresh = None  # PO stale — fall through to the benchmark branch
@@ -109,7 +117,8 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
                              f"market moved {drift:+.1f}% since that purchase")
             anchors["po_drift_note"] = po_drift_note
     if fresh:
-        expected, basis = statistics.median(fresh), "recent PO average"
+        expected = ew or statistics.median(fresh)
+        basis = ew_note or "recent PO average"
     elif bench:
         expected, basis = bench, ("live benchmark landed cost"
                                   if not po_drift_note

@@ -27,6 +27,7 @@ from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import erp_common as erp  # noqa: E402
+import price_anchor  # noqa: E402
 
 OUT = os.path.join(erp.ROOT, "data", "item_intel.json")
 
@@ -40,6 +41,9 @@ def main():
     po = erp.fetch_po_history(session)
     print(f"  history for {len(po)} items.")
 
+    params = erp.load_params()
+    calib = price_anchor.load_calibration()
+    asof = (datetime.now(timezone.utc).date() + timedelta(days=1)).isoformat()
     today = datetime.now(timezone.utc).date()
     cut180 = (today - timedelta(days=180)).isoformat()
     cut365 = (today - timedelta(days=365)).isoformat()
@@ -59,7 +63,9 @@ def main():
             if name:
                 by_vendor[name] = l
         vend = sorted(by_vendor.values(), key=lambda l: l["date"], reverse=True)[:3]
+        ew, ewb = price_anchor.anchor(lines, asof, params, calib, (item["code"] or "")[:2])
         out[item["code"]] = {
+            "ew": ew, "ewb": ewb,
             "lpo": round(last["price"], 2), "lpod": last["date"],
             # medians (field names kept for compatibility): a single PO with a
             # unit/pack-size entry error can no longer drag the rate
