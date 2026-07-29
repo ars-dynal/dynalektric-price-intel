@@ -1,32 +1,32 @@
 {
-  "generated_at_utc": "2026-07-28T11:32:58Z",
+  "generated_at_utc": "2026-07-29T11:41:54Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b91,325/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,325), +7% vs its 6-month average, 3-month momentum +9%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,308/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,308), +5% vs its 6-month average, 3-month momentum +8%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 1324.66,
+      "cur": 1307.87,
       "lo": 1129.6,
-      "hi": 1324.66,
+      "hi": 1307.87,
       "pos": 1.0,
-      "mom3": 9.0,
-      "vs_avg6": 6.6
+      "mom3": 7.6,
+      "vs_avg6": 5.5
     },
     "Aluminium": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b9362/kg it sits 100% up its trailing-12-month range (\u20b9241\u2013\u20b9362), +7% vs its 6-month average, 3-month momentum +2%. Multi-year high; NALCO guides that aluminium may ease into FY27 as alumina softens. A pullback is more likely than a further leg up.",
+      "reason": "At \u20b9360/kg it sits 99% up its trailing-12-month range (\u20b9241\u2013\u20b9362), +7% vs its 6-month average, 3-month momentum +2%. Multi-year high; NALCO guides that aluminium may ease into FY27 as alumina softens. A pullback is more likely than a further leg up.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 361.9,
+      "cur": 360.5,
       "lo": 240.8,
       "hi": 361.9,
-      "pos": 1.0,
-      "mom3": 2.5,
-      "vs_avg6": 7.4
+      "pos": 0.988,
+      "mom3": 2.1,
+      "vs_avg6": 7.0
     },
     "CRGO steel": {
       "signal": "NO SIGNAL",
