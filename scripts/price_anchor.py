@@ -129,8 +129,9 @@ def anchor(pos, asof, params=None, calib=None, prefix=None):
                 rate *= (1 + adj_pct / 100)
                 note += f", trend {monthly_pct:+.1f}%/mo → projected {adj_pct:+.1f}%"
 
-    # 5. bounded category calibration (learned by the back-test)
-    if calib and prefix:
+    # 5. bounded category calibration (learned by the back-test) — only
+    # when explicitly enabled: the improvement lab must prove it first.
+    if calib and prefix and (params or {}).get("calibration_enabled", False):
         c = calib.get(prefix)
         if c and c.get("n", 0) >= _p(params, "calibration_min_lines"):
             cap = _p(params, "calibration_cap_pct")

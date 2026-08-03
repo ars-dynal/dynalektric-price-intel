@@ -153,7 +153,9 @@ def main():
             bstat = "under" if erp < fin_val * 0.98 else ("over" if erp > fin_val * 1.15 else "ok")
         ii = intel.get(it.get("code")) or {}
         our, ours = None, None
-        if ii.get("avg180"):
+        if ii.get("ew"):
+            our, ours = ii["ew"], "PO"            # Tier-2 anchor (age-weighted+trend)
+        elif ii.get("avg180"):
             our, ours = ii["avg180"], "PO"        # real recent buying price
         elif ii.get("avg12"):
             our, ours = ii["avg12"], "PO12"       # older real price
@@ -167,6 +169,13 @@ def main():
             drift = (fin_val - our) / our * 100
             if abs(drift) > DRIFT_PCT:
                 our, ours = fin_val, "est"
+        # FULL-COVERAGE gap fill — every item gets a predicted price:
+        #   PO anchor > costing estimate > raw metal benchmark (indicative,
+        #   e.g. CRGO laminations at CRGO steel price) > ERP master rate.
+        if our is None and has_price and metal not in ("Aluminium", "Copper"):
+            our, ours = b["price"], "ind"         # indicative metal floor
+        if our is None and it.get("rate"):
+            our, ours = it["rate"], "erp"         # ERP master data, unverified
         vend = " · ".join(f'{v["n"]} (₹{v["p"]:,.0f})' for v in ii.get("vend", [])[:3]) or None
         rows.append({"code": it["code"], "name": it["name"], "cat": it["cat"],
                      "metal": metal or "—", "uom": it["uom"],
@@ -178,6 +187,22 @@ def main():
                      "vend": vend,
                      "bstat": bstat, "bdelta": bdelta,
                      "src": SRC_SHORT.get(metal, "—") if has_price else "—"})
+
+    # Machine-readable export of the full prediction table (all items).
+    import csv as _csv
+    csv_path = os.path.join(ROOT, "docs", "predicted_prices.csv")
+    with open(csv_path, "w", newline="") as cf:
+        w = _csv.writer(cf)
+        w.writerow(["item_code", "item_name", "category", "uom", "predicted_rate",
+                    "source", "last_po_price", "last_po_date", "erp_rate", "live_metal_rate"])
+        for r in rows:
+            w.writerow([r["code"], r["name"], r["cat"], r["uom"], r["our"],
+                        {"PO": "recent PO (age-weighted)", "PO12": "older PO",
+                         "est": "costing formula (live metal)", "ind": "metal benchmark (indicative)",
+                         "erp": "ERP master rate (unverified)"}.get(r["ours"], "none"),
+                        r["lpo"], r["lpod"], r["erp"], r["lm"]])
+    covered = sum(1 for r in rows if r["our"])
+    print(f"Wrote {csv_path}: {covered}/{len(rows)} items with a predicted price")
 
     # Only render benchmark cards for metals that actually appear and have a price.
     present = {}
@@ -312,7 +337,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 .b-under{background:var(--critt);color:var(--crit)}.b-ok{background:var(--goodt);color:var(--good)}.b-over{background:var(--warnt);color:#a06a00}
 .ourcell b{font-weight:700}
 .ourtag{font-size:9px;font-weight:800;border-radius:4px;padding:1px 4px;margin-left:4px;color:#fff;vertical-align:1px}
-.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}
+.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}.ot-ind{background:#7a6a4f}.ot-erp{background:#6b7280}
 .lpod{font-size:9.5px;color:var(--text-muted)}
 .vendcell{font-size:11px;color:var(--text-secondary);max-width:230px}
 </style></head><body><div class="wrap">
@@ -327,7 +352,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 </nav>
 <h1>Today's live commodity price beside each item</h1>
 <p class="sub"><b>Finished ₹/kg</b> = today's landed cost from your costing formula (metal + conversion for that item's form + packing + freight, ex-GST). <b>Budget status</b> compares your ERP rate to that finished cost — <b>Under</b> = budgeted below today's cost (will overrun). Filter "Under-budgeted only" to see what needs revising. Values marked <b>*</b> use placeholder copper parameters pending your rates.</p>
-<p class="gen">Auto-refreshed daily (9:00 AM IST). Last generated: {{GENERATED}} · {{N_TOTAL}} items.</p>
+<p class="gen">Every item carries a predicted rate (tags: PO = our real purchase · est = live costing formula · ind = raw metal benchmark, indicative · erp = ERP master rate, unverified). <a href="./predicted_prices.csv">Download all predictions (CSV)</a>. Auto-refreshed daily (9:00 AM IST). Last generated: {{GENERATED}} · {{N_TOTAL}} items.</p>
 <div class="cards">{{BENCH_CARDS}}</div>
 <section class="signals">
  <h2>Buy-timing monitor — should we buy now?</h2>
@@ -430,7 +455,7 @@ function render(){
    '<td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td>'+
-   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+(d.ours==='est'?'est':'PO')+'</span>'):'<span class="na">—</span>')+'</td>'+
+   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+({PO:'PO',PO12:'PO',est:'est',ind:'ind',erp:'erp'}[d.ours]||d.ours)+'</span>'):'<span class="na">—</span>')+'</td>'+
    '<td class="num mono">'+(d.lpo?(d.lpo.toLocaleString('en-IN',{maximumFractionDigits:0})+'<div class="lpod">'+(d.lpod||'')+'</div>'):'—')+'</td>'+
    '<td class="vendcell">'+(d.vend?d.vend.replace(/</g,'&lt;'):'<span class="na">—</span>')+'</td>'+
    '<td>'+bcell(d)+'</td></tr>';}).join('');
