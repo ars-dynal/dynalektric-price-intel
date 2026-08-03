@@ -71,7 +71,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 .b-under{background:var(--critt);color:var(--crit)}.b-ok{background:var(--goodt);color:var(--good)}.b-over{background:var(--warnt);color:#a06a00}
 .ourcell b{font-weight:700}
 .ourtag{font-size:9px;font-weight:800;border-radius:4px;padding:1px 4px;margin-left:4px;color:#fff;vertical-align:1px}
-.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}.ot-ind{background:#7a6a4f}.ot-erp{background:#6b7280}
+.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}.ot-ind{background:#7a6a4f}.ot-erp{background:#6b7280}.ot-qt{background:#0a5da0}
 .lpod{font-size:9.5px;color:var(--text-muted)}
 .vendcell{font-size:11px;color:var(--text-secondary);max-width:230px}
 </style></head><body><div class="wrap">
@@ -86,7 +86,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 </nav>
 <h1>Today's live commodity price beside each item</h1>
 <p class="sub"><b>Finished ₹/kg</b> = today's landed cost from your costing formula (metal + conversion for that item's form + packing + freight, ex-GST). <b>Budget status</b> compares your ERP rate to that finished cost — <b>Under</b> = budgeted below today's cost (will overrun). Filter "Under-budgeted only" to see what needs revising. Values marked <b>*</b> use placeholder copper parameters pending your rates.</p>
-<p class="gen">Every item carries a predicted rate (tags: PO = our real purchase · est = live costing formula · ind = raw metal benchmark, indicative · erp = ERP master rate, unverified). <a href="./predicted_prices.csv">Download all predictions (CSV)</a>. Auto-refreshed daily (9:00 AM IST). Last generated: 2026-08-03 16:11 UTC · 847 items.</p>
+<p class="gen">Every item carries a predicted rate (tags: PO = our real purchase · est = live costing formula · ind = raw metal benchmark, indicative · erp = ERP master rate, unverified). <a href="./predicted_prices.csv">Download all predictions (CSV)</a>. Auto-refreshed daily (9:00 AM IST). Last generated: 2026-08-03 18:40 UTC · 847 items.</p>
 <div class="cards"><div class="card al"><div class="accent"></div><div class="label"><span class="swatch"></span>Aluminium </div><div class="value">₹360.50 <small>/ kg</small></div><div class="finline">Finished ≈ ₹425/kg ex-GST<span class="finp"> · Aluminium foil</span></div><div class="meta">NALCO price circular (nalcoindia.com/domestic/current-price/) · 29.07.2026</div></div><div class="card st"><div class="accent"></div><div class="label"><span class="swatch"></span>CRGO steel <span class="tag-ind">indicative</span></div><div class="value">₹175.00 <small>/ kg</small></div><div class="meta">INDICATIVE reset from real PO at Rs 170/kg (2026-07-21) + small buffer; was Rs 230 (35% high). Refresh from latest CRGO PO or supplier quote. · 26 Jul 2026</div></div><div class="card cu"><div class="accent"></div><div class="label"><span class="swatch"></span>Copper </div><div class="value">₹1,319.63 <small>/ kg</small></div><div class="finline">Finished ≈ ₹1,426/kg ex-GST <span class="tag-ind">est.</span><span class="finp"> · Copper strip/wire</span></div><div class="meta">LME cash settlement via westmetall.com · 31 Jul 2026</div></div><div class="card ms"><div class="accent"></div><div class="label"><span class="swatch"></span>Mild Steel <span class="tag-ind">indicative</span></div><div class="value">₹62.00 <small>/ kg</small></div><div class="meta">INDICATIVE - HRC/MS basis (no free daily feed; update monthly from a supplier quote) · 24 Jul 2026</div></div><div class="card ss"><div class="accent"></div><div class="label"><span class="swatch"></span>Stainless Steel <span class="tag-ind">indicative</span></div><div class="value">₹270.00 <small>/ kg</small></div><div class="meta">INDICATIVE - SS304 basis (no free daily feed; update monthly from a supplier quote) · 24 Jul 2026</div></div></div>
 <section class="signals">
  <h2>Buy-timing monitor — should we buy now?</h2>
@@ -189,7 +189,7 @@ function render(){
    '<td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td>'+
-   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+({PO:'PO',PO12:'PO',est:'est',ind:'ind',erp:'erp'}[d.ours]||d.ours)+'</span>'):'<span class="na">—</span>')+'</td>'+
+   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+({PO:'PO',PO12:'PO',est:'est',ind:'ind',erp:'erp',qt:'quote'}[d.ours]||d.ours)+'</span>'):'<span class="na">—</span>')+'</td>'+
    '<td class="num mono">'+(d.lpo?(d.lpo.toLocaleString('en-IN',{maximumFractionDigits:0})+'<div class="lpod">'+(d.lpod||'')+'</div>'):'—')+'</td>'+
    '<td class="vendcell">'+(d.vend?d.vend.replace(/</g,'&lt;'):'<span class="na">—</span>')+'</td>'+
    '<td>'+bcell(d)+'</td></tr>';}).join('');

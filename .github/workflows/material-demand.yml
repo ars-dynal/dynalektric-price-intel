@@ -7,6 +7,9 @@ name: Forward material requirements (ERP order-book)
 
 on:
   workflow_dispatch: {}
+  push:
+    paths:
+      - 'quotes/**'   # a new vendor quote re-prices the budget + demand pages
   schedule:
     # Mondays 04:45 UTC (10:15 IST)
     - cron: '45 4 * * 1'

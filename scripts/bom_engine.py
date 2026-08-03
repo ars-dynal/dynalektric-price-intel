@@ -52,8 +52,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import erp_common as erp  # noqa: E402
 import costing  # noqa: E402
 import price_anchor  # noqa: E402
+import quote_store  # noqa: E402
 
 CALIB = price_anchor.load_calibration()
+QUOTES = quote_store.load_quotes()
 
 OUT = os.path.join(erp.ROOT, "data", "bom_analysis.json")
 
@@ -106,6 +108,11 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
     # po_drift_threshold_pct away from the recent-PO average (metal rally or
     # crash since that purchase), suppliers will quote today's metal — so the
     # benchmark becomes the expected rate and the basis records why.
+    qres = quote_store.resolve(QUOTES, item.get("code") or "", line.get("quantity") or 1.0)
+    if qres:
+        anchors["vendor_quote"] = qres["price"]
+        anchors["vendor_quote_note"] = qres["note"]
+
     drift_pct = params.get("po_drift_threshold_pct", 5.0)
     po_drift_note = None
     if fresh and bench:
@@ -116,7 +123,9 @@ def price_anchors(iid, item, category, po_history, summary, cost_cfg, params, li
             po_drift_note = (f"recent PO avg Rs {po_avg:,.2f} set aside — "
                              f"market moved {drift:+.1f}% since that purchase")
             anchors["po_drift_note"] = po_drift_note
-    if fresh:
+    if qres:
+        expected, basis = qres["price"], qres["note"]
+    elif fresh:
         expected = ew or statistics.median(fresh)
         basis = ew_note or "recent PO average"
     elif bench:

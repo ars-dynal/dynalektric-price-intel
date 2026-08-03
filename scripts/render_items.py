@@ -30,6 +30,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Stale-PO guard threshold (%). Kept in data/planning_params.json so the
 # policy is editable without touching code; 5% fallback if the key is absent.
+import sys as _sys
+_sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    import quote_store as _qs
+    QUOTE_STORE = _qs.load_quotes()
+except Exception:
+    QUOTE_STORE = {}
+
 try:
     with open(os.path.join(ROOT, "data", "planning_params.json")) as _f:
         DRIFT_PCT = float(json.load(_f).get("po_drift_threshold_pct", 5.0))
@@ -153,7 +161,10 @@ def main():
             bstat = "under" if erp < fin_val * 0.98 else ("over" if erp > fin_val * 1.15 else "ok")
         ii = intel.get(it.get("code")) or {}
         our, ours = None, None
-        if ii.get("ew"):
+        qres = QUOTE_STORE and __import__("quote_store").resolve(QUOTE_STORE, it.get("code") or "", 1.0)
+        if qres:
+            our, ours = qres["price"], "qt"        # current vendor quote
+        elif ii.get("ew"):
             our, ours = ii["ew"], "PO"            # Tier-2 anchor (age-weighted+trend)
         elif ii.get("avg180"):
             our, ours = ii["avg180"], "PO"        # real recent buying price
@@ -199,6 +210,7 @@ def main():
             w.writerow([r["code"], r["name"], r["cat"], r["uom"], r["our"],
                         {"PO": "recent PO (age-weighted)", "PO12": "older PO",
                          "est": "costing formula (live metal)", "ind": "metal benchmark (indicative)",
+                         "qt": "current vendor quote",
                          "erp": "ERP master rate (unverified)"}.get(r["ours"], "none"),
                         r["lpo"], r["lpod"], r["erp"], r["lm"]])
     covered = sum(1 for r in rows if r["our"])
@@ -337,7 +349,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
 .b-under{background:var(--critt);color:var(--crit)}.b-ok{background:var(--goodt);color:var(--good)}.b-over{background:var(--warnt);color:#a06a00}
 .ourcell b{font-weight:700}
 .ourtag{font-size:9px;font-weight:800;border-radius:4px;padding:1px 4px;margin-left:4px;color:#fff;vertical-align:1px}
-.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}.ot-ind{background:#7a6a4f}.ot-erp{background:#6b7280}
+.ot-PO,.ot-PO12{background:#008300}.ot-est{background:#c98500}.ot-ind{background:#7a6a4f}.ot-erp{background:#6b7280}.ot-qt{background:#0a5da0}
 .lpod{font-size:9.5px;color:var(--text-muted)}
 .vendcell{font-size:11px;color:var(--text-secondary);max-width:230px}
 </style></head><body><div class="wrap">
@@ -455,7 +467,7 @@ function render(){
    '<td class="'+(mc?'metal-'+mc:'na')+'">'+d.metal+'</td>'+
    '<td class="mono">'+d.uom+'</td><td class="num mono">'+(d.erp?d.erp.toLocaleString('en-IN',{minimumFractionDigits:2}):'—')+'</td>'+
    '<td class="lm">'+lm+'</td>'+
-   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+({PO:'PO',PO12:'PO',est:'est',ind:'ind',erp:'erp'}[d.ours]||d.ours)+'</span>'):'<span class="na">—</span>')+'</td>'+
+   '<td class="num ourcell">'+(d.our?('<b>₹'+d.our.toLocaleString('en-IN',{maximumFractionDigits:0})+'</b><span class="ourtag ot-'+d.ours+'">'+({PO:'PO',PO12:'PO',est:'est',ind:'ind',erp:'erp',qt:'quote'}[d.ours]||d.ours)+'</span>'):'<span class="na">—</span>')+'</td>'+
    '<td class="num mono">'+(d.lpo?(d.lpo.toLocaleString('en-IN',{maximumFractionDigits:0})+'<div class="lpod">'+(d.lpod||'')+'</div>'):'—')+'</td>'+
    '<td class="vendcell">'+(d.vend?d.vend.replace(/</g,'&lt;'):'<span class="na">—</span>')+'</td>'+
    '<td>'+bcell(d)+'</td></tr>';}).join('');

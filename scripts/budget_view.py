@@ -28,6 +28,9 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import erp_common as erp  # noqa: E402
 import costing  # noqa: E402
+import quote_store  # noqa: E402
+
+QUOTES = quote_store.load_quotes()
 
 ROOT = erp.ROOT
 # Suggested limit = current cost x (1 + buffer%). The buffer covers market
@@ -86,7 +89,7 @@ def rate_amt(rate, qty):
     return f'{rate_fmt(rate)}<div class="amt">₹{inr(rate * qty)}</div>' 
 
 
-def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0):
+def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0, qty=1.0):
     """Recent real PO rate, unless the metal market has drifted away from it.
 
     A real PO is the best anchor only while it still represents today's
@@ -96,6 +99,12 @@ def our_rate(item, intel_rec, mi, summary, cost_cfg, drift_pct=5.0):
     today's metal, not June's — so we switch to the estimate and say why.
     Returns (rate, src_tag, drift_note_or_None).
     """
+    # A VALID vendor quote is the freshest market evidence — it outranks
+    # even PO history. Volume tier resolved for this line's quantity.
+    q = quote_store.resolve(QUOTES, item.get("code") or "", qty)
+    if q:
+        return q["price"], "qt", q["note"], {"lv": "high", "txt": q["note"]}
+
     po, po_note = None, None
     if intel_rec:
         # Tier-2 statistical anchor (age-weighted + trend + calibration) when
@@ -180,6 +189,8 @@ def po_confidence(intel_rec):
 
 
 def _src_phrase(osrc, lpod):
+    if osrc == "qt":
+        return "a current vendor quote"
     if osrc == "PO":
         return f"our {lpod} PO" if lpod else "our recent PO avg"
     if osrc == "est":
@@ -258,7 +269,8 @@ def main():
             mi = mi_engine.enrich(it)
             irec = intel_all.get(it.get("code"))
             our, osrc, drift_note, conf = our_rate(it, irec, mi, summary, cost_cfg,
-                                                   params.get("po_drift_threshold_pct", 5.0))
+                                                   params.get("po_drift_threshold_pct", 5.0),
+                                                   l.get("quantity") or 1.0)
             lpod = (irec or {}).get("lpod")
             sr, vr, q = l.get("system_rate"), l.get("vendor_rate"), l["quantity"]
             ref = vr or sr           # the team's PROPOSED rate wins over the old system rate
@@ -282,8 +294,10 @@ def main():
                     basis += ", price stable in our history"
             elif osrc == "est":
                 basis = "basis: today's base-metal price + our conversion cost (LME/NALCO)"
+            elif osrc == "qt":
+                basis = f"basis: {drift_note}"
             key, label, action = line_status(ref, our, bool(vr), osrc, lpod, q, basis)
-            if drift_note and ("trend" in drift_note or "calibration" in drift_note
+            if drift_note and osrc != "qt" and ("trend" in drift_note or "calibration" in drift_note
                                or "outlier" in drift_note or "market" in drift_note):
                 action = f"{action}. ({drift_note})"
             if conf:
