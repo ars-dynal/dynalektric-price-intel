@@ -1,0 +1,35 @@
+name: Backfill price history (2024 -> today, one-shot)
+
+# Pulls multi-year history from the same official sources the daily refresh
+# uses: LME copper (westmetall yearly tables) x ECB USD-INR, and Hindalco
+# P0610 ready-reckoner PDFs (aluminium conductor reference). Safe to re-run;
+# months are recomputed on the same basis.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests pypdf
+      - name: Backfill history from public sources
+        run: python3 scripts/backfill_history.py
+      - name: Render price-history page
+        run: python3 scripts/render_history.py
+      - name: Commit and push if changed
+        run: |
+          git config user.name "dynalektric-price-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/price_history.json docs/history.html
+          git diff --cached --quiet || git commit -m "Price history backfill: $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main || true
+          git push
