@@ -7,7 +7,9 @@
       "Copper": "LME cash settlement (westmetall.com) converted to Rs/kg using that month's USD/INR. Consistent with the live dashboard number.",
       "Aluminium": "NALCO ingot monthly history (via snalco.com) REBASED x0.8995 to today's NALCO basic-price basis (the source series runs ~10% high, appears duty-inclusive). Pre-Jul-2026 points are therefore rebased estimates; Jul-2026 onward is the live NALCO basic price.",
       "CRGO steel": "Indicative only - no free daily/historical benchmark exists. Single reference point, not a real series."
-    }
+    },
+    "backfilled_at_utc": "2026-08-06T13:36:46Z",
+    "backfill_note": "Backfilled to 2024-01: Copper from westmetall yearly tables x ECB USD-INR; Hindalco P0610 from ready-reckoner PDF archive (one circular per month). CRGO/MS/SS intentionally NOT backfilled \u2014 no public source; series build forward from quotes/POs."
   },
   "series": {
     "Copper": {
@@ -151,6 +153,84 @@
           "v": 270.0
         }
       ]
+    },
+    "Aluminium conductor (Hindalco P0610)": {
+      "indicative": false,
+      "points": [
+        {
+          "m": "2025-01",
+          "v": 316.75
+        },
+        {
+          "m": "2025-04",
+          "v": 254.0
+        },
+        {
+          "m": "2025-05",
+          "v": 245.5
+        },
+        {
+          "m": "2025-06",
+          "v": 254.25
+        },
+        {
+          "m": "2025-07",
+          "v": 260.75
+        },
+        {
+          "m": "2025-08",
+          "v": 264.5
+        },
+        {
+          "m": "2025-09",
+          "v": 263.0
+        },
+        {
+          "m": "2025-10",
+          "v": 274.25
+        },
+        {
+          "m": "2025-11",
+          "v": 291.5
+        },
+        {
+          "m": "2025-12",
+          "v": 298.75
+        },
+        {
+          "m": "2026-01",
+          "v": 316.75
+        },
+        {
+          "m": "2026-02",
+          "v": 330.75
+        },
+        {
+          "m": "2026-03",
+          "v": 346.75
+        },
+        {
+          "m": "2026-04",
+          "v": 412.75
+        },
+        {
+          "m": "2026-05",
+          "v": 402.0
+        },
+        {
+          "m": "2026-06",
+          "v": 437.0
+        },
+        {
+          "m": "2026-07",
+          "v": 359.5
+        },
+        {
+          "m": "2026-08",
+          "v": 365.25
+        }
+      ],
+      "source": "Hindalco primary ready reckoner, P0610 / EC Grade / alloy A0 (hindalco.com)"
     }
   }
 }
