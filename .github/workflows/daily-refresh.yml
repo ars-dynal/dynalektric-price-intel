@@ -57,7 +57,7 @@ jobs:
         run: |
           git config user.name "dynalektric-price-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/public_summary.json data/price_history.json data/buy_signals.json data/alerts.json docs/index.html docs/items.html
+          git add data/public_summary.json data/price_history.json data/buy_signals.json data/alerts.json docs/index.html docs/items.html docs/history.html docs/predicted_prices.csv
           git diff --cached --quiet || git commit -m "Daily public price refresh: $(date -u +%Y-%m-%d)"
           git push
 
