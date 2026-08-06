@@ -49,6 +49,9 @@ jobs:
 
       - name: Render item detail page + trend charts + signals
         run: python3 scripts/render_items.py
+        
+      - name: Render price-history page
+        run: python3 scripts/render_history.py
 
       - name: Commit and push if changed
         run: |
