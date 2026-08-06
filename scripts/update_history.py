@@ -55,6 +55,16 @@ def main():
             continue
         upsert(series["points"], month, val)
 
+    # Aluminium conductor reference (Hindalco P0610) — separate series, since
+    # the company prices conductors off Hindalco, not NALCO.
+    hp = s.get("aluminium_hindalco", {}).get("price_per_kg")
+    if hp:
+        hs = hist["series"].setdefault(
+            "Aluminium conductor (Hindalco P0610)",
+            {"indicative": False, "points": [],
+             "source": "Hindalco primary ready reckoner, P0610 / EC Grade / alloy A0 (hindalco.com)"})
+        upsert(hs["points"], month, hp)
+
     hist["meta"]["generated_at_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     with open(HIST, "w") as f:
         json.dump(hist, f, indent=2)

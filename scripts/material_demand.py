@@ -338,7 +338,7 @@ h2{font-size:15px;margin:26px 0 10px}
 footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(--grid);padding-top:12px;line-height:1.6}
 </style></head><body><div class="wrap">
 <div class="brand"><b>Dynalektric</b><span>Forward Requirements &amp; Max Purchase Limit exposure</span></div>
-<nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html" class="active">Forward demand</a><a href="./budget.html">Max Purchase Limit</a><a href="./backtest.html">Accuracy</a></nav>
+<nav class="nav"><a href="./index.html">Summary</a><a href="./items.html">Items &amp; prices</a><a href="./consumption.html">Consumption &amp; spend</a><a href="./demand.html" class="active">Forward demand</a><a href="./budget.html">Max Purchase Limit</a><a href="./backtest.html">Accuracy</a><a href="./history.html">Price history</a></nav>
 <h1>What to buy, what's covered, and which budgets are under-costed</h1>
 <p class="sub">Open (pending) budget demand vs current inventory, priced live, paired with the buy signal — across {{NBUD}} budgets with metal lines. Plus every budget line whose rate sits below today's metal cost.</p>
 <div class="banner">{{BANNER}}</div>

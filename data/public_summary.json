@@ -1,36 +1,40 @@
 {
-  "generated_at_utc": "2026-08-06T11:50:06Z",
+  "generated_at_utc": "2026-08-03T13:47:22Z",
   "aluminium": {
-    "price_per_kg": 368.9,
-    "price_band": "363,050\u2013374,750/MT",
-    "effective_date": "01.08.2026",
-    "source": "NALCO price circular (nalcoindia.com/domestic/current-price/)"
+    "price_per_kg": 360.5,
+    "price_band": "354,650\u2013366,350/MT",
+    "effective_date": "29.07.2026",
+    "source": "NALCO price circular (nalcoindia.com/domestic/current-price/)",
+    "grades": "Foil: IA60 / grade 1050; bus bar same NALCO basis"
   },
   "copper": {
-    "price_per_kg": 1347.61,
-    "usd_per_tonne": 14167.5,
-    "usdinr": 95.12,
+    "price_per_kg": 1319.63,
+    "usd_per_tonne": 13834.0,
+    "usdinr": 95.39,
     "usdinr_source": "api.frankfurter.app",
-    "settlement_date": "05 Aug 2026",
+    "settlement_date": "31 Jul 2026",
     "source": "LME cash settlement via westmetall.com"
   },
   "crgo_steel": {
     "price_per_kg": 175.0,
     "effective_date": "26 Jul 2026",
     "source": "INDICATIVE reset from real PO at Rs 170/kg (2026-07-21) + small buffer; was Rs 230 (35% high). Refresh from latest CRGO PO or supplier quote.",
-    "indicative": true
+    "indicative": true,
+    "reference": "JSW Steel (company's official CRGO reference; no public price feed \u2014 update from JSW POs/quotes)"
   },
   "mild_steel": {
     "price_per_kg": 62.0,
     "effective_date": "24 Jul 2026",
     "source": "INDICATIVE - HRC/MS basis (no free daily feed; update monthly from a supplier quote)",
-    "indicative": true
+    "indicative": true,
+    "reference": "Local market / supplier quotes (no published circular)"
   },
   "stainless_steel": {
     "price_per_kg": 270.0,
     "effective_date": "24 Jul 2026",
     "source": "INDICATIVE - SS304 basis (no free daily feed; update monthly from a supplier quote)",
-    "indicative": true
+    "indicative": true,
+    "grades": "SS 304, SS 204 (local market / supplier quotes)"
   },
   "pilot_signals": {
     "total_items": 18,

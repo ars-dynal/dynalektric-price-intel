@@ -11,7 +11,8 @@
    "freight_rate": 0,
    "cash_discount_pct": 1.5,
    "other_charges": 0,
-   "_source": "Aluminium wire and foil.xlsx -> Foil Costing sheet"
+   "_source": "Aluminium wire and foil.xlsx -> Foil Costing sheet",
+   "_grade": "NALCO circular (foil/busbar basis: IA60 / grade 1050)"
   },
   "Aluminium conductor": {
    "benchmark": "Aluminium",
@@ -22,7 +23,9 @@
    "freight_rate": 0,
    "cash_discount_pct": 0,
    "other_charges": 0,
-   "_confirm": true
+   "_confirm": true,
+   "rm_source": "hindalco_p0610",
+   "_grade": "EC Grade, alloy A0, product code P0610 (Hindalco ready reckoner)"
   },
   "Aluminium busbar": {
    "benchmark": "Aluminium",
@@ -32,7 +35,8 @@
    "packing_fwd_pct": 2,
    "freight_rate": 0,
    "other_charges": 0,
-   "_confirm": true
+   "_confirm": true,
+   "_grade": "NALCO circular (foil/busbar basis: IA60 / grade 1050)"
   },
   "Copper wire": {
    "benchmark": "Copper",

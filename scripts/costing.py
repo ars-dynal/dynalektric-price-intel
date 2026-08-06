@@ -37,8 +37,17 @@ def raw_material_inr_kg(profile, summary):
         premium = profile.get("premium_usd_mt", 0) or 0
         return (usd + premium) * fx / 1000.0
     if bench == "Aluminium":
-        # NALCO basic price is already the domestic INR/kg metal cost.
-        rm = summary["aluminium"]["price_per_kg"]
+        # Company reference doc (Raw Material Price Reference v1.0):
+        #   Conductor -> HINDALCO circular (EC Grade, alloy A0, code P0610)
+        #   Foil / Bus bar -> NALCO circular (IA60, grade 1050)
+        # Profiles opt into Hindalco via rm_source; NALCO remains the default.
+        if profile.get("rm_source") == "hindalco_p0610":
+            h = summary.get("aluminium_hindalco") or {}
+            rm = h.get("price_per_kg")
+            if not rm:                      # Hindalco feed missing -> NALCO fallback
+                rm = summary["aluminium"]["price_per_kg"]
+        else:
+            rm = summary["aluminium"]["price_per_kg"]
         # optional premium expressed in INR/kg
         return rm + (profile.get("premium_inr_kg", 0) or 0)
     if bench == "CRGO steel":

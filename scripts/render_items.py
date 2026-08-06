@@ -361,6 +361,7 @@ footer{margin-top:24px;font-size:11px;color:var(--mut);border-top:1px solid var(
  <a href="./demand.html">Forward demand</a>
  <a href="./budget.html">Max Purchase Limit</a>
  <a href="./backtest.html">Accuracy</a>
+ <a href="./history.html">Price history</a>
 </nav>
 <h1>Today's live commodity price beside each item</h1>
 <p class="sub"><b>Finished ₹/kg</b> = today's landed cost from your costing formula (metal + conversion for that item's form + packing + freight, ex-GST). <b>Budget status</b> compares your ERP rate to that finished cost — <b>Under</b> = budgeted below today's cost (will overrun). Filter "Under-budgeted only" to see what needs revising. Values marked <b>*</b> use placeholder copper parameters pending your rates.</p>

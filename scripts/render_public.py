@@ -46,6 +46,12 @@ def main():
         '{{AL_PRICE}}': f"{al['price_per_kg']:,.2f}",
         '{{AL_DATE}}': al['effective_date'],
         '{{AL_SOURCE}}': al['source'],
+        # Conductor reference (company doc: Hindalco EC Grade / A0 / P0610) —
+        # shown once the daily fetch has captured a ready-reckoner value.
+        '{{HINDALCO_LINE}}': (
+            f"<br>Conductor basis: Hindalco P0610 ₹{d['aluminium_hindalco']['price_per_kg']:,.2f}/kg "
+            f"(EC Grade · w.e.f. {d['aluminium_hindalco'].get('effective_date', '—')})"
+            if d.get('aluminium_hindalco', {}).get('price_per_kg') else ""),
         '{{CU_PRICE}}': f"{cu['price_per_kg']:,.2f}",
         '{{CU_DATE}}': cu['settlement_date'],
         '{{CU_SOURCE}}': cu['source'],

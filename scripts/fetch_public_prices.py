@@ -161,6 +161,53 @@ def _parse_lme_rows(html):
     return best[1], best[0].strftime("%d %b %Y")
 
 
+def fetch_hindalco():
+    """Hindalco 'Primary metal price Ready Reckoner' PDF — the company's
+    official reference for ALUMINIUM CONDUCTOR (EC Grade, alloy A0, P0610).
+    PDFs live at a predictable URL per issue date; probe the last 20 days for
+    the newest one. Returns (p0610_per_kg, ec_wire_rod_per_kg, wef_date) or None."""
+    from datetime import date, timedelta as _td
+    import io
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        from PyPDF2 import PdfReader  # older runners
+    months = ["january", "february", "march", "april", "may", "june", "july",
+              "august", "september", "october", "november", "december"]
+    today = date.today()
+    for back in range(0, 20):
+        d = today - _td(days=back)
+        url = (f"https://www.hindalco.com/Upload/PDF/primary-ready-reckoner-"
+               f"{d.day:02d}-{months[d.month-1]}-{d.year}.pdf")
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=20)
+            if r.status_code != 200 or not r.content[:4] == b"%PDF":
+                continue
+            text = "\n".join(pg.extract_text() or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
+            # Prices are Rs/MT ("402000" or Indian-grouped "4,02,000"), but
+            # spec digits sit between the keyword and the price ("P0610
+            # (99.85% min)..."), so: scan a window after the keyword and take
+            # the first number in a plausible Rs/MT band for aluminium.
+            def grab(pattern):
+                m = re.search(pattern, text, re.I)
+                if not m:
+                    return None
+                for num in re.findall(r"\d[\d,]{4,9}", text[m.end():m.end() + 250]):
+                    v = float(num.replace(",", ""))
+                    if 200000 <= v <= 800000:
+                        return v / 1000.0
+                return None
+            p0610 = grab(r"P0610")
+            ec_rod = grab(r"EC\s*Grade\s*Wire\s*Rods?")
+            if p0610 or ec_rod:
+                return p0610, ec_rod, d.strftime("%d.%m.%Y")
+            print(f"Hindalco: PDF {d} parsed but no P0610/EC rod match", file=sys.stderr)
+        except Exception as e:
+            print(f"Hindalco probe {d}: {type(e).__name__}: {e}", file=sys.stderr)
+    print("Hindalco: no ready-reckoner PDF found in the last 20 days", file=sys.stderr)
+    return None
+
+
 def fetch_lme_copper():
     """Returns (usd_per_tonne, date_str) or None on failure."""
     try:
@@ -202,6 +249,21 @@ def main():
     else:
         usdinr = data['copper'].get('usdinr', 95.5)
         print(f"Keeping previous USD/INR: {usdinr} (live fetch failed)")
+
+    hind = fetch_hindalco()
+    if hind:
+        p0610, ec_rod, wef = hind
+        h = data.setdefault('aluminium_hindalco', {})
+        if p0610:
+            h['price_per_kg'] = p0610
+        if ec_rod:
+            h['ec_wire_rod_per_kg'] = ec_rod
+        h['grade'] = 'EC Grade, alloy A0, product code P0610'
+        h['effective_date'] = wef
+        h['source'] = 'Hindalco primary ready reckoner (hindalco.com)'
+        print(f"Updated Hindalco: P0610 Rs {p0610}/kg, EC wire rod Rs {ec_rod}/kg (w.e.f. {wef})")
+    else:
+        print("Keeping previous Hindalco aluminium-conductor price (fetch failed)")
 
     lme = fetch_lme_copper()
     if lme:
