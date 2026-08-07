@@ -1,94 +1,94 @@
 item_code,item_name,category,uom,predicted_rate,source,last_po_price,last_po_date,erp_rate,live_metal_rate
-WB-606-00022,"Aluminium Brazing Rod, Size:2 mm",WB-606-,KGS,425.03,costing formula (live metal),,,7000,360.5
-WB-606-00010,"AL TIG Welding Rod, Ø2.4mm",WB-606-,KGS,425.03,costing formula (live metal),900.0,2025-07-31,900,360.5
-WB-606-00004,"Aluminium Brazing Rod, Size:5mm",WB-606-,KGS,425.03,costing formula (live metal),,,440,360.5
-AL-222-00164,Al Strip 11 x 1.8 (Bare) with 0.5mm covering - 0.12SE +2 Layers of polyester of 20u with 50% overlap+ varnish bonded fibre glass filament ( Fine covering) acc to IS 11597-1986,AL-222-,KGS,425.03,costing formula (live metal),,,416,360.5
-AL-222-00207,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11 × 5, Super Enamelled 0.11 mm (Finished OD= 11.11×5.11)",AL-222-,KGS,432.71,costing formula (live metal),,,415,360.5
-AL-222-00220,"AL Round Conductor, Aluminium Wire Ø4.2 MM, Super Enameled 0.11mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=4.31 MM)",AL-222-,KGS,432.71,costing formula (live metal),,,415,360.5
-PKG-000-00035,Aluminium Foil Cover Bag,PKG-000-,KGS,425.03,costing formula (live metal),,,410,360.5
-AL-222-00208,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5.5 × 3.5, Super Enamelled 0.11 mm (Finished OD= 5.61×3.61)",AL-222-,KGS,432.71,costing formula (live metal),,,405,360.5
-AL-222-00217,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 6×3, Super Enamelled 0.12 mm (Finished OD=6.12×3.12)",AL-222-,KGS,432.71,costing formula (live metal),407.2,2025-10-30,405,360.5
-AL-222-00205,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7.5×3.5, Super Enamelled 0.11 mm (Finished OD=7.61×3.61)",AL-222-,KGS,432.71,costing formula (live metal),,,405,360.5
-AL-111-00002,"Aluminium Foil, Electrical Grade:1050, Size: 250 (Width) X 1 MM (Thick)",AL-111-,KGS,425.03,costing formula (live metal),335.0,2025-10-03,400,360.5
-AL-222-00033,"AL Round Conductor, Aluminium Wire Ø0.70 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,393,360.5
-AL-222-00055,"AL Rectangular Conductor, Aluminium Strip 8.0 X 4.0 MM, Super Enameled 0.08MM, Finished OD = 8.08 x 4.08 mm, Grade 2, Class H.",AL-222-,KGS,432.71,costing formula (live metal),,,390,360.5
-AL-222-00046,"AL Round Conductor, Aluminium Wire Ø 0.35 MM, Enameled 0.06mm, Grade-2, Class H, Finished OD = 0.41 mm",AL-222-,KGS,432.71,costing formula (live metal),470.0,2026-02-24,389,360.5
-AL-222-00034,"AL Round Conductor, Aluminium Wire Ø0.80 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,389,360.5
-AL-222-00038,"AL Round Conductor, Aluminium Wire Ø1.40 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),397.0,2025-11-20,388,360.5
-AL-222-00219,"AL Round Conductor, Aluminium Wire Ø3.251 MM, Super Enameled 0.11mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=3.361 MM)",AL-222-,KGS,432.71,costing formula (live metal),,,385,360.5
-AL-222-00058,"Aluminium Wire Multi Paper Covering (MPC), As per IS:6162-Part-1, Class-A, Size: Dia - 3.8 MM, PC 1 MM Paper Covering(Finished OD=5.8 MM)",AL-222-,KGS,425.03,costing formula (live metal),,,372,360.5
-AL-111-00033,"Aluminium Busbar 10 X 40 X 3660,6101 T6",AL-111-,KGS,407.71,costing formula (live metal),,,371,360.5
-AL-111-00032,"Aluminium Busbar 10 X 80 X 3660,6101 T6",AL-111-,KGS,407.71,costing formula (live metal),,,371,360.5
-AL-111-00031,"Aluminium Busbar 12 X 63 X 3660,6101 T6",AL-111-,KGS,407.71,costing formula (live metal),,,371,360.5
-AL-222-00040,"AL Rectangular Conductor, Aluminium Strip 6.0 X 3.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,370,360.5
-AL-222-00126,"AL Rectangular Conductor, Aluminium Strip 8 X 3.5 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,370,360.5
-AL-222-00050,"AL Round Conductor, Aluminium Wire Ø3.25 MM, Super Enameled 0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,370,360.5
-AL-222-00060,"Aluminium Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-H Size:  7 x 3 Enamelled 0.11 MM (Finished OD=7.11 x 3.11)",AL-222-,KGS,425.03,costing formula (live metal),532.0,2026-06-18,370,360.5
-AL-222-00051,"AL Round Conductor, Aluminium Wire Ø2.33 MM, Super Enameled 0.11mm",AL-222-,KGS,452.78,recent PO (age-weighted),450.0,2026-01-17,369,360.5
-AL-222-00036,"AL Rectangular Conductor, Aluminium Strip 9.0 X 3.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,367,360.5
-AL-222-00041,"AL Round Conductor, Aluminium Wire Ø0.90 MM, Super Enameled 0.09mm, Finished OD = 1 mm",AL-222-,KGS,449.45,recent PO (age-weighted),440.0,2026-02-24,366,360.5
-AL-222-00196,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 12.8 × 3, FG Covering 0.3 mm (Finished OD= 13.1 × 3.3)",AL-222-,KGS,432.71,costing formula (live metal),,,364,360.5
-AL-222-00044,"AL Rectangular Conductor, Aluminium Strip 4.5 X 2.5 MM, Super Enameled 0.11MM, Class H",AL-222-,KGS,422.0,recent PO (age-weighted),422.0,2025-11-20,360,360.5
-AL-222-00052,"AL Round Conductor, Aluminium Wire Ø1.2 MM, Super Enameled  0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,360,360.5
-AL-222-00054,"AL Round Conductor, Aluminium Wire Ø3.6 MM, Super Enameled 0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,360,360.5
-AL-222-00029,"AL Round Conductor, Aluminium Wire Ø2.6 MM, Super Enameled 0.12mm, Grade-2, Class H, Finished OD = 2.72mm",AL-222-,KGS,432.71,costing formula (live metal),500.0,2026-04-16,357,360.5
-AL-222-00031,"AL Round Conductor, Aluminium Wire Ø1.00 MM, Super Enameled 0.09mm, Grade-2, Class H, Finished OD = 1.09 mm",AL-222-,KGS,432.71,costing formula (live metal),490.0,2026-04-16,354,360.5
-AL-111-00019,"Aluminium Foil, Electrical Grade:1050, Size: 380 (Width) X 0.6 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,350,360.5
-AL-222-00134,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 30(W) x 5(T) MM",AL-222-,KGS,407.71,costing formula (live metal),,,345,360.5
-AL-222-00224,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 60(W) x 8(T) MM",AL-222-,KGS,407.71,costing formula (live metal),,,345,360.5
-AL-222-00072,"Aluminium Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size: 7 x 2 Enamelled 0.11 MM (Finished OD=7.1 x 2.1)",AL-222-,KGS,425.03,costing formula (live metal),,,345,360.5
-AL-222-00030,"AL Round Conductor, Aluminium Wire Ø3.20 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),470.0,2026-02-03,344,360.5
-AL-222-00023,"AL Round Conductor, Aluminium Wire Ø2.90 MM, Super Enameled 0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,343,360.5
-AL-222-00018,"AL Round Conductor, Aluminium Wire Ø1.8 MM, Super Enameled  0.11mm",AL-222-,KGS,432.71,costing formula (live metal),390.0,2025-09-29,341,360.5
-AL-222-00026,"AL Rectangular Conductor, Aluminium Strip 8.0 X 3.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,340,360.5
-AL-111-00015,"Aluminium Foil, Electrical Grade:1050, Size: 200 (Width) X 2 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),479.3,2026-06-02,339,360.5
-AL-222-00110,"AL Round Conductor, Aluminium Wire Ø2.94 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,335,360.5
-AL-222-00187,"AL Conductor, Aluminium Strip 6 x 3 mm,Super Enameled  0.08mm , Aluminium Strip, As per IS:13730-Part-27, Class-H, Finished OD: 6.08 X 3.08 mm",AL-222-,KGS,432.71,costing formula (live metal),,,330,360.5
-AL-222-00035,"AL Rectangular Conductor, Aluminium Strip 10.0 X 3.5 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,330,360.5
-AL-222-00106,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8×3, Super Enamelled 0.12 mm (Finished OD= 8.12×3.12)",AL-222-,KGS,412.36,recent PO (age-weighted),417.0,2025-11-13,330,360.5
-AL-222-00021,"AL Round Conductor, Aluminium Wire Ø2.30 MM, Super Enameled  0.11mm",AL-222-,KGS,432.71,costing formula (live metal),402.0,2025-11-20,330,360.5
-AL-222-00043,"AL Rectangular Conductor, Aluminium Strip 5.0 X 3.5 MM, Super Enameled 0.11MM, Class H",AL-222-,KGS,432.71,costing formula (live metal),410.0,2025-09-29,325,360.5
-AL-222-00102,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5×3, Super Enamelled 0.11 mm (Finished OD= 10.61×3.11)",AL-222-,KGS,432.71,costing formula (live metal),,,325,360.5
-AL-222-00109,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 12.6×2.8, Super Enamelled 0.12 mm (Finished OD= 12.72×2.92)",AL-222-,KGS,432.71,costing formula (live metal),,,325,360.5
-AL-222-00039,"AL Round Conductor, Aluminium Wire Ø2.00 MM, Super Enameled 0.11mm, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,325,360.5
-AL-222-00108,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.5×3, Super Enamelled 0.12 mm (Finished OD= 8.62×3.12)",AL-222-,KGS,432.71,costing formula (live metal),,,324,360.5
-AL-222-00150,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5.1 × 2.5, Super Enamelled 0.11 mm (Finished OD= 5.21 × 2.61)",AL-222-,KGS,432.71,costing formula (live metal),,,323,360.5
-AL-222-00147,"AL Round Conductor, Aluminium Wire Ø2.8 MM, Super Enameled 0.11mm, Grade-2, Class H, Finished OD = 2.91 mm",AL-222-,KGS,432.71,costing formula (live metal),,,323,360.5
-AL-222-00148,"AL Round Conductor, Aluminium Wire Ø3.1 MM, Super Enameled 0.11mm, Grade-2, Class H, Finished OD = 3.21 mm",AL-222-,KGS,432.71,costing formula (live metal),,,323,360.5
-AL-222-00057,"Aluminium Strip, As per IS:6162-Part-2, Class-A, Size:  6.6 x 1.6, PC 0.35 MM Kraft Paper Covering(Finished OD=6.95 x 1.95",AL-222-,KGS,425.03,costing formula (live metal),,,322,360.5
-AL-222-00107,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5×3, Super Enamelled 0.12 mm (Finished OD= 9.62×3.12)",AL-222-,KGS,432.71,costing formula (live metal),,,321,360.5
-AL-222-00135,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.5 × 4.5, FG Covering 0.3 mm (Finished OD= 8.8 × 4.8)",AL-222-,KGS,432.71,costing formula (live metal),,,320,360.5
-AL-222-00059,"AL Round Conductor, Aluminium Wire Ø2.5 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),528.0,2026-06-18,320,360.5
-AL-222-00218,"AL Round Conductor, Aluminium Wire Ø3.0 MM, Super Enameled 0.11mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=3.11 MM)",AL-222-,KGS,432.71,costing formula (live metal),395.0,2025-10-30,320,360.5
-AL-222-00165,Aluminium Conductor – 11 x 4.8 with 0.3mm FG covering,AL-222-,KGS,432.71,costing formula (live metal),,,320,360.5
-AL-222-00053,"AL Rectangular Conductor, Aluminium Strip 10.0 X 3.0 MM, Super Enameled 0.11MM",AL-222-,KGS,432.71,costing formula (live metal),,,318,360.5
-AL-111-00004,"Aluminium Foil, Electrical Grade:1050, Size: 340 (Width) X 1.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,436.08,recent PO (age-weighted),479.3,2026-06-02,316,360.5
-AL-222-00124,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5 × 2, Super Enamelled 0.12 mm (Finished OD= 5.12×2.12)",AL-222-,KGS,432.71,costing formula (live metal),,,315,360.5
-AL-222-00075,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-H, Size: 12.6 x2.8, Super Enamelled 0.12 mm",AL-222-,KGS,432.71,costing formula (live metal),,,315,360.5
-AL-222-00179,"Aluminium Busbar , Electrical Grade: A6101-T6, Size: 50(W) X 6(T) mm",AL-222-,KGS,407.71,costing formula (live metal),435.8,2026-06-24,315,360.5
-AL-222-00132,"AL Rectangular Conductor, Aluminium Strip 8 X 2.5 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00136,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5×3.5, Super Enamelled 0.11 mm (Finished OD= 10.61×3.61)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00145,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11 × 4.5, Super Enamelled 0.11 mm (Finished OD= 11.11 × 4.61)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00153,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11.2×3, Super Enamelled 0.12 mm (Finished OD= 11.32×3.62)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00156,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11×4, Super Enamelled 0.12 mm (Finished OD= 11.12×4.12)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00155,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 14×3.5, Super Enamelled 0.12 mm (Finished OD= 14.12×3.62)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00149,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 6.5 × 3.5, Super Enamelled 0.11 mm (Finished OD= 6.61 × 3.61)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00152,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.3×2.5, Super Enamelled 0.11 mm (Finished OD= 8.41×2.61)",AL-222-,KGS,417.0,recent PO (age-weighted),417.0,2025-11-20,313,360.5
-AL-222-00101,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9×2.5, Super Enamelled 0.11 mm (Finished OD= 9.11×2.61)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00154,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9×4, Super Enamelled 0.12 mm (Finished OD= 9.12×4.12)",AL-222-,KGS,432.71,costing formula (live metal),,,313,360.5
-AL-222-00074,"AL Round Conductor, Aluminium Wire Ø2.2 MM, Super Enameled 0.1mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=2.3 MM)",AL-222-,KGS,432.71,costing formula (live metal),402.0,2025-11-20,310,360.5
-AL-222-00190,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 40(W) x 12(T),AL-222-,KGS,407.71,costing formula (live metal),327.0,2025-09-15,299,360.5
-AL-222-00188,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 40(W) x 8(T),AL-222-,KGS,407.71,costing formula (live metal),327.0,2025-09-16,295,360.5
-AL-222-00004,"AL Conductor, Aluminium Strip 10.5 x 3.25mm,Super Enameled  0.12mm , Aluminium Strip, As per IS:13730-Part-27, Class-H",AL-222-,KGS,432.71,costing formula (live metal),,,290,360.5
-AL-222-00003,"AL Conductor, Aluminium Strip 11.4 x 3.55mm,Super Enameled  0.12mm",AL-222-,KGS,432.71,costing formula (live metal),,,290,360.5
-AL-222-00015,"Aluminium Wire Multi Paper Covering (MPC), As per IS:6162-Part-1, Class-A, Size: Dia - 3 MM, PC 2 MM Paper Covering",AL-222-,KGS,425.03,costing formula (live metal),,,290,360.5
-AL-222-00013,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 30(W) x 6(T)mm",AL-222-,KGS,407.71,costing formula (live metal),,,279,360.5
-AL-111-00013,"Aluminium Foil, Electrical Grade:1050, Size: 100 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,275,360.5
-AL-111-00017,"Aluminium Foil, Electrical Grade:1050, Size: 200 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,275,360.5
-AL-111-00012,"Aluminium Foil, Electrical Grade:1050, Size: 250 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,275,360.5
-AL-111-00011,"Aluminium Foil, Electrical Grade:1050, Size: 300 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,275,360.5
-AL-222-00002,"AL Conductor, Aluminium 12 x 4.60mm, PC 0.40mm",AL-222-,KGS,432.71,costing formula (live metal),,,195,360.5
-AL-222-00001,"AL Conductor, Aluminium 5.50 X 2.00mm, PC 0.40mm",AL-222-,KGS,432.71,costing formula (live metal),,,192,360.5
+WB-606-00022,"Aluminium Brazing Rod, Size:2 mm",WB-606-,KGS,433.3,costing formula (live metal),,,7000,368.9
+WB-606-00010,"AL TIG Welding Rod, Ø2.4mm",WB-606-,KGS,433.3,costing formula (live metal),900.0,2025-07-31,900,368.9
+WB-606-00004,"Aluminium Brazing Rod, Size:5mm",WB-606-,KGS,433.3,costing formula (live metal),,,440,368.9
+AL-222-00164,Al Strip 11 x 1.8 (Bare) with 0.5mm covering - 0.12SE +2 Layers of polyester of 20u with 50% overlap+ varnish bonded fibre glass filament ( Fine covering) acc to IS 11597-1986,AL-222-,KGS,433.3,costing formula (live metal),,,416,368.9
+AL-222-00207,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11 × 5, Super Enamelled 0.11 mm (Finished OD= 11.11×5.11)",AL-222-,KGS,443.93,costing formula (live metal),,,415,368.9
+AL-222-00220,"AL Round Conductor, Aluminium Wire Ø4.2 MM, Super Enameled 0.11mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=4.31 MM)",AL-222-,KGS,443.93,costing formula (live metal),,,415,368.9
+PKG-000-00035,Aluminium Foil Cover Bag,PKG-000-,KGS,433.3,costing formula (live metal),,,410,368.9
+AL-222-00208,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5.5 × 3.5, Super Enamelled 0.11 mm (Finished OD= 5.61×3.61)",AL-222-,KGS,443.93,costing formula (live metal),,,405,368.9
+AL-222-00217,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 6×3, Super Enamelled 0.12 mm (Finished OD=6.12×3.12)",AL-222-,KGS,443.93,costing formula (live metal),407.2,2025-10-30,405,368.9
+AL-222-00205,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7.5×3.5, Super Enamelled 0.11 mm (Finished OD=7.61×3.61)",AL-222-,KGS,443.93,costing formula (live metal),,,405,368.9
+AL-111-00002,"Aluminium Foil, Electrical Grade:1050, Size: 250 (Width) X 1 MM (Thick)",AL-111-,KGS,433.3,costing formula (live metal),335.0,2025-10-03,400,368.9
+AL-222-00033,"AL Round Conductor, Aluminium Wire Ø0.70 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,393,368.9
+AL-222-00055,"AL Rectangular Conductor, Aluminium Strip 8.0 X 4.0 MM, Super Enameled 0.08MM, Finished OD = 8.08 x 4.08 mm, Grade 2, Class H.",AL-222-,KGS,443.93,costing formula (live metal),,,390,368.9
+AL-222-00046,"AL Round Conductor, Aluminium Wire Ø 0.35 MM, Enameled 0.06mm, Grade-2, Class H, Finished OD = 0.41 mm",AL-222-,KGS,443.93,costing formula (live metal),470.0,2026-02-24,389,368.9
+AL-222-00034,"AL Round Conductor, Aluminium Wire Ø0.80 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,389,368.9
+AL-222-00038,"AL Round Conductor, Aluminium Wire Ø1.40 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),397.0,2025-11-20,388,368.9
+AL-222-00219,"AL Round Conductor, Aluminium Wire Ø3.251 MM, Super Enameled 0.11mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=3.361 MM)",AL-222-,KGS,443.93,costing formula (live metal),,,385,368.9
+AL-222-00058,"Aluminium Wire Multi Paper Covering (MPC), As per IS:6162-Part-1, Class-A, Size: Dia - 3.8 MM, PC 1 MM Paper Covering(Finished OD=5.8 MM)",AL-222-,KGS,433.3,costing formula (live metal),,,372,368.9
+AL-111-00033,"Aluminium Busbar 10 X 40 X 3660,6101 T6",AL-111-,KGS,416.28,costing formula (live metal),,,371,368.9
+AL-111-00032,"Aluminium Busbar 10 X 80 X 3660,6101 T6",AL-111-,KGS,416.28,costing formula (live metal),,,371,368.9
+AL-111-00031,"Aluminium Busbar 12 X 63 X 3660,6101 T6",AL-111-,KGS,416.28,costing formula (live metal),,,371,368.9
+AL-222-00040,"AL Rectangular Conductor, Aluminium Strip 6.0 X 3.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,370,368.9
+AL-222-00126,"AL Rectangular Conductor, Aluminium Strip 8 X 3.5 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,370,368.9
+AL-222-00050,"AL Round Conductor, Aluminium Wire Ø3.25 MM, Super Enameled 0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,370,368.9
+AL-222-00060,"Aluminium Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-H Size:  7 x 3 Enamelled 0.11 MM (Finished OD=7.11 x 3.11)",AL-222-,KGS,433.3,costing formula (live metal),532.0,2026-06-18,370,368.9
+AL-222-00051,"AL Round Conductor, Aluminium Wire Ø2.33 MM, Super Enameled 0.11mm",AL-222-,KGS,452.78,recent PO (age-weighted),450.0,2026-01-17,369,368.9
+AL-222-00036,"AL Rectangular Conductor, Aluminium Strip 9.0 X 3.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,367,368.9
+AL-222-00041,"AL Round Conductor, Aluminium Wire Ø0.90 MM, Super Enameled 0.09mm, Finished OD = 1 mm",AL-222-,KGS,449.45,recent PO (age-weighted),440.0,2026-02-24,366,368.9
+AL-222-00196,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 12.8 × 3, FG Covering 0.3 mm (Finished OD= 13.1 × 3.3)",AL-222-,KGS,443.93,costing formula (live metal),,,364,368.9
+AL-222-00044,"AL Rectangular Conductor, Aluminium Strip 4.5 X 2.5 MM, Super Enameled 0.11MM, Class H",AL-222-,KGS,443.93,costing formula (live metal),422.0,2025-11-20,360,368.9
+AL-222-00052,"AL Round Conductor, Aluminium Wire Ø1.2 MM, Super Enameled  0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,360,368.9
+AL-222-00054,"AL Round Conductor, Aluminium Wire Ø3.6 MM, Super Enameled 0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,360,368.9
+AL-222-00029,"AL Round Conductor, Aluminium Wire Ø2.6 MM, Super Enameled 0.12mm, Grade-2, Class H, Finished OD = 2.72mm",AL-222-,KGS,443.93,costing formula (live metal),500.0,2026-04-16,357,368.9
+AL-222-00031,"AL Round Conductor, Aluminium Wire Ø1.00 MM, Super Enameled 0.09mm, Grade-2, Class H, Finished OD = 1.09 mm",AL-222-,KGS,443.93,costing formula (live metal),490.0,2026-04-16,354,368.9
+AL-111-00019,"Aluminium Foil, Electrical Grade:1050, Size: 380 (Width) X 0.6 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,350,368.9
+AL-222-00134,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 30(W) x 5(T) MM",AL-222-,KGS,416.28,costing formula (live metal),,,345,368.9
+AL-222-00224,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 60(W) x 8(T) MM",AL-222-,KGS,416.28,costing formula (live metal),,,345,368.9
+AL-222-00072,"Aluminium Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size: 7 x 2 Enamelled 0.11 MM (Finished OD=7.1 x 2.1)",AL-222-,KGS,433.3,costing formula (live metal),,,345,368.9
+AL-222-00030,"AL Round Conductor, Aluminium Wire Ø3.20 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,463.33,recent PO (age-weighted),470.0,2026-02-03,344,368.9
+AL-222-00023,"AL Round Conductor, Aluminium Wire Ø2.90 MM, Super Enameled 0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,343,368.9
+AL-222-00018,"AL Round Conductor, Aluminium Wire Ø1.8 MM, Super Enameled  0.11mm",AL-222-,KGS,443.93,costing formula (live metal),390.0,2025-09-29,341,368.9
+AL-222-00026,"AL Rectangular Conductor, Aluminium Strip 8.0 X 3.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,340,368.9
+AL-111-00015,"Aluminium Foil, Electrical Grade:1050, Size: 200 (Width) X 2 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),479.3,2026-06-02,339,368.9
+AL-222-00110,"AL Round Conductor, Aluminium Wire Ø2.94 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,335,368.9
+AL-222-00187,"AL Conductor, Aluminium Strip 6 x 3 mm,Super Enameled  0.08mm , Aluminium Strip, As per IS:13730-Part-27, Class-H, Finished OD: 6.08 X 3.08 mm",AL-222-,KGS,443.93,costing formula (live metal),,,330,368.9
+AL-222-00035,"AL Rectangular Conductor, Aluminium Strip 10.0 X 3.5 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,330,368.9
+AL-222-00106,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8×3, Super Enamelled 0.12 mm (Finished OD= 8.12×3.12)",AL-222-,KGS,443.93,costing formula (live metal),417.0,2025-11-13,330,368.9
+AL-222-00021,"AL Round Conductor, Aluminium Wire Ø2.30 MM, Super Enameled  0.11mm",AL-222-,KGS,443.93,costing formula (live metal),402.0,2025-11-20,330,368.9
+AL-222-00043,"AL Rectangular Conductor, Aluminium Strip 5.0 X 3.5 MM, Super Enameled 0.11MM, Class H",AL-222-,KGS,443.93,costing formula (live metal),410.0,2025-09-29,325,368.9
+AL-222-00102,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5×3, Super Enamelled 0.11 mm (Finished OD= 10.61×3.11)",AL-222-,KGS,443.93,costing formula (live metal),,,325,368.9
+AL-222-00109,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 12.6×2.8, Super Enamelled 0.12 mm (Finished OD= 12.72×2.92)",AL-222-,KGS,443.93,costing formula (live metal),,,325,368.9
+AL-222-00039,"AL Round Conductor, Aluminium Wire Ø2.00 MM, Super Enameled 0.11mm, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,325,368.9
+AL-222-00108,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.5×3, Super Enamelled 0.12 mm (Finished OD= 8.62×3.12)",AL-222-,KGS,443.93,costing formula (live metal),,,324,368.9
+AL-222-00150,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5.1 × 2.5, Super Enamelled 0.11 mm (Finished OD= 5.21 × 2.61)",AL-222-,KGS,443.93,costing formula (live metal),,,323,368.9
+AL-222-00147,"AL Round Conductor, Aluminium Wire Ø2.8 MM, Super Enameled 0.11mm, Grade-2, Class H, Finished OD = 2.91 mm",AL-222-,KGS,443.93,costing formula (live metal),,,323,368.9
+AL-222-00148,"AL Round Conductor, Aluminium Wire Ø3.1 MM, Super Enameled 0.11mm, Grade-2, Class H, Finished OD = 3.21 mm",AL-222-,KGS,443.93,costing formula (live metal),,,323,368.9
+AL-222-00057,"Aluminium Strip, As per IS:6162-Part-2, Class-A, Size:  6.6 x 1.6, PC 0.35 MM Kraft Paper Covering(Finished OD=6.95 x 1.95",AL-222-,KGS,433.3,costing formula (live metal),,,322,368.9
+AL-222-00107,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5×3, Super Enamelled 0.12 mm (Finished OD= 9.62×3.12)",AL-222-,KGS,443.93,costing formula (live metal),,,321,368.9
+AL-222-00135,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.5 × 4.5, FG Covering 0.3 mm (Finished OD= 8.8 × 4.8)",AL-222-,KGS,443.93,costing formula (live metal),,,320,368.9
+AL-222-00059,"AL Round Conductor, Aluminium Wire Ø2.5 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),528.0,2026-06-18,320,368.9
+AL-222-00218,"AL Round Conductor, Aluminium Wire Ø3.0 MM, Super Enameled 0.11mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=3.11 MM)",AL-222-,KGS,443.93,costing formula (live metal),395.0,2025-10-30,320,368.9
+AL-222-00165,Aluminium Conductor – 11 x 4.8 with 0.3mm FG covering,AL-222-,KGS,443.93,costing formula (live metal),,,320,368.9
+AL-222-00053,"AL Rectangular Conductor, Aluminium Strip 10.0 X 3.0 MM, Super Enameled 0.11MM",AL-222-,KGS,443.93,costing formula (live metal),,,318,368.9
+AL-111-00004,"Aluminium Foil, Electrical Grade:1050, Size: 340 (Width) X 1.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,436.08,recent PO (age-weighted),479.3,2026-06-02,316,368.9
+AL-222-00124,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5 × 2, Super Enamelled 0.12 mm (Finished OD= 5.12×2.12)",AL-222-,KGS,443.93,costing formula (live metal),,,315,368.9
+AL-222-00075,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-H, Size: 12.6 x2.8, Super Enamelled 0.12 mm",AL-222-,KGS,443.93,costing formula (live metal),,,315,368.9
+AL-222-00179,"Aluminium Busbar , Electrical Grade: A6101-T6, Size: 50(W) X 6(T) mm",AL-222-,KGS,438.16,recent PO (age-weighted),435.8,2026-06-24,315,368.9
+AL-222-00132,"AL Rectangular Conductor, Aluminium Strip 8 X 2.5 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00136,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5×3.5, Super Enamelled 0.11 mm (Finished OD= 10.61×3.61)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00145,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11 × 4.5, Super Enamelled 0.11 mm (Finished OD= 11.11 × 4.61)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00153,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11.2×3, Super Enamelled 0.12 mm (Finished OD= 11.32×3.62)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00156,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11×4, Super Enamelled 0.12 mm (Finished OD= 11.12×4.12)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00155,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 14×3.5, Super Enamelled 0.12 mm (Finished OD= 14.12×3.62)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00149,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 6.5 × 3.5, Super Enamelled 0.11 mm (Finished OD= 6.61 × 3.61)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00152,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.3×2.5, Super Enamelled 0.11 mm (Finished OD= 8.41×2.61)",AL-222-,KGS,443.93,costing formula (live metal),417.0,2025-11-20,313,368.9
+AL-222-00101,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9×2.5, Super Enamelled 0.11 mm (Finished OD= 9.11×2.61)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00154,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9×4, Super Enamelled 0.12 mm (Finished OD= 9.12×4.12)",AL-222-,KGS,443.93,costing formula (live metal),,,313,368.9
+AL-222-00074,"AL Round Conductor, Aluminium Wire Ø2.2 MM, Super Enameled 0.1mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=2.3 MM)",AL-222-,KGS,443.93,costing formula (live metal),402.0,2025-11-20,310,368.9
+AL-222-00190,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 40(W) x 12(T),AL-222-,KGS,416.28,costing formula (live metal),327.0,2025-09-15,299,368.9
+AL-222-00188,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 40(W) x 8(T),AL-222-,KGS,416.28,costing formula (live metal),327.0,2025-09-16,295,368.9
+AL-222-00004,"AL Conductor, Aluminium Strip 10.5 x 3.25mm,Super Enameled  0.12mm , Aluminium Strip, As per IS:13730-Part-27, Class-H",AL-222-,KGS,443.93,costing formula (live metal),,,290,368.9
+AL-222-00003,"AL Conductor, Aluminium Strip 11.4 x 3.55mm,Super Enameled  0.12mm",AL-222-,KGS,443.93,costing formula (live metal),,,290,368.9
+AL-222-00015,"Aluminium Wire Multi Paper Covering (MPC), As per IS:6162-Part-1, Class-A, Size: Dia - 3 MM, PC 2 MM Paper Covering",AL-222-,KGS,433.3,costing formula (live metal),,,290,368.9
+AL-222-00013,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 30(W) x 6(T)mm",AL-222-,KGS,416.28,costing formula (live metal),,,279,368.9
+AL-111-00013,"Aluminium Foil, Electrical Grade:1050, Size: 100 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,275,368.9
+AL-111-00017,"Aluminium Foil, Electrical Grade:1050, Size: 200 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,275,368.9
+AL-111-00012,"Aluminium Foil, Electrical Grade:1050, Size: 250 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,275,368.9
+AL-111-00011,"Aluminium Foil, Electrical Grade:1050, Size: 300 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,275,368.9
+AL-222-00002,"AL Conductor, Aluminium 12 x 4.60mm, PC 0.40mm",AL-222-,KGS,443.93,costing formula (live metal),,,195,368.9
+AL-222-00001,"AL Conductor, Aluminium 5.50 X 2.00mm, PC 0.40mm",AL-222-,KGS,443.93,costing formula (live metal),,,192,368.9
 CMP-444-00138,"FG Sheet, Grade: GPO3, 10 MM (Thickness)",CMP-444-,KGS,293.03,recent PO (age-weighted),290.0,2026-07-24,350,175.0
 CC-555-00018,"Limb Core Lamination Strips, Size : 44(L) x 130(W) mm, Grade : CRGO M3-0.23(T) mm, Core Loss : 0.68W/kg @ 1.5T 50Hz, As per drawing no : 5004-B02-02",CC-555-,KGS,265.0,recent PO (age-weighted),265.0,2026-03-02,290,175.0
 CC-555-00017,"Yoke Core Lamination Strips, Size : 380(L) x 130(W) mm, Grade : CRGO M3-0.23(T) mm, Core Loss : 0.68W/kg @ 1.5T 50Hz, As per drawing no : 5004-B01-02",CC-555-,KGS,265.0,recent PO (age-weighted),265.0,2026-03-02,290,175.0
@@ -140,113 +140,113 @@ CC-555-00372,"Core Lamination Strips - 1, Size : 130(L) 40(W) , CRNO Grade: M360
 CC-555-00373,"Core Lamination Strips - 2, Size : 175(L) 40(W) , CRNO Grade: M360, 0.5 (T) MM, Max Core Loss 3.6 W/Kg@1.5 T, 50Hz, As Per Drawing No : 4023-06-B02-01",CC-555-,KGS,175.0,metal benchmark (indicative),,,120,175.0
 CC-555-00374,"Core Lamination Strips - 3, Size : 220(L) 40(W) , CRNO Grade: M360, 0.5 (T) MM, Max Core Loss 3.6 W/Kg@1.5 T, 50Hz, As Per Drawing No : 4023-06-B03-01",CC-555-,KGS,175.0,metal benchmark (indicative),,,120,175.0
 CC-555-00251,"Core E Lamination Type-43, 1Ph CRNGO Grade: 50H230/H6, Losses <2.3W/Kg @1.5 T, 50Hz, As per drawing No: 5011-07-B01-01 & 5011-06-B01-01",CC-555-,KGS,175.0,metal benchmark (indicative),,,119,175.0
-WB-606-00003,Cu Brazing Rod Ø1.6mm with 2% Silver Content,WB-606-,KGS,1426.02,costing formula (live metal),3200.0,29/04/2025,3200,1319.63
-INS-666-00219,"NPN, 5mil  Class F, 0.13 (T) X 155 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,1950,1319.63
-INS-666-00220,"NPN, 5mil  Class F, 0.13 (T) X 185 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,1950,1319.63
-INS-666-00166,"NPN, 5mil  Class F, 0.13 (T) X 355 (W) mm",INS-666-,KGS,1482.03,recent PO (age-weighted),1600.0,31/03/2025,1875,1319.63
-INS-666-00104,"NPN, 5 Mil  Class F, 0.13 (T) X 44 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),1650.0,2026-07-09,1711,1319.63
-INS-666-00171,"NPN, 5mil  Class F, 0.13 (T) X 95 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,1702,1319.63
-CU-222-00151,"Copper Litz Wire, 10.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1544.63,costing formula (live metal),,,1650,1319.63
-CU-222-00147,"Copper Litz Wire, 2.50 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1544.63,costing formula (live metal),,,1650,1319.63
-CU-222-00148,"Copper Litz Wire, 4.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1544.63,costing formula (live metal),,,1650,1319.63
-CU-222-00150,"Copper Litz Wire, 8.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1544.63,costing formula (live metal),,,1650,1319.63
-INS-666-00167,"NPN, 5mil  Class F, 0.13 (T) X 215 (W) mm",INS-666-,KGS,1449.18,recent PO (age-weighted),1600.0,31/03/2025,1617,1319.63
-WB-606-00020,Cu Brazing Rod Ø1.5mm with 0% Silver Content,WB-606-,KGS,1426.02,costing formula (live metal),,,1290,1319.63
-CU-222-00384,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size:  5 x 3 Enamelled 0.11 MM (Finished OD=5.11 x 3.11)",CU-222-,KGS,1508.63,costing formula (live metal),,,1045,1319.63
-CU-111-00008,"Copper Foil, Size: 72 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,1025,1319.63
-CU-222-00261,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.2 Enamelled 0.12 (Finished OD=2.32mm)",CU-222-,KGS,1544.63,costing formula (live metal),1025.0,2025-08-04,1025,1319.63
-CU-222-00039,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø3.20 MM, SE-PIA 0.10 MM",CU-222-,KGS,1544.63,costing formula (live metal),1011.0,31/07/2025,992,1319.63
-CU-222-00388,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 15.7 x 2.5 Enamelled 0.12 mm (Finished OD = 15.82 x 2.62) mm",CU-222-,KGS,1508.63,costing formula (live metal),1025.0,2025-09-03,990,1319.63
-CU-222-00325,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 10.5 x 3.25 Enamelled 0.12 MM (Finished OD= 10.62 x 3.37)",CU-222-,KGS,1508.63,costing formula (live metal),,,980,1319.63
-CU-222-00326,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 11.5 x 3 Enamelled 0.12 MM (Finished OD= 11.62 x 3.12)",CU-222-,KGS,1508.63,costing formula (live metal),,,980,1319.63
-CU-222-00324,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 14.5 x 3.55 Enamelled 0.12 MM (Finished OD= 14.62 x 3.67)",CU-222-,KGS,1508.63,costing formula (live metal),,,980,1319.63
-CU-222-00322,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9.6 x 3.2 Enamelled 0.12 MM (Finished OD= 9.72 x 3.32)",CU-222-,KGS,1508.63,costing formula (live metal),,,980,1319.63
-CU-222-00305,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9.8 x 3 Enamelled 0.12 MM (Finished OD= 9.92 x 3.12)",CU-222-,KGS,1508.63,costing formula (live metal),,,980,1319.63
-CU-222-00164,"Dual Coated  Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2.18 MM, SE-PIA 0.11 MM , Finished OD:2.29 MM, 13.5 SWG , UL Approved , Grade:MW35",CU-222-,KGS,1544.63,costing formula (live metal),1355.0,2026-03-06,978,1319.63
-CU-111-00009,"Copper Foil, Size: 350 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,975,1319.63
-CU-111-00030,"Copper Foil, Size: 280mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,970,1319.63
-CU-222-00301,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.422 Enamelled 0.12 (Finished OD=1.542mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,963,1319.63
-CU-222-00122,"Copper Wire Ø1.5 MM, Polyester-amide-imide (Polyamide-imide) 0.1MM, Finished OD= 1.6,ANSI Type: MW 35, 200°C",CU-222-,KGS,1544.63,costing formula (live metal),1302.0,2026-04-06,962,1319.63
-CU-222-00124,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 12 X 4 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,960,1319.63
-CU-222-00125,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 9.5 X 4 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,960,1319.63
-CU-222-00065,"CU Round Conductor, Copper Wire Ø1.80 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1426.02,costing formula (live metal),,,955,1319.63
-CU-222-00126,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2.7 MM, SE-PIA 0.1 MM ,Finished OD:2.8mm",CU-222-,KGS,1544.63,costing formula (live metal),,,951,1319.63
-CU-222-00329,"Copper Busbar, ISO-ETP/BS-C101, Size: 80 (W) X 6 (T) mm",CU-222-,KGS,1401.02,costing formula (live metal),,,950,1319.63
-CU-222-00131,"Copper Wire Ø0.4 MM, Super Enameled 0.1mm(Finished OD=0.5MM)",CU-222-,KGS,1544.63,costing formula (live metal),,,950,1319.63
-CU-222-00117,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 30 (W) X 3 (T) MM",CU-222-,KGS,1401.02,costing formula (live metal),945.0,26/06/2025,940,1319.63
-CU-222-00116,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 30 (W) X 6 (T) MM ",CU-222-,KGS,1401.02,costing formula (live metal),,,940,1319.63
-CU-222-00118,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 50 (W) X 10 (T) MM ",CU-222-,KGS,1401.02,costing formula (live metal),,,940,1319.63
-CU-222-00198,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2 MM, SE-PIA 0.1 MM,Fineshed OD:2.1mm",CU-222-,KGS,1544.63,costing formula (live metal),1335.0,2026-03-13,938,1319.63
-CU-222-00351,"Copper Busbar, ISO-ETP/BS-C101, Size: 20 (W) X 3 (T) mm",CU-222-,KGS,1401.02,costing formula (live metal),945.0,26/06/2025,932,1319.63
-CU-222-00158,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 11.4 X 2  FG 0.3 MM (Finished OD=11.7 x 2.3 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,926,1319.63
-CU-222-00159,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 7.7 X 2.24 FG 0.3 MM (Finished OD=8 x 2.54 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,926,1319.63
-CU-222-00157,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 9.5 X 2.12 FG 0.3 MM (Finished OD=9.8 x 2.42 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,926,1319.63
-CU-111-00005,"Copper Foil, Size: 130 MM (Width) X 0.5 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,925,1319.63
-CU-111-00006,"Copper Foil, Size: 90 MM (Width) X 0.5 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,925,1319.63
-CU-222-00064,"CU Round Conductor, Copper Wire Ø2.50 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1426.02,costing formula (live metal),,,921,1319.63
-CU-222-00136,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size: 16X2 FG 0.3 MM (Finished OD=16.3 x 2.3 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,921,1319.63
-CU-111-00010,"Copper Foil, Size: 180 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,920,1319.63
-CU-111-00039,"Copper Foil, Size: 300 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,920,1319.63
-CU-222-00141,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size: 8.2X3 FG 0.3 MM (Finished OD=8.5 x 3.3 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,918,1319.63
-CU-222-00092,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 50 (W) X 5 (T) MM",CU-222-,KGS,1401.02,costing formula (live metal),,,915,1319.63
-CU-222-00154,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 15 (W) X 3 (T) MM",CU-222-,KGS,1401.02,costing formula (live metal),,,910,1319.63
-CU-222-00181,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size:8 x 2 Enamelled 0.11 MM (Finished OD=8.11 x 2.11)",CU-222-,KGS,1508.63,costing formula (live metal),,,910,1319.63
-CU-111-00040,"Copper Foil, Size: 350 MM (Width) X 0.45 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,902,1319.63
-CU-222-00199,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.2 Enamelled 0.10 (Finished OD=1.3mm)",CU-222-,KGS,1544.63,costing formula (live metal),1335.0,2026-04-08,901,1319.63
-CU-222-00186,"CU Round Conductor, Copper Wire Ø2.6 MM, (SE) Super Enameled 0.1MM, Finished OD:2.7mm",CU-222-,KGS,1426.02,costing formula (live metal),,,897,1319.63
-CU-222-00071,"CU Rectangular Conductor, Copper Strip 6.0 X 2.4 MM, Super Enameled 0.11MM",CU-222-,KGS,1426.02,costing formula (live metal),1216.61,2026-01-05,890,1319.63
-CU-222-00166,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø0.914 MM, SE-PIA 0.09 MM , Finished OD:1.004 MM, 20 SWG",CU-222-,KGS,1544.63,costing formula (live metal),1336.0,2026-03-13,885,1319.63
-CU-222-00163,"Dual Coated  Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø1.524 MM, SE-PIA 0.11 MM , Finished OD:1.634 mm, 16.5 SWG , UL Approved , Grade:MW35",CU-222-,KGS,1544.63,costing formula (live metal),1203.15,2026-05-07,883,1319.63
-CU-222-00211,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size : 8 x 2.5 Enamelled 0.11 MM (Finished OD=8.11 x 2.61)",CU-222-,KGS,1508.63,costing formula (live metal),,,875,1319.63
-CU-222-00182,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.6 Enamelled 0.11 (Finished OD=1.71mm)",CU-222-,KGS,1544.63,costing formula (live metal),1335.0,2026-03-13,855,1319.63
-CU-222-00217,"CU Round Conductor, Copper Wire Ø2.946 MM, Super Enameled 0.11mm",CU-222-,KGS,1426.02,costing formula (live metal),1226.61,2026-01-05,850,1319.63
-CU-111-00031,"Copper Foil, Size: 140mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),989.0,2025-10-31,850,1319.63
-CU-111-00032,"Copper Foil, Size: 140mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),989.0,2025-10-31,850,1319.63
-CU-111-00029,"Copper Foil, Size: 280mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,850,1319.63
-CU-222-00197,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.26 Enamelled 0.05 (Finished OD=0.31mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,850,1319.63
-CU-222-00132,"Copper Wire Ø1.3MM, Super Enameled 0.1mm (Finished OD=1.4MM)",CU-222-,KGS,1544.63,costing formula (live metal),1450.0,2026-03-05,841,1319.63
-CU-222-00086,"Copper Busbar, ISO-ETP/BS-C101, 100 (W) X 10 (Thick) mm",CU-222-,KGS,1401.02,costing formula (live metal),,,840,1319.63
-CU-222-00063,"CU Rectangular Conductor, Copper Strip 10.0 X 3.25 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1426.02,costing formula (live metal),,,838,1319.63
-CU-222-00178,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 6.7 X 2.12 FG 0.3 MM (Finished OD=7.0 x 2.42 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,835,1319.63
-CU-222-00175,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 8 X 2.5 FG 0.3 MM (Finished OD=8.3 x 2.8 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,835,1319.63
-CU-222-00040,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 6.00 X 2.40 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,835,1319.63
-CU-111-00002,"Copper Foil, Size: 290 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),1394.07,2025-12-31,834,1319.63
-CU-222-00293,Copper Bus Bar 40mm x 6mm,CU-222-,KGS,1401.02,costing formula (live metal),963.0,2025-09-18,830,1319.63
-CU-222-00244,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 11.5 x 2.70 Enamelled 0.11 MM (Finished OD= 11.61 x 2.81)",CU-222-,KGS,1508.63,costing formula (live metal),,,830,1319.63
-CU-222-00195,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.48 Enamelled 0.05 (Finished OD=0.53mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,830,1319.63
-CU-222-00260,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.65 Enamelled 0.12 (Finished OD=2.77mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,830,1319.63
-CU-222-00259,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.90 Enamelled 0.12 (Finished OD=3.02mm)",CU-222-,KGS,1544.63,costing formula (live metal),995.0,2025-09-04,830,1319.63
-CU-222-00291,Copper Bus Bar 30mm x 3mm,CU-222-,KGS,1401.02,costing formula (live metal),,,823,1319.63
-CU-222-00196,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.66 Enamelled 0.05 (Finished OD=0.71mm)",CU-222-,KGS,1544.63,costing formula (live metal),1459.21,2026-02-02,820,1319.63
-CU-222-00290,Copper Bus Bar 25mm x 5mm,CU-222-,KGS,1401.02,costing formula (live metal),,,815,1319.63
-CU-222-00210,"Super Enameled Copper Strip, as per IS:13730-Part29- Class-200 (H), Size: 10×2.8 MM, SE-PIA 0.11mm Enameled",CU-222-,KGS,1508.63,costing formula (live metal),,,810,1319.63
-CU-222-00172,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-H Size:  10 x 4 Enamelled 0.1 MM (Finished OD=10.1 x 4.1)",CU-222-,KGS,1508.63,costing formula (live metal),,,800,1319.63
-CU-222-00165,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø0.295 MM, SE-PIA 0.06 MM , Finished OD:0.355 MM, 31 SWG ",CU-222-,KGS,1544.63,costing formula (live metal),,,770,1319.63
-CU-222-00167,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø0.345 MM, SE-PIA 0.06 MM , Finished OD:0.405 MM, 29 SWG",CU-222-,KGS,1544.63,costing formula (live metal),,,770,1319.63
-CU-222-00173,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 6 X 1.40 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,755,1319.63
-CU-222-00012,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-29, Class-200 (H), Size: 10.7X 3.2 FG 0.3 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,725,1319.63
-CU-222-00013,"Copper Wire With Fibreglass Covering, As per IS:13730-Part-13, 1993, Class-200 (H), Size: 3.0 FG 0.2 MM",CU-222-,KGS,1544.63,costing formula (live metal),,,725,1319.63
-CU-222-00015,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 9.00 X 2.00 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,710,1319.63
-CU-222-00014,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø3.50 MM, SE-PIA 0.10 MM",CU-222-,KGS,1544.63,costing formula (live metal),,,710,1319.63
-CU-111-00001,"Copper Foil, Thickness 0.1mm, 16"" Roll Width",CU-111-,KGS,1508.63,costing formula (live metal),1405.0,2026-04-16,640,1319.63
-CU-222-00007,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-29, Size: 8X3 FG 0.3 MM",CU-222-,KGS,1508.63,costing formula (live metal),1000.0,2025-12-16,595,1319.63
-CU-222-00006,"Copper Strip with Fiberglass Covering, As per IS:13730-Part-29, Size: 7.50 X 1.70 FG 0.30 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,595,1319.63
-CU-222-00002,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 10.50 X 4.40 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,591.12,1319.63
-CU-222-00001,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 12.50 X 4.50 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,591.12,1319.63
-CU-222-00003,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 6.40 X 1.50 MM, SE-PIA 0.10 MM",CU-222-,KGS,1508.63,costing formula (live metal),,,588.12,1319.63
-CU-222-00004,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø2.35 MM, SE-PIA 0.10 MM",CU-222-,KGS,1544.63,costing formula (live metal),,,583.12,1319.63
-CU-222-00005,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø3.00 MM, SE-PIA 0.10 MM",CU-222-,KGS,1544.63,costing formula (live metal),,,583.12,1319.63
-CMP-444-00233,"FG Dog Bone Sticks, Class H, Size: 10(H) X 12(W) X 215 (L) MM, Colour : White",CMP-444-,KGS,1426.02,costing formula (live metal),157.0,2026-01-10,157,1319.63
-CMP-444-00450,"FG Corner Section, Class H, Size: 10(H) X 10(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1426.02,costing formula (live metal),172.0,2026-07-27,155,1319.63
-CMP-444-00451,"FG Dog Bone, Class H, Size: 6(H) X 8(W) X 2500 (L) MM, White Colour.",CMP-444-,KGS,1426.02,costing formula (live metal),155.0,2026-01-06,153,1319.63
-CMP-444-00390,"FG Dog Bone Sticks, Class H, Size: 12(H) X 19(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1426.02,costing formula (live metal),172.0,2026-06-22,150,1319.63
-CMP-444-00452,"FG Dog Bone, Class H, Size: 6(H) X 8(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1426.02,costing formula (live metal),,,150,1319.63
-WB-606-00002,"CO2 MIG Copper Welding Wire, Ø1.2mm",WB-606-,KGS,1544.63,costing formula (live metal),145.0,2026-06-29,90,1319.63
-CU-111-00035,"Copper Foil, Size: 125mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,50,1319.63
-CU-111-00036,"Copper Foil, Size: 125mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,50,1319.63
-CMP-444-00288,"FG Corner Section, Class H, Size: 8(H) X 8(W) X 225 (L) MM, Colour : White",CMP-444-,KGS,1426.02,costing formula (live metal),157.0,28/04/2025,11,1319.63
-CU-111-00033,"Copper Foil, Size: 170mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,5,1319.63
-CU-111-00034,"Copper Foil, Size: 170mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,3,1319.63
+WB-606-00003,Cu Brazing Rod Ø1.6mm with 2% Silver Content,WB-606-,KGS,1484.63,costing formula (live metal),3200.0,29/04/2025,3200,1377.08
+INS-666-00219,"NPN, 5mil  Class F, 0.13 (T) X 155 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,1950,1377.08
+INS-666-00220,"NPN, 5mil  Class F, 0.13 (T) X 185 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,1950,1377.08
+INS-666-00166,"NPN, 5mil  Class F, 0.13 (T) X 355 (W) mm",INS-666-,KGS,1482.03,recent PO (age-weighted),1600.0,31/03/2025,1875,1377.08
+INS-666-00104,"NPN, 5 Mil  Class F, 0.13 (T) X 44 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),1650.0,2026-07-09,1711,1377.08
+INS-666-00171,"NPN, 5mil  Class F, 0.13 (T) X 95 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,1702,1377.08
+CU-222-00151,"Copper Litz Wire, 10.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1602.08,costing formula (live metal),,,1650,1377.08
+CU-222-00147,"Copper Litz Wire, 2.50 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1602.08,costing formula (live metal),,,1650,1377.08
+CU-222-00148,"Copper Litz Wire, 4.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1602.08,costing formula (live metal),,,1650,1377.08
+CU-222-00150,"Copper Litz Wire, 8.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1602.08,costing formula (live metal),,,1650,1377.08
+INS-666-00167,"NPN, 5mil  Class F, 0.13 (T) X 215 (W) mm",INS-666-,KGS,1449.18,recent PO (age-weighted),1600.0,31/03/2025,1617,1377.08
+WB-606-00020,Cu Brazing Rod Ø1.5mm with 0% Silver Content,WB-606-,KGS,1484.63,costing formula (live metal),,,1290,1377.08
+CU-222-00384,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size:  5 x 3 Enamelled 0.11 MM (Finished OD=5.11 x 3.11)",CU-222-,KGS,1566.08,costing formula (live metal),,,1045,1377.08
+CU-111-00008,"Copper Foil, Size: 72 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,1025,1377.08
+CU-222-00261,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.2 Enamelled 0.12 (Finished OD=2.32mm)",CU-222-,KGS,1602.08,costing formula (live metal),1025.0,2025-08-04,1025,1377.08
+CU-222-00039,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø3.20 MM, SE-PIA 0.10 MM",CU-222-,KGS,1602.08,costing formula (live metal),1011.0,31/07/2025,992,1377.08
+CU-222-00388,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 15.7 x 2.5 Enamelled 0.12 mm (Finished OD = 15.82 x 2.62) mm",CU-222-,KGS,1566.08,costing formula (live metal),1025.0,2025-09-03,990,1377.08
+CU-222-00325,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 10.5 x 3.25 Enamelled 0.12 MM (Finished OD= 10.62 x 3.37)",CU-222-,KGS,1566.08,costing formula (live metal),,,980,1377.08
+CU-222-00326,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 11.5 x 3 Enamelled 0.12 MM (Finished OD= 11.62 x 3.12)",CU-222-,KGS,1566.08,costing formula (live metal),,,980,1377.08
+CU-222-00324,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 14.5 x 3.55 Enamelled 0.12 MM (Finished OD= 14.62 x 3.67)",CU-222-,KGS,1566.08,costing formula (live metal),,,980,1377.08
+CU-222-00322,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9.6 x 3.2 Enamelled 0.12 MM (Finished OD= 9.72 x 3.32)",CU-222-,KGS,1566.08,costing formula (live metal),,,980,1377.08
+CU-222-00305,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9.8 x 3 Enamelled 0.12 MM (Finished OD= 9.92 x 3.12)",CU-222-,KGS,1566.08,costing formula (live metal),,,980,1377.08
+CU-222-00164,"Dual Coated  Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2.18 MM, SE-PIA 0.11 MM , Finished OD:2.29 MM, 13.5 SWG , UL Approved , Grade:MW35",CU-222-,KGS,1602.08,costing formula (live metal),1355.0,2026-03-06,978,1377.08
+CU-111-00009,"Copper Foil, Size: 350 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,975,1377.08
+CU-111-00030,"Copper Foil, Size: 280mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,970,1377.08
+CU-222-00301,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.422 Enamelled 0.12 (Finished OD=1.542mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,963,1377.08
+CU-222-00122,"Copper Wire Ø1.5 MM, Polyester-amide-imide (Polyamide-imide) 0.1MM, Finished OD= 1.6,ANSI Type: MW 35, 200°C",CU-222-,KGS,1602.08,costing formula (live metal),1302.0,2026-04-06,962,1377.08
+CU-222-00124,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 12 X 4 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,960,1377.08
+CU-222-00125,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 9.5 X 4 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,960,1377.08
+CU-222-00065,"CU Round Conductor, Copper Wire Ø1.80 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1484.63,costing formula (live metal),,,955,1377.08
+CU-222-00126,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2.7 MM, SE-PIA 0.1 MM ,Finished OD:2.8mm",CU-222-,KGS,1602.08,costing formula (live metal),,,951,1377.08
+CU-222-00329,"Copper Busbar, ISO-ETP/BS-C101, Size: 80 (W) X 6 (T) mm",CU-222-,KGS,1459.63,costing formula (live metal),,,950,1377.08
+CU-222-00131,"Copper Wire Ø0.4 MM, Super Enameled 0.1mm(Finished OD=0.5MM)",CU-222-,KGS,1602.08,costing formula (live metal),,,950,1377.08
+CU-222-00117,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 30 (W) X 3 (T) MM",CU-222-,KGS,1459.63,costing formula (live metal),945.0,26/06/2025,940,1377.08
+CU-222-00116,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 30 (W) X 6 (T) MM ",CU-222-,KGS,1459.63,costing formula (live metal),,,940,1377.08
+CU-222-00118,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 50 (W) X 10 (T) MM ",CU-222-,KGS,1459.63,costing formula (live metal),,,940,1377.08
+CU-222-00198,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2 MM, SE-PIA 0.1 MM,Fineshed OD:2.1mm",CU-222-,KGS,1602.08,costing formula (live metal),1335.0,2026-03-13,938,1377.08
+CU-222-00351,"Copper Busbar, ISO-ETP/BS-C101, Size: 20 (W) X 3 (T) mm",CU-222-,KGS,1459.63,costing formula (live metal),945.0,26/06/2025,932,1377.08
+CU-222-00158,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 11.4 X 2  FG 0.3 MM (Finished OD=11.7 x 2.3 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,926,1377.08
+CU-222-00159,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 7.7 X 2.24 FG 0.3 MM (Finished OD=8 x 2.54 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,926,1377.08
+CU-222-00157,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 9.5 X 2.12 FG 0.3 MM (Finished OD=9.8 x 2.42 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,926,1377.08
+CU-111-00005,"Copper Foil, Size: 130 MM (Width) X 0.5 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,925,1377.08
+CU-111-00006,"Copper Foil, Size: 90 MM (Width) X 0.5 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,925,1377.08
+CU-222-00064,"CU Round Conductor, Copper Wire Ø2.50 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1484.63,costing formula (live metal),,,921,1377.08
+CU-222-00136,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size: 16X2 FG 0.3 MM (Finished OD=16.3 x 2.3 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,921,1377.08
+CU-111-00010,"Copper Foil, Size: 180 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,920,1377.08
+CU-111-00039,"Copper Foil, Size: 300 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,920,1377.08
+CU-222-00141,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size: 8.2X3 FG 0.3 MM (Finished OD=8.5 x 3.3 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,918,1377.08
+CU-222-00092,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 50 (W) X 5 (T) MM",CU-222-,KGS,1459.63,costing formula (live metal),,,915,1377.08
+CU-222-00154,"Copper Flat Busbar, ISO -ETP / BS -C101, Size: 15 (W) X 3 (T) MM",CU-222-,KGS,1459.63,costing formula (live metal),,,910,1377.08
+CU-222-00181,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size:8 x 2 Enamelled 0.11 MM (Finished OD=8.11 x 2.11)",CU-222-,KGS,1566.08,costing formula (live metal),,,910,1377.08
+CU-111-00040,"Copper Foil, Size: 350 MM (Width) X 0.45 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,902,1377.08
+CU-222-00199,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.2 Enamelled 0.10 (Finished OD=1.3mm)",CU-222-,KGS,1602.08,costing formula (live metal),1335.0,2026-04-08,901,1377.08
+CU-222-00186,"CU Round Conductor, Copper Wire Ø2.6 MM, (SE) Super Enameled 0.1MM, Finished OD:2.7mm",CU-222-,KGS,1484.63,costing formula (live metal),,,897,1377.08
+CU-222-00071,"CU Rectangular Conductor, Copper Strip 6.0 X 2.4 MM, Super Enameled 0.11MM",CU-222-,KGS,1484.63,costing formula (live metal),1216.61,2026-01-05,890,1377.08
+CU-222-00166,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø0.914 MM, SE-PIA 0.09 MM , Finished OD:1.004 MM, 20 SWG",CU-222-,KGS,1602.08,costing formula (live metal),1336.0,2026-03-13,885,1377.08
+CU-222-00163,"Dual Coated  Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø1.524 MM, SE-PIA 0.11 MM , Finished OD:1.634 mm, 16.5 SWG , UL Approved , Grade:MW35",CU-222-,KGS,1602.08,costing formula (live metal),1203.15,2026-05-07,883,1377.08
+CU-222-00211,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size : 8 x 2.5 Enamelled 0.11 MM (Finished OD=8.11 x 2.61)",CU-222-,KGS,1566.08,costing formula (live metal),,,875,1377.08
+CU-222-00182,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.6 Enamelled 0.11 (Finished OD=1.71mm)",CU-222-,KGS,1602.08,costing formula (live metal),1335.0,2026-03-13,855,1377.08
+CU-222-00217,"CU Round Conductor, Copper Wire Ø2.946 MM, Super Enameled 0.11mm",CU-222-,KGS,1484.63,costing formula (live metal),1226.61,2026-01-05,850,1377.08
+CU-111-00031,"Copper Foil, Size: 140mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),989.0,2025-10-31,850,1377.08
+CU-111-00032,"Copper Foil, Size: 140mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),989.0,2025-10-31,850,1377.08
+CU-111-00029,"Copper Foil, Size: 280mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,850,1377.08
+CU-222-00197,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.26 Enamelled 0.05 (Finished OD=0.31mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,850,1377.08
+CU-222-00132,"Copper Wire Ø1.3MM, Super Enameled 0.1mm (Finished OD=1.4MM)",CU-222-,KGS,1602.08,costing formula (live metal),1450.0,2026-03-05,841,1377.08
+CU-222-00086,"Copper Busbar, ISO-ETP/BS-C101, 100 (W) X 10 (Thick) mm",CU-222-,KGS,1459.63,costing formula (live metal),,,840,1377.08
+CU-222-00063,"CU Rectangular Conductor, Copper Strip 10.0 X 3.25 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1484.63,costing formula (live metal),,,838,1377.08
+CU-222-00178,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 6.7 X 2.12 FG 0.3 MM (Finished OD=7.0 x 2.42 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,835,1377.08
+CU-222-00175,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 8 X 2.5 FG 0.3 MM (Finished OD=8.3 x 2.8 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,835,1377.08
+CU-222-00040,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 6.00 X 2.40 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,835,1377.08
+CU-111-00002,"Copper Foil, Size: 290 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),1394.07,2025-12-31,834,1377.08
+CU-222-00293,Copper Bus Bar 40mm x 6mm,CU-222-,KGS,1459.63,costing formula (live metal),963.0,2025-09-18,830,1377.08
+CU-222-00244,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 11.5 x 2.70 Enamelled 0.11 MM (Finished OD= 11.61 x 2.81)",CU-222-,KGS,1566.08,costing formula (live metal),,,830,1377.08
+CU-222-00195,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.48 Enamelled 0.05 (Finished OD=0.53mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,830,1377.08
+CU-222-00260,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.65 Enamelled 0.12 (Finished OD=2.77mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,830,1377.08
+CU-222-00259,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.90 Enamelled 0.12 (Finished OD=3.02mm)",CU-222-,KGS,1602.08,costing formula (live metal),995.0,2025-09-04,830,1377.08
+CU-222-00291,Copper Bus Bar 30mm x 3mm,CU-222-,KGS,1459.63,costing formula (live metal),,,823,1377.08
+CU-222-00196,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.66 Enamelled 0.05 (Finished OD=0.71mm)",CU-222-,KGS,1602.08,costing formula (live metal),1459.21,2026-02-02,820,1377.08
+CU-222-00290,Copper Bus Bar 25mm x 5mm,CU-222-,KGS,1459.63,costing formula (live metal),,,815,1377.08
+CU-222-00210,"Super Enameled Copper Strip, as per IS:13730-Part29- Class-200 (H), Size: 10×2.8 MM, SE-PIA 0.11mm Enameled",CU-222-,KGS,1566.08,costing formula (live metal),,,810,1377.08
+CU-222-00172,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-H Size:  10 x 4 Enamelled 0.1 MM (Finished OD=10.1 x 4.1)",CU-222-,KGS,1566.08,costing formula (live metal),,,800,1377.08
+CU-222-00165,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø0.295 MM, SE-PIA 0.06 MM , Finished OD:0.355 MM, 31 SWG ",CU-222-,KGS,1602.08,costing formula (live metal),,,770,1377.08
+CU-222-00167,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø0.345 MM, SE-PIA 0.06 MM , Finished OD:0.405 MM, 29 SWG",CU-222-,KGS,1602.08,costing formula (live metal),,,770,1377.08
+CU-222-00173,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 6 X 1.40 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,755,1377.08
+CU-222-00012,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-29, Class-200 (H), Size: 10.7X 3.2 FG 0.3 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,725,1377.08
+CU-222-00013,"Copper Wire With Fibreglass Covering, As per IS:13730-Part-13, 1993, Class-200 (H), Size: 3.0 FG 0.2 MM",CU-222-,KGS,1602.08,costing formula (live metal),,,725,1377.08
+CU-222-00015,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 9.00 X 2.00 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,710,1377.08
+CU-222-00014,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø3.50 MM, SE-PIA 0.10 MM",CU-222-,KGS,1602.08,costing formula (live metal),,,710,1377.08
+CU-111-00001,"Copper Foil, Thickness 0.1mm, 16"" Roll Width",CU-111-,KGS,1566.08,costing formula (live metal),1405.0,2026-04-16,640,1377.08
+CU-222-00007,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-29, Size: 8X3 FG 0.3 MM",CU-222-,KGS,1566.08,costing formula (live metal),1000.0,2025-12-16,595,1377.08
+CU-222-00006,"Copper Strip with Fiberglass Covering, As per IS:13730-Part-29, Size: 7.50 X 1.70 FG 0.30 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,595,1377.08
+CU-222-00002,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 10.50 X 4.40 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,591.12,1377.08
+CU-222-00001,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 12.50 X 4.50 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,591.12,1377.08
+CU-222-00003,"Dual Coated Polyimide-amide Super Enameled Copper Strip, As per IS:13730-Part-29, Class-200 (H) , Size: 6.40 X 1.50 MM, SE-PIA 0.10 MM",CU-222-,KGS,1566.08,costing formula (live metal),,,588.12,1377.08
+CU-222-00004,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø2.35 MM, SE-PIA 0.10 MM",CU-222-,KGS,1602.08,costing formula (live metal),,,583.12,1377.08
+CU-222-00005,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part-13, 1993, Class-200 (H), Size: Ø3.00 MM, SE-PIA 0.10 MM",CU-222-,KGS,1602.08,costing formula (live metal),,,583.12,1377.08
+CMP-444-00233,"FG Dog Bone Sticks, Class H, Size: 10(H) X 12(W) X 215 (L) MM, Colour : White",CMP-444-,KGS,1484.63,costing formula (live metal),157.0,2026-01-10,157,1377.08
+CMP-444-00450,"FG Corner Section, Class H, Size: 10(H) X 10(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1484.63,costing formula (live metal),172.0,2026-07-27,155,1377.08
+CMP-444-00451,"FG Dog Bone, Class H, Size: 6(H) X 8(W) X 2500 (L) MM, White Colour.",CMP-444-,KGS,1484.63,costing formula (live metal),155.0,2026-01-06,153,1377.08
+CMP-444-00390,"FG Dog Bone Sticks, Class H, Size: 12(H) X 19(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1484.63,costing formula (live metal),172.0,2026-06-22,150,1377.08
+CMP-444-00452,"FG Dog Bone, Class H, Size: 6(H) X 8(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1484.63,costing formula (live metal),,,150,1377.08
+WB-606-00002,"CO2 MIG Copper Welding Wire, Ø1.2mm",WB-606-,KGS,1602.08,costing formula (live metal),145.0,2026-06-29,90,1377.08
+CU-111-00035,"Copper Foil, Size: 125mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,50,1377.08
+CU-111-00036,"Copper Foil, Size: 125mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,50,1377.08
+CMP-444-00288,"FG Corner Section, Class H, Size: 8(H) X 8(W) X 225 (L) MM, Colour : White",CMP-444-,KGS,1484.63,costing formula (live metal),157.0,28/04/2025,11,1377.08
+CU-111-00033,"Copper Foil, Size: 170mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,5,1377.08
+CU-111-00034,"Copper Foil, Size: 170mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,3,1377.08
 CC-555-00082,"Limb Core Lamination Strips, Size: 75(L) X 70(W), Grade : 25C1500, CRNO - 0.25mm Thick Core Loss : Max 1.5W / Kg @ 1.5 T , 50 Hz",CC-555-,KGS,230.0,recent PO (age-weighted),230.0,2025-08-22,230,62.0
 CC-555-00171,"Core E Lamination Strips 1PH TY 180 (RC2016-01), CRNO Grade: M250-35A, 0.35MM, Max Core Loss 2.5 W/Kg@1.5 T, 50Hz",CC-555-,KGS,133.01,recent PO (age-weighted),132.0,2026-07-22,135,62.0
 CC-555-00172,"Core I Lamination Strips 1PH TY 180 (RC2016-01), CRNO Grade: M250-35A, 0.35MM, Max Core Loss 2.5 W/Kg@1.5 T, 50Hz",CC-555-,KGS,133.01,recent PO (age-weighted),132.0,2026-07-22,135,62.0
@@ -274,89 +274,89 @@ CF-555-00006,"MS ISMC Top Channel for 9 KVA, Size: 615 (L)X 75(H) X 40(W) X 5(T)
 CF-555-00012,"MS ISMC Top Core Fixture, DEPL-35-C-01",CF-555-,KGS,62.0,metal benchmark (indicative),,,80,62.0
 CH-303-00031,Damisol 3042-300,CH-303-,KGS,476.64,recent PO (age-weighted),498.0,2026-04-10,445,270.0
 CC-555-00365,"Core E & I Lamination 1 - Ph Type 15 CRNO Grade: M210-35A, 0.35MM, Max Core Loss <2.1 W/Kg@1.5 T, 50Hz, As Per Drawing No: 5013-02-00-02",CC-555-,KGS,270.0,metal benchmark (indicative),,,140,270.0
-AL-222-00005,"AL Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size: 10.5 X 3.5, PC 0.5 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00024,"AL Rectangular Conductor, Aluminium Strip 10.0 X 2.0 MM, Super Enameled 0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00027,"AL Rectangular Conductor, Aluminium Strip 12.0 X 3.0 MM, Super Enameled 0.11MM",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00022,"AL Rectangular Conductor, Aluminium Strip 12.0 X 4.0 MM, Super Enameled 0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00028,"AL Rectangular Conductor, Aluminium Strip 3.0 X 2.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00020,"AL Rectangular Conductor, Aluminium Strip 5.0 X 3.0 MM, Super Enameled  0.11mm",AL-222-,KGS,417.0,recent PO (age-weighted),417.0,2025-11-20,0,360.5
-AL-222-00282,"AL Rectangular Conductor, Aluminium Strip Size : 7.5 x 4mm Super Enameled 0.08mm, Finished OD = 7.58 x 4.08 mm, Grade 2, Class H",AL-222-,KGS,432.71,costing formula (live metal),600.0,2026-06-22,,360.5
-AL-222-00241,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size : 10 × 2.5, Super Enamelled 0.11 mm (Finished OD= 10.11 × 2.61)",AL-222-,KGS,432.71,costing formula (live metal),380.0,2025-09-06,,360.5
-AL-222-00221,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10 × 4.5, FG Covering 0.3 mm (Finished OD= 10.3 × 4.8)",AL-222-,KGS,432.71,costing formula (live metal),354.0,25/04/2025,,360.5
-AL-222-00210,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5 × 4, FG Covering 0.5 mm (Finished OD= 11 × 4.5)",AL-222-,KGS,432.71,costing formula (live metal),545.45,2026-06-27,0,360.5
-AL-222-00238,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5×3.5, Super Enamelled 0.11 mm (Finished OD= 10.61×3.61)",AL-222-,KGS,432.71,costing formula (live metal),410.0,2025-09-29,,360.5
-AL-222-00249,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11 × 3.55, Super Enamelled 0.12 mm (Finished OD= 11.12 × 3.67)",AL-222-,KGS,440.0,recent PO (age-weighted),440.0,2026-01-07,,360.5
-AL-222-00223,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11.4 × 2.7 FG Covering 0.3 mm (Finished OD= 11.7 × 3)",AL-222-,KGS,432.71,costing formula (live metal),354.0,25/04/2025,,360.5
-AL-222-00125,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11.4 × 3.55, Super Enamelled 0.11 mm (Finished OD= 11.51 × 3.66)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00133,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 12 × 3.5, Super Enamelled 0.11 mm (Finished OD= 12.11× 3.61)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00222,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 13.8 × 3.35, FG Covering 0.3 mm (Finished OD= 14.1 × 3.65)",AL-222-,KGS,432.71,costing formula (live metal),354.0,25/04/2025,,360.5
-AL-222-00100,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 3.6×2, Super Enamelled 0.11 mm (Finished OD= 3.71 x 2.11)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00099,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 3x2, Super Enamelled 0.1 mm, (Finished OD:3.10×2.10)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00103,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 4.2×2.5, Super Enamelled 0.12 mm (Finished OD= 4.32×2.62)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00104,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 4×2, Super Enamelled 0.11 mm (Finished OD= 4.11×2.11)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00083,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5.8 x2.12, Super Enamelled 0.12 mm (Finished OD= 5.92 x 2.24)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00105,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7.5×2.5, Super Enamelled 0.11 mm (Finished OD=7.61×2.61)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00082,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.5 x2.7, Super Enamelled 0.11 mm (Finished OD= 8.61 x 2.81)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00243,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9 × 3.5, Super Enamelled 0.11 mm (Finished OD= 9.11×3.61)",AL-222-,KGS,417.0,recent PO (age-weighted),417.0,2025-11-13,,360.5
-AL-222-00246,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.4×5.2, Super Enamelled 0.12 mm (Finished OD= 9.52×5.32)",AL-222-,KGS,432.71,costing formula (live metal),407.2,2025-10-30,,360.5
-AL-222-00251,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5 × 2.12, FG Covering 0.3 mm (Finished OD= 9.8 × 2.42)",AL-222-,KGS,432.71,costing formula (live metal),460.0,2026-01-07,,360.5
-AL-222-00250,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5 × 3.2, FG Covering 0.3 mm (Finished OD= 9.8 × 3.5)",AL-222-,KGS,432.71,costing formula (live metal),460.0,2026-01-07,,360.5
-AL-222-00151,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5×3.5, Super Enamelled 0.11 mm (Finished OD= 9.61×3.61)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00008,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size:  9.5 x 4.8, PC 0.35 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00009,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size: 12.6 x 5.0, PC 0.35 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00007,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size: 8.1 x 4.9, PC 0.35 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00076,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-H, Size: 8.5 x3.0, Super Enamelled 0.12 mm",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00247,"AL Rectangular Conductor, Aluminum Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7×4, Super Enameled 0.12 mm (Finished OD= 7.12×4.12).",AL-222-,KGS,432.71,costing formula (live metal),407.2,2025-10-30,,360.5
-AL-222-00283,"AL Round Conductor, Aluminium Wire Size : Ø0.457mm Super Enameled 0.08mm, Finished OD = 0.537 mm, Grade 2, Class H",AL-222-,KGS,432.71,costing formula (live metal),530.0,2026-06-20,,360.5
-AL-222-00032,"AL Round Conductor, Aluminium Wire Ø0.41 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00042,"AL Round Conductor, Aluminium Wire Ø1.30 MM, Super Enameled 0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00071,"AL Round Conductor, Aluminium Wire Ø1.9 MM, Super Enameled 0.1mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00073,"AL Round Conductor, Aluminium Wire Ø2.0 MM, Super Enameled 0.1mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=2.1MM)",AL-222-,KGS,432.71,costing formula (live metal),528.0,2026-06-18,0,360.5
-AL-222-00025,"AL Round Conductor, Aluminium Wire Ø2.40 MM, Super Enameled 0.11mm, Finished OD = 2.51 mm",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00019,"AL Round Conductor, Aluminium Wire Ø2.8 MM, Super Enameled  0.11mm",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00045,"AL Round Conductor, Aluminium Wire Ø3.0 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,432.71,costing formula (live metal),402.0,2025-11-13,0,360.5
-AL-222-00245,"AL Round Conductor, Aluminium Wire Ø3.8 MM, Super Enameled 0.12mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=3.92 MM)",AL-222-,KGS,432.71,costing formula (live metal),395.0,2025-10-30,,360.5
-AL-222-00206,"AL Round Conductor, Aluminium Wire Ø4.27 MM, Super Enameled 0.11mm, As per IS:13730 ,(Finished OD=4.38 MM)",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00010,"AL Round Conductor, Aluminium Wire, As per IS:6162-Part-1, Class-A, Size: Dia - 1MM, PC 0.20 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00011,"AL Round Conductor, Aluminium Wire, As per IS:6162-Part-1, Class-A, Size: Dia - 2.10 MM, PC 0.22 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00012,"AL Round Conductor, Aluminium Wire, As per IS:6162-Part-1, Class-A, Size: Dia - 2.50 MM, PC 0.22 MM Kraft Paper Covering",AL-222-,KGS,432.71,costing formula (live metal),,,0,360.5
-AL-222-00242,"AL Round Conductor, Wire Size : Bare Ø1 mm",AL-222-,KGS,432.71,costing formula (live metal),,,,360.5
-WB-606-00006,"Aluminium Brazing Rod  L&T EutecRod, Size:3.15mm",WB-606-,KGS,425.03,costing formula (live metal),,,0,360.5
-WB-606-00019,"Aluminium Brazing Rod, Size:22 X 1.6mm",WB-606-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-222-00192,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 20(W) x 5(T),AL-222-,KGS,415.0,recent PO (age-weighted),415.0,2026-07-17,0,360.5
-AL-222-00189,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 50(W) x 6(T),AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-AL-222-00269,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 100(W) x 12 (T) mm",AL-222-,KGS,415.0,recent PO (age-weighted),415.0,2026-03-23,,360.5
-AL-222-00252,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 195(L) x 30(W) x 5 (T) mm, As per Drawing No : 2025-01-00-11",AL-222-,KGS,407.71,costing formula (live metal),,,,360.5
-AL-222-00014,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 25(W) x 3(T)mm",AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-AL-222-00048,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 30(W) x 3(T) MM",AL-222-,KGS,407.71,costing formula (live metal),322.0,2025-09-06,0,360.5
-AL-222-00049,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 40(W) x 5(T) MM",AL-222-,KGS,415.0,recent PO (age-weighted),415.0,2026-07-17,0,360.5
-AL-222-00087,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 40(W) x 6(T)mm",AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-AL-222-00180,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 50(W) x 10(T)mm",AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-AL-222-00006,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 50(W) x 6(T)mm",AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-AL-222-00047,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 60(W) x 6(T) MM",AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-AL-222-00169,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 80(W) x 6(T)mm",AL-222-,KGS,407.71,costing formula (live metal),,,0,360.5
-WB-606-00009,"Aluminium Filler Rod, Ø1.6mm",WB-606-,KGS,425.03,costing formula (live metal),,,0,360.5
-WB-606-00014,"Aluminium Filler Rod, Ø2.5mm",WB-606-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00045,"Aluminium Foil, Electrical Grade : 1070A-O, Size : 150(Width) x 1.4 (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,,360.5
-AL-111-00046,"Aluminium Foil, Electrical Grade : 1070A-O, Size : 350(Width) x 0.8 (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),76960.0,2026-06-17,,360.5
-AL-111-00018,"Aluminium Foil, Electrical Grade:1050, Size: 100 (Width) X 1 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00010,"Aluminium Foil, Electrical Grade:1050, Size: 1000 (Width) X 0.5 MM (Thick)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00001,"Aluminium Foil, Electrical Grade:1050, Size: 110 (Width) X 0.8MM (Thick)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00003,"Aluminium Foil, Electrical Grade:1050, Size: 200 (Width) X 1 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00040,"Aluminium Foil, Electrical Grade:1050, Size: 250(Width) x 1.5(Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,,360.5
-AL-111-00030,"Aluminium Foil, Electrical Grade:1050, Size: 325 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00020,"Aluminium Foil, Electrical Grade:1050, Size: 350 (Width) X 2 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,,360.5
-AL-111-00042,"Aluminium Foil, Electrical Grade:1050, Size: 350(Width) x 0.5(Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),465.0,2026-02-07,,360.5
-AL-111-00014,"Aluminium Foil, Electrical Grade:1050, Size: 36 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00016,"Aluminium Foil, Electrical Grade:1050, Size: 45 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00005,"Aluminium Foil, Electrical Grade:1050, Size: 80 (Width) X 1 MM (Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-111-00044,"Aluminium Foil, Electrical Grade:1070A-O, Size : 200(Width) x 2(Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,,360.5
-AL-111-00043,"Aluminium Foil, Electrical Grade:1070A-O, Size : 340(Width) x 1.5(Thick) (Hardness less than 30)",AL-111-,KGS,425.03,costing formula (live metal),,,,360.5
-AL-222-00064,"Aluminium Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size: 6 x 2 Enamelled 0.11 MM (Finished OD=6.1 x 2.1)",AL-222-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-222-00056,"Aluminium Strip, As per IS:6162-Part-2, Class-A, Size:  12 x 3.9, PC 0.35 MM Kraft Paper Covering(Finished OD=12.35 x 4.25)",AL-222-,KGS,425.03,costing formula (live metal),,,0,360.5
-AL-222-00253,"Aluminium Strip, Bare Size : 4 x 2.5 with Poleyester and Fibreglass Covering 0.5mm, Finished OD : 4.5 x 3, As per IS 11597-1986",AL-222-,KGS,443.45,recent PO (age-weighted),443.45,2025-11-22,,360.5
-AL-111-00036,TESTING OCT 25 BULK PROCUREMENT,AL-111-,KGS,425.03,costing formula (live metal),500.0,2025-10-18,,360.5
-AL-222-00244,TESTING OCT 25 BULK PROCUREMENT_2,AL-222-,KGS,425.03,costing formula (live metal),200.0,2025-10-18,,360.5
+AL-222-00005,"AL Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size: 10.5 X 3.5, PC 0.5 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00024,"AL Rectangular Conductor, Aluminium Strip 10.0 X 2.0 MM, Super Enameled 0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00027,"AL Rectangular Conductor, Aluminium Strip 12.0 X 3.0 MM, Super Enameled 0.11MM",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00022,"AL Rectangular Conductor, Aluminium Strip 12.0 X 4.0 MM, Super Enameled 0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00028,"AL Rectangular Conductor, Aluminium Strip 3.0 X 2.0 MM, Super Enameled 0.11MM, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00020,"AL Rectangular Conductor, Aluminium Strip 5.0 X 3.0 MM, Super Enameled  0.11mm",AL-222-,KGS,443.93,costing formula (live metal),417.0,2025-11-20,0,368.9
+AL-222-00282,"AL Rectangular Conductor, Aluminium Strip Size : 7.5 x 4mm Super Enameled 0.08mm, Finished OD = 7.58 x 4.08 mm, Grade 2, Class H",AL-222-,KGS,443.93,costing formula (live metal),600.0,2026-06-22,,368.9
+AL-222-00241,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size : 10 × 2.5, Super Enamelled 0.11 mm (Finished OD= 10.11 × 2.61)",AL-222-,KGS,443.93,costing formula (live metal),380.0,2025-09-06,,368.9
+AL-222-00221,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10 × 4.5, FG Covering 0.3 mm (Finished OD= 10.3 × 4.8)",AL-222-,KGS,443.93,costing formula (live metal),354.0,25/04/2025,,368.9
+AL-222-00210,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5 × 4, FG Covering 0.5 mm (Finished OD= 11 × 4.5)",AL-222-,KGS,443.93,costing formula (live metal),545.45,2026-06-27,0,368.9
+AL-222-00238,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 10.5×3.5, Super Enamelled 0.11 mm (Finished OD= 10.61×3.61)",AL-222-,KGS,443.93,costing formula (live metal),410.0,2025-09-29,,368.9
+AL-222-00249,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11 × 3.55, Super Enamelled 0.12 mm (Finished OD= 11.12 × 3.67)",AL-222-,KGS,440.0,recent PO (age-weighted),440.0,2026-01-07,,368.9
+AL-222-00223,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11.4 × 2.7 FG Covering 0.3 mm (Finished OD= 11.7 × 3)",AL-222-,KGS,443.93,costing formula (live metal),354.0,25/04/2025,,368.9
+AL-222-00125,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 11.4 × 3.55, Super Enamelled 0.11 mm (Finished OD= 11.51 × 3.66)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00133,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 12 × 3.5, Super Enamelled 0.11 mm (Finished OD= 12.11× 3.61)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00222,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 13.8 × 3.35, FG Covering 0.3 mm (Finished OD= 14.1 × 3.65)",AL-222-,KGS,443.93,costing formula (live metal),354.0,25/04/2025,,368.9
+AL-222-00100,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 3.6×2, Super Enamelled 0.11 mm (Finished OD= 3.71 x 2.11)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00099,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 3x2, Super Enamelled 0.1 mm, (Finished OD:3.10×2.10)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00103,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 4.2×2.5, Super Enamelled 0.12 mm (Finished OD= 4.32×2.62)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00104,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 4×2, Super Enamelled 0.11 mm (Finished OD= 4.11×2.11)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00083,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 5.8 x2.12, Super Enamelled 0.12 mm (Finished OD= 5.92 x 2.24)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00105,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7.5×2.5, Super Enamelled 0.11 mm (Finished OD=7.61×2.61)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00082,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 8.5 x2.7, Super Enamelled 0.11 mm (Finished OD= 8.61 x 2.81)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00243,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9 × 3.5, Super Enamelled 0.11 mm (Finished OD= 9.11×3.61)",AL-222-,KGS,443.93,costing formula (live metal),417.0,2025-11-13,,368.9
+AL-222-00246,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.4×5.2, Super Enamelled 0.12 mm (Finished OD= 9.52×5.32)",AL-222-,KGS,443.93,costing formula (live metal),407.2,2025-10-30,,368.9
+AL-222-00251,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5 × 2.12, FG Covering 0.3 mm (Finished OD= 9.8 × 2.42)",AL-222-,KGS,460.0,recent PO (age-weighted),460.0,2026-01-07,,368.9
+AL-222-00250,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5 × 3.2, FG Covering 0.3 mm (Finished OD= 9.8 × 3.5)",AL-222-,KGS,460.0,recent PO (age-weighted),460.0,2026-01-07,,368.9
+AL-222-00151,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 9.5×3.5, Super Enamelled 0.11 mm (Finished OD= 9.61×3.61)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00008,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size:  9.5 x 4.8, PC 0.35 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00009,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size: 12.6 x 5.0, PC 0.35 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00007,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-A, Size: 8.1 x 4.9, PC 0.35 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00076,"AL Rectangular Conductor, Aluminium Strip, As per IS:13730-Part-27, Class-H, Size: 8.5 x3.0, Super Enamelled 0.12 mm",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00247,"AL Rectangular Conductor, Aluminum Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7×4, Super Enameled 0.12 mm (Finished OD= 7.12×4.12).",AL-222-,KGS,443.93,costing formula (live metal),407.2,2025-10-30,,368.9
+AL-222-00283,"AL Round Conductor, Aluminium Wire Size : Ø0.457mm Super Enameled 0.08mm, Finished OD = 0.537 mm, Grade 2, Class H",AL-222-,KGS,443.93,costing formula (live metal),530.0,2026-06-20,,368.9
+AL-222-00032,"AL Round Conductor, Aluminium Wire Ø0.41 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00042,"AL Round Conductor, Aluminium Wire Ø1.30 MM, Super Enameled 0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00071,"AL Round Conductor, Aluminium Wire Ø1.9 MM, Super Enameled 0.1mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00073,"AL Round Conductor, Aluminium Wire Ø2.0 MM, Super Enameled 0.1mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=2.1MM)",AL-222-,KGS,443.93,costing formula (live metal),528.0,2026-06-18,0,368.9
+AL-222-00025,"AL Round Conductor, Aluminium Wire Ø2.40 MM, Super Enameled 0.11mm, Finished OD = 2.51 mm",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00019,"AL Round Conductor, Aluminium Wire Ø2.8 MM, Super Enameled  0.11mm",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00045,"AL Round Conductor, Aluminium Wire Ø3.0 MM, Super Enameled 0.11mm, Grade-2, Class H",AL-222-,KGS,443.93,costing formula (live metal),402.0,2025-11-13,0,368.9
+AL-222-00245,"AL Round Conductor, Aluminium Wire Ø3.8 MM, Super Enameled 0.12mm, Grade-2, Class H , IS 13730 | IEC 60317 | Part - 8 (Finished OD=3.92 MM)",AL-222-,KGS,443.93,costing formula (live metal),395.0,2025-10-30,,368.9
+AL-222-00206,"AL Round Conductor, Aluminium Wire Ø4.27 MM, Super Enameled 0.11mm, As per IS:13730 ,(Finished OD=4.38 MM)",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00010,"AL Round Conductor, Aluminium Wire, As per IS:6162-Part-1, Class-A, Size: Dia - 1MM, PC 0.20 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00011,"AL Round Conductor, Aluminium Wire, As per IS:6162-Part-1, Class-A, Size: Dia - 2.10 MM, PC 0.22 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00012,"AL Round Conductor, Aluminium Wire, As per IS:6162-Part-1, Class-A, Size: Dia - 2.50 MM, PC 0.22 MM Kraft Paper Covering",AL-222-,KGS,443.93,costing formula (live metal),,,0,368.9
+AL-222-00242,"AL Round Conductor, Wire Size : Bare Ø1 mm",AL-222-,KGS,443.93,costing formula (live metal),,,,368.9
+WB-606-00006,"Aluminium Brazing Rod  L&T EutecRod, Size:3.15mm",WB-606-,KGS,433.3,costing formula (live metal),,,0,368.9
+WB-606-00019,"Aluminium Brazing Rod, Size:22 X 1.6mm",WB-606-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-222-00192,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 20(W) x 5(T),AL-222-,KGS,415.0,recent PO (age-weighted),415.0,2026-07-17,0,368.9
+AL-222-00189,Aluminium Bus Bar Electrical Grade : A6101-T6 Size 50(W) x 6(T),AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+AL-222-00269,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 100(W) x 12 (T) mm",AL-222-,KGS,415.0,recent PO (age-weighted),415.0,2026-03-23,,368.9
+AL-222-00252,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 195(L) x 30(W) x 5 (T) mm, As per Drawing No : 2025-01-00-11",AL-222-,KGS,416.28,costing formula (live metal),,,,368.9
+AL-222-00014,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 25(W) x 3(T)mm",AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+AL-222-00048,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 30(W) x 3(T) MM",AL-222-,KGS,416.28,costing formula (live metal),322.0,2025-09-06,0,368.9
+AL-222-00049,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 40(W) x 5(T) MM",AL-222-,KGS,415.0,recent PO (age-weighted),415.0,2026-07-17,0,368.9
+AL-222-00087,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 40(W) x 6(T)mm",AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+AL-222-00180,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 50(W) x 10(T)mm",AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+AL-222-00006,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 50(W) x 6(T)mm",AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+AL-222-00047,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 60(W) x 6(T) MM",AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+AL-222-00169,"Aluminium Busbar, Electrical Grade: A6101-T6, Size: 80(W) x 6(T)mm",AL-222-,KGS,416.28,costing formula (live metal),,,0,368.9
+WB-606-00009,"Aluminium Filler Rod, Ø1.6mm",WB-606-,KGS,433.3,costing formula (live metal),,,0,368.9
+WB-606-00014,"Aluminium Filler Rod, Ø2.5mm",WB-606-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00045,"Aluminium Foil, Electrical Grade : 1070A-O, Size : 150(Width) x 1.4 (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,,368.9
+AL-111-00046,"Aluminium Foil, Electrical Grade : 1070A-O, Size : 350(Width) x 0.8 (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),76960.0,2026-06-17,,368.9
+AL-111-00018,"Aluminium Foil, Electrical Grade:1050, Size: 100 (Width) X 1 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00010,"Aluminium Foil, Electrical Grade:1050, Size: 1000 (Width) X 0.5 MM (Thick)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00001,"Aluminium Foil, Electrical Grade:1050, Size: 110 (Width) X 0.8MM (Thick)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00003,"Aluminium Foil, Electrical Grade:1050, Size: 200 (Width) X 1 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00040,"Aluminium Foil, Electrical Grade:1050, Size: 250(Width) x 1.5(Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,,368.9
+AL-111-00030,"Aluminium Foil, Electrical Grade:1050, Size: 325 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00020,"Aluminium Foil, Electrical Grade:1050, Size: 350 (Width) X 2 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,,368.9
+AL-111-00042,"Aluminium Foil, Electrical Grade:1050, Size: 350(Width) x 0.5(Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),465.0,2026-02-07,,368.9
+AL-111-00014,"Aluminium Foil, Electrical Grade:1050, Size: 36 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00016,"Aluminium Foil, Electrical Grade:1050, Size: 45 (Width) X 0.5 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00005,"Aluminium Foil, Electrical Grade:1050, Size: 80 (Width) X 1 MM (Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-111-00044,"Aluminium Foil, Electrical Grade:1070A-O, Size : 200(Width) x 2(Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,,368.9
+AL-111-00043,"Aluminium Foil, Electrical Grade:1070A-O, Size : 340(Width) x 1.5(Thick) (Hardness less than 30)",AL-111-,KGS,433.3,costing formula (live metal),,,,368.9
+AL-222-00064,"Aluminium Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size: 6 x 2 Enamelled 0.11 MM (Finished OD=6.1 x 2.1)",AL-222-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-222-00056,"Aluminium Strip, As per IS:6162-Part-2, Class-A, Size:  12 x 3.9, PC 0.35 MM Kraft Paper Covering(Finished OD=12.35 x 4.25)",AL-222-,KGS,433.3,costing formula (live metal),,,0,368.9
+AL-222-00253,"Aluminium Strip, Bare Size : 4 x 2.5 with Poleyester and Fibreglass Covering 0.5mm, Finished OD : 4.5 x 3, As per IS 11597-1986",AL-222-,KGS,443.45,recent PO (age-weighted),443.45,2025-11-22,,368.9
+AL-111-00036,TESTING OCT 25 BULK PROCUREMENT,AL-111-,KGS,433.3,costing formula (live metal),500.0,2025-10-18,,368.9
+AL-222-00244,TESTING OCT 25 BULK PROCUREMENT_2,AL-222-,KGS,433.3,costing formula (live metal),200.0,2025-10-18,,368.9
 CC-555-00173," Core Lamination -1 Strips, Size: 440(L) x 110(W), Grade: CRNGO - 0.35mm Thick, Core Loss: Max 3.5 W/Kg @ 1.7T",CC-555-,KGS,175.0,metal benchmark (indicative),,,0,175.0
 CC-555-00174," Core Lamination -2 Strips, Size: 260(L) x 110(W), Grade: CRNGO - 0.35mm Thick, Core Loss: Max 3.5W/Kg @ 1.7T",CC-555-,KGS,175.0,metal benchmark (indicative),,,0,175.0
 CC-555-00152," Core Lamination 1 Strips, Size: 170(L) x 45(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,175.0,metal benchmark (indicative),,,0,175.0
@@ -635,104 +635,104 @@ CC-555-00009,"Yoke Core Lamination, Size: 245(L) X 80(W),  Material: CRNGO , Gra
 CC-555-00108,"Yoke core 220(L) x 40 (W) CRNO 0.25 mm Thick , CORE LOSS : MAX 1.2 W / Kg @ 1.5 T 50Hz ,  Grade: CRNO, 25C1500, As per Drawing No : 5011-01-00-02",CC-555-,KGS,140.33,recent PO (age-weighted),130.0,2026-02-10,0,175.0
 CC-555-00111,"Yoke core 305 (L) x 65 (W) CRNO 0.25 mm Thick , CORE LOSS : MAX 1.2 W / Kg @ 1.5 T 50Hz,  Grade: CRNO, 25C1500",CC-555-,KGS,120.0,recent PO (age-weighted),120.0,2025-09-18,0,175.0
 CC-555-00137,"Yoke core 505 (L) x 75 (W) CRGO,M4 0.27 mm Thick , CORE LOSS : MAX 1.12 W / Kg @ 1.65 T 50Hz",CC-555-,KGS,175.0,metal benchmark (indicative),,,0,175.0
-CC-555-00155," Core Lamination 1 Strips, Size: 200(L) x 65(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CC-555-00159," Core Lamination 1 Strips, Size: 220(L) x 80(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CC-555-00160," Core Lamination 2 Strips, Size: 450(L) x 80(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CC-555-00156," Core Lamination 2 Strips, Size:350(L) x 65(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CC-555-00154," Core Lamination 3 Strips, Size: 295(L) x 45(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CC-555-00157," Core Lamination 3 Strips, Size: 335(L) x 65(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CC-555-00161," Core Lamination 3 Strips, Size: 360(L) x 80(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00161,"CU Rectangular Conductor, Copper Strip 10 X 3 MM, Super Enameled 0.11MM (Finished OD= 10.11 X 3.11 mm)",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00106,"CU Rectangular Conductor, Copper Strip 8.0 X 2.8 MM, with Enamel 0.11MM.",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00119,"CU Rectangular Conductor, Copper Strip 8.0 X 3.0 MM, with Enamel 0.11MM.",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00107,"CU Rectangular Conductor, Copper Strip 8.0 X 3.55 MM, with Enamel 0.11MM.",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00120,"CU Rectangular Conductor, Copper Strip 8.0 X 4.0 MM, with Enamel 0.11MM.",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00078,"CU Rectangular Conductor, Copper Strip 8.6 X 2.7 MM, Super Enameled 0.11MM",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00062,"CU Round Conductor, Copper Wire Ø2.10 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00073,"CU Round Conductor, Copper Wire Ø3.10 MM, Super Enameled 0.11mm",CU-222-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00292,Copper Bus Bar 30mm x 5mm,CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00427,"Copper Busbar, ISO-ETP/BS-C101, 100(W) x 12(T) mm",CU-222-,KGS,1405.0,recent PO (age-weighted),1405.0,2026-06-03,,1319.63
-CU-222-00254,"Copper Busbar, ISO-ETP/BS-C101, Size: 25(W) X 5(T) mm",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00256,"Copper Busbar, ISO-ETP/BS-C101, Size: 30(W) X 3(T) mm",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00255,"Copper Busbar, ISO-ETP/BS-C101, Size: 30(W) X 5(T) mm",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00253,"Copper Busbar, ISO-ETP/BS-C101, Size: 40(W) X 6(T) mm",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00425,"Copper Busbar, ISO-ETP/BS-C101, Size: 75(W) x 10(T) x 2000(L) mm",CU-222-,KGS,1412.0,recent PO (age-weighted),1412.0,2026-04-24,,1319.63
-CU-222-00419,"Copper Busbar, ISO-ETP/BS-C101, Size: 80(W) x 10(T) x 2000(L) mm",CU-222-,KGS,1390.0,recent PO (age-weighted),1390.0,2026-03-23,,1319.63
-CU-222-00408,"Copper Busbur Flat, 15 (W) X 5 (T) MM",CU-222-,KGS,1426.02,costing formula (live metal),,,,1319.63
-CU-222-00074,"Copper Extruded Start Busbar, ISO-ETP/BS-C101, 50(W) X 3(T) mm",CU-222-,KGS,1445.0,recent PO (age-weighted),1445.0,2026-07-04,0,1319.63
-CU-222-00094,"Copper Finish Busbar, ISO-ETP / BS -C101, Drawing: 5009-00-05",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00087,"Copper Flat Busbar (EC), 80 (W) X 6 (T) - 3660 - CU - EC",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00097,"Copper Flat Busbar, Electrical Grade A6101,Size:60(w)×10(T)",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-111-00048,"Copper Foil, Size : 420 mm (Width) x 1 mm (Thickness), Grade: ETP",CU-111-,KGS,1502.45,recent PO (age-weighted),1502.45,2026-05-28,,1319.63
-CU-111-00007,"Copper Foil, Size: 210 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00049,"Copper Foil, Size: 250mm (Width) x 1mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00046,"Copper Foil, Size: 260 MM (Width) X 1 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00041,"Copper Foil, Size: 300 MM (Width) X 1.5 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00038,"Copper Foil, Size: 300mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00037,"Copper Foil, Size: 300mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00047,"Copper Foil, Size: 330(Width) x 0.6(Thickness) mm, Grade: ETP 0 temper",CU-111-,KGS,1508.63,costing formula (live metal),1394.07,2025-12-31,,1319.63
-CU-111-00003,"Copper Foil, Size: 350 MM (Width) X 0.4 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00042,"Copper Foil, Size: 350 MM (Width) X 1.5 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00004,"Copper Foil, Size: 356 MM (Width) X 0.5 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-111-00011,"Copper Foil, Size: 356 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1508.63,costing formula (live metal),,,,1319.63
-CU-222-00229,"Copper Litz Wire, 3.7mm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00149,"Copper Litz Wire, 6.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00093,"Copper Start Busbar, ISO-ETP / BS -C101, Drawing: 5009-00-06",CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
-CU-222-00403,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size : 9 x 2.8 mm(Bare), With FG 0.3mm, Finished OD : 9.3 x 3.1 mm",CU-222-,KGS,1508.63,costing formula (live metal),1256.96,2025-12-22,,1319.63
-CU-222-00405,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size : 9 x 3 mm(Bare), With FG 0.3mm, Finished OD : 9.3 x 3.3 mm",CU-222-,KGS,1508.63,costing formula (live metal),1000.0,2025-12-16,,1319.63
-CU-222-00176,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 4 X 1.8 FG 0.3 MM (Finished OD=4.3 x 2.1 mm)",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00323,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 10.8 x 3 Enamelled 0.12 MM (Finished OD= 10.92 x 3.12)",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00258,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9 x 3 Enamelled 0.12 MM (Finished OD= 9.12 x 3.12)",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00257,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9.5 x 2.9 Enamelled 0.12 MM (Finished OD= 9.62 x 3.02)",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00169,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size:  5.7 x 2.3 Enamelled 0.11 MM (Finished OD=5.81 x 2.41)",CU-222-,KGS,1508.63,costing formula (live metal),1370.0,2026-02-03,0,1319.63
-CU-222-00035,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 10 X 3.35, PC 0.6 MM Kraft Paper Covering",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00095,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 14.0 X 2.0, PC 0.6 MM Kraft Paper Covering",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00096,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 7.5 X 3.55, PC 0.8 MM Kraft Paper Covering",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00034,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 9.8 X 2.5, PC 0.5 MM Kraft Paper Covering",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00036,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 9.8 X 2.55, PC 0.8 MM Kraft Paper Covering",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00037,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 9.8 X 3.0, PC 0.8 MM Kraft Paper Covering",CU-222-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00343,"Copper Wire - 28 SWG, Class F-155,IS:13730 Part-3",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00342,"Copper Wire - 32 SWG, Class F-155,IS:13730 Part-3",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CH-303-00012,Copper Wire Enamel Remover Chemical,CH-303-,KGS,1544.63,costing formula (live metal),370.0,2026-07-10,,1319.63
-CU-222-00133,"Copper Wire Ø0.31 MM, Super Enameled 0.1mm (Finished OD=0.41MM)",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00160,"Copper Wire Ø0.315 MM, Super Enameled 0.052mm (Finished OD=0.367MM), Grade 2",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00134,"Copper Wire Ø1.08 MM, Super Enameled 0.1mm (Finished OD=1.18MM)",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00121,"Copper Wire Ø2.18 MM, Polyester-amide-imide (Polyamide-imide) 0.1MM, ANSI Type: MW 35, 200°C",CU-222-,KGS,1544.63,costing formula (live metal),1302.0,2026-04-06,,1319.63
-CU-222-00410,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.173 Enamelled 0.024 (Finished OD=0.197mm) (37 SWG)",CU-222-,KGS,1544.63,costing formula (live metal),1434.5,2026-01-08,,1319.63
-CU-222-00200,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.45 Enamelled 0.06 (Finished OD=0.51mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00429,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.559 Enamelled 0.07 (Finished OD=0.629mm) (24 SWG)",CU-222-,KGS,1492.0,recent PO (age-weighted),1492.0,2026-06-29,,1319.63
-CU-222-00440,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.711 Enamelled 0.08 (Finished OD=0.791mm) (22 SWG)",CU-222-,KGS,1539.97,recent PO (age-weighted),1569.04,2026-07-25,,1319.63
-CU-222-00402,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.82 Enamelled 0.05 (Finished OD=0.87mm)",CU-222-,KGS,1540.0,recent PO (age-weighted),1540.0,2026-06-11,,1319.63
-CU-222-00390,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1 Enamelled 0.08 (Finished OD=1.08mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,,1319.63
-CU-222-00262,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.2 Enamelled 0.12 (Finished OD=1.32mm)",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00409,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.219 Enamelled 0.066 (Finished OD=1.285mm) (18 SWG)",CU-222-,KGS,1544.63,costing formula (live metal),1380.0,2026-04-11,,1319.63
-CU-222-00298,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.33 Enamelled 0.12 ",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-WB-606-00016,Cu Brazing Rod Ø2.5mm with 0% Silver Content,WB-606-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-WB-606-00011,Cu Brazing Rod Ø3mm with 0% Silver Content,WB-606-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-WB-606-00001,Cu Brazing Rod Ø3mm with 14% Silver Content,WB-606-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00127,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2.82 MM, SE-PIA 0.1 MM,Fineshed OD:2.9mm",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00180,Enamelled Copper Round Wire 22MP,CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CU-222-00366,Enamelled Copper Wire 16 SWG,CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CMP-444-00439,"FG Corner Section, Class H, Size: 10(H) X 10(W) X 2500 (L) MM",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CMP-444-00449,"FG Corner Section, Class H, Size: 10(H) X 10(W) X 2500 (L) MM, White Colour.",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CMP-444-00434,"FG Corner Section, Class H, Size: 8(H) X 8(W) X 2500 (L) MM",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CMP-444-00415,"FG Dog Bone Sticks,Class H, Size: 12(H) X 16(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CMP-444-00438,"FG Dog Bone, Class H, Size: 6(H) X 8(W) X 2500 (L) MM",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CMP-444-00235,"FG Sheet, Grade: GPO3, 3 MM (Thickness), Size: 180(L) x 45(W) x 3(T) mm.",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CMP-444-00435,"FG Sheet, Grade: GPO3, 3 mm(T)",CMP-444-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CC-555-00266,"Limb Core Lamination Strips, Size: 41.5(L) x 80(W),  Grade: M-OH 0.23, Losses: <0.93W/Kg, @1.7T/50Hz, As per drawing no: 5003-B02-01.",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-WB-606-00025,"Mig Copper Welding Wire, Ø1 mm",WB-606-,KGS,1544.63,costing formula (live metal),1200.0,2026-02-03,,1319.63
-INS-666-00239,NPN Class H 0.13(T) X 40(W) mm,INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00109,"NPN, 3 Mil  Class F, 0.08 (T) X 75 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00221,"NPN, 5mil  Class F, 0.13 (T) X 140 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00162,"NPN, 5mil  Class F, 0.13 (T) X 330 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00170,"NPN, 5mil  Class F, 0.13 (T) X 415 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00227,"NPN, 5mil  Class F, 0.13 (T) X 420 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00230,"NPN, 5mil  Class H, 0.13 (T) X 315 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-INS-666-00231,"NPN, 5mil  Class H, 0.13 (T) X 365 (W) mm",INS-666-,KGS,1426.02,costing formula (live metal),,,0,1319.63
-CU-222-00168,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø1.016 MM, SE-PIA 0.09 MM , Finished OD:1.106 MM, 19 SWG ",CU-222-,KGS,1544.63,costing formula (live metal),,,0,1319.63
-CC-555-00265,"Yoke Core Lamination Strips, Size: 380(L) x 80(W),  Grade: M-OH 0.23, Losses: <0.93W/Kg, @1.7T/50Hz, As per drawing no: 5003-B01-01.",CC-555-,KGS,1508.63,costing formula (live metal),,,0,1319.63
-CU-222-00327,copper bus bar 30 X 8 mm,CU-222-,KGS,1401.02,costing formula (live metal),,,0,1319.63
+CC-555-00155," Core Lamination 1 Strips, Size: 200(L) x 65(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CC-555-00159," Core Lamination 1 Strips, Size: 220(L) x 80(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CC-555-00160," Core Lamination 2 Strips, Size: 450(L) x 80(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CC-555-00156," Core Lamination 2 Strips, Size:350(L) x 65(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CC-555-00154," Core Lamination 3 Strips, Size: 295(L) x 45(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CC-555-00157," Core Lamination 3 Strips, Size: 335(L) x 65(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CC-555-00161," Core Lamination 3 Strips, Size: 360(L) x 80(W) ,Grade: M4, CRGO -0.27mm Thick, Core Loss: Max 0.89w/Kg @ 1.5T, 50Hz",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00161,"CU Rectangular Conductor, Copper Strip 10 X 3 MM, Super Enameled 0.11MM (Finished OD= 10.11 X 3.11 mm)",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00106,"CU Rectangular Conductor, Copper Strip 8.0 X 2.8 MM, with Enamel 0.11MM.",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00119,"CU Rectangular Conductor, Copper Strip 8.0 X 3.0 MM, with Enamel 0.11MM.",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00107,"CU Rectangular Conductor, Copper Strip 8.0 X 3.55 MM, with Enamel 0.11MM.",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00120,"CU Rectangular Conductor, Copper Strip 8.0 X 4.0 MM, with Enamel 0.11MM.",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00078,"CU Rectangular Conductor, Copper Strip 8.6 X 2.7 MM, Super Enameled 0.11MM",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00062,"CU Round Conductor, Copper Wire Ø2.10 MM, (SE) Super Enameled 0.11MM",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00073,"CU Round Conductor, Copper Wire Ø3.10 MM, Super Enameled 0.11mm",CU-222-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00292,Copper Bus Bar 30mm x 5mm,CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00427,"Copper Busbar, ISO-ETP/BS-C101, 100(W) x 12(T) mm",CU-222-,KGS,1405.0,recent PO (age-weighted),1405.0,2026-06-03,,1377.08
+CU-222-00254,"Copper Busbar, ISO-ETP/BS-C101, Size: 25(W) X 5(T) mm",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00256,"Copper Busbar, ISO-ETP/BS-C101, Size: 30(W) X 3(T) mm",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00255,"Copper Busbar, ISO-ETP/BS-C101, Size: 30(W) X 5(T) mm",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00253,"Copper Busbar, ISO-ETP/BS-C101, Size: 40(W) X 6(T) mm",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00425,"Copper Busbar, ISO-ETP/BS-C101, Size: 75(W) x 10(T) x 2000(L) mm",CU-222-,KGS,1412.0,recent PO (age-weighted),1412.0,2026-04-24,,1377.08
+CU-222-00419,"Copper Busbar, ISO-ETP/BS-C101, Size: 80(W) x 10(T) x 2000(L) mm",CU-222-,KGS,1459.63,costing formula (live metal),1390.0,2026-03-23,,1377.08
+CU-222-00408,"Copper Busbur Flat, 15 (W) X 5 (T) MM",CU-222-,KGS,1484.63,costing formula (live metal),,,,1377.08
+CU-222-00074,"Copper Extruded Start Busbar, ISO-ETP/BS-C101, 50(W) X 3(T) mm",CU-222-,KGS,1445.0,recent PO (age-weighted),1445.0,2026-07-04,0,1377.08
+CU-222-00094,"Copper Finish Busbar, ISO-ETP / BS -C101, Drawing: 5009-00-05",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00087,"Copper Flat Busbar (EC), 80 (W) X 6 (T) - 3660 - CU - EC",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00097,"Copper Flat Busbar, Electrical Grade A6101,Size:60(w)×10(T)",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-111-00048,"Copper Foil, Size : 420 mm (Width) x 1 mm (Thickness), Grade: ETP",CU-111-,KGS,1502.45,recent PO (age-weighted),1502.45,2026-05-28,,1377.08
+CU-111-00007,"Copper Foil, Size: 210 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00049,"Copper Foil, Size: 250mm (Width) x 1mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00046,"Copper Foil, Size: 260 MM (Width) X 1 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00041,"Copper Foil, Size: 300 MM (Width) X 1.5 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00038,"Copper Foil, Size: 300mm (Width) X 0.35mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00037,"Copper Foil, Size: 300mm (Width) X 0.6mm (Thickness), Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00047,"Copper Foil, Size: 330(Width) x 0.6(Thickness) mm, Grade: ETP 0 temper",CU-111-,KGS,1566.08,costing formula (live metal),1394.07,2025-12-31,,1377.08
+CU-111-00003,"Copper Foil, Size: 350 MM (Width) X 0.4 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00042,"Copper Foil, Size: 350 MM (Width) X 1.5 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00004,"Copper Foil, Size: 356 MM (Width) X 0.5 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-111-00011,"Copper Foil, Size: 356 MM (Width) X 1.0 MM Thickness, Grade: ETP",CU-111-,KGS,1566.08,costing formula (live metal),,,,1377.08
+CU-222-00229,"Copper Litz Wire, 3.7mm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00149,"Copper Litz Wire, 6.00 Sqmm, 36SWG DCH Insulated Wire, Class H, Non Solderable",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00093,"Copper Start Busbar, ISO-ETP / BS -C101, Drawing: 5009-00-06",CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
+CU-222-00403,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size : 9 x 2.8 mm(Bare), With FG 0.3mm, Finished OD : 9.3 x 3.1 mm",CU-222-,KGS,1566.08,costing formula (live metal),1256.96,2025-12-22,,1377.08
+CU-222-00405,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-31, Size : 9 x 3 mm(Bare), With FG 0.3mm, Finished OD : 9.3 x 3.3 mm",CU-222-,KGS,1566.08,costing formula (live metal),1000.0,2025-12-16,,1377.08
+CU-222-00176,"Copper Strip With Fiberglass Covering, As per IS: 13730-Part-32, Size: 4 X 1.8 FG 0.3 MM (Finished OD=4.3 x 2.1 mm)",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00323,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 10.8 x 3 Enamelled 0.12 MM (Finished OD= 10.92 x 3.12)",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00258,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9 x 3 Enamelled 0.12 MM (Finished OD= 9.12 x 3.12)",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00257,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 28 Class-180, Size: 9.5 x 2.9 Enamelled 0.12 MM (Finished OD= 9.62 x 3.02)",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00169,"Copper Strip, As per IS 13730 | IEC 60317 | Part - 8 Class-H Size:  5.7 x 2.3 Enamelled 0.11 MM (Finished OD=5.81 x 2.41)",CU-222-,KGS,1566.08,costing formula (live metal),1370.0,2026-02-03,0,1377.08
+CU-222-00035,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 10 X 3.35, PC 0.6 MM Kraft Paper Covering",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00095,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 14.0 X 2.0, PC 0.6 MM Kraft Paper Covering",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00096,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 7.5 X 3.55, PC 0.8 MM Kraft Paper Covering",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00034,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 9.8 X 2.5, PC 0.5 MM Kraft Paper Covering",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00036,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 9.8 X 2.55, PC 0.8 MM Kraft Paper Covering",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00037,"Copper Strip, As per IS:13730-Part-27, Class-A, Size: 9.8 X 3.0, PC 0.8 MM Kraft Paper Covering",CU-222-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00343,"Copper Wire - 28 SWG, Class F-155,IS:13730 Part-3",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00342,"Copper Wire - 32 SWG, Class F-155,IS:13730 Part-3",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CH-303-00012,Copper Wire Enamel Remover Chemical,CH-303-,KGS,1602.08,costing formula (live metal),370.0,2026-07-10,,1377.08
+CU-222-00133,"Copper Wire Ø0.31 MM, Super Enameled 0.1mm (Finished OD=0.41MM)",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00160,"Copper Wire Ø0.315 MM, Super Enameled 0.052mm (Finished OD=0.367MM), Grade 2",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00134,"Copper Wire Ø1.08 MM, Super Enameled 0.1mm (Finished OD=1.18MM)",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00121,"Copper Wire Ø2.18 MM, Polyester-amide-imide (Polyamide-imide) 0.1MM, ANSI Type: MW 35, 200°C",CU-222-,KGS,1602.08,costing formula (live metal),1302.0,2026-04-06,,1377.08
+CU-222-00410,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.173 Enamelled 0.024 (Finished OD=0.197mm) (37 SWG)",CU-222-,KGS,1602.08,costing formula (live metal),1434.5,2026-01-08,,1377.08
+CU-222-00200,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.45 Enamelled 0.06 (Finished OD=0.51mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00429,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.559 Enamelled 0.07 (Finished OD=0.629mm) (24 SWG)",CU-222-,KGS,1602.08,costing formula (live metal),1492.0,2026-06-29,,1377.08
+CU-222-00440,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.711 Enamelled 0.08 (Finished OD=0.791mm) (22 SWG)",CU-222-,KGS,1539.97,recent PO (age-weighted),1569.04,2026-07-25,,1377.08
+CU-222-00402,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 0.82 Enamelled 0.05 (Finished OD=0.87mm)",CU-222-,KGS,1540.0,recent PO (age-weighted),1540.0,2026-06-11,,1377.08
+CU-222-00390,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1 Enamelled 0.08 (Finished OD=1.08mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,,1377.08
+CU-222-00262,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.2 Enamelled 0.12 (Finished OD=1.32mm)",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00409,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 1.219 Enamelled 0.066 (Finished OD=1.285mm) (18 SWG)",CU-222-,KGS,1602.08,costing formula (live metal),1380.0,2026-04-11,,1377.08
+CU-222-00298,"Copper Wire, As per IS 13730 | IEC60317 |Part-8 , Class-180, Size: Dia 2.33 Enamelled 0.12 ",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+WB-606-00016,Cu Brazing Rod Ø2.5mm with 0% Silver Content,WB-606-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+WB-606-00011,Cu Brazing Rod Ø3mm with 0% Silver Content,WB-606-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+WB-606-00001,Cu Brazing Rod Ø3mm with 14% Silver Content,WB-606-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00127,"Dual Coated Polyimide-amide Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø2.82 MM, SE-PIA 0.1 MM,Fineshed OD:2.9mm",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00180,Enamelled Copper Round Wire 22MP,CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CU-222-00366,Enamelled Copper Wire 16 SWG,CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CMP-444-00439,"FG Corner Section, Class H, Size: 10(H) X 10(W) X 2500 (L) MM",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CMP-444-00449,"FG Corner Section, Class H, Size: 10(H) X 10(W) X 2500 (L) MM, White Colour.",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CMP-444-00434,"FG Corner Section, Class H, Size: 8(H) X 8(W) X 2500 (L) MM",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CMP-444-00415,"FG Dog Bone Sticks,Class H, Size: 12(H) X 16(W) X 2500 (L) MM, Green Colour.",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CMP-444-00438,"FG Dog Bone, Class H, Size: 6(H) X 8(W) X 2500 (L) MM",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CMP-444-00235,"FG Sheet, Grade: GPO3, 3 MM (Thickness), Size: 180(L) x 45(W) x 3(T) mm.",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CMP-444-00435,"FG Sheet, Grade: GPO3, 3 mm(T)",CMP-444-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CC-555-00266,"Limb Core Lamination Strips, Size: 41.5(L) x 80(W),  Grade: M-OH 0.23, Losses: <0.93W/Kg, @1.7T/50Hz, As per drawing no: 5003-B02-01.",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+WB-606-00025,"Mig Copper Welding Wire, Ø1 mm",WB-606-,KGS,1602.08,costing formula (live metal),1200.0,2026-02-03,,1377.08
+INS-666-00239,NPN Class H 0.13(T) X 40(W) mm,INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00109,"NPN, 3 Mil  Class F, 0.08 (T) X 75 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00221,"NPN, 5mil  Class F, 0.13 (T) X 140 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00162,"NPN, 5mil  Class F, 0.13 (T) X 330 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00170,"NPN, 5mil  Class F, 0.13 (T) X 415 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00227,"NPN, 5mil  Class F, 0.13 (T) X 420 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00230,"NPN, 5mil  Class H, 0.13 (T) X 315 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+INS-666-00231,"NPN, 5mil  Class H, 0.13 (T) X 365 (W) mm",INS-666-,KGS,1484.63,costing formula (live metal),,,0,1377.08
+CU-222-00168,"Super Enameled Copper Wire, As per IS:13730-Part29- Class-200 (H), Size: Ø1.016 MM, SE-PIA 0.09 MM , Finished OD:1.106 MM, 19 SWG ",CU-222-,KGS,1602.08,costing formula (live metal),,,0,1377.08
+CC-555-00265,"Yoke Core Lamination Strips, Size: 380(L) x 80(W),  Grade: M-OH 0.23, Losses: <0.93W/Kg, @1.7T/50Hz, As per drawing no: 5003-B01-01.",CC-555-,KGS,1566.08,costing formula (live metal),,,0,1377.08
+CU-222-00327,copper bus bar 30 X 8 mm,CU-222-,KGS,1459.63,costing formula (live metal),,,0,1377.08
 PRD-SPL-00537,6MM Mild Steel Link Chain,PRD-SPL-,KGS,105.0,recent PO (age-weighted),105.0,2026-07-28,,62.0
 CF-555-00056,"Base Plate, 100 KVA, MS, Size: 390 X 60 X 8 MM As Per Drawing",CF-555-,KGS,62.0,metal benchmark (indicative),,,0,62.0
 CF-555-00052,"Base Plate, 63KVA, MS, Size: 370 X 50 X 8 MM As Per Drawing",CF-555-,KGS,62.0,metal benchmark (indicative),,,0,62.0

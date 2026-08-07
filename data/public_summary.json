@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-08-03T13:47:22Z",
+  "generated_at_utc": "2026-08-07T08:01:08Z",
   "aluminium": {
-    "price_per_kg": 360.5,
-    "price_band": "354,650\u2013366,350/MT",
-    "effective_date": "29.07.2026",
+    "price_per_kg": 368.9,
+    "price_band": "363,050\u2013374,750/MT",
+    "effective_date": "01.08.2026",
     "source": "NALCO price circular (nalcoindia.com/domestic/current-price/)",
     "grades": "Foil: IA60 / grade 1050; bus bar same NALCO basis"
   },
   "copper": {
-    "price_per_kg": 1319.63,
-    "usd_per_tonne": 13834.0,
-    "usdinr": 95.39,
-    "usdinr_source": "api.frankfurter.app",
-    "settlement_date": "31 Jul 2026",
+    "price_per_kg": 1377.08,
+    "usd_per_tonne": 14455.0,
+    "usdinr": 95.267,
+    "usdinr_source": "open.er-api.com",
+    "settlement_date": "06 Aug 2026",
     "source": "LME cash settlement via westmetall.com"
   },
   "crgo_steel": {
@@ -55,5 +55,12 @@
     "aluminium": "High (n=25 real POs, last 12mo preferred)",
     "copper": "Medium (n=10 real POs, last 12mo preferred)"
   },
-  "data_source": "live_erp_purchase_order_history"
+  "data_source": "live_erp_purchase_order_history",
+  "aluminium_hindalco": {
+    "price_per_kg": 371.5,
+    "ec_wire_rod_per_kg": 380.25,
+    "grade": "EC Grade, alloy A0, product code P0610",
+    "effective_date": "07.08.2026",
+    "source": "Hindalco primary ready reckoner (hindalco.com)"
+  }
 }
