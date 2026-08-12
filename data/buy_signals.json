@@ -1,32 +1,32 @@
 {
-  "generated_at_utc": "2026-08-11T06:12:22Z",
+  "generated_at_utc": "2026-08-12T08:06:11Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b91,362/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,362), +8% vs its 6-month average, 3-month momentum +5%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,377/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,377), +9% vs its 6-month average, 3-month momentum +6%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 1361.84,
+      "cur": 1376.67,
       "lo": 1129.6,
-      "hi": 1361.84,
+      "hi": 1376.67,
       "pos": 1.0,
-      "mom3": 4.8,
-      "vs_avg6": 7.6
+      "mom3": 5.9,
+      "vs_avg6": 8.6
     },
     "Aluminium": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b9369/kg it sits 100% up its trailing-12-month range (\u20b9241\u2013\u20b9369), +5% vs its 6-month average, 3-month momentum +4%. Multi-year high; NALCO guides that aluminium may ease into FY27 as alumina softens. A pullback is more likely than a further leg up.",
+      "reason": "At \u20b9381/kg it sits 100% up its trailing-12-month range (\u20b9241\u2013\u20b9381), +8% vs its 6-month average, 3-month momentum +7%. Multi-year high; NALCO guides that aluminium may ease into FY27 as alumina softens. A pullback is more likely than a further leg up.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 368.9,
+      "cur": 380.8,
       "lo": 240.8,
-      "hi": 368.9,
+      "hi": 380.8,
       "pos": 1.0,
-      "mom3": 3.5,
-      "vs_avg6": 5.1
+      "mom3": 6.9,
+      "vs_avg6": 7.9
     },
     "CRGO steel": {
       "signal": "NO SIGNAL",
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9378/kg it sits 69% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -3% vs its 6-month average, 3-month momentum -6%. ",
+      "reason": "At \u20b9383/kg it sits 72% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -2% vs its 6-month average, 3-month momentum -5%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 378.0,
+      "cur": 383.25,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.692,
-      "mom3": -6.0,
-      "vs_avg6": -2.9
+      "pos": 0.719,
+      "mom3": -4.7,
+      "vs_avg6": -1.8
     }
   }
 }
