@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-13T05:17:03Z",
+  "generated_at_utc": "2026-08-14T05:15:23Z",
   "aluminium": {
     "price_per_kg": 380.8,
     "price_band": "374,950\u2013386,650/MT",
@@ -10,7 +10,7 @@
   "copper": {
     "price_per_kg": 1370.61,
     "usd_per_tonne": 14376.0,
-    "usdinr": 95.34,
+    "usdinr": 95.44,
     "usdinr_source": "api.frankfurter.app",
     "settlement_date": "12 Aug 2026",
     "source": "LME cash settlement via westmetall.com"
