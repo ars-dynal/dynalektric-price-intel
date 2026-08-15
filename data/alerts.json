@@ -10,10 +10,18 @@
     },
     "moved": [
       "Aluminium conductor (Hindalco P0610):2026-08",
-      "Aluminium:2026-08"
+      "Aluminium:2026-08",
+      "Copper:2026-08"
     ]
   },
   "alerts": [
+    {
+      "date": "2026-08-15",
+      "type": "BIG_MOVE",
+      "severity": "watch",
+      "metal": "Copper",
+      "message": "**Copper \u25b2 5.2%** to \u20b91,388/kg (2026-08 vs 2026-07)."
+    },
     {
       "date": "2026-08-12",
       "type": "BIG_MOVE",
@@ -29,5 +37,5 @@
       "message": "**Aluminium conductor (Hindalco P0610) \u25b2 5.1%** to \u20b9378/kg (2026-08 vs 2026-07)."
     }
   ],
-  "generated_at_utc": "2026-08-14T05:15:23Z"
+  "generated_at_utc": "2026-08-15T04:03:02Z"
 }
