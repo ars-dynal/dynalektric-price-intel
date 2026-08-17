@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-24T20:56:45Z",
+  "generated_at_utc": "2026-08-17T07:59:51Z",
   "model": "llama-3.1-8b-instant",
   "items": {
     "CU-111-00049": {
@@ -4510,6 +4510,78 @@
     },
     "AL-111-00001": {
       "metal": "Aluminium"
+    },
+    "CC-555-00484": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00483": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00482": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00481": {
+      "metal": "Mild Steel"
+    },
+    "AL-111-00047": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00480": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00479": {
+      "metal": "Mild Steel"
+    },
+    "AL-222-00292": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00478": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00477": {
+      "metal": "Mild Steel"
+    },
+    "CC-555-00476": {
+      "metal": "Mild Steel"
+    },
+    "CU-222-00442": {
+      "metal": "Copper"
+    },
+    "CU-222-00441": {
+      "metal": "Copper"
+    },
+    "CC-555-00475": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00474": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00473": {
+      "metal": "CRGO steel"
+    },
+    "CC-555-00472": {
+      "metal": "Mild Steel"
+    },
+    "AL-222-00291": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00290": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00289": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00288": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00287": {
+      "metal": "Aluminium"
+    },
+    "AL-222-00286": {
+      "metal": "Aluminium"
+    },
+    "CC-555-00415": {
+      "metal": "CRGO steel"
     }
   }
 }

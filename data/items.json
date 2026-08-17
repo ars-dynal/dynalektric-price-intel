@@ -1,6 +1,6 @@
 {
 "source_export": "ERP live + AI classification",
-"item_count": 847,
+"item_count": 869,
 "items": [
 {
 "code": "WB-606-00022",
@@ -2459,6 +2459,38 @@
 "rate": 0
 },
 {
+"code": "AL-222-00290",
+"name": "AL Rectangular Conductor, Aluminium Strip, Size : 6 × 3mm, Super Enamelled 0.12mm,  Finished OD=6.12 × 3.12mm, UL Approved.",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "AL-222-00287",
+"name": "AL Rectangular Conductor, Aluminium Strip, Size : 7 × 4mm, Super Enamelled 0.12mm, Finished OD = 7.12 × 4.12mm, UL Approved.",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "AL-222-00288",
+"name": "AL Rectangular Conductor, Aluminium Strip, Size : 8 × 3, Super Enamelled 0.12 mm, Finished OD = 8.12 × 3.12mm, UL Approved.",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "AL-222-00286",
+"name": "AL Rectangular Conductor, Aluminium Strip, Size : 9.4 × 5.2mm, Super Enamelled 0.12mm, Finished OD = 9.52 × 5.32mm, UL Approved.",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
+},
+{
 "code": "AL-222-00247",
 "name": "AL Rectangular Conductor, Aluminum Strip, As per IS:13730 | IEC 60317-Part-28, Class-H, Size: 7×4, Super Enameled 0.12 mm (Finished OD= 7.12×4.12).",
 "cat": "AL-222-",
@@ -2569,6 +2601,22 @@
 "metal": "Aluminium",
 "uom": "KGS",
 "rate": 0
+},
+{
+"code": "AL-222-00291",
+"name": "AL Round Conductor, Aluminium Wire, Size : Ø3.0mm, Super Enameled 0.11mm, Grade-2, Finished OD=3.11mm, UL Approved.",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "AL-222-00289",
+"name": "AL Round Conductor, Aluminium Wire, Size : Ø3.8mm, Super Enameled 0.12mm, Grade-2, Finished OD = Ø3.92mm, UL Approved.",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
 },
 {
 "code": "AL-222-00242",
@@ -2705,6 +2753,14 @@
 "metal": "Aluminium",
 "uom": "KGS",
 "rate": 0
+},
+{
+"code": "AL-111-00047",
+"name": "Aluminium Foil, Electrical Grade : 1050, Size: 220(Width) x 2(Thick) mm (Hardness less than 30)",
+"cat": "AL-111-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
 },
 {
 "code": "AL-111-00045",
@@ -2845,6 +2901,14 @@
 {
 "code": "AL-222-00253",
 "name": "Aluminium Strip, Bare Size : 4 x 2.5 with Poleyester and Fibreglass Covering 0.5mm, Finished OD : 4.5 x 3, As per IS 11597-1986",
+"cat": "AL-222-",
+"metal": "Aluminium",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "AL-222-00292",
+"name": "Aluminium Strip, Bare Size : 5 x 2.5 with Poleyester and Fibreglass Covering 0.5mm, Finished OD : 5.5 x 3, As per IS 11597-1986",
 "cat": "AL-222-",
 "metal": "Aluminium",
 "uom": "KGS",
@@ -4123,6 +4187,30 @@
 "rate": 0
 },
 {
+"code": "CC-555-00473",
+"name": "Core Lamination Strips, Grade: CRGO,M6-35A,0.35mm/Equivalent, Max Core Loss 1.35W/kg@1.7T, 50Hz, As per drawing No : 2025-03-B01-02",
+"cat": "CC-555-",
+"metal": "CRGO steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00474",
+"name": "Core Lamination Strips, Grade: CRGO,M6-35A,0.35mm/Equivalent, Max Core Loss 1.35W/kg@1.7T, 50Hz, As per drawing No : 2025-03-B02-02",
+"cat": "CC-555-",
+"metal": "CRGO steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00475",
+"name": "Core Lamination Strips, Grade: CRGO,M6-35A,0.35mm/Equivalent, Max Core Loss 1.35W/kg@1.7T, 50Hz, As per drawing No : 2025-03-B03-02",
+"cat": "CC-555-",
+"metal": "CRGO steel",
+"uom": "KGS",
+"rate": null
+},
+{
 "code": "CC-555-00452",
 "name": "Core Lamination Strips-1, Grade: CRGO, M4-0.27thk mm, Max Core Loss 1.2W/Kg@1.7T, 50Hz, As per drawing No : 2036-01-B01-02",
 "cat": "CC-555-",
@@ -4325,6 +4413,22 @@
 {
 "code": "CC-555-00445",
 "name": "Core Lamination-1, Size : 195(L) x 85(W)mm, CRNO Grade : 0.35mm, Max Core Loss : 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 2035-01-B01-02",
+"cat": "CC-555-",
+"metal": "CRGO steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00483",
+"name": "Core Lamination-1, Size : 440(L) x 120(W)mm, Grade: CRGO, M4-0.27thk mm, Max Core Loss 1.2W/Kg@1.7T, 50Hz As Per Drawing No : 2039-B01-02",
+"cat": "CC-555-",
+"metal": "CRGO steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00484",
+"name": "Core Lamination-2, Size : 230(L) x 120(W)mm, Grade: CRGO, M4-0.27thk mm, Max Core Loss 1.2W/Kg@1.7T, 50Hz As Per Drawing No : 2039-B02-02",
 "cat": "CC-555-",
 "metal": "CRGO steel",
 "uom": "KGS",
@@ -4681,6 +4785,14 @@
 "metal": "CRGO steel",
 "uom": "KGS",
 "rate": 0
+},
+{
+"code": "CC-555-00415",
+"name": "Limb Core Lamination Strips, Size: 56(L) x 115(W), Grade: CRGO,M3, 0.23 thk mm, Max Core Loss 1.2W/Kg@1.7T, 50Hz, As per drawing No: 5014-06-B02-02",
+"cat": "CC-555-",
+"metal": "CRGO steel",
+"uom": "KGS",
+"rate": null
 },
 {
 "code": "CC-555-00417",
@@ -5995,14 +6107,6 @@
 "rate": 0
 },
 {
-"code": "CC-555-00318",
-"name": "Core E & I Lamination 1 - Ph Type 200, CRNO Grade: M250-35A, 0.35MM, Max Core Loss 2.5 W/Kg@1.5 T, 50Hz, As per drawing No: 2012-10-00-02",
-"cat": "CC-555-",
-"metal": "Mild Steel",
-"uom": "KGS",
-"rate": 0
-},
-{
 "code": "CC-555-00462",
 "name": "Core E & I Lamination, 1 - Phase, Type 120, CRNO Grade : M250-35A, 0.35(T)mm, Max Core Loss <2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 2037-00-02",
 "cat": "CC-555-",
@@ -6013,6 +6117,22 @@
 {
 "code": "CC-555-00461",
 "name": "Core E & I Lamination, 1 - Phase, Type 43, CRNO Grade : M250-35A, 0.35(T)mm, Max Core Loss <2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 2023-07-00-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00318",
+"name": "Core E & I Lamination, 3 - Phase, Type 200, CRNO Grade : M210-35A, 0.35mm, Max Core Loss <2.1 W/Kg@1.5T, 50Hz, As Per Drawing No : 2012-15-00-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": 0
+},
+{
+"code": "CC-555-00472",
+"name": "Core E & I Lamination, 3 - Phase, Type 43 TP, CRNO Grade : M210-35A, 0.35mm, Max Core Loss <2.1 W/Kg@1.5T, 50Hz, As Per Drawing No : 2036-03-00-02",
 "cat": "CC-555-",
 "metal": "Mild Steel",
 "uom": "KGS",
@@ -6315,6 +6435,30 @@
 "rate": null
 },
 {
+"code": "CC-555-00476",
+"name": "Core Lamination Strips-1, Size : 195(L) x 85(W), Grade : CRNO, M250-35A, 0.35(T) mm, Max Core Loss : 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 2035-04-B01-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00477",
+"name": "Core Lamination Strips-2, Size : 305(L) x 85(W), Grade : CRNO, M250-35A, 0.35(T) mm, Max Core Loss : 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 2035-04-B02-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00478",
+"name": "Core Lamination Strips-3, Size : 430(L) x 85(W), Grade : CRNO, M250-35A, 0.35(T) mm, Max Core Loss : 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 2035-04-B03-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
 "code": "CC-555-00114",
 "name": "Lamination 1, Size:105 (L) x 40 (W) x 0.5 (T)  CRNO , Grade:360, Max 3.6W/kg @ 1.5T, 50Hz",
 "cat": "CC-555-",
@@ -6437,6 +6581,22 @@
 {
 "code": "CC-555-00437",
 "name": "Limb Core Lamination, Size : 44(L) x 50(W)mm, CRNO Grade : 0.35mm, Max Core Loss 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 5014-09-B02-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00480",
+"name": "Limb Core Lamination, Size : 44(L) x 65(W) mm, CRNO Grade: M250-35A, 0.35mm, Max Core Loss 2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 5018-02-B02-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00482",
+"name": "Limb Core Lamination, Size : 45(L) x 80(W) mm, CRNO Grade: M250-35A, 0.35mm, Max Core Loss 2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 5023-B02-02",
 "cat": "CC-555-",
 "metal": "Mild Steel",
 "uom": "KGS",
@@ -6683,6 +6843,14 @@
 "rate": 0
 },
 {
+"code": "CC-555-00481",
+"name": "Yoke Core Lamination, Size : 252(L) x 80(W) mm, CRNO Grade: M250-35A, 0.35mm, Max Core Loss 2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 5023-B01-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
 "code": "CC-555-00440",
 "name": "Yoke Core Lamination, Size : 260(L) x 50(W)mm, CRNO Grade : 0.35mm, Max Core Loss : 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 5014-11-B01-02",
 "cat": "CC-555-",
@@ -6693,6 +6861,14 @@
 {
 "code": "CC-555-00436",
 "name": "Yoke Core Lamination, Size : 330(L) x 50(W)mm, CRNO Grade : 0.35mm, Max Core Loss 2.7W/kg@1.5T, 50Hz, As Per Drawing No : 5014-09-B01-02",
+"cat": "CC-555-",
+"metal": "Mild Steel",
+"uom": "KGS",
+"rate": null
+},
+{
+"code": "CC-555-00479",
+"name": "Yoke Core Lamination, Size : 415(L) x 65(W) mm, CRNO Grade: M250-35A, 0.35mm, Max Core Loss 2.7W/Kg@1.5T, 50Hz, As Per Drawing No : 5018-02-B01-02",
 "cat": "CC-555-",
 "metal": "Mild Steel",
 "uom": "KGS",
