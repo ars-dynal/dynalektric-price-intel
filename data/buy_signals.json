@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-22T04:04:34Z",
+  "generated_at_utc": "2026-08-23T04:08:26Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9361/kg it sits 60% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -7% vs its 6-month average, 3-month momentum -10%. ",
+      "reason": "At \u20b9366/kg it sits 63% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -6% vs its 6-month average, 3-month momentum -9%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 361.0,
+      "cur": 366.0,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.603,
-      "mom3": -10.2,
-      "vs_avg6": -6.6
+      "pos": 0.629,
+      "mom3": -9.0,
+      "vs_avg6": -5.5
     }
   }
 }
