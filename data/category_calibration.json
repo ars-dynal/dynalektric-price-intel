@@ -1,0 +1,86 @@
+{
+ "generated_at_utc": "2026-09-01T04:10:50Z",
+ "note": "Per-category-prefix median signed prediction error from the back-test. price_anchor applies the OPPOSITE sign, capped by calibration_cap_pct, only when n >= calibration_min_lines.",
+ "prefixes": {
+  "EN": {
+   "bias_pct": 0.0,
+   "n": 42
+  },
+  "PK": {
+   "bias_pct": 0.0,
+   "n": 123
+  },
+  "CM": {
+   "bias_pct": 0.0,
+   "n": 365
+  },
+  "AN": {
+   "bias_pct": 0.0,
+   "n": 473
+  },
+  "WD": {
+   "bias_pct": -0.85,
+   "n": 52
+  },
+  "FS": {
+   "bias_pct": 0.0,
+   "n": 2413
+  },
+  "CH": {
+   "bias_pct": -2.0,
+   "n": 264
+  },
+  "IN": {
+   "bias_pct": 0.0,
+   "n": 721
+  },
+  "EL": {
+   "bias_pct": 0.0,
+   "n": 646
+  },
+  "TM": {
+   "bias_pct": 0.0,
+   "n": 446
+  },
+  "CU": {
+   "bias_pct": -10.4,
+   "n": 462
+  },
+  "PN": {
+   "bias_pct": 0.0,
+   "n": 241
+  },
+  "PV": {
+   "bias_pct": -2.0,
+   "n": 30
+  },
+  "MF": {
+   "bias_pct": 0.0,
+   "n": 39
+  },
+  "CC": {
+   "bias_pct": 0.0,
+   "n": 160
+  },
+  "AL": {
+   "bias_pct": -5.1,
+   "n": 71
+  },
+  "CF": {
+   "bias_pct": 0.0,
+   "n": 277
+  },
+  "WB": {
+   "bias_pct": 0.0,
+   "n": 29
+  },
+  "HN": {
+   "bias_pct": 4.3,
+   "n": 10
+  },
+  "RL": {
+   "bias_pct": -7.9,
+   "n": 4
+  }
+ }
+}
