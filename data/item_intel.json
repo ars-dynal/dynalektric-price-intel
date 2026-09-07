@@ -1,5 +1,5 @@
 {
- "generated_at_utc": "2026-08-31T11:30:30Z",
+ "generated_at_utc": "2026-09-07T10:03:21Z",
  "cat_tpm": {
   "EL": 0.0,
   "CU": 3.5,
@@ -7,15 +7,15 @@
   "TM": 0.0,
   "CM": 0.0,
   "FS": 0.3,
-  "IN": 0.0,
-  "CC": 0.5,
+  "IN": -0.1,
+  "CC": 0.4,
   "CF": 0.0,
   "AN": 0.0,
-  "PN": 0.0,
-  "SE": 0.6,
+  "PN": -0.0,
+  "SE": 0.2,
   "CH": 1.3,
   "PR": 0.0,
-  "AL": 3.1,
+  "AL": 2.9,
   "MF": 0.0,
   "PK": 0.0
  },
@@ -26,7 +26,7 @@
    "tpm": null,
    "lpo": 70000.0,
    "lpod": "2026-03-04",
-   "avg180": 70000.0,
+   "avg180": null,
    "avg12": 70000.0,
    "npo": 4,
    "vend": [
@@ -48,7 +48,7 @@
    "tpm": -0.4,
    "lpo": 2100.0,
    "lpod": "2026-03-27",
-   "avg180": 2125.0,
+   "avg180": 2100.0,
    "avg12": 2150.0,
    "npo": 6,
    "vend": [
@@ -60,12 +60,12 @@
    ]
   },
   "CU-222-00079": {
-   "ew": 63.78,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +9.6%",
+   "ew": 64.0,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +10.0%",
    "tpm": 2.3,
    "lpo": 61.0,
    "lpod": "2026-08-03",
-   "avg180": 59.0,
+   "avg180": 60.0,
    "avg12": 56.0,
    "npo": 8,
    "vend": [
@@ -111,12 +111,12 @@
    ]
   },
   "EL-777-00105": {
-   "ew": 82676.34,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -8.7%",
+   "ew": 82415.49,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -8.9%",
    "tpm": -1.2,
    "lpo": 93000.0,
    "lpod": "2026-03-27",
-   "avg180": 86500.0,
+   "avg180": 93000.0,
    "avg12": 93000.0,
    "npo": 8,
    "vend": [
@@ -138,7 +138,7 @@
    "tpm": 0.5,
    "lpo": 1580.0,
    "lpod": "21/03/2025",
-   "avg180": 1655.26,
+   "avg180": 1620.76,
    "avg12": 1625.0,
    "npo": 9,
    "vend": [
@@ -187,7 +187,7 @@
    "tpm": 0.5,
    "lpo": 1820.0,
    "lpod": "21/03/2025",
-   "avg180": 1661.51,
+   "avg180": 1740.76,
    "avg12": 1637.0,
    "npo": 9,
    "vend": [
@@ -231,8 +231,8 @@
    ]
   },
   "EL-777-00553": {
-   "ew": 4044.57,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +7.6%",
+   "ew": 4054.71,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +7.9%",
    "tpm": 1.2,
    "lpo": 3797.25,
    "lpod": "2026-03-27",
@@ -253,8 +253,8 @@
    ]
   },
   "EL-777-00029": {
-   "ew": 736.76,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend -1.6%/mo \u2192 projected -9.0%",
+   "ew": 733.83,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend -1.6%/mo \u2192 projected -9.3%",
    "tpm": -1.5,
    "lpo": 860.0,
    "lpod": "27/05/2025",
@@ -275,7 +275,7 @@
    "tpm": -2.3,
    "lpo": 4655.0,
    "lpod": "21/01/2025",
-   "avg180": 4355.0,
+   "avg180": 4505.0,
    "avg12": 4355.0,
    "npo": 11,
    "vend": [
@@ -297,7 +297,7 @@
    "tpm": -2.1,
    "lpo": 4655.0,
    "lpod": "21/01/2025",
-   "avg180": 4355.0,
+   "avg180": 4505.0,
    "avg12": 4355.0,
    "npo": 12,
    "vend": [
@@ -314,12 +314,12 @@
    ]
   },
   "EL-777-00515": {
-   "ew": 2614.74,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.5%/mo \u2192 projected +7.3%",
+   "ew": 2623.18,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.5%/mo \u2192 projected +7.6%",
    "tpm": 1.6,
    "lpo": 2650.0,
    "lpod": "2026-07-18",
-   "avg180": 2290.0,
+   "avg180": 2470.0,
    "avg12": 2290.0,
    "npo": 8,
    "vend": [
@@ -358,12 +358,12 @@
    ]
   },
   "EL-777-00585": {
-   "ew": 1110.81,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.7%/mo \u2192 projected +6.8%",
+   "ew": 1114.98,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.7%/mo \u2192 projected +7.2%",
    "tpm": 1.8,
    "lpo": 1100.0,
    "lpod": "2026-07-18",
-   "avg180": 1025.0,
+   "avg180": 1100.0,
    "avg12": 950.0,
    "npo": 5,
    "vend": [
@@ -429,7 +429,7 @@
    "tpm": -0.3,
    "lpo": 7500.0,
    "lpod": "27/05/2025",
-   "avg180": 7500.0,
+   "avg180": 8500.0,
    "avg12": 7500.0,
    "npo": 19,
    "vend": [
@@ -456,7 +456,7 @@
    "tpm": 5.9,
    "lpo": 35.5,
    "lpod": "2026-08-03",
-   "avg180": 30.85,
+   "avg180": 35.0,
    "avg12": 23.0,
    "npo": 10,
    "vend": [
@@ -473,7 +473,7 @@
    "tpm": 6.5,
    "lpo": 11.15,
    "lpod": "2026-08-03",
-   "avg180": 10.93,
+   "avg180": 10.95,
    "avg12": 7.0,
    "npo": 10,
    "vend": [
@@ -490,7 +490,7 @@
    "tpm": 3.8,
    "lpo": 12.0,
    "lpod": "27/05/2025",
-   "avg180": 12.0,
+   "avg180": 13.72,
    "avg12": 11.0,
    "npo": 15,
    "vend": [
@@ -704,7 +704,7 @@
    "tpm": null,
    "lpo": 40000.0,
    "lpod": "21/01/2025",
-   "avg180": 39250.0,
+   "avg180": 40000.0,
    "avg12": 38500.0,
    "npo": 5,
    "vend": [
@@ -722,18 +722,18 @@
   },
   "FST-999-00082": {
    "ew": 3.99,
-   "ewb": "age-weighted avg of 17 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
    "tpm": 0.1,
    "lpo": 4.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 4.0,
    "avg12": 4.0,
-   "npo": 18,
+   "npo": 19,
    "vend": [
     {
      "n": "Black Burn & Co. Pvt. Ltd.",
      "p": 4.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     },
     {
      "n": "Pankaj Electricals",
@@ -744,18 +744,18 @@
   },
   "FST-999-00083": {
    "ew": 5.96,
-   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
-   "tpm": 0.2,
+   "ewb": "age-weighted avg of 19 PO(s), half-life 90d",
+   "tpm": 0.3,
    "lpo": 6.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 6.0,
    "avg12": 6.0,
-   "npo": 19,
+   "npo": 20,
    "vend": [
     {
      "n": "Black Burn & Co. Pvt. Ltd.",
      "p": 6.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     },
     {
      "n": "Pankaj Electricals",
@@ -765,19 +765,19 @@
    ]
   },
   "FST-999-00084": {
-   "ew": 12.91,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d",
+   "ew": 12.93,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d",
    "tpm": 0.2,
    "lpo": 13.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 13.0,
    "avg12": 13.0,
-   "npo": 14,
+   "npo": 15,
    "vend": [
     {
      "n": "Black Burn & Co. Pvt. Ltd.",
      "p": 13.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     },
     {
      "n": "Pankaj Electricals",
@@ -792,7 +792,7 @@
    "tpm": 0.0,
    "lpo": 8.0,
    "lpod": "2026-08-03",
-   "avg180": 8.0,
+   "avg180": 4.78,
    "avg12": 8.0,
    "npo": 12,
    "vend": [
@@ -838,12 +838,12 @@
   "FST-999-00394": {
    "ew": 0.23,
    "ewb": "age-weighted avg of 17 PO(s), half-life 90d",
-   "tpm": -0.5,
+   "tpm": 0.0,
    "lpo": 0.28,
    "lpod": "27/05/2025",
    "avg180": 0.23,
    "avg12": 0.23,
-   "npo": 19,
+   "npo": 20,
    "vend": [
     {
      "n": "Black Burn & Co. Pvt. Ltd.",
@@ -863,7 +863,7 @@
    "tpm": 0.0,
    "lpo": 0.67,
    "lpod": "27/05/2025",
-   "avg180": 0.76,
+   "avg180": 0.72,
    "avg12": 0.76,
    "npo": 11,
    "vend": [
@@ -880,7 +880,7 @@
    "tpm": -0.0,
    "lpo": 2.48,
    "lpod": "2026-08-03",
-   "avg180": 2.54,
+   "avg180": 2.48,
    "avg12": 2.48,
    "npo": 10,
    "vend": [
@@ -981,7 +981,7 @@
   },
   "FST-999-00532": {
    "ew": 2.84,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, 1 outlier(s) dropped",
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d",
    "tpm": -0.2,
    "lpo": 2.6,
    "lpod": "27/05/2025",
@@ -1051,9 +1051,9 @@
    ]
   },
   "FST-999-00017": {
-   "ew": 0.86,
-   "ewb": "age-weighted avg of 16 PO(s), half-life 90d",
-   "tpm": -0.9,
+   "ew": 0.79,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -8.3%",
+   "tpm": -1.3,
    "lpo": 0.9,
    "lpod": "29/04/2025",
    "avg180": 0.8,
@@ -1074,7 +1074,7 @@
   },
   "FST-999-00121": {
    "ew": 0.5,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend -1.1%/mo \u2192 projected -5.0%",
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend -1.1%/mo \u2192 projected -5.3%",
    "tpm": -1.1,
    "lpo": 0.5,
    "lpod": "27/05/2025",
@@ -1095,8 +1095,8 @@
    ]
   },
   "FST-999-00119": {
-   "ew": 0.53,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend -1.0%/mo \u2192 projected -4.8%",
+   "ew": 0.52,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend -1.0%/mo \u2192 projected -5.0%",
    "tpm": -1.0,
    "lpo": 0.5,
    "lpod": "27/05/2025",
@@ -1118,7 +1118,7 @@
   },
   "FST-999-00251": {
    "ew": 0.66,
-   "ewb": "age-weighted avg of 15 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +5.7%",
+   "ewb": "age-weighted avg of 15 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +6.0%",
    "tpm": 1.3,
    "lpo": 0.5,
    "lpod": "27/05/2025",
@@ -1144,7 +1144,7 @@
    "tpm": 10.6,
    "lpo": 8.9,
    "lpod": "2026-03-04",
-   "avg180": 8.9,
+   "avg180": null,
    "avg12": 5.75,
    "npo": 6,
    "vend": [
@@ -1156,14 +1156,14 @@
    ]
   },
   "FST-999-00738": {
-   "ew": 9.2,
-   "ewb": "age-weighted avg of 16 PO(s), half-life 90d",
+   "ew": 9.25,
+   "ewb": "age-weighted avg of 17 PO(s), half-life 90d",
    "tpm": 0.6,
    "lpo": 8.5,
    "lpod": "30/05/2025",
    "avg180": 9.25,
-   "avg12": 8.5,
-   "npo": 22,
+   "avg12": 8.75,
+   "npo": 23,
    "vend": [
     {
      "n": "Kamlesh Industries",
@@ -1178,7 +1178,7 @@
    "tpm": null,
    "lpo": 15.5,
    "lpod": "2026-03-04",
-   "avg180": 15.5,
+   "avg180": null,
    "avg12": 15.22,
    "npo": 4,
    "vend": [
@@ -1190,13 +1190,13 @@
    ]
   },
   "FST-999-00677": {
-   "ew": 18.99,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +2.6%/mo \u2192 projected +10.0%",
-   "tpm": 2.6,
+   "ew": 19.13,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +10.0%",
+   "tpm": 1.8,
    "lpo": 16.12,
    "lpod": "30/05/2025",
-   "avg180": 15.81,
-   "avg12": 15.81,
+   "avg180": 16.12,
+   "avg12": 16.12,
    "npo": 13,
    "vend": [
     {
@@ -1217,7 +1217,7 @@
    "tpm": 3.9,
    "lpo": 19.5,
    "lpod": "2026-03-04",
-   "avg180": 19.5,
+   "avg180": null,
    "avg12": 16.5,
    "npo": 6,
    "vend": [
@@ -1285,7 +1285,7 @@
    "tpm": 3.8,
    "lpo": 30.31,
    "lpod": "30/05/2025",
-   "avg180": 30.16,
+   "avg180": 30.0,
    "avg12": 31.27,
    "npo": 13,
    "vend": [
@@ -1302,7 +1302,7 @@
    "tpm": 5.1,
    "lpo": 35.36,
    "lpod": "30/05/2025",
-   "avg180": 35.18,
+   "avg180": 35.0,
    "avg12": 35.0,
    "npo": 14,
    "vend": [
@@ -1358,7 +1358,7 @@
    "tpm": null,
    "lpo": 22.99,
    "lpod": "2026-03-04",
-   "avg180": 22.99,
+   "avg180": null,
    "avg12": 22.99,
    "npo": 4,
    "vend": [
@@ -1375,7 +1375,7 @@
    "tpm": null,
    "lpo": 29.04,
    "lpod": "2026-03-04",
-   "avg180": 29.04,
+   "avg180": null,
    "avg12": 29.04,
    "npo": 4,
    "vend": [
@@ -1465,7 +1465,7 @@
    "tpm": 12.0,
    "lpo": 16.7,
    "lpod": "2026-08-03",
-   "avg180": 11.72,
+   "avg180": 16.7,
    "avg12": 6.74,
    "npo": 11,
    "vend": [
@@ -1487,7 +1487,7 @@
    "tpm": -0.3,
    "lpo": 18.4,
    "lpod": "2026-08-03",
-   "avg180": 12.79,
+   "avg180": 18.4,
    "avg12": 7.18,
    "npo": 11,
    "vend": [
@@ -1509,7 +1509,7 @@
    "tpm": 0.6,
    "lpo": 8.29,
    "lpod": "2026-03-06",
-   "avg180": 8.52,
+   "avg180": null,
    "avg12": 8.29,
    "npo": 15,
    "vend": [
@@ -1526,7 +1526,7 @@
    "tpm": 12.4,
    "lpo": 24.8,
    "lpod": "2026-08-03",
-   "avg180": 17.48,
+   "avg180": 24.8,
    "avg12": 10.15,
    "npo": 11,
    "vend": [
@@ -1548,7 +1548,7 @@
    "tpm": -0.1,
    "lpo": 9.62,
    "lpod": "2026-03-04",
-   "avg180": 9.62,
+   "avg180": null,
    "avg12": 9.91,
    "npo": 9,
    "vend": [
@@ -1565,7 +1565,7 @@
    "tpm": 10.8,
    "lpo": 32.5,
    "lpod": "2026-08-03",
-   "avg180": 23.46,
+   "avg180": 32.5,
    "avg12": 14.43,
    "npo": 11,
    "vend": [
@@ -1675,8 +1675,8 @@
    ]
   },
   "CU-222-00026": {
-   "ew": 28.88,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.4%",
+   "ew": 29.02,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.9%",
    "tpm": 2.3,
    "lpo": 22.6,
    "lpod": "27/05/2025",
@@ -1702,9 +1702,9 @@
    ]
   },
   "EL-777-00296": {
-   "ew": 247.38,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.5,
+   "ew": 247.82,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d",
+   "tpm": 0.6,
    "lpo": 252.0,
    "lpod": "2026-08-24",
    "avg180": 252.0,
@@ -1719,13 +1719,13 @@
    ]
   },
   "CC-555-00146": {
-   "ew": 101.53,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
+   "ew": 101.77,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d",
    "tpm": 0.5,
    "lpo": 98.0,
    "lpod": "24/04/2025",
    "avg180": 103.5,
-   "avg12": 97.0,
+   "avg12": 96.5,
    "npo": 23,
    "vend": [
     {
@@ -1746,13 +1746,13 @@
    ]
   },
   "CC-555-00147": {
-   "ew": 101.57,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
+   "ew": 101.82,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d",
    "tpm": 0.5,
    "lpo": 98.0,
    "lpod": "24/04/2025",
    "avg180": 103.5,
-   "avg12": 97.0,
+   "avg12": 96.75,
    "npo": 23,
    "vend": [
     {
@@ -1773,9 +1773,9 @@
    ]
   },
   "CF-555-00393": {
-   "ew": 89.16,
-   "ewb": "age-weighted avg of 15 PO(s), half-life 90d",
-   "tpm": -0.1,
+   "ew": 88.95,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
+   "tpm": 0.3,
    "lpo": 91.0,
    "lpod": "2026-08-22",
    "avg180": 90.12,
@@ -1800,22 +1800,22 @@
    ]
   },
   "CF-555-00394": {
-   "ew": 78.1,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.5,
+   "ew": 78.47,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "tpm": 0.8,
    "lpo": 80.0,
-   "lpod": "2026-08-24",
+   "lpod": "2026-09-01",
    "avg180": 80.0,
    "avg12": 75.0,
-   "npo": 22,
+   "npo": 23,
    "vend": [
     {
-     "n": "GKX ENGINEERINGS INDIA",
+     "n": "VISHAKHA INDUSTRIES",
      "p": 80.0,
-     "d": "2026-08-24"
+     "d": "2026-09-01"
     },
     {
-     "n": "VISHAKHA INDUSTRIES",
+     "n": "GKX ENGINEERINGS INDIA",
      "p": 80.0,
      "d": "2026-08-24"
     },
@@ -1827,22 +1827,22 @@
    ]
   },
   "CF-555-00395": {
-   "ew": 91.1,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.4,
+   "ew": 91.47,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "tpm": 0.7,
    "lpo": 93.0,
-   "lpod": "2026-08-24",
+   "lpod": "2026-09-01",
    "avg180": 93.0,
    "avg12": 88.0,
-   "npo": 22,
+   "npo": 23,
    "vend": [
     {
-     "n": "GKX ENGINEERINGS INDIA",
+     "n": "VISHAKHA INDUSTRIES",
      "p": 93.0,
-     "d": "2026-08-24"
+     "d": "2026-09-01"
     },
     {
-     "n": "VISHAKHA INDUSTRIES",
+     "n": "GKX ENGINEERINGS INDIA",
      "p": 93.0,
      "d": "2026-08-24"
     },
@@ -1854,22 +1854,22 @@
    ]
   },
   "CF-555-00396": {
-   "ew": 96.07,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.5,
+   "ew": 96.47,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "tpm": 0.6,
    "lpo": 98.0,
-   "lpod": "2026-08-24",
+   "lpod": "2026-09-01",
    "avg180": 98.0,
    "avg12": 93.0,
-   "npo": 22,
+   "npo": 23,
    "vend": [
     {
-     "n": "GKX ENGINEERINGS INDIA",
+     "n": "VISHAKHA INDUSTRIES",
      "p": 98.0,
-     "d": "2026-08-24"
+     "d": "2026-09-01"
     },
     {
-     "n": "VISHAKHA INDUSTRIES",
+     "n": "GKX ENGINEERINGS INDIA",
      "p": 98.0,
      "d": "2026-08-24"
     },
@@ -1881,12 +1881,12 @@
    ]
   },
   "ANG-000-00053": {
-   "ew": 197.8,
-   "ewb": "age-weighted avg of 26 PO(s), half-life 90d",
-   "tpm": 0.6,
+   "ew": 198.34,
+   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
+   "tpm": 0.7,
    "lpo": 193.0,
    "lpod": "29/04/2025",
-   "avg180": 193.0,
+   "avg180": 202.5,
    "avg12": 193.0,
    "npo": 30,
    "vend": [
@@ -1898,8 +1898,8 @@
    ]
   },
   "ANG-000-00063": {
-   "ew": 711.94,
-   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "ew": 712.75,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d",
    "tpm": 0.3,
    "lpo": 722.0,
    "lpod": "2026-08-22",
@@ -1915,8 +1915,8 @@
    ]
   },
   "ANG-000-00030": {
-   "ew": 258.04,
-   "ewb": "age-weighted avg of 16 PO(s), half-life 90d",
+   "ew": 258.05,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
    "tpm": -0.0,
    "lpo": 258.0,
    "lpod": "2026-01-10",
@@ -1932,9 +1932,9 @@
    ]
   },
   "ANG-000-00027": {
-   "ew": 27.96,
-   "ewb": "age-weighted avg of 48 PO(s), half-life 90d",
-   "tpm": 0.6,
+   "ew": 28.01,
+   "ewb": "age-weighted avg of 41 PO(s), half-life 90d",
+   "tpm": 0.7,
    "lpo": 27.0,
    "lpod": "29/04/2025",
    "avg180": 29.5,
@@ -1949,12 +1949,12 @@
    ]
   },
   "INS-666-00075": {
-   "ew": 166.87,
-   "ewb": "age-weighted avg of 24 PO(s), half-life 90d, trend -1.2%/mo \u2192 projected -10.0%",
-   "tpm": -1.2,
+   "ew": 166.19,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d, trend -1.6%/mo \u2192 projected -10.0%",
+   "tpm": -1.6,
    "lpo": 190.0,
    "lpod": "28/04/2025",
-   "avg180": 185.0,
+   "avg180": 190.0,
    "avg12": 190.0,
    "npo": 27,
    "vend": [
@@ -1967,7 +1967,7 @@
   },
   "PNR-202-00010": {
    "ew": 1.7,
-   "ewb": "age-weighted avg of 23 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 19 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 1.7,
    "lpod": "2026-08-22",
@@ -1984,7 +1984,7 @@
   },
   "ANG-000-00034": {
    "ew": 67.0,
-   "ewb": "age-weighted avg of 15 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 67.0,
    "lpod": "2026-01-10",
@@ -2000,9 +2000,9 @@
    ]
   },
   "TMP-000-00086": {
-   "ew": 5.28,
-   "ewb": "age-weighted avg of 37 PO(s), half-life 90d, trend -2.6%/mo \u2192 projected -10.0%",
-   "tpm": -2.5,
+   "ew": 5.27,
+   "ewb": "age-weighted avg of 33 PO(s), half-life 90d, trend -3.3%/mo \u2192 projected -10.0%",
+   "tpm": -3.2,
    "lpo": 4.0,
    "lpod": "2026-05-03",
    "avg180": 4.0,
@@ -2017,9 +2017,9 @@
    ]
   },
   "TMP-000-00135": {
-   "ew": 1.87,
-   "ewb": "age-weighted avg of 21 PO(s), half-life 90d, 7 outlier(s) dropped",
-   "tpm": -0.3,
+   "ew": 2.0,
+   "ewb": "age-weighted avg of 17 PO(s), half-life 90d, 7 outlier(s) dropped, trend +1.0%/mo \u2192 projected +7.6%",
+   "tpm": 1.0,
    "lpo": 0.58,
    "lpod": "2026-06-05",
    "avg180": 2.0,
@@ -2034,13 +2034,13 @@
    ]
   },
   "WD-909-00001": {
-   "ew": 523.48,
-   "ewb": "age-weighted avg of 37 PO(s), half-life 90d, trend -2.0%/mo \u2192 projected -9.7%",
-   "tpm": -1.9,
+   "ew": 527.99,
+   "ewb": "age-weighted avg of 33 PO(s), half-life 90d, trend -1.7%/mo \u2192 projected -8.6%",
+   "tpm": -1.7,
    "lpo": 570.0,
    "lpod": "2026-08-22",
    "avg180": 570.0,
-   "avg12": 580.0,
+   "avg12": 570.0,
    "npo": 41,
    "vend": [
     {
@@ -2061,9 +2061,9 @@
    ]
   },
   "CMP-444-00472": {
-   "ew": 12.28,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +1.9%/mo \u2192 projected +7.8%",
-   "tpm": 2.1,
+   "ew": 12.45,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +8.7%",
+   "tpm": 2.4,
    "lpo": 12.0,
    "lpod": "2026-08-22",
    "avg180": 12.0,
@@ -2083,9 +2083,9 @@
    ]
   },
   "CC-555-00148": {
-   "ew": 224.45,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d",
-   "tpm": 0.7,
+   "ew": 246.64,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +10.0%",
+   "tpm": 1.1,
    "lpo": 257.0,
    "lpod": "24/04/2025",
    "avg180": 257.0,
@@ -2110,9 +2110,9 @@
    ]
   },
   "CC-555-00149": {
-   "ew": 224.45,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d",
-   "tpm": 0.7,
+   "ew": 246.64,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +10.0%",
+   "tpm": 1.1,
    "lpo": 257.0,
    "lpod": "24/04/2025",
    "avg180": 257.0,
@@ -2137,9 +2137,9 @@
    ]
   },
   "CF-555-00397": {
-   "ew": 127.71,
-   "ewb": "age-weighted avg of 15 PO(s), half-life 90d",
-   "tpm": -0.9,
+   "ew": 127.02,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d",
+   "tpm": -0.6,
    "lpo": 127.0,
    "lpod": "2026-08-22",
    "avg180": 126.5,
@@ -2164,22 +2164,22 @@
    ]
   },
   "CF-555-00398": {
-   "ew": 47.84,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.5,
+   "ew": 48.08,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "tpm": 0.8,
    "lpo": 49.0,
-   "lpod": "2026-08-22",
+   "lpod": "2026-09-01",
    "avg180": 49.0,
    "avg12": 46.0,
-   "npo": 22,
+   "npo": 23,
    "vend": [
     {
-     "n": "GKX ENGINEERINGS INDIA",
+     "n": "VISHAKHA INDUSTRIES",
      "p": 49.0,
-     "d": "2026-08-22"
+     "d": "2026-09-01"
     },
     {
-     "n": "VISHAKHA INDUSTRIES",
+     "n": "GKX ENGINEERINGS INDIA",
      "p": 49.0,
      "d": "2026-08-22"
     },
@@ -2191,22 +2191,22 @@
    ]
   },
   "CF-555-00399": {
-   "ew": 82.46,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.4,
+   "ew": 82.77,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "tpm": 0.6,
    "lpo": 84.0,
-   "lpod": "2026-08-22",
+   "lpod": "2026-09-01",
    "avg180": 84.0,
    "avg12": 80.0,
-   "npo": 22,
+   "npo": 23,
    "vend": [
     {
-     "n": "GKX ENGINEERINGS INDIA",
+     "n": "VISHAKHA INDUSTRIES",
      "p": 84.0,
-     "d": "2026-08-22"
+     "d": "2026-09-01"
     },
     {
-     "n": "VISHAKHA INDUSTRIES",
+     "n": "GKX ENGINEERINGS INDIA",
      "p": 84.0,
      "d": "2026-08-22"
     },
@@ -2218,22 +2218,22 @@
    ]
   },
   "CF-555-00400": {
-   "ew": 70.46,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
-   "tpm": 0.5,
+   "ew": 70.77,
+   "ewb": "age-weighted avg of 18 PO(s), half-life 90d",
+   "tpm": 0.7,
    "lpo": 72.0,
-   "lpod": "2026-08-22",
+   "lpod": "2026-09-01",
    "avg180": 72.0,
    "avg12": 68.0,
-   "npo": 22,
+   "npo": 23,
    "vend": [
     {
-     "n": "GKX ENGINEERINGS INDIA",
+     "n": "VISHAKHA INDUSTRIES",
      "p": 72.0,
-     "d": "2026-08-22"
+     "d": "2026-09-01"
     },
     {
-     "n": "VISHAKHA INDUSTRIES",
+     "n": "GKX ENGINEERINGS INDIA",
      "p": 72.0,
      "d": "2026-08-22"
     },
@@ -2245,9 +2245,9 @@
    ]
   },
   "CMP-444-00432": {
-   "ew": 19.11,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +2.5%/mo \u2192 projected +10.0%",
-   "tpm": 2.8,
+   "ew": 19.28,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +2.8%/mo \u2192 projected +10.0%",
+   "tpm": 3.2,
    "lpo": 20.0,
    "lpod": "2026-08-22",
    "avg180": 20.0,
@@ -2267,9 +2267,9 @@
    ]
   },
   "INS-666-00166": {
-   "ew": 1500.24,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -6.1%",
-   "tpm": -1.2,
+   "ew": 1578.62,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d",
+   "tpm": -0.3,
    "lpo": 1600.0,
    "lpod": "31/03/2025",
    "avg180": 1580.0,
@@ -2414,15 +2414,20 @@
    ]
   },
   "SER-R&M-00001": {
-   "ew": 1159.27,
-   "ewb": "age-weighted avg of 44 PO(s), half-life 90d, 70 outlier(s) dropped, trend +2.8%/mo \u2192 projected +10.0%",
-   "tpm": 2.9,
-   "lpo": 76.27,
-   "lpod": "2026-08-31",
-   "avg180": 2170.5,
-   "avg12": 1066.0,
-   "npo": 118,
+   "ew": 1129.85,
+   "ewb": "age-weighted avg of 45 PO(s), half-life 90d, 71 outlier(s) dropped, trend +2.2%/mo \u2192 projected +9.3%",
+   "tpm": 2.3,
+   "lpo": 400.0,
+   "lpod": "2026-09-07",
+   "avg180": 1100.0,
+   "avg12": 1031.0,
+   "npo": 120,
    "vend": [
+    {
+     "n": "SURAKSHA SURGE SAFETY SOLUTIONS PRIVATE LIMITED",
+     "p": 400.0,
+     "d": "2026-09-07"
+    },
     {
      "n": "MALLAPPA BATH STUDIO",
      "p": 76.27,
@@ -2432,11 +2437,6 @@
      "n": "KATZE TECHNOLOGIES",
      "p": 4600.0,
      "d": "2026-08-18"
-    },
-    {
-     "n": "SUPREME COOL TECH",
-     "p": 650.0,
-     "d": "2026-07-29"
     }
    ]
   },
@@ -2520,14 +2520,19 @@
   },
   "SER-CON-00006": {
    "ew": 1022.92,
-   "ewb": "age-weighted avg of 94 PO(s), half-life 90d, 75 outlier(s) dropped, trend -5.4%/mo \u2192 projected -10.0%",
+   "ewb": "age-weighted avg of 94 PO(s), half-life 90d, 79 outlier(s) dropped, trend -5.4%/mo \u2192 projected -10.0%",
    "tpm": -5.0,
-   "lpo": 12000.0,
-   "lpod": "2026-08-24",
-   "avg180": 1000.0,
+   "lpo": 15000.0,
+   "lpod": "2026-09-01",
+   "avg180": 1200.0,
    "avg12": 1000.0,
-   "npo": 170,
+   "npo": 174,
    "vend": [
+    {
+     "n": "SGS INDIA PRIVATE LIMITED",
+     "p": 15000.0,
+     "d": "2026-09-01"
+    },
     {
      "n": "PIBCO LIMITED (R&D CENTRE)",
      "p": 12000.0,
@@ -2537,22 +2542,17 @@
      "n": "Envitest Laboratories Private Limited",
      "p": 30000.0,
      "d": "2026-08-22"
-    },
-    {
-     "n": "TransCal Technologies LLP",
-     "p": 1000.0,
-     "d": "2026-08-18"
     }
    ]
   },
   "SER-CON-00007": {
-   "ew": 36380.94,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d, 3 outlier(s) dropped",
+   "ew": 44328.24,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d, 3 outlier(s) dropped",
    "tpm": null,
    "lpo": 195000.0,
    "lpod": "2026-02-14",
    "avg180": null,
-   "avg12": 26850.0,
+   "avg12": 38700.0,
    "npo": 10,
    "vend": [
     {
@@ -2573,35 +2573,35 @@
    ]
   },
   "SER-TPT-00001": {
-   "ew": 1515.67,
-   "ewb": "age-weighted avg of 269 PO(s), half-life 90d, 251 outlier(s) dropped",
-   "tpm": 1.0,
-   "lpo": 2000.0,
-   "lpod": "2026-08-29",
-   "avg180": 1671.0,
+   "ew": 1478.22,
+   "ewb": "age-weighted avg of 273 PO(s), half-life 90d, 248 outlier(s) dropped",
+   "tpm": 0.2,
+   "lpo": 1000.0,
+   "lpod": "2026-09-07",
+   "avg180": 1500.0,
    "avg12": 1500.0,
-   "npo": 577,
+   "npo": 590,
    "vend": [
     {
-     "n": "Schaltbau India Pvt. Ltd.",
-     "p": 2850.0,
-     "d": "2026-08-29"
+     "n": "SURAKSHA SURGE SAFETY SOLUTIONS PRIVATE LIMITED",
+     "p": 1000.0,
+     "d": "2026-09-07"
     },
     {
-     "n": "Kamlesh Industries",
-     "p": 600.0,
-     "d": "2026-08-29"
-    },
-    {
-     "n": "WOAMA ELECTRONICS",
+     "n": "METALCO EXTRUSIONS GLOBAL LLP",
      "p": 2000.0,
-     "d": "2026-08-29"
+     "d": "2026-09-05"
+    },
+    {
+     "n": "S V ELECTRONICS",
+     "p": 600.0,
+     "d": "2026-09-03"
     }
    ]
   },
   "SER-TPT-00003": {
    "ew": 551.46,
-   "ewb": "age-weighted avg of 30 PO(s), half-life 90d, 16 outlier(s) dropped, trend -10.4%/mo \u2192 projected -10.0%",
+   "ewb": "age-weighted avg of 30 PO(s), half-life 90d, 13 outlier(s) dropped, trend -10.4%/mo \u2192 projected -10.0%",
    "tpm": -9.7,
    "lpo": 2294.39,
    "lpod": "2026-07-14",
@@ -2676,8 +2676,8 @@
    ]
   },
   "SER-CON-00004": {
-   "ew": 2102.76,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 9 outlier(s) dropped, trend -2.0%/mo \u2192 projected -5.9%",
+   "ew": 2092.54,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 9 outlier(s) dropped, trend -2.0%/mo \u2192 projected -6.4%",
    "tpm": -2.0,
    "lpo": 7540.0,
    "lpod": "2026-08-20",
@@ -2703,9 +2703,9 @@
    ]
   },
   "CMP-444-00026": {
-   "ew": 289.02,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.4%/mo \u2192 projected +5.2%",
-   "tpm": 1.5,
+   "ew": 291.86,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +5.9%",
+   "tpm": 1.7,
    "lpo": 250.0,
    "lpod": "28/04/2025",
    "avg180": 275.0,
@@ -2731,7 +2731,7 @@
   },
   "CMP-444-00500": {
    "ew": 157.0,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 157.0,
    "lpod": "2026-01-10",
@@ -2769,7 +2769,7 @@
    "tpm": 1.8,
    "lpo": 749.6,
    "lpod": "2026-07-08",
-   "avg180": 709.45,
+   "avg180": 749.6,
    "avg12": 630.0,
    "npo": 37,
    "vend": [
@@ -2999,8 +2999,8 @@
    ]
   },
   "PRD-SPL-00127": {
-   "ew": 12.43,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -4.5%/mo \u2192 projected -7.1%",
+   "ew": 12.29,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -4.5%/mo \u2192 projected -8.1%",
    "tpm": -4.0,
    "lpo": 13.0,
    "lpod": "2026-08-19",
@@ -3075,9 +3075,9 @@
    ]
   },
   "FST-999-00607": {
-   "ew": 15.18,
-   "ewb": "age-weighted avg of 19 PO(s), half-life 90d, trend +2.5%/mo \u2192 projected +10.0%",
-   "tpm": 2.7,
+   "ew": 15.33,
+   "ewb": "age-weighted avg of 15 PO(s), half-life 90d, trend +2.8%/mo \u2192 projected +10.0%",
+   "tpm": 3.0,
    "lpo": 15.0,
    "lpod": "2026-08-22",
    "avg180": 15.0,
@@ -3093,8 +3093,8 @@
   },
   "FST-999-00045": {
    "ew": 0.36,
-   "ewb": "age-weighted avg of 39 PO(s), half-life 90d, 1 outlier(s) dropped, trend +4.9%/mo \u2192 projected +10.0%",
-   "tpm": 5.5,
+   "ewb": "age-weighted avg of 35 PO(s), half-life 90d, 1 outlier(s) dropped, trend +5.2%/mo \u2192 projected +10.0%",
+   "tpm": 5.8,
    "lpo": 0.26,
    "lpod": "29/04/2025",
    "avg180": 0.41,
@@ -3114,9 +3114,9 @@
    ]
   },
   "FST-999-00187": {
-   "ew": 1.59,
-   "ewb": "age-weighted avg of 24 PO(s), half-life 90d",
-   "tpm": -0.7,
+   "ew": 1.58,
+   "ewb": "age-weighted avg of 20 PO(s), half-life 90d",
+   "tpm": -0.9,
    "lpo": 1.1,
    "lpod": "2026-08-22",
    "avg180": 1.7,
@@ -3131,9 +3131,9 @@
    ]
   },
   "FST-999-00611": {
-   "ew": 0.93,
-   "ewb": "age-weighted avg of 32 PO(s), half-life 90d, trend +6.2%/mo \u2192 projected +10.0%",
-   "tpm": 7.1,
+   "ew": 0.94,
+   "ewb": "age-weighted avg of 28 PO(s), half-life 90d, trend +5.6%/mo \u2192 projected +10.0%",
+   "tpm": 6.2,
    "lpo": 0.75,
    "lpod": "2026-08-22",
    "avg180": 1.1,
@@ -3153,12 +3153,12 @@
    ]
   },
   "FST-999-00044": {
-   "ew": 0.84,
-   "ewb": "age-weighted avg of 43 PO(s), half-life 90d, trend +2.0%/mo \u2192 projected +10.0%",
-   "tpm": 2.0,
+   "ew": 0.85,
+   "ewb": "age-weighted avg of 39 PO(s), half-life 90d, trend +2.0%/mo \u2192 projected +10.0%",
+   "tpm": 2.1,
    "lpo": 0.7,
    "lpod": "29/04/2025",
-   "avg180": 0.72,
+   "avg180": 0.75,
    "avg12": 0.7,
    "npo": 49,
    "vend": [
@@ -3175,13 +3175,13 @@
    ]
   },
   "AL-222-00179": {
-   "ew": 442.68,
-   "ewb": "age-weighted avg of 31 PO(s), half-life 90d, trend +3.5%/mo \u2192 projected +10.0%",
-   "tpm": 3.8,
+   "ew": 446.17,
+   "ewb": "age-weighted avg of 27 PO(s), half-life 90d, trend +3.6%/mo \u2192 projected +10.0%",
+   "tpm": 3.9,
    "lpo": 425.0,
    "lpod": "2026-08-21",
-   "avg180": 435.0,
-   "avg12": 338.0,
+   "avg180": 435.4,
+   "avg12": 358.25,
    "npo": 32,
    "vend": [
     {
@@ -3202,9 +3202,9 @@
    ]
   },
   "ANG-000-00071": {
-   "ew": 652.76,
-   "ewb": "age-weighted avg of 27 PO(s), half-life 90d, trend +1.0%/mo \u2192 projected +9.9%",
-   "tpm": 1.0,
+   "ew": 597.25,
+   "ewb": "age-weighted avg of 22 PO(s), half-life 90d",
+   "tpm": 0.4,
    "lpo": 600.0,
    "lpod": "2026-01-10",
    "avg180": null,
@@ -3219,9 +3219,9 @@
    ]
   },
   "ANG-000-00072": {
-   "ew": 472.11,
-   "ewb": "age-weighted avg of 26 PO(s), half-life 90d, 1 outlier(s) dropped, trend -1.1%/mo \u2192 projected -10.0%",
-   "tpm": -1.1,
+   "ew": 521.0,
+   "ewb": "age-weighted avg of 21 PO(s), half-life 90d, 1 outlier(s) dropped",
+   "tpm": 0.0,
    "lpo": 521.0,
    "lpod": "2026-01-10",
    "avg180": null,
@@ -3491,9 +3491,9 @@
    ]
   },
   "CMP-444-00288": {
-   "ew": 162.76,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d",
-   "tpm": 0.6,
+   "ew": 163.18,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
+   "tpm": 0.7,
    "lpo": 157.0,
    "lpod": "28/04/2025",
    "avg180": 162.5,
@@ -4107,9 +4107,9 @@
    ]
   },
   "FST-999-00018": {
-   "ew": 0.82,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend -3.1%/mo \u2192 projected -10.0%",
-   "tpm": -3.1,
+   "ew": 0.98,
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +10.0%",
+   "tpm": 1.6,
    "lpo": 0.6,
    "lpod": "29/04/2025",
    "avg180": 0.8,
@@ -4276,8 +4276,8 @@
   },
   "FST-999-00014": {
    "ew": 1.96,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +1.9%/mo \u2192 projected +10.0%",
-   "tpm": 1.9,
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +3.7%/mo \u2192 projected +10.0%",
+   "tpm": 3.8,
    "lpo": 1.3,
    "lpod": "29/04/2025",
    "avg180": 1.55,
@@ -5295,8 +5295,8 @@
    ]
   },
   "MFS-111-00122": {
-   "ew": 1934.77,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +4.9%",
+   "ew": 1941.35,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +5.3%",
    "tpm": 1.6,
    "lpo": 3200.0,
    "lpod": "28/05/2025",
@@ -5388,19 +5388,24 @@
    ]
   },
   "CU-222-00362": {
-   "ew": 139.5,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ew": 223.11,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 135.0,
    "lpod": "23/05/2025",
-   "avg180": 135.0,
-   "avg12": 137.25,
-   "npo": 2,
+   "avg180": 182.5,
+   "avg12": 139.5,
+   "npo": 3,
    "vend": [
     {
      "n": "CABLE CRAFTS",
      "p": 135.0,
      "d": "23/05/2025"
+    },
+    {
+     "n": "ENERGY MATTERS",
+     "p": 230.0,
+     "d": "2026-09-03"
     },
     {
      "n": "Suman Electric Udyogs Pvt. Ltd.",
@@ -5773,9 +5778,9 @@
    ]
   },
   "INS-666-00167": {
-   "ew": 1586.54,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d",
-   "tpm": -0.7,
+   "ew": 1579.75,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d",
+   "tpm": -0.3,
    "lpo": 1600.0,
    "lpod": "31/03/2025",
    "avg180": 1580.0,
@@ -5834,9 +5839,9 @@
    ]
   },
   "HNT-707-00044": {
-   "ew": 4529.44,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d",
-   "tpm": -0.8,
+   "ew": 4500.0,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 4600.0,
    "lpod": "27/05/2025",
    "avg180": 4750.0,
@@ -5856,9 +5861,9 @@
    ]
   },
   "EL-777-00028": {
-   "ew": 3038.47,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend -4.6%/mo \u2192 projected -10.0%",
-   "tpm": -4.2,
+   "ew": 2982.68,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend -3.0%/mo \u2192 projected -10.0%",
+   "tpm": -2.9,
    "lpo": 3000.0,
    "lpod": "27/05/2025",
    "avg180": 3250.0,
@@ -6132,14 +6137,14 @@
    ]
   },
   "FST-999-00739": {
-   "ew": 29.91,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.4%/mo \u2192 projected +4.9%",
+   "ew": 30.01,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend +1.4%/mo \u2192 projected +4.0%",
    "tpm": 1.5,
    "lpo": 25.0,
    "lpod": "30/05/2025",
    "avg180": 25.0,
    "avg12": 25.0,
-   "npo": 18,
+   "npo": 19,
    "vend": [
     {
      "n": "Kamlesh Industries",
@@ -6149,14 +6154,14 @@
    ]
   },
   "FST-999-00150": {
-   "ew": 3.25,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -2.9%/mo \u2192 projected -10.0%",
-   "tpm": -2.7,
+   "ew": 3.37,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -2.3%/mo \u2192 projected -5.5%",
+   "tpm": -2.1,
    "lpo": 2.0,
    "lpod": "27/05/2025",
    "avg180": 3.0,
    "avg12": 3.5,
-   "npo": 10,
+   "npo": 11,
    "vend": [
     {
      "n": "ELECTRO CRIMP CONTACTS INDIA PRIVATE LIMITED",
@@ -7226,8 +7231,8 @@
    ]
   },
   "FST-999-00635": {
-   "ew": 14.19,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +6.4%",
+   "ew": 14.24,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +6.8%",
    "tpm": 1.7,
    "lpo": 15.0,
    "lpod": "22/05/2025",
@@ -7243,8 +7248,8 @@
    ]
   },
   "FST-999-00421": {
-   "ew": 14.35,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +5.2%",
+   "ew": 14.39,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +5.5%",
    "tpm": 1.4,
    "lpo": 15.0,
    "lpod": "22/05/2025",
@@ -7260,8 +7265,8 @@
    ]
   },
   "FST-999-00494": {
-   "ew": 9.12,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +4.0%",
+   "ew": 9.15,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +4.3%",
    "tpm": 1.2,
    "lpo": 8.0,
    "lpod": "22/05/2025",
@@ -7277,14 +7282,14 @@
    ]
   },
   "FST-999-00755": {
-   "ew": 7.46,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +20.0%/mo \u2192 projected +10.0%",
-   "tpm": 21.2,
+   "ew": 5.65,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d",
+   "tpm": -0.6,
    "lpo": 8.5,
    "lpod": "22/05/2025",
-   "avg180": 8.5,
-   "avg12": 6.75,
-   "npo": 6,
+   "avg180": 6.75,
+   "avg12": 5.0,
+   "npo": 7,
    "vend": [
     {
      "n": "Kamlesh Industries",
@@ -7294,7 +7299,7 @@
     {
      "n": "Shree Kuladevata Enterprises",
      "p": 5.0,
-     "d": "2025-11-13"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -7368,7 +7373,7 @@
   },
   "FST-999-00105": {
    "ew": 2.02,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -6.3%",
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -6.6%",
    "tpm": -1.3,
    "lpo": 2.0,
    "lpod": "27/05/2025",
@@ -7500,7 +7505,7 @@
   },
   "FST-999-00176": {
    "ew": 0.39,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -7.8%",
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -8.2%",
    "tpm": -1.3,
    "lpo": 0.4,
    "lpod": "27/05/2025",
@@ -7822,7 +7827,7 @@
   },
   "FST-999-00098": {
    "ew": 0.97,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +1.0%/mo \u2192 projected +4.9%",
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +1.0%/mo \u2192 projected +5.1%",
    "tpm": 1.1,
    "lpo": 0.95,
    "lpod": "21/07/2025",
@@ -9297,12 +9302,12 @@
   },
   "CU-222-00259": {
    "ew": 995.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 995.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 995.0,
+   "avg12": null,
    "npo": 2,
    "vend": [
     {
@@ -9586,7 +9591,7 @@
   },
   "TMP-000-00419": {
    "ew": 50.0,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 50.0,
    "lpod": "2026-04-21",
@@ -9603,7 +9608,7 @@
   },
   "TMP-000-00399": {
    "ew": 20.0,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 20.0,
    "lpod": "2026-04-21",
@@ -9653,9 +9658,9 @@
    ]
   },
   "CMP-444-00233": {
-   "ew": 162.76,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d",
-   "tpm": 0.6,
+   "ew": 163.18,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
+   "tpm": 0.7,
    "lpo": 168.0,
    "lpod": "2026-08-22",
    "avg180": 168.0,
@@ -9675,9 +9680,9 @@
    ]
   },
   "CMP-444-00025": {
-   "ew": 288.45,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +4.6%",
-   "tpm": 1.2,
+   "ew": 290.21,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +4.9%",
+   "tpm": 1.3,
    "lpo": 290.0,
    "lpod": "2026-08-22",
    "avg180": 290.0,
@@ -9747,18 +9752,18 @@
   },
   "PRD-SPL-00077": {
    "ew": 390.0,
-   "ewb": "age-weighted avg of 33 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 34 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 390.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-04",
    "avg180": 390.0,
    "avg12": 390.0,
-   "npo": 35,
+   "npo": 36,
    "vend": [
     {
      "n": "Peenya Industrial Gases Pvt Ltd",
      "p": 390.0,
-     "d": "2026-08-17"
+     "d": "2026-09-04"
     }
    ]
   },
@@ -9851,8 +9856,8 @@
    ]
   },
   "CMP-444-00132": {
-   "ew": 128.54,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +8.0%",
+   "ew": 128.97,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +8.3%",
    "tpm": 1.6,
    "lpo": 125.0,
    "lpod": "2026-06-13",
@@ -9934,12 +9939,12 @@
    ]
   },
   "CC-555-00150": {
-   "ew": 134.31,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +8.0%",
+   "ew": 134.62,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +8.3%",
    "tpm": 1.1,
    "lpo": 127.0,
    "lpod": "2026-03-06",
-   "avg180": 127.0,
+   "avg180": null,
    "avg12": 120.0,
    "npo": 10,
    "vend": [
@@ -9951,12 +9956,12 @@
    ]
   },
   "CC-555-00151": {
-   "ew": 134.31,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +8.0%",
+   "ew": 134.62,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +8.3%",
    "tpm": 1.1,
    "lpo": 127.0,
    "lpod": "2026-03-06",
-   "avg180": 127.0,
+   "avg180": null,
    "avg12": 120.0,
    "npo": 10,
    "vend": [
@@ -9973,7 +9978,7 @@
    "tpm": 0.0,
    "lpo": 405.0,
    "lpod": "2026-03-06",
-   "avg180": 405.0,
+   "avg180": null,
    "avg12": 405.0,
    "npo": 11,
    "vend": [
@@ -9990,7 +9995,7 @@
    "tpm": -0.5,
    "lpo": 90.0,
    "lpod": "2026-03-06",
-   "avg180": 90.0,
+   "avg180": null,
    "avg12": 91.0,
    "npo": 12,
    "vend": [
@@ -10017,7 +10022,7 @@
    "tpm": -1.4,
    "lpo": 45.0,
    "lpod": "2026-03-06",
-   "avg180": 45.0,
+   "avg180": null,
    "avg12": 46.5,
    "npo": 12,
    "vend": [
@@ -10044,7 +10049,7 @@
    "tpm": -0.6,
    "lpo": 70.0,
    "lpod": "2026-03-06",
-   "avg180": 70.0,
+   "avg180": null,
    "avg12": 71.0,
    "npo": 12,
    "vend": [
@@ -10071,7 +10076,7 @@
    "tpm": -0.9,
    "lpo": 1600.0,
    "lpod": "2026-03-06",
-   "avg180": 1600.0,
+   "avg180": null,
    "avg12": 1600.0,
    "npo": 15,
    "vend": [
@@ -10164,7 +10169,7 @@
    "tpm": 3.9,
    "lpo": 1011.0,
    "lpod": "31/07/2025",
-   "avg180": 1355.0,
+   "avg180": 1208.15,
    "avg12": 1208.15,
    "npo": 19,
    "vend": [
@@ -10191,7 +10196,7 @@
    "tpm": 3.3,
    "lpo": 1525.26,
    "lpod": "2026-08-17",
-   "avg180": 1345.0,
+   "avg180": 1335.0,
    "avg12": 1203.15,
    "npo": 19,
    "vend": [
@@ -10269,13 +10274,13 @@
    ]
   },
   "CU-222-00060": {
-   "ew": 117.66,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 124.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 93.0,
    "lpod": "26/06/2025",
    "avg180": 93.0,
-   "avg12": 94.0,
+   "avg12": 108.5,
    "npo": 3,
    "vend": [
     {
@@ -10286,13 +10291,13 @@
    ]
   },
   "CU-222-00056": {
-   "ew": 443.22,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 469.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 344.0,
    "lpod": "26/06/2025",
    "avg180": 344.0,
-   "avg12": 347.0,
+   "avg12": 406.5,
    "npo": 3,
    "vend": [
     {
@@ -10303,13 +10308,13 @@
    ]
   },
   "CU-222-00054": {
-   "ew": 340.88,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 358.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 275.0,
    "lpod": "26/06/2025",
    "avg180": 275.0,
-   "avg12": 277.0,
+   "avg12": 316.5,
    "npo": 3,
    "vend": [
     {
@@ -10320,13 +10325,13 @@
    ]
   },
   "CU-222-00057": {
-   "ew": 495.67,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 528.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 373.0,
    "lpod": "26/06/2025",
    "avg180": 373.0,
-   "avg12": 375.0,
+   "avg12": 450.5,
    "npo": 3,
    "vend": [
     {
@@ -10449,7 +10454,7 @@
    "tpm": 0.0,
    "lpo": 367.0,
    "lpod": "2026-03-06",
-   "avg180": 367.0,
+   "avg180": null,
    "avg12": 367.0,
    "npo": 9,
    "vend": [
@@ -10556,13 +10561,13 @@
    ]
   },
   "TMP-000-00247": {
-   "ew": 1.8,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d, 1 outlier(s) dropped",
+   "ew": 7.5,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 7.5,
    "lpod": "2026-06-30",
    "avg180": 7.5,
-   "avg12": 1.8,
+   "avg12": 7.5,
    "npo": 4,
    "vend": [
     {
@@ -10583,19 +10588,19 @@
    ]
   },
   "SER-R&M-00004": {
-   "ew": 611.32,
-   "ewb": "age-weighted avg of 59 PO(s), half-life 90d, 17 outlier(s) dropped, trend +1.6%/mo \u2192 projected +5.5%",
+   "ew": 612.43,
+   "ewb": "age-weighted avg of 60 PO(s), half-life 90d, 17 outlier(s) dropped, trend +1.6%/mo \u2192 projected +5.5%",
    "tpm": 1.6,
    "lpo": 600.0,
-   "lpod": "2026-08-25",
+   "lpod": "2026-09-04",
    "avg180": 600.0,
    "avg12": 600.0,
-   "npo": 79,
+   "npo": 80,
    "vend": [
     {
      "n": "CARTRIDGE PLUS",
      "p": 600.0,
-     "d": "2026-08-25"
+     "d": "2026-09-04"
     },
     {
      "n": "JAI MARUTHI REFILLING SERVICE",
@@ -10610,19 +10615,19 @@
    ]
   },
   "ANG-000-00031": {
-   "ew": 496.94,
-   "ewb": "age-weighted avg of 29 PO(s), half-life 90d",
-   "tpm": 0.4,
+   "ew": 498.79,
+   "ewb": "age-weighted avg of 30 PO(s), half-life 90d",
+   "tpm": 0.5,
    "lpo": 509.25,
-   "lpod": "2026-08-01",
+   "lpod": "2026-09-07",
    "avg180": 509.25,
    "avg12": 485.0,
-   "npo": 31,
+   "npo": 32,
    "vend": [
     {
      "n": "CG ADHESIVE PRODUCTS LIMITED",
      "p": 509.25,
-     "d": "2026-08-01"
+     "d": "2026-09-07"
     }
    ]
   },
@@ -10700,7 +10705,7 @@
    "tpm": 0.0,
    "lpo": 3.0,
    "lpod": "2026-03-06",
-   "avg180": 3.0,
+   "avg180": null,
    "avg12": 3.0,
    "npo": 20,
    "vend": [
@@ -10926,15 +10931,20 @@
    ]
   },
   "PNR-202-00015": {
-   "ew": 276.41,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +9.4%",
-   "tpm": 1.9,
-   "lpo": 265.65,
-   "lpod": "2026-07-02",
+   "ew": 276.86,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +5.7%",
+   "tpm": 2.0,
+   "lpo": 273.35,
+   "lpod": "2026-09-01",
    "avg180": 265.65,
    "avg12": 227.0,
-   "npo": 9,
+   "npo": 10,
    "vend": [
+    {
+     "n": "SHRI DURGA ENTERPRISES",
+     "p": 273.35,
+     "d": "2026-09-01"
+    },
     {
      "n": "RAJESHWARI ENTERPRISES",
      "p": 265.65,
@@ -10948,15 +10958,20 @@
    ]
   },
   "PNR-202-00034": {
-   "ew": 118.91,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +10.0%",
-   "tpm": 2.3,
-   "lpo": 116.88,
-   "lpod": "2026-04-14",
-   "avg180": 116.88,
+   "ew": 132.53,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.5%/mo \u2192 projected +8.4%",
+   "tpm": 2.8,
+   "lpo": 133.1,
+   "lpod": "2026-09-01",
+   "avg180": 124.99,
    "avg12": 101.15,
-   "npo": 6,
+   "npo": 7,
    "vend": [
+    {
+     "n": "SHRI DURGA ENTERPRISES",
+     "p": 133.1,
+     "d": "2026-09-01"
+    },
     {
      "n": "RAJESHWARI ENTERPRISES",
      "p": 116.88,
@@ -11046,9 +11061,9 @@
    ]
   },
   "SER-TPT-00006": {
-   "ew": 43608.38,
-   "ewb": "age-weighted avg of 46 PO(s), half-life 90d, 14 outlier(s) dropped",
-   "tpm": 0.5,
+   "ew": 43678.36,
+   "ewb": "age-weighted avg of 43 PO(s), half-life 90d, 14 outlier(s) dropped",
+   "tpm": 0.2,
    "lpo": 44500.0,
    "lpod": "2026-08-29",
    "avg180": 44000.0,
@@ -11095,29 +11110,29 @@
    ]
   },
   "SER-CON-00001": {
-   "ew": 3375.95,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, 93 outlier(s) dropped, trend -11.7%/mo \u2192 projected -10.0%",
-   "tpm": -10.3,
-   "lpo": 7.0,
-   "lpod": "2026-08-27",
-   "avg180": 102.34,
-   "avg12": 3500.0,
-   "npo": 109,
+   "ew": 2786.64,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, 97 outlier(s) dropped, trend -4.8%/mo \u2192 projected -10.0%",
+   "tpm": -4.5,
+   "lpo": 10.0,
+   "lpod": "2026-09-07",
+   "avg180": 89.84,
+   "avg12": 2800.0,
+   "npo": 112,
    "vend": [
+    {
+     "n": "Dev Component Pvt. Ltd.",
+     "p": 10.0,
+     "d": "2026-09-07"
+    },
+    {
+     "n": "SURAKSHA SURGE",
+     "p": 1000.0,
+     "d": "2026-09-04"
+    },
     {
      "n": "S B Power Systems",
      "p": 7.0,
-     "d": "2026-08-27"
-    },
-    {
-     "n": "Nicam Industries",
-     "p": 35.0,
-     "d": "2026-08-26"
-    },
-    {
-     "n": "GKX ENGINEERINGS INDIA",
-     "p": 41000.0,
-     "d": "2026-08-19"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -11139,8 +11154,8 @@
    ]
   },
   "EL-777-00090": {
-   "ew": 15.08,
-   "ewb": "age-weighted avg of 30 PO(s), half-life 90d, trend +1.0%/mo \u2192 projected +5.0%",
+   "ew": 14.37,
+   "ewb": "age-weighted avg of 29 PO(s), half-life 90d",
    "tpm": 1.0,
    "lpo": 15.0,
    "lpod": "2026-08-01",
@@ -11161,8 +11176,8 @@
    ]
   },
   "EL-777-00092": {
-   "ew": 27.75,
-   "ewb": "age-weighted avg of 21 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +6.6%",
+   "ew": 27.89,
+   "ewb": "age-weighted avg of 20 PO(s), half-life 90d, trend +1.4%/mo \u2192 projected +7.1%",
    "tpm": 1.4,
    "lpo": 27.5,
    "lpod": "2026-08-01",
@@ -11178,8 +11193,8 @@
    ]
   },
   "EL-777-00091": {
-   "ew": 7.67,
-   "ewb": "age-weighted avg of 29 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +6.1%",
+   "ew": 7.69,
+   "ewb": "age-weighted avg of 28 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +6.3%",
    "tpm": 1.3,
    "lpo": 7.7,
    "lpod": "2026-08-01",
@@ -11320,8 +11335,8 @@
    ]
   },
   "CC-555-00165": {
-   "ew": 134.2,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +6.6%",
+   "ew": 134.58,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +6.9%",
    "tpm": 1.3,
    "lpo": 132.0,
    "lpod": "2026-06-15",
@@ -11337,8 +11352,8 @@
    ]
   },
   "CC-555-00166": {
-   "ew": 134.2,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +6.6%",
+   "ew": 134.58,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +6.9%",
    "tpm": 1.3,
    "lpo": 132.0,
    "lpod": "2026-06-15",
@@ -11376,19 +11391,19 @@
    ]
   },
   "PKG-000-00016": {
-   "ew": 942.77,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ew": 995.02,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.7%/mo \u2192 projected +3.4%",
+   "tpm": 1.8,
    "lpo": 980.0,
-   "lpod": "2026-07-09",
+   "lpod": "2026-09-01",
    "avg180": 980.0,
-   "avg12": 850.0,
-   "npo": 4,
+   "avg12": 915.0,
+   "npo": 5,
    "vend": [
     {
      "n": "Shree Siddeshwara Packaging",
      "p": 980.0,
-     "d": "2026-07-09"
+     "d": "2026-09-01"
     },
     {
      "n": "FINN PACK",
@@ -11518,7 +11533,7 @@
    "tpm": -1.6,
    "lpo": 9.0,
    "lpod": "2026-03-06",
-   "avg180": 9.0,
+   "avg180": null,
    "avg12": 10.0,
    "npo": 12,
    "vend": [
@@ -11535,7 +11550,7 @@
    "tpm": 2.1,
    "lpo": 0.99,
    "lpod": "2026-03-06",
-   "avg180": 0.99,
+   "avg180": null,
    "avg12": 0.99,
    "npo": 14,
    "vend": [
@@ -11552,19 +11567,19 @@
    ]
   },
   "FST-999-00167": {
-   "ew": 0.27,
-   "ewb": "age-weighted avg of 31 PO(s), half-life 90d, trend +3.2%/mo \u2192 projected +10.0%",
-   "tpm": 3.6,
+   "ew": 0.28,
+   "ewb": "age-weighted avg of 32 PO(s), half-life 90d, trend +3.1%/mo \u2192 projected +10.0%",
+   "tpm": 3.4,
    "lpo": 0.28,
-   "lpod": "2026-08-13",
+   "lpod": "2026-09-04",
    "avg180": 0.28,
    "avg12": 0.2,
-   "npo": 34,
+   "npo": 35,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
      "p": 0.28,
-     "d": "2026-08-13"
+     "d": "2026-09-04"
     },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
@@ -11579,7 +11594,7 @@
    "tpm": -5.9,
    "lpo": 0.8,
    "lpod": "2026-07-07",
-   "avg180": 0.7,
+   "avg180": 0.8,
    "avg12": 0.6,
    "npo": 19,
    "vend": [
@@ -11596,34 +11611,34 @@
    ]
   },
   "FST-999-00164": {
-   "ew": 0.54,
-   "ewb": "age-weighted avg of 24 PO(s), half-life 90d, trend +5.3%/mo \u2192 projected +10.0%",
-   "tpm": 5.4,
+   "ew": 0.5,
+   "ewb": "age-weighted avg of 25 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +8.4%",
+   "tpm": 1.2,
    "lpo": 0.39,
-   "lpod": "2026-03-06",
+   "lpod": "2026-09-04",
    "avg180": 0.39,
    "avg12": 0.39,
-   "npo": 26,
+   "npo": 27,
    "vend": [
+    {
+     "n": "Shree Kuladevata Enterprises",
+     "p": 0.39,
+     "d": "2026-09-04"
+    },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
      "p": 0.39,
      "d": "2026-03-06"
-    },
-    {
-     "n": "Shree Kuladevata Enterprises",
-     "p": 0.8,
-     "d": "2026-01-20"
     }
    ]
   },
   "FST-999-00043": {
-   "ew": 3.34,
-   "ewb": "age-weighted avg of 32 PO(s), half-life 90d, 1 outlier(s) dropped, trend +2.3%/mo \u2192 projected +10.0%",
-   "tpm": 2.4,
+   "ew": 3.36,
+   "ewb": "age-weighted avg of 28 PO(s), half-life 90d, 1 outlier(s) dropped, trend +2.2%/mo \u2192 projected +10.0%",
+   "tpm": 2.2,
    "lpo": 3.05,
    "lpod": "2026-08-22",
-   "avg180": 3.0,
+   "avg180": 3.05,
    "avg12": 2.96,
    "npo": 35,
    "vend": [
@@ -11773,7 +11788,7 @@
   },
   "FST-999-00371": {
    "ew": 0.49,
-   "ewb": "age-weighted avg of 28 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +9.7%",
+   "ewb": "age-weighted avg of 28 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +9.9%",
    "tpm": 1.2,
    "lpo": 0.45,
    "lpod": "2026-04-16",
@@ -11856,18 +11871,18 @@
   },
   "FST-999-00199": {
    "ew": 0.21,
-   "ewb": "age-weighted avg of 41 PO(s), half-life 90d",
-   "tpm": 0.3,
+   "ewb": "age-weighted avg of 43 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 0.2,
-   "lpod": "2026-08-01",
+   "lpod": "2026-09-04",
    "avg180": 0.2,
    "avg12": 0.2,
-   "npo": 43,
+   "npo": 45,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
      "p": 0.2,
-     "d": "2026-08-01"
+     "d": "2026-09-04"
     },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
@@ -11877,19 +11892,19 @@
    ]
   },
   "FST-999-00198": {
-   "ew": 0.32,
-   "ewb": "age-weighted avg of 39 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +10.0%",
-   "tpm": 1.6,
-   "lpo": 0.29,
-   "lpod": "2026-08-01",
-   "avg180": 0.29,
+   "ew": 0.28,
+   "ewb": "age-weighted avg of 40 PO(s), half-life 90d",
+   "tpm": -0.0,
+   "lpo": 0.2,
+   "lpod": "2026-09-04",
+   "avg180": 0.24,
    "avg12": 0.26,
-   "npo": 41,
+   "npo": 42,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
-     "p": 0.29,
-     "d": "2026-08-01"
+     "p": 0.2,
+     "d": "2026-09-04"
     },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
@@ -11955,19 +11970,19 @@
    ]
   },
   "FST-999-00250": {
-   "ew": 0.21,
-   "ewb": "age-weighted avg of 28 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +8.8%",
-   "tpm": 1.2,
-   "lpo": 0.2,
-   "lpod": "2026-08-01",
-   "avg180": 0.2,
+   "ew": 0.23,
+   "ewb": "age-weighted avg of 29 PO(s), half-life 90d, trend +2.7%/mo \u2192 projected +10.0%",
+   "tpm": 2.9,
+   "lpo": 0.29,
+   "lpod": "2026-09-04",
+   "avg180": 0.24,
    "avg12": 0.18,
-   "npo": 29,
+   "npo": 30,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
-     "p": 0.2,
-     "d": "2026-08-01"
+     "p": 0.29,
+     "d": "2026-09-04"
     },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
@@ -12060,13 +12075,13 @@
    ]
   },
   "FST-999-00274": {
-   "ew": 4.47,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -2.0%/mo \u2192 projected -10.0%",
-   "tpm": -2.0,
+   "ew": 4.88,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 5.0,
    "lpod": "2026-01-10",
    "avg180": null,
-   "avg12": 5.25,
+   "avg12": 5.0,
    "npo": 5,
    "vend": [
     {
@@ -12162,15 +12177,20 @@
    ]
   },
   "FST-999-00488": {
-   "ew": 11.62,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +4.3%/mo \u2192 projected +10.0%",
-   "tpm": 4.5,
-   "lpo": 14.5,
-   "lpod": "2026-03-18",
+   "ew": 10.63,
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +5.2%",
+   "tpm": 1.1,
+   "lpo": 9.5,
+   "lpod": "2026-09-01",
    "avg180": 12.0,
    "avg12": 9.5,
-   "npo": 11,
+   "npo": 12,
    "vend": [
+    {
+     "n": "Shree Kuladevata Enterprises",
+     "p": 9.5,
+     "d": "2026-09-01"
+    },
     {
      "n": "KAMAL ELECTRICALS",
      "p": 14.5,
@@ -12189,7 +12209,7 @@
    "tpm": 0.0,
    "lpo": 1700.0,
    "lpod": "2026-03-06",
-   "avg180": 1700.0,
+   "avg180": null,
    "avg12": 1700.0,
    "npo": 16,
    "vend": [
@@ -12461,13 +12481,13 @@
    ]
   },
   "INS-666-00064": {
-   "ew": 447.8,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 405.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 350.0,
    "lpod": "29/07/2025",
    "avg180": 480.0,
-   "avg12": 507.5,
+   "avg12": 405.0,
    "npo": 4,
    "vend": [
     {
@@ -12483,13 +12503,13 @@
    ]
   },
   "PNR-202-00029": {
-   "ew": 105.27,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 75.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 220.0,
    "lpod": "25/06/2025",
    "avg180": 220.0,
-   "avg12": 220.0,
+   "avg12": 147.5,
    "npo": 3,
    "vend": [
     {
@@ -12505,8 +12525,8 @@
    ]
   },
   "MFS-111-00129": {
-   "ew": 291.94,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 303.93,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 200.0,
    "lpod": "25/06/2025",
@@ -12532,13 +12552,13 @@
    ]
   },
   "AL-111-00004": {
-   "ew": 454.23,
-   "ewb": "age-weighted avg of 18 PO(s), half-life 90d, 1 outlier(s) dropped, trend +2.6%/mo \u2192 projected +8.6%",
+   "ew": 456.74,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d, 1 outlier(s) dropped, trend +2.6%/mo \u2192 projected +8.6%",
    "tpm": 2.9,
    "lpo": 436.91,
    "lpod": "2026-08-31",
    "avg180": 436.91,
-   "avg12": 354.71,
+   "avg12": 361.65,
    "npo": 19,
    "vend": [
     {
@@ -12559,13 +12579,13 @@
    ]
   },
   "AL-111-00015": {
-   "ew": 445.24,
-   "ewb": "age-weighted avg of 17 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +4.1%",
-   "tpm": 1.4,
+   "ew": 443.11,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d, trend +1.0%/mo \u2192 projected +3.4%",
+   "tpm": 1.1,
    "lpo": 436.91,
    "lpod": "2026-08-31",
    "avg180": 436.91,
-   "avg12": 361.65,
+   "avg12": 363.69,
    "npo": 17,
    "vend": [
     {
@@ -12592,7 +12612,7 @@
    "lpo": 2450.0,
    "lpod": "2025-09-02",
    "avg180": null,
-   "avg12": 2450.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12604,7 +12624,7 @@
   },
   "PRD-SPL-00386": {
    "ew": 75.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 75.0,
    "lpod": "2025-10-08",
@@ -12626,7 +12646,7 @@
    "lpo": 50.0,
    "lpod": "2025-09-02",
    "avg180": null,
-   "avg12": 50.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12637,9 +12657,9 @@
    ]
   },
   "PNI-000-10052": {
-   "ew": 2590.98,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -4.0%/mo \u2192 projected -10.0%",
-   "tpm": -3.7,
+   "ew": 2850.0,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 2850.0,
    "lpod": "2026-06-30",
    "avg180": 2850.0,
@@ -12659,9 +12679,9 @@
    ]
   },
   "INS-666-00172": {
-   "ew": 5.83,
-   "ewb": "age-weighted avg of 18 PO(s), half-life 90d, 2 outlier(s) dropped",
-   "tpm": -0.6,
+   "ew": 5.27,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, 2 outlier(s) dropped, trend -1.9%/mo \u2192 projected -10.0%",
+   "tpm": -1.8,
    "lpo": 5.55,
    "lpod": "2026-08-22",
    "avg180": 5.55,
@@ -12686,9 +12706,9 @@
    ]
   },
   "INS-666-00004": {
-   "ew": 14.88,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d, 1 outlier(s) dropped, trend +1.2%/mo \u2192 projected +7.5%",
-   "tpm": 1.1,
+   "ew": 14.02,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d, 1 outlier(s) dropped",
+   "tpm": -0.7,
    "lpo": 11.9,
    "lpod": "2026-08-22",
    "avg180": 11.9,
@@ -12714,8 +12734,8 @@
   },
   "FST-999-00234": {
    "ew": 0.76,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +2.6%/mo \u2192 projected +10.0%",
-   "tpm": 2.9,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend +2.9%/mo \u2192 projected +10.0%",
+   "tpm": 3.1,
    "lpo": 0.75,
    "lpod": "2026-08-04",
    "avg180": 0.75,
@@ -12730,9 +12750,9 @@
    ]
   },
   "PKG-000-00002": {
-   "ew": 175.88,
-   "ewb": "age-weighted avg of 20 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +10.0%",
-   "tpm": 2.5,
+   "ew": 176.87,
+   "ewb": "age-weighted avg of 17 PO(s), half-life 90d, trend +2.6%/mo \u2192 projected +10.0%",
+   "tpm": 2.9,
    "lpo": 178.0,
    "lpod": "2026-08-22",
    "avg180": 178.0,
@@ -12747,9 +12767,9 @@
    ]
   },
   "CMP-444-00499": {
-   "ew": 166.2,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d",
-   "tpm": 0.9,
+   "ew": 172.94,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +1.0%/mo \u2192 projected +3.8%",
+   "tpm": 1.0,
    "lpo": 168.0,
    "lpod": "2026-08-22",
    "avg180": 172.0,
@@ -12769,13 +12789,13 @@
    ]
   },
   "CU-222-00164": {
-   "ew": 1302.76,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +4.7%/mo \u2192 projected +10.0%",
-   "tpm": 5.0,
+   "ew": 1322.56,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +4.6%/mo \u2192 projected +10.0%",
+   "tpm": 4.9,
    "lpo": 1355.0,
    "lpod": "2026-03-06",
-   "avg180": 1355.0,
-   "avg12": 1087.36,
+   "avg180": null,
+   "avg12": 1101.79,
    "npo": 6,
    "vend": [
     {
@@ -12802,7 +12822,7 @@
    "lpo": 19500.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 19500.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12819,7 +12839,7 @@
    "lpo": 44500.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 44500.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12836,7 +12856,7 @@
    "lpo": 724.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 724.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12853,7 +12873,7 @@
    "lpo": 432.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 432.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12870,7 +12890,7 @@
    "lpo": 214.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 214.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12887,7 +12907,7 @@
    "lpo": 414.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 414.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12904,7 +12924,7 @@
    "lpo": 355.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 355.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12921,7 +12941,7 @@
    "lpo": 663.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 663.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12938,7 +12958,7 @@
    "lpo": 202.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 202.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12955,7 +12975,7 @@
    "lpo": 610.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 610.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12972,7 +12992,7 @@
    "lpo": 575.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 575.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -12989,7 +13009,7 @@
    "lpo": 575.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 575.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13006,7 +13026,7 @@
    "lpo": 1365.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 1365.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13023,7 +13043,7 @@
    "lpo": 25.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 25.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13040,7 +13060,7 @@
    "lpo": 35.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 35.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13057,7 +13077,7 @@
    "lpo": 95000.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 95000.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13074,7 +13094,7 @@
    "lpo": 0.01,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 0.01,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13091,7 +13111,7 @@
    "lpo": 8000.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 8000.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13108,7 +13128,7 @@
    "lpo": 2000.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 2000.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13125,7 +13145,7 @@
    "lpo": 250000.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 250000.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13136,13 +13156,13 @@
    ]
   },
   "EL-777-00087": {
-   "ew": 16366.04,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 17000.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 17000.0,
    "lpod": "2026-02-21",
    "avg180": null,
-   "avg12": 15500.0,
+   "avg12": 17000.0,
    "npo": 2,
    "vend": [
     {
@@ -13164,7 +13184,7 @@
    "lpo": 2000.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 2000.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13181,7 +13201,7 @@
    "lpo": 47000.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 47000.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13198,7 +13218,7 @@
    "lpo": 0.01,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 0.01,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13215,7 +13235,7 @@
    "lpo": 0.01,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 0.01,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13232,7 +13252,7 @@
    "lpo": 260.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 260.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13249,7 +13269,7 @@
    "lpo": 260.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 260.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13266,7 +13286,7 @@
    "lpo": 40.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 40.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13283,7 +13303,7 @@
    "lpo": 266.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 266.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13300,7 +13320,7 @@
    "lpo": 269.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 269.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13317,7 +13337,7 @@
    "lpo": 450.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 450.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13334,7 +13354,7 @@
    "lpo": 465.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 465.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13351,7 +13371,7 @@
    "lpo": 50.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 50.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13362,13 +13382,13 @@
    ]
   },
   "TMP-000-00342": {
-   "ew": 4.86,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 4.76,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 4.0,
    "lpod": "2026-05-18",
    "avg180": 5.0,
-   "avg12": 6.0,
+   "avg12": 5.0,
    "npo": 3,
    "vend": [
     {
@@ -13385,7 +13405,7 @@
    "lpo": 54.3,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 54.3,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13402,7 +13422,7 @@
    "lpo": 54.3,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 54.3,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13419,7 +13439,7 @@
    "lpo": 725.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 725.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13436,7 +13456,7 @@
    "lpo": 673.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 673.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13453,7 +13473,7 @@
    "lpo": 220.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 220.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13470,7 +13490,7 @@
    "lpo": 125.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 125.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13487,7 +13507,7 @@
    "lpo": 1025.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 1025.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13504,7 +13524,7 @@
    "lpo": 6600.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 6600.0,
+   "avg12": null,
    "npo": 2,
    "vend": [
     {
@@ -13516,7 +13536,7 @@
   },
   "ANG-000-00026": {
    "ew": 5500.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5500.0,
    "lpod": "2026-03-02",
@@ -13532,13 +13552,13 @@
    ]
   },
   "ANG-000-00046": {
-   "ew": 448.65,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 451.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 451.0,
    "lpod": "2026-06-18",
    "avg180": 451.0,
-   "avg12": 438.0,
+   "avg12": 451.0,
    "npo": 3,
    "vend": [
     {
@@ -13555,7 +13575,7 @@
    "lpo": 4900.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 4900.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13566,12 +13586,12 @@
    ]
   },
   "CMP-444-00325": {
-   "ew": 10.09,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d",
-   "tpm": 0.9,
+   "ew": 10.16,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
+   "tpm": 0.8,
    "lpo": 11.0,
    "lpod": "2026-05-19",
-   "avg180": 10.25,
+   "avg180": 11.0,
    "avg12": 9.5,
    "npo": 9,
    "vend": [
@@ -13594,7 +13614,7 @@
    "lpo": 26.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 26.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13611,7 +13631,7 @@
    "lpo": 3.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 3.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13628,7 +13648,7 @@
    "lpo": 3.7,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 3.7,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13645,7 +13665,7 @@
    "lpo": 13.6,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 13.6,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13657,7 +13677,7 @@
   },
   "FST-999-00670": {
    "ew": 6.6,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 6.6,
    "lpod": "2025-09-25",
@@ -13679,7 +13699,7 @@
    "lpo": 75.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 75.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13696,7 +13716,7 @@
    "lpo": 190.0,
    "lpod": "2025-09-03",
    "avg180": null,
-   "avg12": 190.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -13707,9 +13727,9 @@
    ]
   },
   "CF-555-00428": {
-   "ew": 36.16,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -8.6%/mo \u2192 projected -10.0%",
-   "tpm": -7.3,
+   "ew": 34.8,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -4.2%/mo \u2192 projected -10.0%",
+   "tpm": -3.9,
    "lpo": 36.4,
    "lpod": "2026-06-15",
    "avg180": 36.4,
@@ -13735,7 +13755,7 @@
   },
   "CF-555-00771": {
    "ew": 11.28,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, 2 outlier(s) dropped, trend -10.5%/mo \u2192 projected -10.0%",
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, 1 outlier(s) dropped, trend -10.5%/mo \u2192 projected -10.0%",
    "tpm": -9.2,
    "lpo": 11.8,
    "lpod": "2026-06-15",
@@ -13762,7 +13782,7 @@
   },
   "CF-555-00772": {
    "ew": 11.19,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 2 outlier(s) dropped, trend -10.4%/mo \u2192 projected -10.0%",
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 1 outlier(s) dropped, trend -10.4%/mo \u2192 projected -10.0%",
    "tpm": -9.4,
    "lpo": 11.8,
    "lpod": "2026-06-15",
@@ -13788,13 +13808,13 @@
    ]
   },
   "INS-666-00273": {
-   "ew": 2275.87,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -12.1%/mo \u2192 projected -10.0%",
-   "tpm": -11.5,
+   "ew": 2200.32,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -10.6%/mo \u2192 projected -10.0%",
+   "tpm": -10.2,
    "lpo": 1650.0,
    "lpod": "2026-01-03",
    "avg180": null,
-   "avg12": 3350.0,
+   "avg12": 2612.5,
    "npo": 7,
    "vend": [
     {
@@ -13811,7 +13831,7 @@
   },
   "INS-666-00278": {
    "ew": 3350.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 3350.0,
    "lpod": "2025-11-18",
@@ -13828,7 +13848,7 @@
   },
   "INS-666-00279": {
    "ew": 3350.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 3350.0,
    "lpod": "2025-11-18",
@@ -13845,8 +13865,8 @@
   },
   "CMP-444-00602": {
    "ew": 520.0,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
-   "tpm": 0.0,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 520.0,
    "lpod": "2025-11-24",
    "avg180": null,
@@ -13862,7 +13882,7 @@
   },
   "CMP-444-00565": {
    "ew": 500.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 500.0,
    "lpod": "2025-11-18",
@@ -13878,9 +13898,9 @@
    ]
   },
   "CMP-444-00564": {
-   "ew": 520.98,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -2.2%/mo \u2192 projected -10.0%",
-   "tpm": -2.2,
+   "ew": 575.37,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 540.0,
    "lpod": "2025-12-31",
    "avg180": null,
@@ -13901,11 +13921,11 @@
   },
   "INS-666-00132": {
    "ew": 8.71,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, 4 outlier(s) dropped",
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, 4 outlier(s) dropped",
    "tpm": 0.0,
    "lpo": 8.71,
    "lpod": "2026-03-06",
-   "avg180": 8.71,
+   "avg180": null,
    "avg12": 8.71,
    "npo": 13,
    "vend": [
@@ -13923,7 +13943,7 @@
   },
   "TMP-000-00454": {
    "ew": 50.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 50.0,
    "lpod": "2026-03-16",
@@ -13939,12 +13959,12 @@
    ]
   },
   "INS-666-00106": {
-   "ew": 19.27,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend -3.5%/mo \u2192 projected -10.0%",
-   "tpm": -3.4,
+   "ew": 19.04,
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend -3.2%/mo \u2192 projected -10.0%",
+   "tpm": -3.1,
    "lpo": 20.5,
    "lpod": "2026-03-06",
-   "avg180": 20.5,
+   "avg180": null,
    "avg12": 20.5,
    "npo": 12,
    "vend": [
@@ -13961,12 +13981,12 @@
    ]
   },
   "INS-666-00161": {
-   "ew": 6.75,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend -3.0%/mo \u2192 projected -10.0%",
-   "tpm": -3.0,
+   "ew": 6.64,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend -1.8%/mo \u2192 projected -10.0%",
+   "tpm": -1.8,
    "lpo": 7.3,
    "lpod": "2026-03-06",
-   "avg180": 7.3,
+   "avg180": null,
    "avg12": 7.3,
    "npo": 10,
    "vend": [
@@ -13989,7 +14009,7 @@
    "lpo": 42.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 42.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14006,7 +14026,7 @@
    "lpo": 1869.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 1869.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14018,7 +14038,7 @@
   },
   "PRD-SPL-00478": {
    "ew": 110.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 110.0,
    "lpod": "2025-09-10",
@@ -14040,7 +14060,7 @@
    "lpo": 408.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 408.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14057,7 +14077,7 @@
    "lpo": 966.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 966.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14074,7 +14094,7 @@
    "lpo": 227.07,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 227.07,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14091,7 +14111,7 @@
    "lpo": 26.75,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 26.75,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14102,8 +14122,8 @@
    ]
   },
   "EN-888-00559": {
-   "ew": 8.49,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 7.0,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 7.0,
    "lpod": "2026-01-31",
@@ -14130,7 +14150,7 @@
    "lpo": 12.39,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 12.39,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14147,7 +14167,7 @@
    "lpo": 10.44,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 10.44,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14164,7 +14184,7 @@
    "lpo": 12.4,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 12.4,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14181,7 +14201,7 @@
    "lpo": 4.54,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 4.54,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14198,7 +14218,7 @@
    "lpo": 13.69,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 13.69,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14215,7 +14235,7 @@
    "lpo": 2.84,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 2.84,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14232,7 +14252,7 @@
    "lpo": 3.34,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 3.34,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14249,7 +14269,7 @@
    "lpo": 35.98,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 35.98,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14266,7 +14286,7 @@
    "lpo": 55.95,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 55.95,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14283,7 +14303,7 @@
    "lpo": 88.74,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 88.74,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14300,7 +14320,7 @@
    "lpo": 39.15,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 39.15,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14317,7 +14337,7 @@
    "lpo": 33.3,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 33.3,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14334,7 +14354,7 @@
    "lpo": 1.61,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 1.61,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14346,8 +14366,8 @@
   },
   "OFF-SPL-00027": {
    "ew": 80.0,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
-   "tpm": 0.0,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 80.0,
    "lpod": "2026-07-13",
    "avg180": 80.0,
@@ -14362,13 +14382,13 @@
    ]
   },
   "OFF-SPL-00026": {
-   "ew": 7.05,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 6.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 6.0,
    "lpod": "2026-07-27",
    "avg180": 6.0,
-   "avg12": 13.0,
+   "avg12": 6.0,
    "npo": 2,
    "vend": [
     {
@@ -14379,9 +14399,9 @@
    ]
   },
   "OFF-SPL-00025": {
-   "ew": 42.77,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d",
-   "tpm": 0.5,
+   "ew": 42.85,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
+   "tpm": -0.1,
    "lpo": 40.0,
    "lpod": "2026-07-13",
    "avg180": 40.0,
@@ -14402,7 +14422,7 @@
    "lpo": 1101.69,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 1101.69,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14419,7 +14439,7 @@
    "lpo": 5694.92,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 5694.92,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14436,7 +14456,7 @@
    "lpo": 12711.86,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 12711.86,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14453,7 +14473,7 @@
    "lpo": 14559.32,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 14559.32,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14470,7 +14490,7 @@
    "lpo": 13400.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 13400.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14487,7 +14507,7 @@
    "lpo": 2450.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 2450.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14504,7 +14524,7 @@
    "lpo": 3500.0,
    "lpod": "2025-09-04",
    "avg180": null,
-   "avg12": 3500.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -14515,12 +14535,12 @@
    ]
   },
   "EL-777-00027": {
-   "ew": 30030.61,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend -2.0%/mo \u2192 projected -10.0%",
-   "tpm": -2.0,
+   "ew": 30000.84,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -2.7%/mo \u2192 projected -10.0%",
+   "tpm": -2.6,
    "lpo": 34000.0,
    "lpod": "2026-03-27",
-   "avg180": 31500.0,
+   "avg180": 34000.0,
    "avg12": 34000.0,
    "npo": 8,
    "vend": [
@@ -14542,13 +14562,13 @@
    ]
   },
   "TMP-000-00131": {
-   "ew": 8.09,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +9.4%/mo \u2192 projected +10.0%",
-   "tpm": 10.1,
+   "ew": 8.31,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +13.0%/mo \u2192 projected +10.0%",
+   "tpm": 13.5,
    "lpo": 8.0,
    "lpod": "2026-02-14",
    "avg180": null,
-   "avg12": 6.0,
+   "avg12": 7.0,
    "npo": 10,
    "vend": [
     {
@@ -14560,7 +14580,7 @@
   },
   "TMP-000-00121": {
    "ew": 3.0,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, 1 outlier(s) dropped",
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, 1 outlier(s) dropped",
    "tpm": 0.0,
    "lpo": 1.0,
    "lpod": "2026-02-14",
@@ -14577,7 +14597,7 @@
   },
   "TMP-000-00132": {
    "ew": 4.0,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 4.0,
    "lpod": "2026-01-17",
@@ -14593,9 +14613,9 @@
    ]
   },
   "TMP-000-00133": {
-   "ew": 9.69,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend -1.1%/mo \u2192 projected -9.5%",
-   "tpm": -1.1,
+   "ew": 9.62,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend -1.8%/mo \u2192 projected -10.0%",
+   "tpm": -1.8,
    "lpo": 10.0,
    "lpod": "2026-02-14",
    "avg180": null,
@@ -14611,7 +14631,7 @@
   },
   "TMP-000-00134": {
    "ew": 6.0,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 6.0,
    "lpod": "2026-01-17",
@@ -14627,9 +14647,9 @@
    ]
   },
   "TMP-000-00185": {
-   "ew": 1.56,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend -7.6%/mo \u2192 projected -10.0%",
-   "tpm": -7.1,
+   "ew": 1.5,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend -1.9%/mo \u2192 projected -10.0%",
+   "tpm": -1.8,
    "lpo": 1.5,
    "lpod": "2026-05-04",
    "avg180": 1.5,
@@ -14645,8 +14665,8 @@
   },
   "CMP-444-00076": {
    "ew": 13.7,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
-   "tpm": -0.0,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 13.7,
    "lpod": "2026-08-01",
    "avg180": 13.7,
@@ -14661,9 +14681,9 @@
    ]
   },
   "CF-555-00131": {
-   "ew": 9.72,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend +3.7%/mo \u2192 projected +10.0%",
-   "tpm": 4.2,
+   "ew": 9.77,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +3.9%/mo \u2192 projected +10.0%",
+   "tpm": 4.4,
    "lpo": 10.0,
    "lpod": "2026-08-01",
    "avg180": 10.0,
@@ -14678,9 +14698,9 @@
    ]
   },
   "CF-555-00132": {
-   "ew": 9.05,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend +2.7%/mo \u2192 projected +10.0%",
-   "tpm": 2.9,
+   "ew": 9.08,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +2.8%/mo \u2192 projected +10.0%",
+   "tpm": 3.1,
    "lpo": 9.0,
    "lpod": "2026-08-01",
    "avg180": 9.0,
@@ -14695,13 +14715,13 @@
    ]
   },
   "EL-777-00093": {
-   "ew": 8.25,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend +1.4%/mo \u2192 projected +7.1%",
+   "ew": 8.28,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.5%/mo \u2192 projected +7.4%",
    "tpm": 1.5,
    "lpo": 8.2,
    "lpod": "2026-08-01",
    "avg180": 7.75,
-   "avg12": 7.32,
+   "avg12": 7.6,
    "npo": 14,
    "vend": [
     {
@@ -14712,13 +14732,13 @@
    ]
   },
   "EL-777-00094": {
-   "ew": 4.82,
-   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, trend +1.7%/mo \u2192 projected +8.8%",
+   "ew": 4.84,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +9.1%",
    "tpm": 1.8,
    "lpo": 4.5,
    "lpod": "2026-08-01",
    "avg180": 4.65,
-   "avg12": 4.13,
+   "avg12": 4.3,
    "npo": 14,
    "vend": [
     {
@@ -14729,8 +14749,8 @@
    ]
   },
   "CC-555-00123": {
-   "ew": 99.33,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
+   "ew": 99.38,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d",
    "tpm": 0.4,
    "lpo": 101.0,
    "lpod": "2026-08-01",
@@ -14747,7 +14767,7 @@
   },
   "CMP-444-00319": {
    "ew": 12.0,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 12.0,
    "lpod": "2026-08-01",
@@ -14764,7 +14784,7 @@
   },
   "CMP-444-00085": {
    "ew": 49.0,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 49.0,
    "lpod": "2026-01-17",
@@ -14780,9 +14800,9 @@
    ]
   },
   "CF-555-00149": {
-   "ew": 30.66,
-   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +1.9%/mo \u2192 projected +8.8%",
-   "tpm": 2.1,
+   "ew": 30.93,
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +2.0%/mo \u2192 projected +9.5%",
+   "tpm": 2.2,
    "lpo": 30.0,
    "lpod": "2026-08-01",
    "avg180": 30.0,
@@ -14797,9 +14817,9 @@
    ]
   },
   "CF-555-00150": {
-   "ew": 26.53,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +8.5%",
-   "tpm": 1.9,
+   "ew": 26.74,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +1.9%/mo \u2192 projected +9.1%",
+   "tpm": 2.0,
    "lpo": 26.0,
    "lpod": "2026-08-01",
    "avg180": 26.0,
@@ -14814,9 +14834,9 @@
    ]
   },
   "CF-555-00207": {
-   "ew": 26.53,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +8.5%",
-   "tpm": 1.9,
+   "ew": 26.74,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +1.9%/mo \u2192 projected +9.1%",
+   "tpm": 2.0,
    "lpo": 26.0,
    "lpod": "2026-08-01",
    "avg180": 26.0,
@@ -14831,8 +14851,8 @@
    ]
   },
   "CC-555-00134": {
-   "ew": 142.66,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d",
+   "ew": 142.79,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
    "tpm": 0.8,
    "lpo": 147.0,
    "lpod": "2026-08-01",
@@ -14848,8 +14868,8 @@
    ]
   },
   "CC-555-00135": {
-   "ew": 142.66,
-   "ewb": "age-weighted avg of 13 PO(s), half-life 90d",
+   "ew": 142.79,
+   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
    "tpm": 0.8,
    "lpo": 147.0,
    "lpod": "2026-08-01",
@@ -14865,13 +14885,13 @@
    ]
   },
   "TMP-000-00264": {
-   "ew": 4.09,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend -7.0%/mo \u2192 projected -10.0%",
-   "tpm": -6.4,
+   "ew": 4.04,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend -7.5%/mo \u2192 projected -10.0%",
+   "tpm": -6.9,
    "lpo": 4.0,
    "lpod": "2026-05-19",
    "avg180": 4.0,
-   "avg12": 5.0,
+   "avg12": 4.0,
    "npo": 10,
    "vend": [
     {
@@ -14883,7 +14903,7 @@
   },
   "TMP-000-00265": {
    "ew": 3.0,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 3.0,
    "lpod": "2026-05-19",
@@ -14899,13 +14919,13 @@
    ]
   },
   "TMP-000-00266": {
-   "ew": 9.24,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend -1.6%/mo \u2192 projected -10.0%",
-   "tpm": -1.5,
+   "ew": 9.22,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend -1.7%/mo \u2192 projected -10.0%",
+   "tpm": -1.6,
    "lpo": 10.0,
    "lpod": "2026-05-19",
    "avg180": 10.0,
-   "avg12": 10.5,
+   "avg12": 10.0,
    "npo": 10,
    "vend": [
     {
@@ -14916,9 +14936,9 @@
    ]
   },
   "TMP-000-00267": {
-   "ew": 14.15,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d",
-   "tpm": -1.0,
+   "ew": 14.1,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d",
+   "tpm": -0.8,
    "lpo": 14.0,
    "lpod": "2026-05-19",
    "avg180": 14.0,
@@ -14933,9 +14953,9 @@
    ]
   },
   "TMP-000-00268": {
-   "ew": 6.54,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +1.7%/mo \u2192 projected +10.0%",
-   "tpm": 1.7,
+   "ew": 6.0,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 6.0,
    "lpod": "2026-05-19",
    "avg180": 6.0,
@@ -14951,7 +14971,7 @@
   },
   "TMP-000-00416": {
    "ew": 50.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 50.0,
    "lpod": "2025-11-13",
@@ -14967,13 +14987,13 @@
    ]
   },
   "TMP-000-00415": {
-   "ew": 27.56,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 32.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 32.0,
    "lpod": "2025-11-13",
    "avg180": null,
-   "avg12": 26.0,
+   "avg12": 32.0,
    "npo": 2,
    "vend": [
     {
@@ -14984,13 +15004,13 @@
    ]
   },
   "CC-555-00378": {
-   "ew": 262.03,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 265.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 265.0,
    "lpod": "2025-10-17",
    "avg180": null,
-   "avg12": 260.0,
+   "avg12": 265.0,
    "npo": 3,
    "vend": [
     {
@@ -15006,13 +15026,13 @@
    ]
   },
   "CC-555-00380": {
-   "ew": 262.03,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 265.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 265.0,
    "lpod": "2025-10-17",
    "avg180": null,
-   "avg12": 260.0,
+   "avg12": 265.0,
    "npo": 3,
    "vend": [
     {
@@ -15028,13 +15048,13 @@
    ]
   },
   "CC-555-00379": {
-   "ew": 262.03,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 265.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 265.0,
    "lpod": "2025-10-17",
    "avg180": null,
-   "avg12": 260.0,
+   "avg12": 265.0,
    "npo": 3,
    "vend": [
     {
@@ -15050,13 +15070,13 @@
    ]
   },
   "CMP-444-00573": {
-   "ew": 1393.48,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +5.0%/mo \u2192 projected +10.0%",
-   "tpm": 7.2,
+   "ew": 1338.3,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 1411.0,
    "lpod": "2026-08-13",
    "avg180": 1411.0,
-   "avg12": 715.0,
+   "avg12": 1063.0,
    "npo": 4,
    "vend": [
     {
@@ -15067,13 +15087,13 @@
    ]
   },
   "CMP-444-00572": {
-   "ew": 184.31,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 190.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 190.0,
    "lpod": "2026-08-13",
    "avg180": 190.0,
-   "avg12": 145.0,
+   "avg12": 190.0,
    "npo": 3,
    "vend": [
     {
@@ -15084,75 +15104,75 @@
    ]
   },
   "TMP-000-00461": {
-   "ew": 63.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 100.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 63.0,
-   "lpod": "2025-09-06",
-   "avg180": null,
-   "avg12": 63.0,
-   "npo": 2,
+   "lpo": 100.0,
+   "lpod": "2026-09-05",
+   "avg180": 100.0,
+   "avg12": 100.0,
+   "npo": 3,
    "vend": [
     {
      "n": "Ranganatha Industries",
-     "p": 63.0,
-     "d": "2025-09-06"
+     "p": 100.0,
+     "d": "2026-09-05"
     }
    ]
   },
   "TMP-000-00462": {
-   "ew": 5.5,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 100.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 5.5,
-   "lpod": "2025-09-06",
-   "avg180": null,
-   "avg12": 5.5,
-   "npo": 2,
+   "lpo": 100.0,
+   "lpod": "2026-09-05",
+   "avg180": 100.0,
+   "avg12": 100.0,
+   "npo": 3,
    "vend": [
     {
      "n": "Ranganatha Industries",
-     "p": 5.5,
-     "d": "2025-09-06"
+     "p": 100.0,
+     "d": "2026-09-05"
     }
    ]
   },
   "TMP-000-00463": {
-   "ew": 20.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 50.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 20.0,
-   "lpod": "2025-09-06",
-   "avg180": null,
-   "avg12": 20.0,
-   "npo": 2,
+   "lpo": 50.0,
+   "lpod": "2026-09-05",
+   "avg180": 50.0,
+   "avg12": 50.0,
+   "npo": 3,
    "vend": [
     {
      "n": "Ranganatha Industries",
-     "p": 20.0,
-     "d": "2025-09-06"
+     "p": 50.0,
+     "d": "2026-09-05"
     }
    ]
   },
   "TMP-000-00480": {
-   "ew": 41.49,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 47.44,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 25.0,
-   "lpod": "2025-11-27",
-   "avg180": null,
-   "avg12": 57.0,
-   "npo": 3,
+   "lpo": 50.0,
+   "lpod": "2026-09-05",
+   "avg180": 50.0,
+   "avg12": 37.5,
+   "npo": 4,
    "vend": [
+    {
+     "n": "Ranganatha Industries",
+     "p": 50.0,
+     "d": "2026-09-05"
+    },
     {
      "n": "Kinelectro Lines India Pvt Ltd",
      "p": 25.0,
      "d": "2025-11-27"
-    },
-    {
-     "n": "Ranganatha Industries",
-     "p": 57.0,
-     "d": "2025-09-06"
     }
    ]
   },
@@ -15163,7 +15183,7 @@
    "lpo": 450.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 382.5,
+   "avg12": null,
    "npo": 2,
    "vend": [
     {
@@ -15180,7 +15200,7 @@
    "lpo": 450.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 325.5,
+   "avg12": null,
    "npo": 2,
    "vend": [
     {
@@ -15191,13 +15211,13 @@
    ]
   },
   "CF-555-00848": {
-   "ew": 350.08,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -2.8%/mo \u2192 projected -10.0%",
-   "tpm": -2.7,
+   "ew": 376.75,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 490.0,
    "lpod": "2026-05-18",
    "avg180": 357.5,
-   "avg12": 459.5,
+   "avg12": 357.5,
    "npo": 4,
    "vend": [
     {
@@ -15213,13 +15233,13 @@
    ]
   },
   "AL-222-00030": {
-   "ew": 463.33,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 474.87,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 470.0,
    "lpod": "2026-02-03",
    "avg180": null,
-   "avg12": 470.0,
+   "avg12": 475.0,
    "npo": 3,
    "vend": [
     {
@@ -15236,7 +15256,7 @@
    "lpo": 380.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 380.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -15247,13 +15267,13 @@
    ]
   },
   "CU-222-00389": {
-   "ew": 605.16,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 620.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 620.0,
    "lpod": "2026-08-13",
    "avg180": 620.0,
-   "avg12": 510.0,
+   "avg12": 620.0,
    "npo": 2,
    "vend": [
     {
@@ -15270,7 +15290,7 @@
    "lpo": 322.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 322.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -15281,15 +15301,20 @@
    ]
   },
   "INS-666-00305": {
-   "ew": 4900.0,
+   "ew": 3950.0,
    "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 4900.0,
-   "lpod": "2025-09-06",
-   "avg180": null,
-   "avg12": 4900.0,
-   "npo": 1,
+   "lpo": 3950.0,
+   "lpod": "2026-09-04",
+   "avg180": 3950.0,
+   "avg12": 3950.0,
+   "npo": 2,
    "vend": [
+    {
+     "n": "Ganapathy Industries",
+     "p": 3950.0,
+     "d": "2026-09-04"
+    },
     {
      "n": "Polycom Associates",
      "p": 4900.0,
@@ -15304,7 +15329,7 @@
    "lpo": 65.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 65.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -15316,7 +15341,7 @@
   },
   "FST-999-00909": {
    "ew": 6.6,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 6.6,
    "lpod": "2025-12-08",
@@ -15332,13 +15357,13 @@
    ]
   },
   "FST-999-00553": {
-   "ew": 8.69,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ew": 8.66,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 9.0,
    "lpod": "2026-06-22",
    "avg180": 9.0,
-   "avg12": 9.0,
+   "avg12": 7.5,
    "npo": 3,
    "vend": [
     {
@@ -15349,9 +15374,9 @@
    ]
   },
   "FST-999-00169": {
-   "ew": 3.24,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -2.5%/mo \u2192 projected -10.0%",
-   "tpm": -2.3,
+   "ew": 3.46,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.9,
    "lpo": 3.5,
    "lpod": "2026-06-22",
    "avg180": 3.5,
@@ -15366,13 +15391,13 @@
    ]
   },
   "FST-999-00910": {
-   "ew": 7.87,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 8.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 8.0,
    "lpod": "2026-08-13",
    "avg180": 8.0,
-   "avg12": 7.0,
+   "avg12": 8.0,
    "npo": 2,
    "vend": [
     {
@@ -15383,13 +15408,13 @@
    ]
   },
   "FST-999-00911": {
-   "ew": 16.87,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 17.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 17.0,
    "lpod": "2026-08-13",
    "avg180": 17.0,
-   "avg12": 16.0,
+   "avg12": 17.0,
    "npo": 2,
    "vend": [
     {
@@ -15406,7 +15431,7 @@
    "lpo": 162.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 162.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -15417,12 +15442,12 @@
    ]
   },
   "INS-666-00105": {
-   "ew": 12.56,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, trend -4.0%/mo \u2192 projected -10.0%",
-   "tpm": -3.9,
+   "ew": 12.47,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend -3.7%/mo \u2192 projected -10.0%",
+   "tpm": -3.6,
    "lpo": 13.2,
    "lpod": "2026-03-06",
-   "avg180": 13.2,
+   "avg180": null,
    "avg12": 13.2,
    "npo": 12,
    "vend": [
@@ -15439,9 +15464,9 @@
    ]
   },
   "CMP-444-00310": {
-   "ew": 123.52,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +4.4%/mo \u2192 projected +10.0%",
-   "tpm": 4.4,
+   "ew": 115.0,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 115.0,
    "lpod": "2025-11-13",
    "avg180": null,
@@ -15457,7 +15482,7 @@
   },
   "EN-888-00281": {
    "ew": 5500.0,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5500.0,
    "lpod": "2025-10-16",
@@ -15474,7 +15499,7 @@
   },
   "EN-888-00282": {
    "ew": 5500.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5500.0,
    "lpod": "2025-10-16",
@@ -15491,7 +15516,7 @@
   },
   "EN-888-00283": {
    "ew": 5500.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5500.0,
    "lpod": "2025-10-16",
@@ -15508,7 +15533,7 @@
   },
   "EN-888-00289": {
    "ew": 5500.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5500.0,
    "lpod": "2025-10-16",
@@ -15524,13 +15549,13 @@
    ]
   },
   "EL-777-00386": {
-   "ew": 2395.78,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
-   "tpm": 0.2,
+   "ew": 2397.48,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "tpm": null,
    "lpo": 2400.0,
    "lpod": "2026-08-05",
    "avg180": 2400.0,
-   "avg12": 2375.0,
+   "avg12": 2400.0,
    "npo": 4,
    "vend": [
     {
@@ -15546,13 +15571,13 @@
    ]
   },
   "EL-777-00387": {
-   "ew": 2532.06,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 2600.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 2600.0,
    "lpod": "2026-01-12",
    "avg180": null,
-   "avg12": 2475.0,
+   "avg12": 2600.0,
    "npo": 2,
    "vend": [
     {
@@ -15568,13 +15593,13 @@
    ]
   },
   "EL-777-00389": {
-   "ew": 2070.65,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 2000.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 2000.0,
    "lpod": "2026-01-12",
    "avg180": null,
-   "avg12": 2130.0,
+   "avg12": 2000.0,
    "npo": 2,
    "vend": [
     {
@@ -15594,15 +15619,15 @@
    "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 2500.0,
-   "lpod": "2026-08-05",
+   "lpod": "2026-09-02",
    "avg180": 2500.0,
    "avg12": 2500.0,
-   "npo": 7,
+   "npo": 8,
    "vend": [
     {
      "n": "RAYCO ELECTRO ENTERPRISE",
      "p": 2500.0,
-     "d": "2026-08-05"
+     "d": "2026-09-02"
     }
    ]
   },
@@ -15613,7 +15638,7 @@
    "lpo": 333.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 333.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -15630,7 +15655,7 @@
    "lpo": 333.0,
    "lpod": "2025-09-06",
    "avg180": null,
-   "avg12": 333.0,
+   "avg12": null,
    "npo": 1,
    "vend": [
     {
@@ -15658,24 +15683,24 @@
    ]
   },
   "SER-SOF-00003": {
-   "ew": 91200.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d, 9 outlier(s) dropped",
+   "ew": 119598.27,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d, 8 outlier(s) dropped",
    "tpm": null,
-   "lpo": 91200.0,
-   "lpod": "2026-07-06",
-   "avg180": 51840.0,
-   "avg12": 52500.0,
-   "npo": 10,
+   "lpo": 605000.0,
+   "lpod": "2026-09-07",
+   "avg180": 91200.0,
+   "avg12": 91200.0,
+   "npo": 11,
    "vend": [
+    {
+     "n": "KATZE TECHNOLOGIES",
+     "p": 605000.0,
+     "d": "2026-09-07"
+    },
     {
      "n": "MHE BAZAR",
      "p": 91200.0,
      "d": "2026-07-06"
-    },
-    {
-     "n": "KATZE TECHNOLOGIES",
-     "p": 12480.0,
-     "d": "2026-05-29"
     },
     {
      "n": "Lean On Us",
@@ -16014,19 +16039,19 @@
    ]
   },
   "INS-666-00092": {
-   "ew": 10.06,
-   "ewb": "age-weighted avg of 16 PO(s), half-life 90d, trend +7.1%/mo \u2192 projected +10.0%",
-   "tpm": 9.5,
+   "ew": 10.66,
+   "ewb": "age-weighted avg of 17 PO(s), half-life 90d, trend +6.9%/mo \u2192 projected +10.0%",
+   "tpm": 9.4,
    "lpo": 12.1,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 12.1,
    "avg12": 5.4,
-   "npo": 16,
+   "npo": 17,
    "vend": [
     {
      "n": "PEP CHARLES LIMPENS PVT LTD",
      "p": 12.1,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     },
     {
      "n": "Vijay Trading Corporation",
@@ -16090,19 +16115,19 @@
    ]
   },
   "INS-666-00021": {
-   "ew": 12.47,
-   "ewb": "age-weighted avg of 18 PO(s), half-life 90d, 1 outlier(s) dropped, trend +4.0%/mo \u2192 projected +10.0%",
+   "ew": 12.87,
+   "ewb": "age-weighted avg of 19 PO(s), half-life 90d, 1 outlier(s) dropped, trend +3.9%/mo \u2192 projected +10.0%",
    "tpm": 4.8,
    "lpo": 13.2,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 13.2,
    "avg12": 8.5,
-   "npo": 19,
+   "npo": 20,
    "vend": [
     {
      "n": "PEP CHARLES LIMPENS PVT LTD",
      "p": 13.2,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     },
     {
      "n": "Vijay Trading Corporation",
@@ -16140,18 +16165,18 @@
   },
   "INS-666-00130": {
    "ew": 18.6,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d",
-   "tpm": -0.0,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 18.6,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 18.6,
    "avg12": 18.6,
-   "npo": 7,
+   "npo": 8,
    "vend": [
     {
      "n": "PEP CHARLES LIMPENS PVT LTD",
      "p": 18.6,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -16292,19 +16317,19 @@
    ]
   },
   "FST-999-00201": {
-   "ew": 2.94,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d",
-   "tpm": -0.2,
+   "ew": 3.62,
+   "ewb": "age-weighted avg of 13 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +8.9%",
+   "tpm": 2.0,
    "lpo": 4.0,
-   "lpod": "2026-04-16",
-   "avg180": 3.18,
+   "lpod": "2026-09-05",
+   "avg180": 4.0,
    "avg12": 3.0,
-   "npo": 12,
+   "npo": 13,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
      "p": 4.0,
-     "d": "2026-04-16"
+     "d": "2026-09-05"
     },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
@@ -16380,8 +16405,8 @@
    ]
   },
   "FST-999-00345": {
-   "ew": 11.17,
-   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +7.4%",
+   "ew": 11.21,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +7.8%",
    "tpm": 1.7,
    "lpo": 11.0,
    "lpod": "2026-08-01",
@@ -17051,23 +17076,23 @@
   },
   "FST-999-00162": {
    "ew": 0.26,
-   "ewb": "age-weighted avg of 15 PO(s), half-life 90d, trend +8.0%/mo \u2192 projected +10.0%",
-   "tpm": 8.3,
+   "ewb": "age-weighted avg of 16 PO(s), half-life 90d, trend +2.9%/mo \u2192 projected +10.0%",
+   "tpm": 3.0,
    "lpo": 0.24,
-   "lpod": "2026-02-03",
-   "avg180": null,
+   "lpod": "2026-09-04",
+   "avg180": 0.24,
    "avg12": 0.2,
-   "npo": 15,
+   "npo": 16,
    "vend": [
+    {
+     "n": "Shree Kuladevata Enterprises",
+     "p": 0.24,
+     "d": "2026-09-04"
+    },
     {
      "n": "MVD FASTENERS PRIVATE LIMITED",
      "p": 0.24,
      "d": "2026-02-03"
-    },
-    {
-     "n": "Shree Kuladevata Enterprises",
-     "p": 0.35,
-     "d": "2026-01-20"
     }
    ]
   },
@@ -18404,15 +18429,20 @@
    ]
   },
   "EL-777-00670": {
-   "ew": 27.13,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +4.0%/mo \u2192 projected +10.0%",
-   "tpm": 4.1,
-   "lpo": 26.4,
-   "lpod": "2026-03-06",
-   "avg180": 26.4,
+   "ew": 32.08,
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d, trend +3.9%/mo \u2192 projected +10.0%",
+   "tpm": 4.6,
+   "lpo": 35.0,
+   "lpod": "2026-09-05",
+   "avg180": 35.0,
    "avg12": 26.4,
-   "npo": 10,
+   "npo": 11,
    "vend": [
+    {
+     "n": "GVP Technologies",
+     "p": 35.0,
+     "d": "2026-09-05"
+    },
     {
      "n": "MICRONOVA IMPEX PVT LTD",
      "p": 26.4,
@@ -18422,11 +18452,6 @@
      "n": "ENERGY MATTERS",
      "p": 28.5,
      "d": "2025-11-17"
-    },
-    {
-     "n": "Suman Electric Udyogs Pvt. Ltd.",
-     "p": 26.2,
-     "d": "2025-10-06"
     }
    ]
   },
@@ -18436,7 +18461,7 @@
    "tpm": 0.6,
    "lpo": 50.05,
    "lpod": "2026-03-12",
-   "avg180": 41.88,
+   "avg180": 50.05,
    "avg12": 41.88,
    "npo": 15,
    "vend": [
@@ -18458,7 +18483,7 @@
    "tpm": 1.6,
    "lpo": 8.71,
    "lpod": "2026-03-06",
-   "avg180": 8.71,
+   "avg180": null,
    "avg12": 8.71,
    "npo": 16,
    "vend": [
@@ -18553,19 +18578,19 @@
    ]
   },
   "CU-111-00001": {
-   "ew": 1420.07,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +5.7%/mo \u2192 projected +10.0%",
-   "tpm": 6.1,
-   "lpo": 1405.0,
-   "lpod": "2026-04-16",
-   "avg180": 1405.0,
-   "avg12": 1250.0,
-   "npo": 7,
+   "ew": 1603.05,
+   "ewb": "age-weighted avg of 8 PO(s), half-life 90d, trend +3.9%/mo \u2192 projected +10.0%",
+   "tpm": 4.5,
+   "lpo": 1630.0,
+   "lpod": "2026-09-07",
+   "avg180": 1517.5,
+   "avg12": 1320.0,
+   "npo": 8,
    "vend": [
     {
      "n": "Bombay Metal Corporation",
-     "p": 1405.0,
-     "d": "2026-04-16"
+     "p": 1630.0,
+     "d": "2026-09-07"
     }
    ]
   },
@@ -18575,7 +18600,7 @@
    "tpm": 3.5,
    "lpo": 38.0,
    "lpod": "2026-08-13",
-   "avg180": 37.91,
+   "avg180": 38.0,
    "avg12": 31.98,
    "npo": 14,
    "vend": [
@@ -18619,7 +18644,7 @@
    "tpm": 0.2,
    "lpo": 290.0,
    "lpod": "2026-08-20",
-   "avg180": 277.5,
+   "avg180": 290.0,
    "avg12": 265.0,
    "npo": 14,
    "vend": [
@@ -18916,7 +18941,7 @@
    "tpm": null,
    "lpo": 9.87,
    "lpod": "2026-03-05",
-   "avg180": 9.87,
+   "avg180": null,
    "avg12": 9.87,
    "npo": 3,
    "vend": [
@@ -19082,7 +19107,7 @@
    "tpm": -8.6,
    "lpo": 0.16,
    "lpod": "2026-03-06",
-   "avg180": 0.16,
+   "avg180": null,
    "avg12": 0.28,
    "npo": 12,
    "vend": [
@@ -19565,18 +19590,18 @@
   },
   "PRD-SPL-00003": {
    "ew": 30.0,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 11 PO(s), half-life 90d",
    "tpm": 0.0,
    "lpo": 30.0,
-   "lpod": "2026-07-27",
+   "lpod": "2026-09-04",
    "avg180": 30.0,
    "avg12": 30.0,
-   "npo": 10,
+   "npo": 11,
    "vend": [
     {
      "n": "Peenya Industrial Gases Pvt Ltd",
      "p": 30.0,
-     "d": "2026-07-27"
+     "d": "2026-09-04"
     }
    ]
   },
@@ -19832,8 +19857,8 @@
    ]
   },
   "TMP-000-00339": {
-   "ew": 13.74,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +4.6%",
+   "ew": 13.78,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +4.9%",
    "tpm": 1.4,
    "lpo": 12.0,
    "lpod": "2026-07-09",
@@ -20177,19 +20202,19 @@
    ]
   },
   "EL-777-00569": {
-   "ew": 199.96,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ew": 213.12,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.9%/mo \u2192 projected +3.9%",
+   "tpm": 2.0,
    "lpo": 209.4,
-   "lpod": "2026-06-27",
+   "lpod": "2026-09-01",
    "avg180": 209.4,
-   "avg12": 173.0,
-   "npo": 3,
+   "avg12": 191.2,
+   "npo": 4,
    "vend": [
     {
      "n": "DELTONCONTROL & SWITCHGEARS LLP",
      "p": 209.4,
-     "d": "2026-06-27"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -20255,8 +20280,8 @@
    ]
   },
   "FST-999-00181": {
-   "ew": 9.19,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +3.0%",
+   "ew": 9.21,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +3.3%",
    "tpm": 1.4,
    "lpo": 9.0,
    "lpod": "2026-08-04",
@@ -20620,8 +20645,8 @@
    ]
   },
   "FST-999-00764": {
-   "ew": 4.02,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -7.4%",
+   "ew": 4.01,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -7.7%",
    "tpm": -1.4,
    "lpo": 4.3,
    "lpod": "2026-06-18",
@@ -20642,8 +20667,8 @@
    ]
   },
   "FST-999-00765": {
-   "ew": 0.69,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, 2 outlier(s) dropped, trend -2.7%/mo \u2192 projected -8.4%",
+   "ew": 0.68,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, 2 outlier(s) dropped, trend -2.7%/mo \u2192 projected -9.0%",
    "tpm": -2.5,
    "lpo": 0.72,
    "lpod": "2026-08-04",
@@ -21075,8 +21100,8 @@
    ]
   },
   "CH-303-00023": {
-   "ew": 576.05,
-   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +2.0%/mo \u2192 projected +8.7%",
+   "ew": 578.46,
+   "ewb": "age-weighted avg of 10 PO(s), half-life 90d, trend +2.0%/mo \u2192 projected +9.1%",
    "tpm": 2.1,
    "lpo": 553.8,
    "lpod": "2026-07-08",
@@ -21097,8 +21122,8 @@
    ]
   },
   "CH-303-00024": {
-   "ew": 444.31,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.4%/mo \u2192 projected +7.9%",
+   "ew": 446.56,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.4%/mo \u2192 projected +8.5%",
    "tpm": 2.5,
    "lpo": 427.0,
    "lpod": "2026-07-08",
@@ -21119,7 +21144,7 @@
    "tpm": 3.1,
    "lpo": 1189.5,
    "lpod": "2026-07-08",
-   "avg180": 986.05,
+   "avg180": 1062.1,
    "avg12": 910.0,
    "npo": 16,
    "vend": [
@@ -21829,19 +21854,19 @@
    ]
   },
   "PKG-000-00003": {
-   "ew": 173.9,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +3.1%/mo \u2192 projected +10.0%",
-   "tpm": 3.4,
+   "ew": 182.35,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +2.6%/mo \u2192 projected +8.7%",
+   "tpm": 2.9,
    "lpo": 178.0,
-   "lpod": "2026-06-09",
+   "lpod": "2026-09-01",
    "avg180": 178.0,
-   "avg12": 139.0,
-   "npo": 6,
+   "avg12": 140.0,
+   "npo": 7,
    "vend": [
     {
      "n": "FINN PACK",
      "p": 178.0,
-     "d": "2026-06-09"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -21851,7 +21876,7 @@
    "tpm": 0.0,
    "lpo": 32.0,
    "lpod": "2026-03-06",
-   "avg180": 32.0,
+   "avg180": null,
    "avg12": 32.0,
    "npo": 5,
    "vend": [
@@ -22597,7 +22622,7 @@
   },
   "FST-999-00849": {
    "ew": 1.62,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +4.0%",
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +4.2%",
    "tpm": 1.1,
    "lpo": 1.5,
    "lpod": "2026-07-28",
@@ -22653,7 +22678,7 @@
   },
   "FST-999-00851": {
    "ew": 0.39,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -2.4%/mo \u2192 projected -6.0%",
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -2.4%/mo \u2192 projected -6.6%",
    "tpm": -2.2,
    "lpo": 0.4,
    "lpod": "2026-08-04",
@@ -22840,8 +22865,8 @@
    ]
   },
   "TMP-000-00413": {
-   "ew": 19.69,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -2.3%/mo \u2192 projected -4.4%",
+   "ew": 19.58,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -2.3%/mo \u2192 projected -4.9%",
    "tpm": -2.1,
    "lpo": 20.0,
    "lpod": "2026-08-29",
@@ -22913,8 +22938,8 @@
    ]
   },
   "INS-666-00104": {
-   "ew": 1545.18,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -1.6%/mo \u2192 projected -7.9%",
+   "ew": 1539.09,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -1.6%/mo \u2192 projected -8.2%",
    "tpm": -1.5,
    "lpo": 1650.0,
    "lpod": "2026-07-09",
@@ -22969,8 +22994,8 @@
    ]
   },
   "CU-222-00201": {
-   "ew": 15.08,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 1 outlier(s) dropped, trend +1.7%/mo \u2192 projected +4.9%",
+   "ew": 15.14,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 1 outlier(s) dropped, trend +1.7%/mo \u2192 projected +5.3%",
    "tpm": 1.8,
    "lpo": 14.62,
    "lpod": "2026-07-31",
@@ -22996,8 +23021,8 @@
    ]
   },
   "CU-222-00206": {
-   "ew": 54.9,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +3.5%",
+   "ew": 55.1,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +3.8%",
    "tpm": 1.7,
    "lpo": 52.9,
    "lpod": "2026-07-31",
@@ -23023,8 +23048,8 @@
    ]
   },
   "CU-222-00207": {
-   "ew": 54.9,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +3.5%",
+   "ew": 55.1,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +3.8%",
    "tpm": 1.7,
    "lpo": 52.9,
    "lpod": "2026-07-31",
@@ -23050,8 +23075,8 @@
    ]
   },
   "CU-222-00221": {
-   "ew": 15.21,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +5.3%",
+   "ew": 15.26,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +5.6%",
    "tpm": 1.7,
    "lpo": 14.62,
    "lpod": "2026-07-31",
@@ -23077,8 +23102,8 @@
    ]
   },
   "CU-222-00337": {
-   "ew": 229.97,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +5.5%",
+   "ew": 231.09,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +6.1%",
    "tpm": 2.4,
    "lpo": 220.17,
    "lpod": "2026-07-31",
@@ -23104,8 +23129,8 @@
    ]
   },
   "CU-222-00338": {
-   "ew": 229.97,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +5.5%",
+   "ew": 231.09,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.2%/mo \u2192 projected +6.1%",
    "tpm": 2.4,
    "lpo": 220.17,
    "lpod": "2026-07-31",
@@ -23131,8 +23156,8 @@
    ]
   },
   "CU-222-00344": {
-   "ew": 9.07,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.1%",
+   "ew": 9.11,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.6%",
    "tpm": 2.2,
    "lpo": 8.72,
    "lpod": "2026-07-31",
@@ -23153,8 +23178,8 @@
    ]
   },
   "CU-222-00345": {
-   "ew": 9.07,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.1%",
+   "ew": 9.11,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.6%",
    "tpm": 2.2,
    "lpo": 8.72,
    "lpod": "2026-07-31",
@@ -23175,8 +23200,8 @@
    ]
   },
   "CU-222-00346": {
-   "ew": 9.07,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.1%",
+   "ew": 9.11,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +6.6%",
    "tpm": 2.2,
    "lpo": 8.72,
    "lpod": "2026-07-31",
@@ -23451,36 +23476,36 @@
    ]
   },
   "EL-777-00412": {
-   "ew": 5182.48,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 5191.48,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5200.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 5200.0,
-   "avg12": 5099.5,
-   "npo": 2,
+   "avg12": 5200.0,
+   "npo": 3,
    "vend": [
     {
      "n": "PPS International Private Limited",
      "p": 5200.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
   "EL-777-00411": {
    "ew": 3325.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 3325.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 3325.0,
    "avg12": 3325.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "WOAMA ELECTRONICS",
      "p": 3325.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -23536,19 +23561,19 @@
    ]
   },
   "EN-888-00356": {
-   "ew": 894.77,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ew": 893.24,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": -0.7,
    "lpo": 891.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 891.0,
    "avg12": 891.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "RAYCO ELECTRO ENTERPRISE",
      "p": 891.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -23643,8 +23668,8 @@
    ]
   },
   "EL-777-00244": {
-   "ew": 8803.66,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -1.2%/mo \u2192 projected -4.1%",
+   "ew": 8778.01,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -1.2%/mo \u2192 projected -4.4%",
    "tpm": -1.2,
    "lpo": 9000.0,
    "lpod": "2026-08-03",
@@ -23665,8 +23690,8 @@
    ]
   },
   "EL-777-00519": {
-   "ew": 10409.68,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -5.2%",
+   "ew": 10375.88,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -1.3%/mo \u2192 projected -5.5%",
    "tpm": -1.3,
    "lpo": 10500.0,
    "lpod": "2026-08-03",
@@ -24335,8 +24360,8 @@
    ]
   },
   "PVT00000272": {
-   "ew": 536.83,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, 2 outlier(s) dropped, trend -1.0%/mo \u2192 projected -3.7%",
+   "ew": 535.52,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, 2 outlier(s) dropped, trend -1.0%/mo \u2192 projected -3.9%",
    "tpm": -1.0,
    "lpo": 546.0,
    "lpod": "2026-08-01",
@@ -24357,8 +24382,8 @@
    ]
   },
   "PVT00000262": {
-   "ew": 3393.7,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, 2 outlier(s) dropped, trend +1.7%/mo \u2192 projected +5.9%",
+   "ew": 3405.89,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, 2 outlier(s) dropped, trend +1.7%/mo \u2192 projected +6.3%",
    "tpm": 1.7,
    "lpo": 3337.0,
    "lpod": "2026-08-01",
@@ -25383,19 +25408,24 @@
    ]
   },
   "SER-EMP-00001": {
-   "ew": 15000.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ew": 24395.15,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 15000.0,
-   "lpod": "2025-11-05",
-   "avg180": null,
-   "avg12": 15000.0,
-   "npo": 1,
+   "lpo": 33000.0,
+   "lpod": "2026-09-07",
+   "avg180": 24750.0,
+   "avg12": 16500.0,
+   "npo": 3,
    "vend": [
     {
+     "n": "SURAKSHA SURGE SAFETY SOLUTIONS PRIVATE LIMITED",
+     "p": 33000.0,
+     "d": "2026-09-07"
+    },
+    {
      "n": "SURAKSHA SURGE",
-     "p": 15000.0,
-     "d": "2025-11-05"
+     "p": 16500.0,
+     "d": "2026-09-04"
     }
    ]
   },
@@ -25536,8 +25566,8 @@
    ]
   },
   "OFF-SPL-00012": {
-   "ew": 2.58,
-   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +1.5%/mo \u2192 projected +3.6%",
+   "ew": 2.59,
+   "ewb": "age-weighted avg of 9 PO(s), half-life 90d, trend +1.5%/mo \u2192 projected +3.9%",
    "tpm": 1.5,
    "lpo": 2.5,
    "lpod": "2026-08-28",
@@ -26278,8 +26308,8 @@
    ]
   },
   "CU-222-00051": {
-   "ew": 117.96,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +2.7%",
+   "ew": 118.24,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.1%/mo \u2192 projected +2.9%",
    "tpm": 1.1,
    "lpo": 116.1,
    "lpod": "2026-08-01",
@@ -26568,7 +26598,7 @@
    "tpm": 0.0,
    "lpo": 101.0,
    "lpod": "2026-03-10",
-   "avg180": 101.0,
+   "avg180": null,
    "avg12": 101.0,
    "npo": 4,
    "vend": [
@@ -26733,8 +26763,8 @@
    ]
   },
   "EL-777-00677": {
-   "ew": 1818.5,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +4.4%",
+   "ew": 1823.24,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.2%/mo \u2192 projected +4.7%",
    "tpm": 1.2,
    "lpo": 1780.0,
    "lpod": "2026-06-30",
@@ -26777,8 +26807,8 @@
    ]
   },
   "PNR-202-00063": {
-   "ew": 1.77,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +3.0%/mo \u2192 projected +6.7%",
+   "ew": 1.78,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +3.0%/mo \u2192 projected +7.4%",
    "tpm": 3.2,
    "lpo": 1.3,
    "lpod": "2026-07-22",
@@ -26946,7 +26976,7 @@
   },
   "FST-999-00316": {
    "ew": 0.39,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -4.8%",
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -1.4%/mo \u2192 projected -5.1%",
    "tpm": -1.4,
    "lpo": 0.4,
    "lpod": "2026-07-16",
@@ -26973,7 +27003,7 @@
   },
   "FST-999-00329": {
    "ew": 0.24,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +6.4%",
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.8%/mo \u2192 projected +6.8%",
    "tpm": 1.9,
    "lpo": 0.2,
    "lpod": "2026-06-22",
@@ -27160,8 +27190,8 @@
    ]
   },
   "EL-777-00546": {
-   "ew": 1466.07,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.3%/mo \u2192 projected +8.8%",
+   "ew": 1473.32,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +2.3%/mo \u2192 projected +9.3%",
    "tpm": 2.5,
    "lpo": 1400.0,
    "lpod": "2026-06-30",
@@ -27304,7 +27334,7 @@
    "tpm": null,
    "lpo": 500.0,
    "lpod": "2026-03-04",
-   "avg180": 500.0,
+   "avg180": null,
    "avg12": 75.0,
    "npo": 4,
    "vend": [
@@ -27603,19 +27633,19 @@
    ]
   },
   "FST-999-00125": {
-   "ew": 1.8,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 1.96,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 2.0,
-   "lpod": "2026-01-10",
-   "avg180": null,
-   "avg12": 1.75,
-   "npo": 2,
+   "lpod": "2026-09-01",
+   "avg180": 2.0,
+   "avg12": 2.0,
+   "npo": 3,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
      "p": 2.0,
-     "d": "2026-01-10"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -27708,7 +27738,7 @@
    "tpm": 0.0,
    "lpo": 2492.5,
    "lpod": "2026-03-05",
-   "avg180": 2492.5,
+   "avg180": null,
    "avg12": 2492.5,
    "npo": 4,
    "vend": [
@@ -28942,8 +28972,8 @@
    ]
   },
   "TMP-000-00492": {
-   "ew": 5.82,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -2.8%/mo \u2192 projected -6.3%",
+   "ew": 5.78,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -2.8%/mo \u2192 projected -7.0%",
    "tpm": -2.8,
    "lpo": 8.0,
    "lpod": "2026-08-12",
@@ -28959,8 +28989,8 @@
    ]
   },
   "PKG-000-00144": {
-   "ew": 1456.74,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 1 outlier(s) dropped, trend +1.3%/mo \u2192 projected +2.2%",
+   "ew": 1460.88,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, 1 outlier(s) dropped, trend +1.3%/mo \u2192 projected +2.5%",
    "tpm": 1.3,
    "lpo": 1450.0,
    "lpod": "2026-08-29",
@@ -29166,15 +29196,20 @@
    ]
   },
   "PNR-202-00036": {
-   "ew": 66.17,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
-   "lpo": 70.15,
-   "lpod": "2026-04-14",
-   "avg180": 70.15,
-   "avg12": 61.0,
-   "npo": 3,
+   "ew": 74.84,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +2.1%/mo \u2192 projected +5.6%",
+   "tpm": 2.3,
+   "lpo": 73.7,
+   "lpod": "2026-09-01",
+   "avg180": 71.93,
+   "avg12": 65.58,
+   "npo": 4,
    "vend": [
+    {
+     "n": "SHRI DURGA ENTERPRISES",
+     "p": 73.7,
+     "d": "2026-09-01"
+    },
     {
      "n": "RAJESHWARI ENTERPRISES",
      "p": 70.15,
@@ -29796,8 +29831,8 @@
    ]
   },
   "FST-999-00053": {
-   "ew": 6.3,
-   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -1.1%/mo \u2192 projected -4.4%",
+   "ew": 6.28,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend -1.1%/mo \u2192 projected -4.6%",
    "tpm": -1.0,
    "lpo": 5.4,
    "lpod": "2026-08-12",
@@ -29983,15 +30018,20 @@
    ]
   },
   "CMP-444-00456": {
-   "ew": 155.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
-   "lpo": 155.0,
-   "lpod": "2026-03-02",
-   "avg180": null,
+   "ew": 171.46,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +3.5%",
+   "tpm": 1.3,
+   "lpo": 172.0,
+   "lpod": "2026-09-02",
+   "avg180": 172.0,
    "avg12": 155.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
+    {
+     "n": "FIBERLINK COMPOSITES PRIVATE LIMITED",
+     "p": 172.0,
+     "d": "2026-09-02"
+    },
     {
      "n": "MAKE IT INSULATION",
      "p": 155.0,
@@ -30107,8 +30147,8 @@
    ]
   },
   "CC-555-00409": {
-   "ew": 388.49,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +2.3%/mo \u2192 projected +9.8%",
+   "ew": 389.14,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +2.3%/mo \u2192 projected +10.0%",
    "tpm": 2.4,
    "lpo": 375.0,
    "lpod": "2026-07-10",
@@ -30124,8 +30164,8 @@
    ]
   },
   "CF-555-00903": {
-   "ew": 13.24,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +5.9%",
+   "ew": 13.27,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +6.2%",
    "tpm": 1.3,
    "lpo": 13.0,
    "lpod": "2026-07-10",
@@ -30146,8 +30186,8 @@
    ]
   },
   "CF-555-00904": {
-   "ew": 10.24,
-   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +7.7%",
+   "ew": 10.27,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +1.6%/mo \u2192 projected +8.1%",
    "tpm": 1.7,
    "lpo": 10.0,
    "lpod": "2026-07-10",
@@ -32342,19 +32382,19 @@
    ]
   },
   "EL-777-00482": {
-   "ew": 5157.9,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -3.9%/mo \u2192 projected -7.9%",
-   "tpm": -3.7,
+   "ew": 5268.97,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend -3.4%/mo \u2192 projected -5.4%",
+   "tpm": -3.3,
    "lpo": 5500.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 5500.0,
    "avg12": 5500.0,
-   "npo": 4,
+   "npo": 5,
    "vend": [
     {
      "n": "Autometers Alliance Limited",
      "p": 5500.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     },
     {
      "n": "PPS International Private Limited",
@@ -32831,7 +32871,7 @@
    "tpm": -2.3,
    "lpo": 495.0,
    "lpod": "2026-03-05",
-   "avg180": 495.0,
+   "avg180": null,
    "avg12": 602.5,
    "npo": 4,
    "vend": [
@@ -33362,18 +33402,18 @@
   },
   "FST-999-00700": {
    "ew": 90.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 90.0,
-   "lpod": "2026-01-10",
-   "avg180": null,
+   "lpod": "2026-09-01",
+   "avg180": 90.0,
    "avg12": 90.0,
-   "npo": 1,
+   "npo": 2,
    "vend": [
     {
      "n": "Shree Kuladevata Enterprises",
      "p": 90.0,
-     "d": "2026-01-10"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -33532,18 +33572,18 @@
   },
   "EN-888-00359": {
    "ew": 3500.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 3500.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 3500.0,
    "avg12": 3500.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "WOAMA ELECTRONICS",
      "p": 3500.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -33859,7 +33899,7 @@
    "tpm": null,
    "lpo": 124.0,
    "lpod": "2026-03-10",
-   "avg180": 124.0,
+   "avg180": null,
    "avg12": 124.0,
    "npo": 4,
    "vend": [
@@ -34362,7 +34402,7 @@
    "tpm": null,
    "lpo": 12112.0,
    "lpod": "2026-03-09",
-   "avg180": 12112.0,
+   "avg180": null,
    "avg12": 12112.0,
    "npo": 3,
    "vend": [
@@ -34391,8 +34431,8 @@
    ]
   },
   "OFF-SPL-00015": {
-   "ew": 78.7,
-   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +3.8%",
+   "ew": 78.92,
+   "ewb": "age-weighted avg of 7 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +4.0%",
    "tpm": 1.3,
    "lpo": 80.0,
    "lpod": "2026-08-04",
@@ -36151,15 +36191,20 @@
    ]
   },
   "CU-222-00358": {
-   "ew": 367.39,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 366.13,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 368.0,
-   "lpod": "2026-07-16",
-   "avg180": 368.0,
-   "avg12": 366.62,
-   "npo": 2,
+   "lpo": 365.0,
+   "lpod": "2026-09-01",
+   "avg180": 366.5,
+   "avg12": 365.24,
+   "npo": 3,
    "vend": [
+    {
+     "n": "Bhagavathi Industries",
+     "p": 365.0,
+     "d": "2026-09-01"
+    },
     {
      "n": "SRIYON INDUSTRIES PRIVATE LIMITED",
      "p": 368.0,
@@ -37787,7 +37832,7 @@
    "tpm": null,
    "lpo": 60.0,
    "lpod": "2026-03-10",
-   "avg180": 60.0,
+   "avg180": null,
    "avg12": 60.0,
    "npo": 2,
    "vend": [
@@ -37901,8 +37946,8 @@
    ]
   },
   "CH-303-00031": {
-   "ew": 503.6,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +2.2%",
+   "ew": 505.1,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +2.5%",
    "tpm": 1.3,
    "lpo": 498.0,
    "lpod": "2026-08-25",
@@ -37918,8 +37963,8 @@
    ]
   },
   "CH-303-00032": {
-   "ew": 418.65,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +2.2%",
+   "ew": 419.89,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend +1.3%/mo \u2192 projected +2.5%",
    "tpm": 1.3,
    "lpo": 414.0,
    "lpod": "2026-08-25",
@@ -39386,7 +39431,7 @@
    "tpm": null,
    "lpo": 1050.0,
    "lpod": "2026-04-25",
-   "avg180": 938.0,
+   "avg180": 994.0,
    "avg12": 938.0,
    "npo": 3,
    "vend": [
@@ -39408,7 +39453,7 @@
    "tpm": null,
    "lpo": 1239.79,
    "lpod": "2026-08-25",
-   "avg180": 1201.71,
+   "avg180": 1239.79,
    "avg12": 1201.71,
    "npo": 2,
    "vend": [
@@ -39425,7 +39470,7 @@
    "tpm": null,
    "lpo": 225.0,
    "lpod": "2026-03-05",
-   "avg180": 225.0,
+   "avg180": null,
    "avg12": 225.0,
    "npo": 1,
    "vend": [
@@ -39442,7 +39487,7 @@
    "tpm": null,
    "lpo": 225.0,
    "lpod": "2026-03-05",
-   "avg180": 225.0,
+   "avg180": null,
    "avg12": 225.0,
    "npo": 1,
    "vend": [
@@ -39459,7 +39504,7 @@
    "tpm": null,
    "lpo": 225.0,
    "lpod": "2026-03-05",
-   "avg180": 225.0,
+   "avg180": null,
    "avg12": 225.0,
    "npo": 1,
    "vend": [
@@ -39476,7 +39521,7 @@
    "tpm": null,
    "lpo": 28.0,
    "lpod": "2026-03-05",
-   "avg180": 28.0,
+   "avg180": null,
    "avg12": 28.0,
    "npo": 1,
    "vend": [
@@ -39493,7 +39538,7 @@
    "tpm": null,
    "lpo": 101.75,
    "lpod": "2026-03-05",
-   "avg180": 101.75,
+   "avg180": null,
    "avg12": 101.75,
    "npo": 1,
    "vend": [
@@ -39510,7 +39555,7 @@
    "tpm": null,
    "lpo": 94.5,
    "lpod": "2026-03-05",
-   "avg180": 94.5,
+   "avg180": null,
    "avg12": 94.5,
    "npo": 1,
    "vend": [
@@ -39527,7 +39572,7 @@
    "tpm": null,
    "lpo": 157.5,
    "lpod": "2026-03-05",
-   "avg180": 157.5,
+   "avg180": null,
    "avg12": 157.5,
    "npo": 1,
    "vend": [
@@ -39544,7 +39589,7 @@
    "tpm": null,
    "lpo": 1450.0,
    "lpod": "2026-03-05",
-   "avg180": 1450.0,
+   "avg180": null,
    "avg12": 1450.0,
    "npo": 1,
    "vend": [
@@ -39561,7 +39606,7 @@
    "tpm": null,
    "lpo": 5.18,
    "lpod": "2026-03-05",
-   "avg180": 5.18,
+   "avg180": null,
    "avg12": 5.18,
    "npo": 1,
    "vend": [
@@ -39578,7 +39623,7 @@
    "tpm": null,
    "lpo": 5.67,
    "lpod": "2026-03-05",
-   "avg180": 5.67,
+   "avg180": null,
    "avg12": 5.67,
    "npo": 1,
    "vend": [
@@ -39646,7 +39691,7 @@
    "tpm": null,
    "lpo": 20519.4,
    "lpod": "2026-03-06",
-   "avg180": 20519.4,
+   "avg180": null,
    "avg12": 20519.4,
    "npo": 1,
    "vend": [
@@ -39663,7 +39708,7 @@
    "tpm": null,
    "lpo": 1944.0,
    "lpod": "2026-03-06",
-   "avg180": 1944.0,
+   "avg180": null,
    "avg12": 1944.0,
    "npo": 1,
    "vend": [
@@ -39680,7 +39725,7 @@
    "tpm": null,
    "lpo": 51000.0,
    "lpod": "2026-03-06",
-   "avg180": 51000.0,
+   "avg180": null,
    "avg12": 51000.0,
    "npo": 1,
    "vend": [
@@ -39697,7 +39742,7 @@
    "tpm": null,
    "lpo": 550.0,
    "lpod": "2026-03-07",
-   "avg180": 550.0,
+   "avg180": null,
    "avg12": 550.0,
    "npo": 1,
    "vend": [
@@ -39714,7 +39759,7 @@
    "tpm": null,
    "lpo": 550.0,
    "lpod": "2026-03-07",
-   "avg180": 550.0,
+   "avg180": null,
    "avg12": 550.0,
    "npo": 1,
    "vend": [
@@ -39731,7 +39776,7 @@
    "tpm": null,
    "lpo": 350.0,
    "lpod": "2026-03-07",
-   "avg180": 350.0,
+   "avg180": null,
    "avg12": 350.0,
    "npo": 1,
    "vend": [
@@ -39748,7 +39793,7 @@
    "tpm": null,
    "lpo": 350.0,
    "lpod": "2026-03-07",
-   "avg180": 350.0,
+   "avg180": null,
    "avg12": 350.0,
    "npo": 1,
    "vend": [
@@ -39765,7 +39810,7 @@
    "tpm": null,
    "lpo": 350.0,
    "lpod": "2026-03-07",
-   "avg180": 350.0,
+   "avg180": null,
    "avg12": 350.0,
    "npo": 1,
    "vend": [
@@ -39782,7 +39827,7 @@
    "tpm": null,
    "lpo": 30000.0,
    "lpod": "2026-08-25",
-   "avg180": 15.0,
+   "avg180": 15007.5,
    "avg12": 15.0,
    "npo": 3,
    "vend": [
@@ -39799,7 +39844,7 @@
    "tpm": -0.8,
    "lpo": 175.0,
    "lpod": "2026-08-19",
-   "avg180": 160.0,
+   "avg180": 167.5,
    "avg12": 160.0,
    "npo": 9,
    "vend": [
@@ -42137,24 +42182,24 @@
    ]
   },
   "CMP-444-00668": {
-   "ew": 260.94,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 237.23,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 215.0,
-   "lpod": "2026-06-22",
-   "avg180": 275.0,
-   "avg12": 275.0,
-   "npo": 2,
+   "lpod": "2026-09-01",
+   "avg180": 215.0,
+   "avg12": 215.0,
+   "npo": 3,
    "vend": [
+    {
+     "n": "Bhagavathi Industries",
+     "p": 215.0,
+     "d": "2026-09-01"
+    },
     {
      "n": "Benaka Electronics",
      "p": 215.0,
      "d": "2026-06-22"
-    },
-    {
-     "n": "Bhagavathi Industries",
-     "p": 335.0,
-     "d": "2026-04-21"
     }
    ]
   },
@@ -44271,69 +44316,69 @@
   },
   "CC-555-00455": {
    "ew": 192.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 192.0,
-   "lpod": "2026-08-04",
+   "lpod": "2026-09-01",
    "avg180": 192.0,
    "avg12": 192.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "GALAXY STAMPING PRIVATE LIMITED",
      "p": 192.0,
-     "d": "2026-08-04"
+     "d": "2026-09-01"
     }
    ]
   },
   "CC-555-00456": {
    "ew": 192.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 192.0,
-   "lpod": "2026-08-04",
+   "lpod": "2026-09-01",
    "avg180": 192.0,
    "avg12": 192.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "GALAXY STAMPING PRIVATE LIMITED",
      "p": 192.0,
-     "d": "2026-08-04"
+     "d": "2026-09-01"
     }
    ]
   },
   "CC-555-00457": {
    "ew": 192.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 192.0,
-   "lpod": "2026-08-04",
+   "lpod": "2026-09-01",
    "avg180": 192.0,
    "avg12": 192.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "GALAXY STAMPING PRIVATE LIMITED",
      "p": 192.0,
-     "d": "2026-08-04"
+     "d": "2026-09-01"
     }
    ]
   },
   "CC-555-00458": {
    "ew": 192.0,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": 0.0,
    "lpo": 192.0,
-   "lpod": "2026-08-04",
+   "lpod": "2026-09-01",
    "avg180": 192.0,
    "avg12": 192.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "GALAXY STAMPING PRIVATE LIMITED",
      "p": 192.0,
-     "d": "2026-08-04"
+     "d": "2026-09-01"
     }
    ]
   },
@@ -44530,15 +44575,20 @@
    ]
   },
   "CU-222-00427": {
-   "ew": 1405.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ew": 1549.99,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 1405.0,
-   "lpod": "2026-06-03",
-   "avg180": 1405.0,
-   "avg12": 1405.0,
-   "npo": 1,
+   "lpo": 1585.0,
+   "lpod": "2026-09-07",
+   "avg180": 1585.0,
+   "avg12": 1585.0,
+   "npo": 3,
    "vend": [
+    {
+     "n": "METALCO EXTRUSIONS GLOBAL LLP",
+     "p": 1585.0,
+     "d": "2026-09-07"
+    },
     {
      "n": "DEVRA OVERSEAS LLP",
      "p": 1405.0,
@@ -44756,24 +44806,24 @@
    ]
   },
   "SER-TPT-00008": {
-   "ew": 70431.44,
-   "ewb": "age-weighted avg of 12 PO(s), half-life 90d, 1 outlier(s) dropped, trend +4.1%/mo \u2192 projected +7.4%",
-   "tpm": 4.2,
-   "lpo": 70000.0,
-   "lpod": "2026-08-07",
+   "ew": 73165.95,
+   "ewb": "age-weighted avg of 14 PO(s), half-life 90d, 1 outlier(s) dropped, trend +5.2%/mo \u2192 projected +8.3%",
+   "tpm": 5.3,
+   "lpo": 69500.0,
+   "lpod": "2026-09-05",
    "avg180": 70000.0,
    "avg12": 70000.0,
-   "npo": 13,
+   "npo": 15,
    "vend": [
     {
-     "n": "HINDUSTAN TRAILOR ORGANISATION",
-     "p": 70000.0,
-     "d": "2026-08-07"
+     "n": "LEO GLOBAL LOGISTICS PRIVATE LIMITED",
+     "p": 80000.0,
+     "d": "2026-09-05"
     },
     {
-     "n": "LEO GLOBAL LOGISTICS PRIVATE LIMITED",
-     "p": 35000.0,
-     "d": "2026-08-04"
+     "n": "HINDUSTAN TRAILOR ORGANISATION",
+     "p": 69500.0,
+     "d": "2026-09-05"
     },
     {
      "n": "PREMIER ROAD SERVICE LIMITED",
@@ -44783,19 +44833,19 @@
    ]
   },
   "SER-TPT-00007": {
-   "ew": 3944.89,
-   "ewb": "age-weighted avg of 19 PO(s), half-life 90d, trend -8.0%/mo \u2192 projected -10.0%",
-   "tpm": -7.8,
-   "lpo": 3300.0,
-   "lpod": "2026-08-20",
+   "ew": 3927.03,
+   "ewb": "age-weighted avg of 24 PO(s), half-life 90d, trend -6.7%/mo \u2192 projected -8.7%",
+   "tpm": -6.5,
+   "lpo": 2000.0,
+   "lpod": "2026-09-05",
    "avg180": 4500.0,
    "avg12": 4500.0,
-   "npo": 19,
+   "npo": 24,
    "vend": [
     {
      "n": "BINDU TEMPO SERVICE",
-     "p": 3300.0,
-     "d": "2026-08-20"
+     "p": 2000.0,
+     "d": "2026-09-05"
     }
    ]
   },
@@ -45190,35 +45240,35 @@
   },
   "EL-777-00413": {
    "ew": 2000.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 2000.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 2000.0,
    "avg12": 2000.0,
-   "npo": 2,
+   "npo": 3,
    "vend": [
     {
      "n": "WOAMA ELECTRONICS",
      "p": 2000.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
   "EN-888-00350": {
    "ew": 313.0,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 313.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 313.0,
    "avg12": 313.0,
-   "npo": 2,
+   "npo": 3,
    "vend": [
     {
      "n": "RAYCO ELECTRO ENTERPRISE",
      "p": 313.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -45597,19 +45647,19 @@
    ]
   },
   "TMP-000-00565": {
-   "ew": 234.78,
-   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
-   "tpm": null,
+   "ew": 290.72,
+   "ewb": "age-weighted avg of 6 PO(s), half-life 90d, trend +22.4%/mo \u2192 projected +10.0%",
+   "tpm": 23.6,
    "lpo": 220.0,
-   "lpod": "2026-08-04",
-   "avg180": 185.0,
-   "avg12": 185.0,
-   "npo": 4,
+   "lpod": "2026-09-04",
+   "avg180": 220.0,
+   "avg12": 220.0,
+   "npo": 6,
    "vend": [
     {
      "n": "Ranganatha Industries",
      "p": 220.0,
-     "d": "2026-08-04"
+     "d": "2026-09-04"
     },
     {
      "n": "Kinelectro Lines India Pvt Ltd",
@@ -45653,19 +45703,19 @@
    ]
   },
   "CMP-444-00650": {
-   "ew": 211.37,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ew": 165.33,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -33.7%/mo \u2192 projected -10.0%",
+   "tpm": -30.7,
    "lpo": 130.0,
-   "lpod": "2026-08-13",
-   "avg180": 274.0,
-   "avg12": 274.0,
-   "npo": 3,
+   "lpod": "2026-09-04",
+   "avg180": 202.0,
+   "avg12": 202.0,
+   "npo": 4,
    "vend": [
     {
      "n": "Vijay Trading Corporation",
      "p": 130.0,
-     "d": "2026-08-13"
+     "d": "2026-09-04"
     },
     {
      "n": "SUNRISE FIBRE GLASS INDUSTRIES",
@@ -45675,24 +45725,24 @@
    ]
   },
   "CMP-444-00672": {
-   "ew": 180.19,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
-   "lpo": 195.0,
-   "lpod": "2026-07-03",
+   "ew": 177.22,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
+   "tpm": -0.9,
+   "lpo": 172.0,
+   "lpod": "2026-09-02",
    "avg180": 172.0,
    "avg12": 172.0,
-   "npo": 3,
+   "npo": 4,
    "vend": [
+    {
+     "n": "FIBERLINK COMPOSITES PRIVATE LIMITED",
+     "p": 172.0,
+     "d": "2026-09-02"
+    },
     {
      "n": "Vijay Trading Corporation",
      "p": 195.0,
      "d": "2026-07-03"
-    },
-    {
-     "n": "FIBERLINK COMPOSITES PRIVATE LIMITED",
-     "p": 172.0,
-     "d": "2026-06-22"
     },
     {
      "n": "MAKE IT INSULATION",
@@ -46045,41 +46095,41 @@
    ]
   },
   "AL-222-00060": {
-   "ew": 519.07,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
-   "tpm": null,
-   "lpo": 510.0,
-   "lpod": "2026-08-03",
-   "avg180": 521.0,
-   "avg12": 521.0,
-   "npo": 2,
-   "vend": [
-    {
-     "n": "AAR AAR Mittal & Sons",
-     "p": 510.0,
-     "d": "2026-08-03"
-    },
-    {
-     "n": "Solar Electro Controls",
-     "p": 532.0,
-     "d": "2026-06-18"
-    }
-   ]
-  },
-  "AL-222-00059": {
-   "ew": 500.19,
+   "ew": 515.23,
    "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 498.0,
-   "lpod": "2026-08-10",
-   "avg180": 498.0,
-   "avg12": 498.0,
+   "lpo": 510.0,
+   "lpod": "2026-09-01",
+   "avg180": 510.0,
+   "avg12": 510.0,
    "npo": 3,
    "vend": [
     {
      "n": "Solar Electro Controls",
-     "p": 498.0,
-     "d": "2026-08-10"
+     "p": 510.0,
+     "d": "2026-09-01"
+    },
+    {
+     "n": "AAR AAR Mittal & Sons",
+     "p": 510.0,
+     "d": "2026-08-03"
+    }
+   ]
+  },
+  "AL-222-00059": {
+   "ew": 489.21,
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d, trend -2.3%/mo \u2192 projected -2.5%",
+   "tpm": -2.3,
+   "lpo": 505.0,
+   "lpod": "2026-09-01",
+   "avg180": 501.5,
+   "avg12": 501.5,
+   "npo": 4,
+   "vend": [
+    {
+     "n": "Solar Electro Controls",
+     "p": 505.0,
+     "d": "2026-09-01"
     },
     {
      "n": "AAR AAR Mittal & Sons",
@@ -46315,19 +46365,19 @@
    ]
   },
   "MFS-111-00169": {
-   "ew": 51381.59,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
-   "tpm": null,
+   "ew": 55188.74,
+   "ewb": "age-weighted avg of 5 PO(s), half-life 90d, trend +4.3%/mo \u2192 projected +4.2%",
+   "tpm": 4.3,
    "lpo": 54500.0,
-   "lpod": "2026-08-13",
-   "avg180": 49000.0,
-   "avg12": 49000.0,
-   "npo": 3,
+   "lpod": "2026-09-05",
+   "avg180": 54500.0,
+   "avg12": 54500.0,
+   "npo": 5,
    "vend": [
     {
      "n": "GKX ENGINEERINGS INDIA",
      "p": 54500.0,
-     "d": "2026-08-13"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -47649,19 +47699,19 @@
    ]
   },
   "CU-222-00074": {
-   "ew": 1445.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ew": 1552.15,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
-   "lpo": 1445.0,
-   "lpod": "2026-07-04",
-   "avg180": 1445.0,
-   "avg12": 1445.0,
-   "npo": 1,
+   "lpo": 1585.0,
+   "lpod": "2026-09-07",
+   "avg180": 1585.0,
+   "avg12": 1585.0,
+   "npo": 3,
    "vend": [
     {
      "n": "METALCO EXTRUSIONS GLOBAL LLP",
-     "p": 1445.0,
-     "d": "2026-07-04"
+     "p": 1585.0,
+     "d": "2026-09-07"
     }
    ]
   },
@@ -49957,36 +50007,36 @@
    ]
   },
   "FST-999-00059": {
-   "ew": 7.17,
-   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "ew": 6.54,
+   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 5.5,
-   "lpod": "2026-08-17",
-   "avg180": 7.25,
-   "avg12": 7.25,
-   "npo": 2,
+   "lpod": "2026-09-05",
+   "avg180": 5.5,
+   "avg12": 5.5,
+   "npo": 3,
    "vend": [
     {
      "n": "Kamlesh Industries",
      "p": 5.5,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
   "FST-999-00624": {
    "ew": 9.5,
-   "ewb": "age-weighted avg of 3 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 4 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 9.5,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 9.5,
    "avg12": 9.5,
-   "npo": 3,
+   "npo": 4,
    "vend": [
     {
      "n": "Kamlesh Industries",
      "p": 9.5,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -51046,52 +51096,52 @@
   },
   "EN-888-00353": {
    "ew": 563.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 563.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 563.0,
    "avg12": 563.0,
-   "npo": 1,
+   "npo": 2,
    "vend": [
     {
      "n": "RAYCO ELECTRO ENTERPRISE",
      "p": 563.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
   "FST-999-00746": {
    "ew": 8.5,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 8.5,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 8.5,
    "avg12": 8.5,
-   "npo": 1,
+   "npo": 2,
    "vend": [
     {
      "n": "Kamlesh Industries",
      "p": 8.5,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
   "FST-999-00747": {
    "ew": 9.0,
-   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
    "tpm": null,
    "lpo": 9.0,
-   "lpod": "2026-08-17",
+   "lpod": "2026-09-05",
    "avg180": 9.0,
    "avg12": 9.0,
-   "npo": 1,
+   "npo": 2,
    "vend": [
     {
      "n": "Kamlesh Industries",
      "p": 9.0,
-     "d": "2026-08-17"
+     "d": "2026-09-05"
     }
    ]
   },
@@ -51930,6 +51980,414 @@
      "n": "KATZE TECHNOLOGIES",
      "p": 21200.0,
      "d": "2026-08-31"
+    }
+   ]
+  },
+  "CMP-444-00330": {
+   "ew": 17.0,
+   "ewb": "age-weighted avg of 2 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 17.0,
+   "lpod": "2026-09-02",
+   "avg180": 17.0,
+   "avg12": 17.0,
+   "npo": 2,
+   "vend": [
+    {
+     "n": "SUNRISE FIBRE GLASS INDUSTRIES",
+     "p": 17.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "FST-999-01051": {
+   "ew": 3.3,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 3.3,
+   "lpod": "2026-09-01",
+   "avg180": 3.3,
+   "avg12": 3.3,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Shree Kuladevata Enterprises",
+     "p": 3.3,
+     "d": "2026-09-01"
+    }
+   ]
+  },
+  "CC-555-00486": {
+   "ew": 222.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 222.0,
+   "lpod": "2026-09-02",
+   "avg180": 222.0,
+   "avg12": 222.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Manly Silicon Steel Pvt. Ltd.",
+     "p": 222.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CC-555-00487": {
+   "ew": 222.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 222.0,
+   "lpod": "2026-09-02",
+   "avg180": 222.0,
+   "avg12": 222.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Manly Silicon Steel Pvt. Ltd.",
+     "p": 222.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CF-555-01030": {
+   "ew": 654.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 654.0,
+   "lpod": "2026-09-02",
+   "avg180": 654.0,
+   "avg12": 654.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 654.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CF-555-01031": {
+   "ew": 2112.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 2112.0,
+   "lpod": "2026-09-02",
+   "avg180": 2112.0,
+   "avg12": 2112.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 2112.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CF-555-01032": {
+   "ew": 2565.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 2565.0,
+   "lpod": "2026-09-02",
+   "avg180": 2565.0,
+   "avg12": 2565.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 2565.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CF-555-01033": {
+   "ew": 3960.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 3960.0,
+   "lpod": "2026-09-02",
+   "avg180": 3960.0,
+   "avg12": 3960.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 3960.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CF-555-01034": {
+   "ew": 4113.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 4113.0,
+   "lpod": "2026-09-02",
+   "avg180": 4113.0,
+   "avg12": 4113.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 4113.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "MFS-111-00146": {
+   "ew": 170.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 170.0,
+   "lpod": "2026-09-02",
+   "avg180": 170.0,
+   "avg12": 170.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "ELCO INDUSTRIES",
+     "p": 170.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "MFS-111-00149": {
+   "ew": 190.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 190.0,
+   "lpod": "2026-09-02",
+   "avg180": 190.0,
+   "avg12": 190.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "ELCO INDUSTRIES",
+     "p": 190.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "INS-666-00383": {
+   "ew": 3950.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 3950.0,
+   "lpod": "2026-09-02",
+   "avg180": 3950.0,
+   "avg12": 3950.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Ganapathy Industries",
+     "p": 3950.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "FST-999-00471": {
+   "ew": 12.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 12.0,
+   "lpod": "2026-09-02",
+   "avg180": 12.0,
+   "avg12": 12.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Shree Kuladevata Enterprises",
+     "p": 12.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "PKG-000-00118": {
+   "ew": 300.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 300.0,
+   "lpod": "2026-09-02",
+   "avg180": 300.0,
+   "avg12": 300.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "FINN PACK",
+     "p": 300.0,
+     "d": "2026-09-02"
+    }
+   ]
+  },
+  "CC-555-00481": {
+   "ew": 140.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 140.0,
+   "lpod": "2026-09-04",
+   "avg180": 140.0,
+   "avg12": 140.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Evergreen Metal Works",
+     "p": 140.0,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CC-555-00482": {
+   "ew": 140.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 140.0,
+   "lpod": "2026-09-04",
+   "avg180": 140.0,
+   "avg12": 140.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "Evergreen Metal Works",
+     "p": 140.0,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CF-555-01023": {
+   "ew": 18.2,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 18.2,
+   "lpod": "2026-09-04",
+   "avg180": 18.2,
+   "avg12": 18.2,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 18.2,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CF-555-01024": {
+   "ew": 233.6,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 233.6,
+   "lpod": "2026-09-04",
+   "avg180": 233.6,
+   "avg12": 233.6,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 233.6,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CF-555-01025": {
+   "ew": 558.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 558.0,
+   "lpod": "2026-09-04",
+   "avg180": 558.0,
+   "avg12": 558.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 558.0,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CF-555-01026": {
+   "ew": 18.15,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 18.15,
+   "lpod": "2026-09-04",
+   "avg180": 18.15,
+   "avg12": 18.15,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "VISHAKHA INDUSTRIES",
+     "p": 18.15,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CU-222-00444": {
+   "ew": 1636.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 1636.0,
+   "lpod": "2026-09-04",
+   "avg180": 1636.0,
+   "avg12": 1636.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "S B Power Systems",
+     "p": 1636.0,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CU-222-00445": {
+   "ew": 1400.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 1400.0,
+   "lpod": "2026-09-04",
+   "avg180": 1400.0,
+   "avg12": 1400.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "S B Power Systems",
+     "p": 1400.0,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "CU-222-00446": {
+   "ew": 1001.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 1001.0,
+   "lpod": "2026-09-04",
+   "avg180": 1001.0,
+   "avg12": 1001.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "S B Power Systems",
+     "p": 1001.0,
+     "d": "2026-09-04"
+    }
+   ]
+  },
+  "MEA-000-10575": {
+   "ew": 8000.0,
+   "ewb": "age-weighted avg of 1 PO(s), half-life 90d",
+   "tpm": null,
+   "lpo": 8000.0,
+   "lpod": "2026-09-07",
+   "avg180": 8000.0,
+   "avg12": 8000.0,
+   "npo": 1,
+   "vend": [
+    {
+     "n": "INTECH PRECISION TOOLS",
+     "p": 8000.0,
+     "d": "2026-09-07"
     }
    ]
   }
