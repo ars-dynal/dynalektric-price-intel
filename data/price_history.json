@@ -1,7 +1,7 @@
 {
   "meta": {
     "unit": "INR_per_kg",
-    "generated_at_utc": "2026-09-11T08:12:44Z",
+    "generated_at_utc": "2026-09-12T08:03:05Z",
     "note": "Monthly benchmark price history, Rs/kg. Seeded from public sources; the daily workflow (update_history.py) upserts the current month's point from data/public_summary.json so the series self-builds going forward.",
     "basis_notes": {
       "Copper": "LME cash settlement (westmetall.com) converted to Rs/kg using that month's USD/INR. Consistent with the live dashboard number.",
@@ -50,7 +50,7 @@
         },
         {
           "m": "2026-09",
-          "v": 1373.38
+          "v": 1360.63
         }
       ]
     },
