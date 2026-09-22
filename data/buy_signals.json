@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-09-21T09:11:38Z",
+  "generated_at_utc": "2026-09-22T08:43:06Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b91,393/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,393), +6% vs its 6-month average, 3-month momentum +10%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,417/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,417), +8% vs its 6-month average, 3-month momentum +12%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 1393.04,
+      "cur": 1416.99,
       "lo": 1129.6,
-      "hi": 1393.04,
+      "hi": 1416.99,
       "pos": 1.0,
-      "mom3": 9.9,
-      "vs_avg6": 6.0
+      "mom3": 11.8,
+      "vs_avg6": 7.5
     },
     "Aluminium": {
       "signal": "HOLD",
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9370/kg it sits 65% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -5% vs its 6-month average, 3-month momentum -15%. ",
+      "reason": "At \u20b9368/kg it sits 64% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -6% vs its 6-month average, 3-month momentum -16%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 370.25,
+      "cur": 367.75,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.651,
-      "mom3": -15.3,
-      "vs_avg6": -5.3
+      "pos": 0.638,
+      "mom3": -15.8,
+      "vs_avg6": -5.8
     }
   }
 }
