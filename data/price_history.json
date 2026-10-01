@@ -1,7 +1,7 @@
 {
   "meta": {
     "unit": "INR_per_kg",
-    "generated_at_utc": "2026-09-30T09:54:35Z",
+    "generated_at_utc": "2026-10-01T10:21:25Z",
     "note": "Monthly benchmark price history, Rs/kg. Seeded from public sources; the daily workflow (update_history.py) upserts the current month's point from data/public_summary.json so the series self-builds going forward.",
     "basis_notes": {
       "Copper": "LME cash settlement (westmetall.com) converted to Rs/kg using that month's USD/INR. Consistent with the live dashboard number.",
@@ -51,6 +51,10 @@
         {
           "m": "2026-09",
           "v": 1389.26
+        },
+        {
+          "m": "2026-10",
+          "v": 1388.29
         }
       ]
     },
@@ -117,6 +121,10 @@
         {
           "m": "2026-09",
           "v": 367.9
+        },
+        {
+          "m": "2026-10",
+          "v": 367.9
         }
       ]
     },
@@ -134,6 +142,10 @@
         },
         {
           "m": "2026-09",
+          "v": 175.0
+        },
+        {
+          "m": "2026-10",
           "v": 175.0
         }
       ]
@@ -153,6 +165,10 @@
         {
           "m": "2026-09",
           "v": 62.0
+        },
+        {
+          "m": "2026-10",
+          "v": 62.0
         }
       ]
     },
@@ -170,6 +186,10 @@
         },
         {
           "m": "2026-09",
+          "v": 270.0
+        },
+        {
+          "m": "2026-10",
           "v": 270.0
         }
       ]
@@ -252,6 +272,10 @@
         {
           "m": "2026-09",
           "v": 363.75
+        },
+        {
+          "m": "2026-10",
+          "v": 361.25
         }
       ],
       "source": "Hindalco primary ready reckoner, P0610 / EC Grade / alloy A0 (hindalco.com)"
