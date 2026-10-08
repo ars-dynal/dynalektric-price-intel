@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-10-07T10:28:21Z",
+  "generated_at_utc": "2026-10-08T10:49:12Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b91,399/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,399), +4% vs its 6-month average, 3-month momentum +6%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,404/kg it sits 100% up its trailing-12-month range (\u20b91,130\u2013\u20b91,404), +4% vs its 6-month average, 3-month momentum +6%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 1398.57,
+      "cur": 1403.55,
       "lo": 1129.6,
-      "hi": 1398.57,
+      "hi": 1403.55,
       "pos": 1.0,
-      "mom3": 5.9,
-      "vs_avg6": 4.1
+      "mom3": 6.3,
+      "vs_avg6": 4.4
     },
     "Aluminium": {
       "signal": "HOLD",
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9355/kg it sits 57% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -7% vs its 6-month average, 3-month momentum -1%. ",
+      "reason": "At \u20b9352/kg it sits 56% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -7% vs its 6-month average, 3-month momentum -2%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 355.25,
+      "cur": 352.5,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.573,
-      "mom3": -1.2,
-      "vs_avg6": -6.6
+      "pos": 0.559,
+      "mom3": -1.9,
+      "vs_avg6": -7.2
     }
   }
 }
