@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-25T08:37:26Z",
+  "generated_at_utc": "2026-10-26T09:14:04Z",
   "aluminium": {
     "price_per_kg": 367.9,
     "price_band": "362,050\u2013373,750/MT",
@@ -57,10 +57,10 @@
   },
   "data_source": "live_erp_purchase_order_history",
   "aluminium_hindalco": {
-    "price_per_kg": 336.5,
-    "ec_wire_rod_per_kg": 345.25,
+    "price_per_kg": 339.25,
+    "ec_wire_rod_per_kg": 348.0,
     "grade": "EC Grade, alloy A0, product code P0610",
-    "effective_date": "15.10.2026",
+    "effective_date": "24.10.2026",
     "source": "Hindalco primary ready reckoner (hindalco.com)"
   }
 }
