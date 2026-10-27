@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-10-26T09:14:04Z",
+  "generated_at_utc": "2026-10-27T09:14:20Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "HOLD",
       "cls": "hold",
       "headline": "Elevated \u2014 near the top of its year",
-      "reason": "At \u20b91,369/kg it sits 92% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), +2% vs its 6-month average, 3-month momentum +4%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,380/kg it sits 96% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), +3% vs its 6-month average, 3-month momentum +5%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
-      "cur": 1368.56,
+      "cur": 1380.11,
       "lo": 1129.6,
       "hi": 1389.26,
-      "pos": 0.92,
-      "mom3": 3.7,
-      "vs_avg6": 2.2
+      "pos": 0.965,
+      "mom3": 4.6,
+      "vs_avg6": 3.0
     },
     "Aluminium": {
       "signal": "HOLD",
