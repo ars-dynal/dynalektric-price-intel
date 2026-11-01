@@ -1,82 +1,82 @@
 {
- "generated_at_utc": "2026-10-01T10:45:06Z",
+ "generated_at_utc": "2026-11-01T11:02:56Z",
  "note": "Per-category-prefix median signed prediction error from the back-test. price_anchor applies the OPPOSITE sign, capped by calibration_cap_pct, only when n >= calibration_min_lines.",
  "prefixes": {
   "FS": {
    "bias_pct": 0.0,
-   "n": 2784
-  },
-  "CU": {
-   "bias_pct": -8.9,
-   "n": 549
-  },
-  "TM": {
-   "bias_pct": 0.0,
-   "n": 497
+   "n": 3137
   },
   "IN": {
    "bias_pct": 0.0,
-   "n": 820
-  },
-  "AL": {
-   "bias_pct": -4.9,
-   "n": 75
-  },
-  "CH": {
-   "bias_pct": -2.6,
-   "n": 291
-  },
-  "AN": {
-   "bias_pct": 0.0,
-   "n": 495
+   "n": 883
   },
   "PN": {
    "bias_pct": 0.0,
-   "n": 278
+   "n": 316
   },
-  "CM": {
-   "bias_pct": 0.0,
-   "n": 387
+  "CU": {
+   "bias_pct": -8.5,
+   "n": 593
   },
   "EL": {
    "bias_pct": 0.0,
-   "n": 683
+   "n": 762
   },
-  "PK": {
+  "AN": {
    "bias_pct": 0.0,
-   "n": 138
+   "n": 513
   },
-  "MF": {
+  "CM": {
    "bias_pct": 0.0,
-   "n": 40
-  },
-  "CC": {
-   "bias_pct": 0.0,
-   "n": 164
+   "n": 407
   },
   "CF": {
    "bias_pct": 0.0,
-   "n": 294
+   "n": 301
   },
   "EN": {
    "bias_pct": 0.0,
-   "n": 43
+   "n": 48
+  },
+  "PK": {
+   "bias_pct": 0.0,
+   "n": 158
+  },
+  "CH": {
+   "bias_pct": -2.5,
+   "n": 298
+  },
+  "TM": {
+   "bias_pct": 0.0,
+   "n": 514
+  },
+  "AL": {
+   "bias_pct": -5.0,
+   "n": 76
+  },
+  "MF": {
+   "bias_pct": -5.9,
+   "n": 45
+  },
+  "CC": {
+   "bias_pct": 0.0,
+   "n": 166
   },
   "WD": {
    "bias_pct": -1.5,
-   "n": 56
+   "n": 57
+  },
+  "WB": {
+   "bias_pct": 0.0,
+   "n": 31
   },
   "PV": {
    "bias_pct": -2.0,
    "n": 30
   },
-  "WB": {
-   "bias_pct": 0.0,
-   "n": 29
-  },
   "HN": {
    "bias_pct": 4.3,
-   "n": 10
+   "n": 12
   },
   "RL": {
    "bias_pct": -7.9,
