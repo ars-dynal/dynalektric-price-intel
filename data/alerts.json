@@ -1,7 +1,7 @@
 {
   "state": {
     "signals": {
-      "Copper": "HOLD",
+      "Copper": "NEUTRAL",
       "Aluminium": "HOLD",
       "CRGO steel": "NO SIGNAL",
       "Mild Steel": "NO SIGNAL",
@@ -45,5 +45,5 @@
       "message": "**Aluminium conductor (Hindalco P0610) \u25b2 5.1%** to \u20b9378/kg (2026-08 vs 2026-07)."
     }
   ],
-  "generated_at_utc": "2026-11-06T11:17:11Z"
+  "generated_at_utc": "2026-11-07T10:31:59Z"
 }
