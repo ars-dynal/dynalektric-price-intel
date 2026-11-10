@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-11-09T11:56:12Z",
+  "generated_at_utc": "2026-11-10T11:29:36Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
-      "signal": "NEUTRAL",
-      "cls": "neutral",
-      "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b91,311/kg it sits 70% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), -2% vs its 6-month average, 3-month momentum -5%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
-      "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 1310.65,
+      "signal": "HOLD",
+      "cls": "hold",
+      "headline": "Elevated but pulling back \u2014 watch for an entry",
+      "reason": "At \u20b91,318/kg it sits 72% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), -2% vs its 6-month average, 3-month momentum -5%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "action": "Cover essential needs only; wait for a dip before opportunistic buying.",
+      "cur": 1317.84,
       "lo": 1129.6,
       "hi": 1389.26,
-      "pos": 0.697,
-      "mom3": -5.5,
-      "vs_avg6": -2.3
+      "pos": 0.725,
+      "mom3": -5.0,
+      "vs_avg6": -1.8
     },
     "Aluminium": {
       "signal": "HOLD",
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9347/kg it sits 53% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -6% vs its 6-month average, 3-month momentum -5%. ",
+      "reason": "At \u20b9346/kg it sits 53% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -6% vs its 6-month average, 3-month momentum -5%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 347.25,
+      "cur": 346.5,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.531,
-      "mom3": -4.5,
-      "vs_avg6": -5.9
+      "pos": 0.527,
+      "mom3": -4.7,
+      "vs_avg6": -6.1
     }
   }
 }
