@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-11-12T11:38:16Z",
+  "generated_at_utc": "2026-11-13T11:21:41Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b91,300/kg it sits 66% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), -3% vs its 6-month average, 3-month momentum -6%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,289/kg it sits 62% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), -4% vs its 6-month average, 3-month momentum -7%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 1300.0,
+      "cur": 1289.48,
       "lo": 1129.6,
       "hi": 1389.26,
-      "pos": 0.656,
-      "mom3": -6.2,
-      "vs_avg6": -2.9
+      "pos": 0.616,
+      "mom3": -7.0,
+      "vs_avg6": -3.6
     },
     "Aluminium": {
       "signal": "HOLD",
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9354/kg it sits 57% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -4% vs its 6-month average, 3-month momentum -3%. ",
+      "reason": "At \u20b9347/kg it sits 53% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -6% vs its 6-month average, 3-month momentum -5%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 354.0,
+      "cur": 347.0,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.567,
-      "mom3": -2.7,
-      "vs_avg6": -4.4
+      "pos": 0.53,
+      "mom3": -4.6,
+      "vs_avg6": -6.0
     }
   }
 }
