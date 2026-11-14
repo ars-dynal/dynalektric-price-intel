@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-13T11:21:40Z",
+  "generated_at_utc": "2026-11-14T10:45:21Z",
   "aluminium": {
     "price_per_kg": 367.9,
     "price_band": "362,050\u2013373,750/MT",
@@ -8,11 +8,11 @@
     "grades": "Foil: IA60 / grade 1050; bus bar same NALCO basis"
   },
   "copper": {
-    "price_per_kg": 1289.48,
-    "usd_per_tonne": 13712.0,
-    "usdinr": 94.04,
+    "price_per_kg": 1282.74,
+    "usd_per_tonne": 13610.0,
+    "usdinr": 94.25,
     "usdinr_source": "api.frankfurter.app",
-    "settlement_date": "12 Nov 2026",
+    "settlement_date": "13 Nov 2026",
     "source": "LME cash settlement via westmetall.com"
   },
   "crgo_steel": {
