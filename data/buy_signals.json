@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-11-18T12:01:47Z",
+  "generated_at_utc": "2026-11-19T11:58:00Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
-      "signal": "NEUTRAL",
-      "cls": "neutral",
-      "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b91,236/kg it sits 41% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), -7% vs its 6-month average, 3-month momentum -11%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
-      "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 1236.32,
+      "signal": "BUY",
+      "cls": "buy",
+      "headline": "Favourable \u2014 price in the lower third of its year",
+      "reason": "At \u20b91,191/kg it sits 24% up its trailing-12-month range (\u20b91,130\u2013\u20b91,389), -10% vs its 6-month average, 3-month momentum -14%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "action": "Good stock-up window \u2014 bring forward non-urgent volumes.",
+      "cur": 1191.36,
       "lo": 1129.6,
       "hi": 1389.26,
-      "pos": 0.411,
-      "mom3": -10.8,
-      "vs_avg6": -6.9
+      "pos": 0.238,
+      "mom3": -14.1,
+      "vs_avg6": -9.8
     },
     "Aluminium": {
       "signal": "HOLD",
@@ -56,14 +56,14 @@
       "signal": "NEUTRAL",
       "cls": "neutral",
       "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9335/kg it sits 47% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -9% vs its 6-month average, 3-month momentum -8%. ",
+      "reason": "At \u20b9338/kg it sits 48% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -8% vs its 6-month average, 3-month momentum -7%. ",
       "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 335.25,
+      "cur": 337.5,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.469,
-      "mom3": -7.8,
-      "vs_avg6": -8.7
+      "pos": 0.48,
+      "mom3": -7.2,
+      "vs_avg6": -8.2
     }
   }
 }
