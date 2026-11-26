@@ -1,19 +1,19 @@
 {
-  "generated_at_utc": "2026-11-25T13:18:17Z",
+  "generated_at_utc": "2026-11-26T12:58:40Z",
   "disclaimer": "Procurement decision-support based on public benchmark prices. Not investment advice; prices can move against any signal.",
   "signals": {
     "Copper": {
       "signal": "BUY",
       "cls": "buy",
       "headline": "Favourable \u2014 price in the lower third of its year",
-      "reason": "At \u20b91,118/kg it sits 0% up its trailing-12-month range (\u20b91,118\u2013\u20b91,389), -15% vs its 6-month average, 3-month momentum -19%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
+      "reason": "At \u20b91,079/kg it sits 0% up its trailing-12-month range (\u20b91,079\u2013\u20b91,389), -17% vs its 6-month average, 3-month momentum -22%. Near record 2026 highs on a structural refined-copper deficit; Goldman Sachs sees only a modest decline later in the year. Downside is limited.",
       "action": "Good stock-up window \u2014 bring forward non-urgent volumes.",
-      "cur": 1118.29,
-      "lo": 1118.29,
+      "cur": 1079.48,
+      "lo": 1079.48,
       "hi": 1389.26,
       "pos": 0.0,
-      "mom3": -19.3,
-      "vs_avg6": -14.6
+      "mom3": -22.1,
+      "vs_avg6": -17.1
     },
     "Aluminium": {
       "signal": "HOLD",
@@ -53,17 +53,17 @@
       "cur": 270.0
     },
     "Aluminium conductor (Hindalco P0610)": {
-      "signal": "NEUTRAL",
-      "cls": "neutral",
-      "headline": "Mid-range \u2014 buy to plan",
-      "reason": "At \u20b9338/kg it sits 48% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -8% vs its 6-month average, 3-month momentum -7%. ",
-      "action": "Buy to requirement; no strong timing edge either way.",
-      "cur": 338.25,
+      "signal": "BUY",
+      "cls": "buy",
+      "headline": "Favourable \u2014 price in the lower third of its year",
+      "reason": "At \u20b9301/kg it sits 29% up its trailing-12-month range (\u20b9246\u2013\u20b9437), -17% vs its 6-month average, 3-month momentum -17%. ",
+      "action": "Good stock-up window \u2014 bring forward non-urgent volumes.",
+      "cur": 300.75,
       "lo": 245.5,
       "hi": 437.0,
-      "pos": 0.484,
-      "mom3": -7.0,
-      "vs_avg6": -8.0
+      "pos": 0.289,
+      "mom3": -17.3,
+      "vs_avg6": -16.8
     }
   }
 }

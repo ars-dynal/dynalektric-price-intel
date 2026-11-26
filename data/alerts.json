@@ -6,7 +6,7 @@
       "CRGO steel": "NO SIGNAL",
       "Mild Steel": "NO SIGNAL",
       "Stainless Steel": "NO SIGNAL",
-      "Aluminium conductor (Hindalco P0610)": "NEUTRAL"
+      "Aluminium conductor (Hindalco P0610)": "BUY"
     },
     "moved": [
       "Aluminium conductor (Hindalco P0610):2026-08",
@@ -18,6 +18,13 @@
     ]
   },
   "alerts": [
+    {
+      "date": "2026-11-26",
+      "type": "BUY_FLIP",
+      "severity": "opportunity",
+      "metal": "Aluminium conductor (Hindalco P0610)",
+      "message": "**Aluminium conductor (Hindalco P0610) \u2192 BUY.** Favourable \u2014 price in the lower third of its year Good stock-up window \u2014 bring forward non-urgent volumes."
+    },
     {
       "date": "2026-11-19",
       "type": "BUY_FLIP",
@@ -75,5 +82,5 @@
       "message": "**Aluminium conductor (Hindalco P0610) \u25b2 5.1%** to \u20b9378/kg (2026-08 vs 2026-07)."
     }
   ],
-  "generated_at_utc": "2026-11-25T13:18:17Z"
+  "generated_at_utc": "2026-11-26T12:58:40Z"
 }
