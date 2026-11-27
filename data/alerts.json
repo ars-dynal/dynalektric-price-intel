@@ -6,7 +6,7 @@
       "CRGO steel": "NO SIGNAL",
       "Mild Steel": "NO SIGNAL",
       "Stainless Steel": "NO SIGNAL",
-      "Aluminium conductor (Hindalco P0610)": "BUY"
+      "Aluminium conductor (Hindalco P0610)": "NEUTRAL"
     },
     "moved": [
       "Aluminium conductor (Hindalco P0610):2026-08",
@@ -82,5 +82,5 @@
       "message": "**Aluminium conductor (Hindalco P0610) \u25b2 5.1%** to \u20b9378/kg (2026-08 vs 2026-07)."
     }
   ],
-  "generated_at_utc": "2026-11-26T12:58:40Z"
+  "generated_at_utc": "2026-11-27T12:54:53Z"
 }
